@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MythoGraph</title>
+  <link rel="stylesheet" href="/static/style.css?v=4">
+  <script src="/static/vendor/cytoscape.min.js"></script>
+  <link rel="stylesheet" href="/static/vendor/leaflet.css">
+  <script src="/static/vendor/leaflet.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">Ω</span>
+      <div>
+        <h1>MythoGraph</h1>
+        <p>La mitologia greca come grafo di conoscenza, con le fonti in disaccordo</p>
+      </div>
+    </div>
+    <div class="controls">
+      <label class="field">
+        <span>Fonte</span>
+        <select id="source"></select>
+      </label>
+      <label class="field">
+        <span>Vista</span>
+        <select id="view">
+          <option value="hood" selected>Vicinato del personaggio</option>
+          <option value="tree">Albero genealogico</option>
+          <option value="all">Tutto il grafo</option>
+          <option value="map">Mappa dei luoghi</option>
+        </select>
+      </label>
+      <label class="field" id="depth-field">
+        <span>Passi</span>
+        <select id="depth"><option value="1" selected>1</option><option value="2">2</option></select>
+      </label>
+      <label class="toggle"><input type="checkbox" id="inferred" checked> inferite</label>
+      <label class="toggle"><input type="checkbox" id="events"> eventi</label>
+      <label class="toggle"><input type="checkbox" id="places"> luoghi</label>
+      <div class="search">
+        <input id="search" type="search" placeholder="Cerca un personaggio… (Zeus, Ζεύς, Eracle)" autocomplete="off">
+        <ul id="search-results" class="dropdown" hidden></ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="canvas-wrap">
+      <div id="cy" aria-label="Grafo di conoscenza"></div>
+      <div id="map" hidden aria-label="Mappa dei luoghi"></div>
+      <div class="legend" id="legend"></div>
+      <div class="graph-status" id="graph-status"></div>
+      <button class="fit" id="fit" title="Adatta la vista">⤢</button>
+    </section>
+
+    <aside class="panel">
+      <nav class="tabs" role="tablist">
+        <button role="tab" data-tab="entity" class="active">Scheda</button>
+        <button role="tab" data-tab="conflicts">Conflitti</button>
+        <button role="tab" data-tab="cq">Domande</button>
+        <button role="tab" data-tab="sparql">SPARQL</button>
+        <button role="tab" data-tab="sources">Fonti</button>
+      </nav>
+
+      <div class="tab-body" id="tab-entity">
+        <div class="empty">
+          <p><strong>Come si usa</strong></p>
+          <ol>
+            <li><strong>Cerca</strong> un personaggio in alto (anche in greco: Ζεύς) o <strong>clicca un nodo</strong>:
+                il grafo si ricentra su di lui e qui compare la sua scheda.</li>
+            <li><strong>Vista</strong>: <em>Vicinato</em> mostra i vicini a 1 o 2 passi; <em>Albero genealogico</em>
+                mostra antenati (sopra) e discendenti (sotto); <em>Tutto il grafo</em> è la panoramica completa.</li>
+            <li><strong>Fonte</strong>: scegli Esiodo, Omero o tutte. Con "Tutte" gli archi sono
+                <span style="color:#b8691c;font-weight:600">arancio</span> (Esiodo) e
+                <span style="color:#2b6c94;font-weight:600">blu</span> (Omero).</li>
+            <li><strong>Mappa dei luoghi</strong>: i luoghi reali con le coordinate prese da Wikidata
+                (query federata) e i miti ambientati lì.</li>
+            <li><strong>inferite</strong>: togli la spunta per vedere solo ciò che le fonti dicono esplicitamente.</li>
+          </ol>
+          <p>Linee <span class="k-solid">continue</span> = affermazioni <em>asserite</em>;
+             <span class="k-dashed">tratteggiate</span> = <em>dedotte</em>; <span class="k-red">rosse</span> = contestate tra fonti.
+             Un nodo col bordo tratteggiato ha una classe dedotta (es. semidio).</p>
+        </div>
+      </div>
+      <div class="tab-body" id="tab-conflicts" hidden></div>
+      <div class="tab-body" id="tab-cq" hidden></div>
+      <div class="tab-body" id="tab-sparql" hidden>
+        <p class="hint">Query di sola lettura sul dataset. I named graph sono
+          <code>g:hesiod</code>, <code>g:homer</code> (asserite), <code>g:view/…</code> (asserite + dedotte),
+          <code>g:inferred/…/rules|owlrl|hermit</code>, <code>g:ontology</code>, <code>g:shared</code>, <code>g:meta</code>.</p>
+        <textarea id="sparql-text" spellcheck="false"></textarea>
+        <div class="row"><button id="sparql-run" class="primary">Esegui</button><span id="sparql-msg" class="muted"></span></div>
+        <div id="sparql-out"></div>
+      </div>
+      <div class="tab-body" id="tab-sources" hidden></div>
+    </aside>
+  </main>
+
+  <script src="/static/app.js?v=5"></script>
+</body>
+</html>

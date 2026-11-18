@@ -1,0 +1,12 @@
+# Zio e zia: come la regola hasUncle della lezione 8.
+# Il genere non si esprime in una catena OWL, serve una regola.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+CONSTRUCT { ?x myth:hasUncle ?u . ?x myth:hasAunt ?a . }
+WHERE {
+  { ?x myth:hasParentSibling ?u . ?u a myth:Male . }
+  UNION
+  { ?x myth:hasParentSibling ?a . ?a a myth:Female . }
+}

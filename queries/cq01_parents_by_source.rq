@@ -1,0 +1,21 @@
+# CQ1 — Chi sono i genitori di un personaggio secondo ciascuna fonte?
+# Si interroga la VISTA di ogni fonte (asserite + dedotte), così compare anche
+# Ovidio, che usa i nomi romani: nel suo grafo Venere owl:sameAs Afrodite, e il
+# reasoner copia i fatti di Venere su Afrodite. Il FILTER nasconde i doppioni
+# con il nome romano. Parametro: ?target (default res:Aphrodite)
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+PREFIX res:  <https://example.org/mythograph/resource/>
+PREFIX g:    <https://example.org/mythograph/graph/>
+
+SELECT ?fonte ?relazione ?genitore WHERE {
+  GRAPH g:meta { ?vista myth:viewOf ?fonte }
+  GRAPH ?vista { ?target ?relazione ?genitore }
+  VALUES ?relazione { myth:hasFather myth:hasMother }
+  FILTER NOT EXISTS { GRAPH g:shared { ?genitore myth:romanCounterpart ?greco } }
+}
+ORDER BY ?fonte ?relazione

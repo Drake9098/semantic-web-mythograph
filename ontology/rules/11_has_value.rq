@@ -1,0 +1,12 @@
+# owl:hasValue (regola OWL RL cls-hv1): ogni membro di C ha P = v.
+# Es. ogni Olimpico risiede sull'Olimpo.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+CONSTRUCT { ?x ?p ?v . }
+WHERE {
+  ?c rdfs:subClassOf ?r .
+  ?r owl:onProperty ?p ; owl:hasValue ?v .
+  ?x a ?c .
+}

@@ -1,0 +1,8 @@
+# Regola RDFS rdfs9: se x è istanza di C e C ⊑ D, allora x è istanza di D (lezione 9).
+# Come in EsempiLezione10/NaviQuery5New.py si usa il path + per la chiusura transitiva.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+CONSTRUCT { ?x a ?D . }
+WHERE { ?x a ?C . ?C rdfs:subClassOf+ ?D . FILTER(isIRI(?D)) }

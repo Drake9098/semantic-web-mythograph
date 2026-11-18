@@ -1,0 +1,12 @@
+# Catena di proprietà OWL 2: hasParent ∘ hasSibling ⊑ hasParentSibling.
+# Versione generica: legge l'assioma owl:propertyChainAxiom di lunghezza 2.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+CONSTRUCT { ?x ?q ?z . }
+WHERE {
+  ?q owl:propertyChainAxiom ?list .
+  ?list rdf:first ?p1 ; rdf:rest/rdf:first ?p2 .
+  ?x ?p1 ?y . ?y ?p2 ?z .
+}

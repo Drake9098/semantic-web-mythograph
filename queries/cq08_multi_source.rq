@@ -1,0 +1,21 @@
+# CQ8 — Quali personaggi compaiono in più di una fonte?
+# GROUP BY / HAVING su più named graph.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+PREFIX res:  <https://example.org/mythograph/resource/>
+PREFIX g:    <https://example.org/mythograph/graph/>
+
+SELECT ?personaggio (COUNT(DISTINCT ?fonte) AS ?numFonti)
+       (GROUP_CONCAT(DISTINCT STRAFTER(STR(?fonte), "graph/"); separator=", ") AS ?fonti) WHERE {
+  GRAPH g:meta { ?fonte a myth:SourceGraph }
+  { GRAPH ?fonte { ?personaggio ?p ?o } } UNION { GRAPH ?fonte { ?s ?p2 ?personaggio } }
+  GRAPH g:shared { ?personaggio a ?classe }
+  GRAPH g:ontology { ?classe rdfs:subClassOf* myth:Character }
+}
+GROUP BY ?personaggio
+HAVING (COUNT(DISTINCT ?fonte) > 1)
+ORDER BY DESC(?numFonti) ?personaggio

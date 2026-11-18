@@ -1,0 +1,46 @@
+# CQ2 — Quali affermazioni genealogiche sono contestate tra fonti?
+# Due casi:
+#  (a) due fonti danno valori DIVERSI a una proprietà funzionale (padre/madre);
+#  (b) una fonte NEGA esplicitamente (maxCardinality 0) ciò che un'altra afferma
+#      (anche tramite sottoproprietà: hasMother ⊑ hasParent, per questo si usano le viste).
+# Le figure romane sono alias delle greche: si confrontano solo i nomi greci,
+# altrimenti "Demetra" e "Cerere" sembrerebbero due madri diverse di Persefone.
+# Nota: un ramo per proprietà (invece di VALUES) rende la query molto più veloce in rdflib.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+PREFIX res:  <https://example.org/mythograph/resource/>
+PREFIX g:    <https://example.org/mythograph/graph/>
+
+SELECT ?personaggio ?proprieta ?valore1 ?fonte1 ?valore2 ?fonte2 ?tipo WHERE {
+  {
+    GRAPH g:meta { ?v1 myth:viewOf ?fonte1 . ?v2 myth:viewOf ?fonte2 }
+    GRAPH ?v1 { ?personaggio myth:hasFather ?valore1 }
+    GRAPH ?v2 { ?personaggio myth:hasFather ?valore2 }
+    FILTER(?valore1 != ?valore2 && STR(?fonte1) < STR(?fonte2))
+    BIND(myth:hasFather AS ?proprieta)
+    BIND("valori diversi" AS ?tipo)
+  } UNION {
+    GRAPH g:meta { ?v1 myth:viewOf ?fonte1 . ?v2 myth:viewOf ?fonte2 }
+    GRAPH ?v1 { ?personaggio myth:hasMother ?valore1 }
+    GRAPH ?v2 { ?personaggio myth:hasMother ?valore2 }
+    FILTER(?valore1 != ?valore2 && STR(?fonte1) < STR(?fonte2))
+    BIND(myth:hasMother AS ?proprieta)
+    BIND("valori diversi" AS ?tipo)
+  } UNION {
+    GRAPH g:meta { ?fonte1 a myth:SourceGraph . ?v2 myth:viewOf ?fonte2 }
+    FILTER(?fonte1 != ?fonte2)
+    GRAPH ?fonte1 { ?personaggio a ?r . ?r owl:maxCardinality ?zero ; owl:onProperty ?proprieta . }
+    FILTER(?zero = 0)
+    GRAPH ?v2 { ?personaggio ?proprieta ?valore2 }
+    BIND("nessuno (negato esplicitamente)" AS ?valore1)
+    BIND("negazione esplicita" AS ?tipo)
+  }
+  FILTER NOT EXISTS { GRAPH g:shared { ?personaggio myth:romanCounterpart ?a1 } }
+  FILTER NOT EXISTS { GRAPH g:shared { ?valore2 myth:romanCounterpart ?a2 } }
+  FILTER NOT EXISTS { GRAPH g:shared { ?valore1 myth:romanCounterpart ?a3 } }
+}
+ORDER BY ?personaggio ?proprieta

@@ -1,0 +1,16 @@
+[project]
+name = "mythograph"
+version = "0.1.0"
+description = "Ontologia OWL della mitologia greca con fonti antiche in disaccordo"
+requires-python = ">=3.11"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]

@@ -1,0 +1,807 @@
+{
+  "Achilles": {
+    "description": "Greek mythological hero of the Trojan War",
+    "label": "Achilles",
+    "qid": "Q41746"
+  },
+  "Acis": {
+    "description": "person from Greek mythology",
+    "label": "Acis",
+    "qid": "Q419156"
+  },
+  "AcisRiver": {
+    "qid": null,
+    "reason": "non collegato di proposito"
+  },
+  "Aeacus": {
+    "description": "son of Zeus in Greek mythology",
+    "label": "Aeacus",
+    "qid": "Q206187"
+  },
+  "Aglaea": {
+    "description": "one of the Graces (Charites) in Greek mythology",
+    "label": "Aglaea",
+    "override": true,
+    "qid": "Q4439972"
+  },
+  "Alcmene": {
+    "description": "mother of Heracles",
+    "label": "Alkmene",
+    "qid": "Q190543"
+  },
+  "Amphitrite": {
+    "description": "Oceanid or Nereid of Greek mythology",
+    "label": "Amphitrite",
+    "qid": "Q180222"
+  },
+  "Anatolia": {
+    "description": "peninsula in Western Asia",
+    "label": "Anatolia",
+    "qid": "Q51614"
+  },
+  "Andromache": {
+    "description": "wife of Hector in Greek mythology",
+    "label": "Andromache",
+    "qid": "Q19376"
+  },
+  "Aphrodite": {
+    "description": "Greek goddess of love, beauty, pleasure, and procreation",
+    "label": "Aphrodite",
+    "qid": "Q35500"
+  },
+  "Apollo": {
+    "description": "god in Greek and later Roman mythology",
+    "label": "Apollo",
+    "qid": "Q37340"
+  },
+  "Apollodorus": {
+    "description": "ancient mythographer, purported author of the Bibliotheca",
+    "label": "Pseudo-Apollodorus",
+    "qid": "Q12506564"
+  },
+  "Arcadia": {
+    "description": "historical region of ancient Greece",
+    "label": "Arcadia",
+    "qid": "Q12898802"
+  },
+  "Ares": {
+    "description": "Greek god of war and combat",
+    "label": "Ares",
+    "qid": "Q40901"
+  },
+  "Arges": {
+    "description": "cyclops in Greek mythology",
+    "label": "Arges",
+    "qid": "Q420269"
+  },
+  "Ariadne": {
+    "description": "the daughter of Minos in Greek mythology",
+    "label": "Ariadne",
+    "qid": "Q184874"
+  },
+  "Artemis": {
+    "description": "goddess of the hunt and the wild in ancient Greek religion and mythology",
+    "label": "Artemis",
+    "qid": "Q39503"
+  },
+  "Asteria": {
+    "description": "daughter of the Titans Coeus and Phoebe and sister of Leto",
+    "label": "Asteria",
+    "qid": "Q18642285"
+  },
+  "Athena": {
+    "description": "goddess of wisdom and war in ancient Greek religion and mythology",
+    "label": "Athena",
+    "qid": "Q37122"
+  },
+  "Atlas": {
+    "description": "deity in Greek mythology",
+    "label": "Atlas",
+    "qid": "Q130818"
+  },
+  "Bibliotheca": {
+    "description": "work by Pseudo-Apollodorus, a compendium of Greek myths",
+    "label": "Bibliotheca",
+    "qid": "Q817383"
+  },
+  "Briareus": {
+    "override": true,
+    "qid": "Q849647",
+    "reason": "nessun candidato coerente"
+  },
+  "Brontes": {
+    "description": "Cyclop (\"thunderer\")",
+    "label": "Brontes",
+    "qid": "Q2291710"
+  },
+  "Cadmus": {
+    "description": "mythological founder of Thebes, son of Agenor",
+    "label": "Cadmus",
+    "qid": "Q27613"
+  },
+  "Cerberus": {
+    "description": "three-headed dog that guards the underworld in Greek mythology",
+    "label": "Cerberus",
+    "qid": "Q83496"
+  },
+  "Ceres": {
+    "description": "Roman goddess of agriculture",
+    "label": "Ceres",
+    "qid": "Q32102"
+  },
+  "Ceto": {
+    "description": "Greek sea goddess",
+    "label": "Ceto",
+    "qid": "Q209489"
+  },
+  "Chaos": {
+    "description": "Greek primordial deity",
+    "label": "Chaos",
+    "qid": "Q131090"
+  },
+  "Charis": {
+    "qid": null,
+    "reason": "non collegato di proposito"
+  },
+  "Charybdis": {
+    "description": "figure in Greek mythology transformed in a sea monster by Zeus",
+    "label": "Charybdis",
+    "qid": "Q192082"
+  },
+  "Chrysaor": {
+    "description": "son of Glaucus in Greek mythology",
+    "label": "Chrysaor",
+    "override": true,
+    "qid": "Q320660"
+  },
+  "Circe": {
+    "description": "enchantress-goddess in Greek mythology",
+    "label": "Circe",
+    "qid": "Q187602"
+  },
+  "Clymene": {
+    "description": "Oceanid in Greek mythology",
+    "label": "Clymene",
+    "qid": "Q836792"
+  },
+  "Coeus": {
+    "description": "Titan in Greek mythology, one of the twelve titans",
+    "label": "Coeus",
+    "qid": "Q182837"
+  },
+  "Crete": {
+    "description": "island of Greece",
+    "label": "Crete",
+    "qid": "Q34374"
+  },
+  "Crius": {
+    "description": "Titan in Greek mythology, name that means ram",
+    "label": "Kreios",
+    "qid": "Q192136"
+  },
+  "Cronus": {
+    "description": "ruler of the Titans in Greek mythology",
+    "label": "Cronus",
+    "qid": "Q44204"
+  },
+  "Cupid": {
+    "description": "Roman deity, counterpart of Eros",
+    "label": "Cupid",
+    "qid": "Q5011"
+  },
+  "Cyprus": {
+    "description": "country in the Mediterranean Sea",
+    "label": "Cyprus",
+    "qid": "Q229"
+  },
+  "Cythera": {
+    "description": "village on Kythira island, Greece",
+    "label": "Kythira",
+    "override": true,
+    "qid": "Q207239"
+  },
+  "Daphne": {
+    "description": "Greek mythological figure",
+    "label": "Daphne",
+    "qid": "Q194015"
+  },
+  "Delphi": {
+    "description": "ancient town in Fokida, Greece",
+    "label": "Delphi",
+    "qid": "Q75459"
+  },
+  "Demeter": {
+    "description": "Greek goddess of the harvest, grains, and agriculture",
+    "label": "Demeter",
+    "qid": "Q40730"
+  },
+  "Diana": {
+    "override": true,
+    "qid": "Q132543",
+    "reason": "nessun candidato coerente"
+  },
+  "Dione": {
+    "description": "Greek goddess, mother of Aphrodite",
+    "label": "Dione",
+    "qid": "Q199923"
+  },
+  "Dionysus": {
+    "description": "ancient Greek god of winemaking and wine",
+    "label": "Dionysus",
+    "qid": "Q41680"
+  },
+  "Dis": {
+    "description": "Roman god of the underworld",
+    "label": "Dis Pater",
+    "qid": "Q1228338"
+  },
+  "Doris": {
+    "description": "Oceanid of Greek mythology",
+    "label": "Doris",
+    "qid": "Q726279"
+  },
+  "Echidna": {
+    "description": "ancient Greek mythological monster, the mother of monsters",
+    "label": "Echidna",
+    "qid": "Q185670"
+  },
+  "Eileithyia": {
+    "description": "Greek goddess of childbirth and midwifery",
+    "label": "Eileithyia",
+    "qid": "Q94066"
+  },
+  "Enna": {
+    "description": "ancient city in Sicily",
+    "label": "Enna",
+    "override": true,
+    "qid": "Q13687"
+  },
+  "Eos": {
+    "description": "Greek goddess of the dawn",
+    "label": "Eos",
+    "qid": "Q178417"
+  },
+  "Epimetheus": {
+    "description": "mythological figure",
+    "label": "Epimetheus",
+    "qid": "Q41054"
+  },
+  "Erebus": {
+    "description": "primordial deity in Greek mythology",
+    "label": "Erebos",
+    "qid": "Q131122"
+  },
+  "Eros": {
+    "description": "Greek god of love and sex",
+    "label": "Eros",
+    "qid": "Q121973"
+  },
+  "Erytheia": {
+    "description": "island in Greek mythology",
+    "label": "Erytheia",
+    "qid": "Q1363689"
+  },
+  "Etna": {
+    "description": "active stratovolcano on the east coast of Sicily, Italy",
+    "label": "Mount Etna",
+    "qid": "Q16990"
+  },
+  "Faunus": {
+    "description": "Roman horned god of the forest, plains and fields",
+    "label": "Faunus",
+    "qid": "Q3089703"
+  },
+  "Gaia": {
+    "description": "Greek primordial deity, the personification of the Earth",
+    "label": "Gaia",
+    "qid": "Q93172"
+  },
+  "Galatea": {
+    "description": "nereid from Greek mythology",
+    "label": "Galatea",
+    "qid": "Q241070"
+  },
+  "Geryon": {
+    "description": "mythical king of far western Mediterranean",
+    "label": "Geryon",
+    "qid": "Q86805"
+  },
+  "Greece": {
+    "description": "country in Southeast Europe",
+    "label": "Greece",
+    "qid": "Q41"
+  },
+  "Hades": {
+    "description": "god of the underworld in Greek mythology",
+    "label": "Hades",
+    "qid": "Q41410"
+  },
+  "Harmonia": {
+    "description": "ancient Greek goddess of harmony and concord, spouse of Cadmus; her opposite is Eris",
+    "label": "Harmonia",
+    "qid": "Q978079"
+  },
+  "Hebe": {
+    "description": "ancient Greek goddess of youth",
+    "label": "Hebe",
+    "qid": "Q131125"
+  },
+  "Hecate": {
+    "description": "Greek goddess",
+    "label": "Hecate",
+    "qid": "Q131575"
+  },
+  "Hector": {
+    "description": "prince of Troy in Greek mythology",
+    "label": "Hector",
+    "qid": "Q159666"
+  },
+  "Hecuba": {
+    "override": true,
+    "qid": "Q193433",
+    "reason": "nessun candidato coerente"
+  },
+  "Helen": {
+    "description": "daughter of Zeus in Greek mythology",
+    "label": "Helen",
+    "qid": "Q164061"
+  },
+  "Helios": {
+    "description": "Greek god and personification of the Sun",
+    "label": "Helios",
+    "qid": "Q134270"
+  },
+  "Hephaestus": {
+    "description": "Greek god of blacksmiths",
+    "label": "Hephaestus",
+    "qid": "Q44384"
+  },
+  "Hera": {
+    "description": "Greek goddess, wife and sister of Zeus",
+    "label": "Hera",
+    "qid": "Q38012"
+  },
+  "Heracles": {
+    "description": "divine hero in Greek mythology, son of Zeus and Alcmene",
+    "label": "Heracles",
+    "qid": "Q122248"
+  },
+  "Hermes": {
+    "description": "Olympian god in Greek religion and mythology; the emissary and messenger of the gods; the god of trade, heraldry, merchants, commerce, roads, thieves, trickery, sports, travelers, and athletes; the son of Zeus and the Pleiad Maia",
+    "label": "Hermes",
+    "qid": "Q41484"
+  },
+  "Hesiod": {
+    "description": "ancient Greek poet of the archaic period",
+    "label": "Hesiod",
+    "qid": "Q44233"
+  },
+  "Hestia": {
+    "description": "Greek goddess of the hearth and the home",
+    "label": "Hestia",
+    "qid": "Q41419"
+  },
+  "Homer": {
+    "description": "reputed author of the Iliad and the Odyssey",
+    "label": "Homer",
+    "qid": "Q6691"
+  },
+  "Hydra": {
+    "description": "ancient serpent-like chthonic water monster, with reptilian traits, that possessed many heads, in Greek mythology",
+    "label": "Hydra",
+    "qid": "Q170379"
+  },
+  "Hyperion": {
+    "description": "Titan in Greek mythology",
+    "label": "Hyperion",
+    "qid": "Q179209"
+  },
+  "Iapetus": {
+    "description": "Titan in Greek mythology",
+    "label": "Iapetus",
+    "qid": "Q179543"
+  },
+  "Iliad": {
+    "description": "epic poem attributed to Homer",
+    "label": "Iliad",
+    "qid": "Q8275"
+  },
+  "Italy": {
+    "description": "human settlement in Chieri, Metropolitan City of Turin, Piedmont, Italy",
+    "label": "Italy",
+    "override": true,
+    "qid": "Q38"
+  },
+  "Ithaca": {
+    "description": "town in Ithaca island , Greece",
+    "label": "Ithaca",
+    "override": true,
+    "qid": "Q187471"
+  },
+  "Jupiter": {
+    "description": "chief deity of Roman state religion",
+    "label": "Jupiter",
+    "qid": "Q4649"
+  },
+  "Laertes": {
+    "description": "legendary king of Ithaca",
+    "label": "Laertes",
+    "qid": "Q748296"
+  },
+  "LakePergus": {
+    "override": true,
+    "qid": null,
+    "reason": "nessun candidato coerente"
+  },
+  "LandOfCyclopes": {
+    "qid": null,
+    "reason": "non collegato di proposito"
+  },
+  "Laodamia": {
+    "description": "Greek mythology character, wife of Protesilaus",
+    "label": "Laodamia",
+    "override": true,
+    "qid": "Q1601938"
+  },
+  "Lemnos": {
+    "description": "island of Greece",
+    "label": "Lemnos",
+    "qid": "Q192483"
+  },
+  "Lerna": {
+    "description": "archaeological site in Argolis, Greece",
+    "label": "Lerna",
+    "qid": "Q1236078"
+  },
+  "Leto": {
+    "description": "Greek mythological figure and mother of Apollo and Artemis",
+    "label": "Leto",
+    "qid": "Q103107"
+  },
+  "Lycaon": {
+    "description": "Greek mythical character, king of Arcadia, son of Pelasgus and Meliboea",
+    "label": "Lycaon",
+    "qid": "Q501667"
+  },
+  "Lycia": {
+    "description": "geopolitical region in Anatolia",
+    "label": "Lycia",
+    "qid": "Q18927"
+  },
+  "Lyctus": {
+    "description": "city in ancient Crete",
+    "label": "Lyctus",
+    "qid": "Q1001533"
+  },
+  "Maia": {
+    "description": "Pleiad and mother of Hermes",
+    "label": "Maia",
+    "qid": "Q205233"
+  },
+  "Mars": {
+    "description": "Roman god of war, guardian of agriculture",
+    "label": "Mars",
+    "qid": "Q112"
+  },
+  "Medusa": {
+    "description": "in Greek mythology, one of the three Gorgons, described as a woman with snakes in place of hair, beheaded by Perseus",
+    "label": "Medusa",
+    "qid": "Q160730"
+  },
+  "Menelaus": {
+    "description": "mythical king of Sparta, husband of Helen of Troy",
+    "label": "Menelaus",
+    "qid": "Q171839"
+  },
+  "Menoetius": {
+    "description": "Titan in Greek mythology",
+    "label": "Menoetius",
+    "override": true,
+    "qid": "Q1920680"
+  },
+  "Metamorphoses": {
+    "description": "narrative poem by Ovid",
+    "label": "Metamorphoses",
+    "qid": "Q184742"
+  },
+  "Metis": {
+    "description": "Oceanid of Greek mythology, goddess of wisdom, daughter of Oceanid and Tethys",
+    "label": "Metis",
+    "qid": "Q190565"
+  },
+  "Minerva": {
+    "description": "Roman goddess of wisdom and sponsor of arts, trade, and defense",
+    "label": "Minerva",
+    "qid": "Q126916"
+  },
+  "Mnemosyne": {
+    "description": "personification of memory in Greek mythology, mother of the nine muses",
+    "label": "Mnemosyne",
+    "qid": "Q102884"
+  },
+  "MountOlympus": {
+    "description": "mountain in Elassona municipality, Greece",
+    "label": "Mount Olympus",
+    "qid": "Q80344"
+  },
+  "Nemea": {
+    "description": "ancient sanctuary of Zeus in Corinthia, Greece",
+    "label": "Nemea",
+    "qid": "Q748108"
+  },
+  "NemeanLion": {
+    "override": true,
+    "qid": "Q199438",
+    "reason": "nessun candidato coerente"
+  },
+  "Neptune": {
+    "description": "Roman god of water, particularly the sea, considered equivalent to the Greek Poseidon",
+    "label": "Neptune",
+    "qid": "Q3954"
+  },
+  "Nereus": {
+    "description": "sea god of Greek mythology",
+    "label": "Nereus",
+    "qid": "Q189527"
+  },
+  "Nyx": {
+    "description": "Greek goddess of the night",
+    "label": "Nyx",
+    "qid": "Q131203"
+  },
+  "Oceanus": {
+    "description": "ancient Greek god of the earth-encircling river, Oceanos",
+    "label": "Oceanus",
+    "qid": "Q161419"
+  },
+  "Odysseus": {
+    "description": "legendary Greek king of Ithaca",
+    "label": "Odysseus",
+    "qid": "Q47231"
+  },
+  "Odyssey": {
+    "description": "epic poem attributed to Homer",
+    "label": "Odyssey",
+    "qid": "Q35160"
+  },
+  "Ovid": {
+    "description": "Roman poet (43 BC – 17/18 AD)",
+    "label": "Ovid",
+    "qid": "Q7198"
+  },
+  "Paris": {
+    "description": "mythological son of Priam, king of Troy",
+    "label": "Paris",
+    "qid": "Q167646"
+  },
+  "Patroclus": {
+    "description": "son of Menoetius in Greek mythology, a greek hero of the Trojan war",
+    "label": "Patroclus",
+    "qid": "Q186271"
+  },
+  "Pegasus": {
+    "description": "mythological creature in Greek mythology",
+    "label": "Pegasus",
+    "qid": "Q162797"
+  },
+  "Peleus": {
+    "description": "son of Aeacus in Greek mythology",
+    "label": "Peleus",
+    "qid": "Q178641"
+  },
+  "Penelope": {
+    "description": "wife of Odysseus in Greek mythology",
+    "label": "Penelope",
+    "qid": "Q165769"
+  },
+  "Peneus": {
+    "override": true,
+    "qid": "Q1364612",
+    "reason": "nessun candidato coerente"
+  },
+  "Persephone": {
+    "description": "Greek goddess of the seasons and the queen of the underworld; married with Hades",
+    "label": "Persephone",
+    "qid": "Q45967"
+  },
+  "Perseus": {
+    "description": "legendary Greek hero and founder of Mycenae, demigod son of Zeus and Danae; famous for beheading the Gorgon Medusa",
+    "label": "Perseus",
+    "qid": "Q130832"
+  },
+  "Phaethon": {
+    "description": "son of Helios from Greek mythology",
+    "label": "Phaethon",
+    "qid": "Q203480"
+  },
+  "Phoebe": {
+    "description": "titaness in Greek mythology",
+    "label": "Phoebe",
+    "qid": "Q183281"
+  },
+  "Phorcys": {
+    "description": "Greek sea god",
+    "label": "Phorcys",
+    "qid": "Q200382"
+  },
+  "Polyphemus": {
+    "description": "giant son of Poseidon and Thoosa in Greek mythology",
+    "label": "Polyphemus",
+    "qid": "Q193567"
+  },
+  "Pontus": {
+    "description": "sea god of Greek mythology",
+    "label": "Pontus",
+    "qid": "Q190563"
+  },
+  "Poseidon": {
+    "description": "Roman god of water, particularly the sea, considered equivalent to the Greek Poseidon",
+    "label": "Poseidon",
+    "override": true,
+    "qid": "Q41127"
+  },
+  "Priam": {
+    "description": "the legendary and last king of Troy during the Trojan war; son of Laomedon",
+    "label": "Priam",
+    "qid": "Q170473"
+  },
+  "Prometheus": {
+    "description": "Titan, culture hero, and trickster figure in Greek mythology who defied the gods; son of Iapetus",
+    "label": "Prometheus",
+    "qid": "Q83160"
+  },
+  "Proserpina": {
+    "description": "ancient Roman goddess",
+    "label": "Proserpina",
+    "qid": "Q14515330"
+  },
+  "Rhea": {
+    "description": "female Titan in Greek mythology, mother of Zeus and mother of Hera",
+    "label": "Rhea",
+    "qid": "Q108419"
+  },
+  "Sarpedon": {
+    "description": "Greek mythology character, son of Laodamia",
+    "label": "Sarpedon",
+    "qid": "Q762520"
+  },
+  "Scylla": {
+    "description": "nymph transformed into a sea monster by Circe in Greek mythology",
+    "label": "Scylla",
+    "qid": "Q193115"
+  },
+  "Selene": {
+    "description": "ancient Greek goddess and personification of the Moon, daughter of Hyperion and Theia",
+    "label": "Selene",
+    "qid": "Q131585"
+  },
+  "Semele": {
+    "description": "mother of Dionysus in Greek mythology",
+    "label": "Semele",
+    "qid": "Q776139"
+  },
+  "Sicily": {
+    "description": "region of Italy (for the island in the Mediterranean Q4951156)",
+    "label": "Sicily",
+    "qid": "Q1460"
+  },
+  "Sol": {
+    "description": "Roman god of the Sun",
+    "label": "Sol",
+    "qid": "Q1199937"
+  },
+  "Steropes": {
+    "description": "cyclops in Greek mythology (\"lightning\")",
+    "label": "Steropes",
+    "qid": "Q3553687"
+  },
+  "StraitOfMessina": {
+    "description": "strait between Sicily and Calabria",
+    "label": "Strait of Messina",
+    "qid": "Q134705"
+  },
+  "StraitOfScylla": {
+    "qid": null,
+    "reason": "non collegato di proposito"
+  },
+  "Symaethis": {
+    "qid": null,
+    "reason": "non collegato di proposito"
+  },
+  "Tartarus": {
+    "description": "deep abyss, place of punishment, in ancient Greek mythology",
+    "label": "Tartarus",
+    "qid": "Q101322"
+  },
+  "TartarusPlace": {
+    "qid": null,
+    "reason": "non collegato di proposito"
+  },
+  "Telemachus": {
+    "description": "in Greek mythology, the son of Odysseus and Penelope, a character from Homer's \"Odyssey\"",
+    "label": "Telemachus",
+    "qid": "Q192482"
+  },
+  "Tethys": {
+    "description": "ancient Greek mythological figure; mother of the river gods and the Oceanids",
+    "label": "Tethys",
+    "qid": "Q184216"
+  },
+  "Thebes": {
+    "description": "ancient Egyptian city",
+    "label": "Thebes",
+    "override": true,
+    "qid": "Q5760"
+  },
+  "Theia": {
+    "description": "female Titan in Greek mythology; mother of Helios, Selene and Eos",
+    "label": "Theia",
+    "qid": "Q184232"
+  },
+  "Themis": {
+    "description": "in ancient Greek mythology, a titaness, the personification of divine order, fairness, law, natural law, and custom, whose symbols are the scales of justice",
+    "label": "Themis",
+    "qid": "Q159168"
+  },
+  "Theogony": {
+    "description": "poem by Hesiod, describing the origins and genealogies of the greek gods",
+    "label": "Theogony",
+    "qid": "Q156498"
+  },
+  "Thetis": {
+    "description": "Nereid of Greek mythology",
+    "label": "Thetis",
+    "qid": "Q184437"
+  },
+  "Thoosa": {
+    "description": "water deity",
+    "label": "Thoosa",
+    "qid": "Q843514"
+  },
+  "Thrinacia": {
+    "description": "mythical island with cattle of Helios",
+    "label": "Thrinacia",
+    "qid": "Q2295722"
+  },
+  "Triton": {
+    "description": "Greek god, messenger of the sea",
+    "label": "Triton",
+    "qid": "Q148030"
+  },
+  "Troy": {
+    "description": "ancient Homeric-era city in northwest Asia Minor; it is known as the setting for the Greek myth of the Trojan war",
+    "label": "Troy",
+    "qid": "Q22647"
+  },
+  "Typhon": {
+    "description": "God of the desert, storms, and foreigners in ancient Egyptian religion",
+    "label": "Typhon",
+    "override": true,
+    "qid": "Q180237"
+  },
+  "Underworld": {
+    "qid": null,
+    "reason": "non collegato di proposito"
+  },
+  "Uranus": {
+    "description": "primordial Greek deity, god of the Sky; one of the Greek primordial deities",
+    "label": "Uranus",
+    "qid": "Q79999"
+  },
+  "Venus": {
+    "description": "Roman goddess of love, sexuality, procreation and pleasure",
+    "label": "Venus",
+    "qid": "Q47652"
+  },
+  "Vulcan": {
+    "description": "Romanian company",
+    "label": "Vulcan",
+    "override": true,
+    "qid": "Q4640"
+  },
+  "Zeus": {
+    "description": "Greek god of the sky and king of the gods",
+    "label": "Zeus",
+    "qid": "Q34201"
+  }
+}

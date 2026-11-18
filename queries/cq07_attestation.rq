@@ -1,0 +1,22 @@
+# CQ7 — Quale opera e quale passo attestano un'affermazione?
+# Usa la REIFICAZIONE (rdf:Statement): un'affermazione su un'affermazione.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+PREFIX res:  <https://example.org/mythograph/resource/>
+PREFIX g:    <https://example.org/mythograph/graph/>
+
+SELECT ?fonte ?soggetto ?predicato ?oggetto ?opera ?passo ?nota WHERE {
+  GRAPH g:meta { ?fonte a myth:SourceGraph }
+  GRAPH ?fonte {
+    ?st a rdf:Statement ;
+        rdf:subject ?soggetto ; rdf:predicate ?predicato ; rdf:object ?oggetto ;
+        myth:attestedIn ?p .
+    ?p myth:inWork ?opera ; myth:locus ?passo .
+    OPTIONAL { ?st myth:versionNote ?nota }
+  }
+}
+ORDER BY ?soggetto ?fonte

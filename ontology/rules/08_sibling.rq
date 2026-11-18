@@ -1,0 +1,9 @@
+# Fratelli: stesso genitore e persone diverse.
+# Il FILTER evita che ognuno sia fratello di se stesso: è il motivo per cui
+# hasSibling NON è definita come catena hasParent ∘ hasChild.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+CONSTRUCT { ?x myth:hasSibling ?y . }
+WHERE { ?x myth:hasParent ?p . ?y myth:hasParent ?p . FILTER(?x != ?y) }

@@ -1,0 +1,7 @@
+# Regola RDFS rdfs2: il dominio classifica il SOGGETTO (lezione 10, esempio navi).
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+CONSTRUCT { ?x a ?D . }
+WHERE { ?p rdfs:domain ?D . ?x ?p ?y . FILTER(isIRI(?D)) }

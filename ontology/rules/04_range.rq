@@ -1,0 +1,7 @@
+# Regola RDFS rdfs3: il range classifica l'OGGETTO (lezione 10, esempio comandante → Captain).
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+CONSTRUCT { ?y a ?R . }
+WHERE { ?p rdfs:range ?R . ?x ?p ?y . FILTER(isIRI(?y) && isIRI(?R)) }

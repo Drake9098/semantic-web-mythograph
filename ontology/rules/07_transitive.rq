@@ -1,0 +1,7 @@
+# owl:TransitiveProperty: se x P y e y P z allora x P z (es. hasAncestor, locatedIn).
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+CONSTRUCT { ?x ?p ?z . }
+WHERE { ?p a owl:TransitiveProperty . ?x ?p ?y . ?y ?p ?z . }
