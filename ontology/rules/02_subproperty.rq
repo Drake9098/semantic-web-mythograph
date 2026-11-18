@@ -1,5 +1,4 @@
-# Regola RDFS rdfs7: trasferimento di proprietà (lezione 10).
-# Se x P y e P ⊑ Q allora x Q y.
+# x P y, P sottoproprietà di Q  =>  x Q y
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>

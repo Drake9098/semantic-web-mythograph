@@ -1,5 +1,5 @@
-# CQ8 — Quali personaggi compaiono in più di una fonte?
-# GROUP BY / HAVING su più named graph.
+# CQ8 - Quali personaggi compaiono in più di una fonte?
+# Conta le fonti per personaggio (GROUP BY / HAVING).
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>

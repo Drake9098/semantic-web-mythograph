@@ -1,10 +1,4 @@
-"""Interfaccia web di MythoGraph.
-
-    uvicorn mythograph.web.app:app --reload
-
-Il backend carica il TriG generato da ``mythograph.build`` e offre un'API JSON;
-il frontend (static/) disegna il grafo con Cytoscape.js.
-"""
+"""API web di MythoGraph (uvicorn mythograph.web.app:app)."""
 from __future__ import annotations
 
 import re
@@ -31,8 +25,7 @@ LEVEL_LABELS = {
     "hermit": "dedotta da HermiT (OWL 2 DL)",
 }
 
-# Relazioni disegnate nel grafo. Le inverse (hasChild, killedBy…) non si
-# disegnano: sarebbero archi doppi.
+# archi disegnati (le inverse no, sarebbero doppi)
 EDGE_PROPS = {
     MYTH.hasFather: "family", MYTH.hasMother: "family", MYTH.hasParent: "family",
     MYTH.hasSpouse: "spouse", MYTH.killed: "killed",
@@ -41,7 +34,7 @@ EDGE_PROPS = {
 }
 SYMMETRIC = {MYTH.hasSpouse}
 
-# Ordine di priorità per scegliere la "categoria" (colore) di un nodo.
+# categoria (colore) del nodo, in ordine di priorità
 CATEGORIES = [
     (MYTH.Demigod, "demigod"), (MYTH.Primordial, "primordial"), (MYTH.Titan, "titan"),
     (MYTH.Olympian, "olympian"), (MYTH.MinorDeity, "minor"), (MYTH.Deity, "deity"),
@@ -55,8 +48,7 @@ app = FastAPI(title="MythoGraph")
 
 
 def _covered_by_inverse() -> set[URIRef]:
-    """Proprietà le cui triple "in entrata" sono già visibili come uscenti
-    grazie a un'inversa o alla simmetria: nella scheda si possono omettere."""
+    """Proprietà già visibili dall'altro lato grazie a inversa o simmetria."""
     tbox = store.graph("ontology")
     base = set(tbox.subjects(RDF.type, OWL.SymmetricProperty))
     for a, b in tbox.subject_objects(OWL.inverseOf):
@@ -69,8 +61,7 @@ def _covered_by_inverse() -> set[URIRef]:
 
 COVERED_BY_INVERSE = _covered_by_inverse()
 
-# Figure romane (Ovidio) → corrispettivo greco. Nel grafo disegnato si usa il
-# nome greco, così Venere e Afrodite non compaiono come due nodi separati.
+# nel grafo i nomi romani diventano greci (Venere -> Afrodite)
 ROMAN_TO_GREEK = {s: o for s, o in store.graph("shared").subject_objects(MYTH.romanCounterpart)}
 
 
@@ -348,8 +339,7 @@ def sparql(req: SparqlRequest):
 
 
 def _coords(place, seen=None):
-    """Coordinate di un luogo; se mancano, quelle del luogo che lo contiene
-    (es. Lago di Pergusa → Enna) o del luogo reale con cui è identificato."""
+    """Coordinate del luogo, o del luogo che lo contiene / con cui è identificato."""
     seen = seen or set()
     links_g, shared = store.graph("links"), store.graph("shared")
     lat, lon = links_g.value(place, GEO.lat), links_g.value(place, GEO.long)

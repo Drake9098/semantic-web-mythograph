@@ -1,11 +1,6 @@
-# CQ2 — Quali affermazioni genealogiche sono contestate tra fonti?
-# Due casi:
-#  (a) due fonti danno valori DIVERSI a una proprietà funzionale (padre/madre);
-#  (b) una fonte NEGA esplicitamente (maxCardinality 0) ciò che un'altra afferma
-#      (anche tramite sottoproprietà: hasMother ⊑ hasParent, per questo si usano le viste).
-# Le figure romane sono alias delle greche: si confrontano solo i nomi greci,
-# altrimenti "Demetra" e "Cerere" sembrerebbero due madri diverse di Persefone.
-# Nota: un ramo per proprietà (invece di VALUES) rende la query molto più veloce in rdflib.
+# CQ2 - Quali affermazioni genealogiche sono contestate tra fonti?
+# Due casi: padre/madre diversi tra due fonti, oppure una fonte lo esclude e un'altra lo afferma.
+# I nomi romani si confrontano tramite quelli greci (Cerere = Demetra).
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>

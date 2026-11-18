@@ -1,11 +1,5 @@
-###############################################################################
-#  Fonte: ESIODO, Teogonia (VIII-VII sec. a.C.)
-#  Named graph: <https://example.org/mythograph/graph/hesiod>
-#
-#  Tutto ciò che è scritto qui è "ciò che dice Esiodo". Non è vero o falso in
-#  assoluto: è una versione. Per questo ogni fonte ha il suo grafo.
-#  I riferimenti ai versi seguono la numerazione standard (ed. West).
-###############################################################################
+# Esiodo, Teogonia -> grafo g:hesiod
+# versi secondo la numerazione standard (ed. West)
 
 @prefix :        <https://example.org/mythograph/resource/> .
 @prefix myth:    <https://example.org/mythograph/ontology#> .
@@ -14,7 +8,7 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-# ============================== PASSI CITATI ================================
+# passi citati
 :Theog_116_123 a myth:Passage ; myth:inWork :Theogony ; myth:locus "vv. 116-123" ; rdfs:label "Teogonia, vv. 116-123"@it .
 :Theog_126_138 a myth:Passage ; myth:inWork :Theogony ; myth:locus "vv. 126-138" ; rdfs:label "Teogonia, vv. 126-138"@it .
 :Theog_139_153 a myth:Passage ; myth:inWork :Theogony ; myth:locus "vv. 139-153" ; rdfs:label "Teogonia, vv. 139-153"@it .
@@ -32,9 +26,8 @@
 :Theog_930_955 a myth:Passage ; myth:inWork :Theogony ; myth:locus "vv. 930-955" ; rdfs:label "Teogonia, vv. 930-955"@it .
 :Theog_975_1007 a myth:Passage ; myth:inWork :Theogony ; myth:locus "vv. 975-1007" ; rdfs:label "Teogonia, vv. 975-1007"@it .
 
-# ============================== ORIGINI (vv. 116-138) ========================
-# In Esiodo Eros è una divinità primordiale, senza genitori: nasce subito dopo
-# Caos, Gea e Tartaro. (Altre fonti, es. Ovidio, lo fanno figlio di Afrodite.)
+# origini (vv. 116-138)
+# Eros primordiale, senza genitori (in Ovidio è figlio di Venere)
 :Eros a myth:Primordial ;
     a [ a owl:Restriction ; owl:onProperty myth:hasParent ;
         owl:maxCardinality "0"^^xsd:nonNegativeInteger ] .
@@ -62,23 +55,21 @@
 :Cronus    myth:hasFather :Uranus ; myth:hasMother :Gaia .
 
 # Ciclopi e Centimani: anch'essi figli di Gea e Urano (vv. 139-153).
-# NB: in Omero i Ciclopi sono un popolo diverso (Polifemo è figlio di Poseidone).
+# (i Ciclopi di Omero sono altri: Polifemo è figlio di Poseidone)
 :Brontes  myth:hasFather :Uranus ; myth:hasMother :Gaia .
 :Steropes myth:hasFather :Uranus ; myth:hasMother :Gaia .
 :Arges    myth:hasFather :Uranus ; myth:hasMother :Gaia .
 :Briareus myth:hasFather :Uranus ; myth:hasMother :Gaia .
 
-# ============================== LA CASTRAZIONE DI URANO =====================
+# la castrazione di urano
 :CastrationOfUranus a myth:Event ;
     rdfs:label "Evirazione di Urano"@it, "Castration of Uranus"@en ;
     myth:hasAgent :Cronus ; myth:hasPatient :Uranus ;
     myth:attestedIn :Theog_154_182 .
 
-# ============================== NASCITA DI AFRODITE (vv. 188-206) ===========
-# Versione esiodea: Afrodite nasce dalla spuma intorno ai genitali di Urano,
-# approda a Citera e poi a Cipro. Ha un padre (Urano) e NESSUNA madre.
-# L'assenza di madre va detta esplicitamente: per l'Open World Assumption
-# "non nominare la madre" non vuol dire "non ha madre" (lezione 1).
+# nascita di afrodite (vv. 188-206)
+# nasce dalla spuma intorno ai genitali di Urano: padre Urano, nessuna madre.
+# la madre va esclusa esplicitamente (mondo aperto)
 :Aphrodite myth:hasFather :Uranus ;
     myth:bornIn :Cyprus ;
     a [ a owl:Restriction ; owl:onProperty myth:hasMother ;
@@ -90,13 +81,12 @@
     myth:setIn :Cyprus ;
     myth:attestedIn :Theog_188_206 .
 
-# Reificazione (lezione 4): un'affermazione SU un'affermazione.
-# "La Teogonia, vv. 188-206, afferma che Urano è il padre di Afrodite."
+# reificazione: il passo che attesta il padre
 :claim_hes_aphrodite_father a rdf:Statement ;
     rdf:subject :Aphrodite ; rdf:predicate myth:hasFather ; rdf:object :Uranus ;
     myth:attestedIn :Theog_188_206 .
 
-# ============================== STIRPE DI PONTO (vv. 233-294) ===============
+# stirpe di ponto (vv. 233-294)
 :Nereus  myth:hasFather :Pontus ; myth:hasMother :Gaia .
 :Phorcys myth:hasFather :Pontus ; myth:hasMother :Gaia .
 :Ceto    myth:hasFather :Pontus ; myth:hasMother :Gaia .
@@ -115,12 +105,12 @@
     myth:attestedIn :Theog_270_294 .
 :Perseus myth:killed :Medusa .
 
-# ============================== MOSTRI (vv. 306-332, 820-822) ===============
+# mostri (vv. 306-332, 820-822)
 :Typhon   myth:hasFather :Tartarus ; myth:hasMother :Gaia .
 :Hydra    myth:hasFather :Typhon ; myth:hasMother :Echidna .
 :Cerberus myth:hasFather :Typhon ; myth:hasMother :Echidna .
 
-# ============================== FATICHE DI ERACLE ============================
+# fatiche di eracle
 :Labour_Hydra a myth:Labour ;
     rdfs:label "Eracle uccide l'Idra di Lerna"@it, "Heracles slays the Hydra"@en ;
     myth:hasAgent :Heracles ; myth:hasPatient :Hydra ; myth:setIn :Lerna ;
@@ -140,7 +130,7 @@
 
 :Heracles myth:killed :Hydra, :NemeanLion, :Geryon .
 
-# ============================== OCEANINE E TITANI (vv. 337-411, 507-511) ====
+# oceanine e titani (vv. 337-411, 507-511)
 :Metis   myth:hasFather :Oceanus ; myth:hasMother :Tethys .
 :Clymene myth:hasFather :Oceanus ; myth:hasMother :Tethys .
 :Doris   myth:hasFather :Oceanus ; myth:hasMother :Tethys .
@@ -159,7 +149,7 @@
 :Prometheus myth:hasFather :Iapetus ; myth:hasMother :Clymene .
 :Epimetheus myth:hasFather :Iapetus ; myth:hasMother :Clymene .
 
-# ============================== FIGLI DI CRONO E REA (vv. 453-506) ==========
+# figli di crono e rea (vv. 453-506)
 :Cronus myth:hasSpouse :Rhea .
 :Hestia   myth:hasFather :Cronus ; myth:hasMother :Rhea .
 :Demeter  myth:hasFather :Cronus ; myth:hasMother :Rhea .
@@ -174,7 +164,7 @@
     myth:hasParticipant :Zeus, :Rhea ; myth:setIn :Lyctus ;
     myth:attestedIn :Theog_453_506 .
 
-# ============================== GUERRE COSMICHE ==============================
+# guerre cosmiche
 :Titanomachy a myth:War ;
     rdfs:label "Titanomachia"@it, "Titanomachy"@en ;
     myth:hasParticipant :Zeus, :Cronus, :Iapetus, :Hyperion, :Briareus ;
@@ -185,7 +175,7 @@
     myth:hasAgent :Zeus ; myth:hasPatient :Typhon ;
     myth:attestedIn :Theog_820_868 .
 
-# ============================== LE NOZZE DI ZEUS (vv. 886-929) ==============
+# le nozze di zeus (vv. 886-929)
 :Zeus myth:hasSpouse :Metis, :Themis, :Demeter, :Mnemosyne, :Leto, :Hera .
 
 # Atena: figlia di Zeus e di Metide, che Zeus aveva inghiottito; nasce dalla testa.
@@ -205,8 +195,7 @@
 :Dionysus   myth:hasFather :Zeus ; myth:hasMother :Semele .     # madre mortale (vv. 940-942)
 :Heracles   myth:hasFather :Zeus ; myth:hasMother :Alcmene .    # vv. 943-944
 
-# Efesto: Era lo genera DA SOLA, senza unirsi a Zeus (vv. 927-929).
-# Anche qui chiudiamo esplicitamente il mondo: nessun padre.
+# Efesto: Era lo genera da sola (vv. 927-929), quindi nessun padre
 :Hephaestus myth:hasMother :Hera ;
     a [ a owl:Restriction ; owl:onProperty myth:hasFather ;
         owl:maxCardinality "0"^^xsd:nonNegativeInteger ] .
@@ -218,18 +207,17 @@
 
 :Hades myth:hasSpouse :Persephone .
 
-# ============================== ALTRE NOZZE (vv. 930-955) ===================
+# altre nozze (vv. 930-955)
 :Poseidon myth:hasSpouse :Amphitrite .
 :Triton   myth:hasFather :Poseidon ; myth:hasMother :Amphitrite .
 
 :Harmonia myth:hasFather :Ares ; myth:hasMother :Aphrodite .
 :Hephaestus myth:hasSpouse :Aglaea .          # la più giovane delle Cariti
 :Dionysus myth:hasSpouse :Ariadne .
-# Eracle, compiute le fatiche, sposa Ebe sull'Olimpo e vive tra gli immortali.
-# (Caso di modellazione da discutere: un Umano che diventa immortale.)
+# dopo le fatiche sposa Ebe e vive tra gli immortali (TODO: apoteosi)
 :Heracles myth:hasSpouse :Hebe .
 
-# ============================== EROI (vv. 975-1007) ==========================
+# eroi (vv. 975-1007)
 :Cadmus myth:hasSpouse :Harmonia .
 :Semele myth:hasFather :Cadmus ; myth:hasMother :Harmonia .
 :Peleus myth:hasSpouse :Thetis .

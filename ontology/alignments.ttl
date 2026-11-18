@@ -1,21 +1,5 @@
-###############################################################################
-#  MythoGraph — Allineamento a ontologie fondazionali e vocabolari standard
-#
-#  Come OntoComedySources (lezione 11), MythoGraph non reinventa i concetti
-#  generali: li aggancia a standard riconosciuti, così altri sistemi possono
-#  capire i nostri dati senza conoscere il vocabolario myth:.
-#
-#  - CIDOC CRM: standard ISO per il patrimonio culturale (eventi, luoghi, testi)
-#  - FaBiO (famiglia SPAR): opere e loro parti
-#  - Dublin Core: autore di un'opera, parte di
-#  - FOAF: persone (gli autori antichi)
-#  - SKOS: vocabolari controllati (gli ambiti delle divinità)
-#
-#  Si usa rdfs:subClassOf / rdfs:subPropertyOf e NON owl:equivalentClass:
-#  "ogni nostro Evento è un E5_Event" è vero, il contrario no.
-#  Questo grafo partecipa al ragionamento: ogni evento del mito risulta
-#  automaticamente anche un crm:E5_Event (si vede nella scheda dell'evento).
-###############################################################################
+# Allineamento a CIDOC CRM, FaBiO, Dublin Core, FOAF.
+# subClassOf e non equivalentClass: ogni nostro evento è un E5_Event, non viceversa.
 
 @prefix myth:    <https://example.org/mythograph/ontology#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -26,7 +10,7 @@
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 
-# Dichiarazioni minime dei termini esterni (richieste da OWL 2 DL / HermiT).
+# dichiarazioni richieste da HermiT
 crm:E5_Event               a owl:Class ; rdfs:label "E5 Event"@en .
 crm:E53_Place              a owl:Class ; rdfs:label "E53 Place"@en .
 crm:E28_Conceptual_Object  a owl:Class ; rdfs:label "E28 Conceptual Object"@en .
@@ -39,21 +23,18 @@ crm:P7_took_place_at       a owl:ObjectProperty ; rdfs:label "P7 took place at"@
 crm:P89_falls_within       a owl:ObjectProperty ; rdfs:label "P89 falls within"@en .
 dcterms:isPartOf           a owl:ObjectProperty ; rdfs:label "is part of"@en .
 
-# ---------------------------------------------------------------- classi -----
+# classi
 myth:Event        rdfs:subClassOf crm:E5_Event .             # eventi del mito
 myth:Place        rdfs:subClassOf crm:E53_Place .            # luoghi (reali e mitici)
 myth:LiteraryWork rdfs:subClassOf fabio:Work, crm:E33_Linguistic_Object .
 myth:Passage      rdfs:subClassOf crm:E33_Linguistic_Object . # un frammento di testo
 myth:Author       rdfs:subClassOf crm:E21_Person, foaf:Person .
 
-# Un personaggio mitico NON è una persona storica (crm:E21_Person): è una
-# creazione della tradizione. In CIDOC CRM la scelta più fedele è
-# E28 Conceptual Object. È una scelta discutibile, ed è bene saperla motivare.
+# un personaggio mitico non è una persona storica (E21): uso E28 Conceptual Object
 myth:Character    rdfs:subClassOf crm:E28_Conceptual_Object .
 
-# myth:Domain è già sottoclasse di skos:Concept (nella TBox).
 
-# ------------------------------------------------------------- proprietà -----
+# proprietà
 myth:hasParticipant rdfs:subPropertyOf crm:P11_had_participant .
 myth:setIn          rdfs:subPropertyOf crm:P7_took_place_at .
 myth:locatedIn      rdfs:subPropertyOf crm:P89_falls_within .

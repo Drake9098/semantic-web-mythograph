@@ -1,19 +1,7 @@
-"""Pipeline di costruzione del grafo di conoscenza.
+"""Costruisce data/generated/mythograph.trig (python -m mythograph.build).
 
-    python -m mythograph.build
-
-1. carica TBox, entità condivise e una ABox per ogni fonte (data/sources/*.ttl);
-2. per OGNI fonte separatamente ragiona su  TBox + shared + fonte
-   (così le versioni in disaccordo non si contaminano a vicenda);
-3. ragiona anche sulla FUSIONE INGENUA di tutte le fonti, per mostrare che
-   produce un'ontologia inconsistente;
-4. scrive un unico file TriG con un named graph per ogni pezzo:
-
-   g:ontology                    TBox
-   g:shared                      entità comuni
-   g:<fonte>                     affermazioni asserite dalla fonte
-   g:inferred/<fonte>/<livello>  triple dedotte (rules | owlrl | hermit)
-   g:meta                        consistenza, conteggi, metadati delle fonti
+Ragiona su ogni fonte separatamente (TBox + shared + fonte) e una volta sulla
+fusione di tutte le fonti, che deve risultare inconsistente.
 """
 from __future__ import annotations
 
@@ -36,19 +24,14 @@ def load(path) -> Graph:
 
 
 def unique_names(shared: Graph, tbox: Graph) -> Graph:
-    """owl:AllDifferent su tutti i personaggi.
+    """owl:AllDifferent sui personaggi (niente unique name assumption).
 
-    Il Semantic Web NON assume nomi unici (lezione 1, "non unique naming"):
-    due IRI diversi potrebbero indicare la stessa entità. Qui i nostri IRI sono
-    curati a mano, quindi dichiariamo esplicitamente che sono tutti distinti.
-    Senza questo assioma, la fusione ingenua non sarebbe inconsistente: il
-    reasoner dedurrebbe semplicemente Zeus owl:sameAs Urano!
+    Senza, nella fusione il reasoner dedurrebbe solo Zeus sameAs Urano.
     """
     g = Graph()
     full = tbox + shared
     char_classes = {c for c in full.transitive_subjects(RDFS.subClassOf, MYTH.Character)}
-    # Le figure romane sono escluse: sono "alias" delle greche, e nel grafo di
-    # Ovidio vengono identificate con esse tramite owl:sameAs.
+    # esclusi i nomi romani, che in Ovidio sono sameAs dei greci
     roman = set(shared.subjects(MYTH.romanCounterpart, None))
     chars = sorted({s for c in char_classes for s in shared.subjects(RDF.type, c)
                     if isinstance(s, URIRef) and s not in roman})
@@ -66,9 +49,7 @@ def build(verbose: bool = True) -> Dataset:
 
     tbox = load(ONTOLOGY_FILE)
     alignments = load(ALIGNMENTS_FILE)
-    # Collegamenti a Wikidata/DBpedia e coordinate (generati da mythograph.enrich).
-    # Restano FUORI dal ragionamento: owl:sameAs verso risorse esterne farebbe
-    # solo copiare ogni fatto anche sugli IRI di Wikidata, senza dedurre nulla.
+    # link a Wikidata/DBpedia: fuori dal ragionamento (copierebbe solo triple)
     links = load(LINKS_FILE) if LINKS_FILE.exists() else Graph()
     shared = load(SHARED_FILE)
     shared += unique_names(shared, tbox)
@@ -113,8 +94,7 @@ def build(verbose: bool = True) -> Dataset:
             meta.add((GRAPH[f"inferred/{name}/{level}"], MYTH.inferredFor, GRAPH[name]))
             meta.add((GRAPH[f"inferred/{name}/{level}"], MYTH.level, Literal(level)))
             view += g
-        # Vista completa della fonte (shared + asserite + inferite): rende le
-        # query SPARQL semplici, es.  GRAPH g:view/homer { ?x a myth:Demigod }
+        # vista completa della fonte, comoda per le query
         put(f"view/{name}", view)
         meta.add((GRAPH[f"view/{name}"], MYTH.viewOf, GRAPH[name]))
         meta.add((GRAPH[name], RDF.type, MYTH.SourceGraph))
@@ -123,7 +103,7 @@ def build(verbose: bool = True) -> Dataset:
         log(f"[{name}] asserite {len(src)} | rules +{len(r.rules)} | owlrl +{len(r.owlrl.inferred)} "
             f"(consistente={r.owlrl.consistent}) | {r.hermit.message} +{len(r.hermit.inferred)}")
 
-    # --- Fusione ingenua: tutte le fonti nello stesso grafo ------------------
+    # fusione ingenua di tutte le fonti
     merged = tbox + shared
     for src in sources.values():
         merged += src

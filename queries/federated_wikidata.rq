@@ -1,14 +1,6 @@
-# Query FEDERATA (lezione 8, SERVICE): unisce il grafo locale con Wikidata.
-#
-# - il blocco SERVICE viene inviato all'endpoint pubblico di Wikidata, che
-#   restituisce coordinate (P625) e pagina Wikipedia inglese delle entità;
-# - il pattern fuori dal SERVICE gira sul NOSTRO grafo: per ogni entità di
-#   Wikidata trova la nostra risorsa collegata con owl:sameAs (join locale).
-# I dati restano dove sono: nessun dump di Wikidata viene scaricato.
-#
-# {{WIKIDATA_IRIS}} viene sostituito da mythograph.enrich con l'elenco dei QID.
-# Metterlo DENTRO il SERVICE fa partire un'unica richiesta: altrimenti rdflib
-# chiamerebbe Wikidata una volta per ogni risorsa.
+# Query federata: coordinate e pagina Wikipedia da Wikidata (SERVICE),
+# collegate alle nostre risorse tramite owl:sameAs.
+# {{WIKIDATA_IRIS}} viene sostituito da enrich.py; stare dentro il SERVICE evita una richiesta per risorsa.
 PREFIX owl:    <http://www.w3.org/2002/07/owl#>
 PREFIX wdt:    <http://www.wikidata.org/prop/direct/>
 PREFIX schema: <http://schema.org/>

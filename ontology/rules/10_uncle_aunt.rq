@@ -1,5 +1,4 @@
-# Zio e zia: come la regola hasUncle della lezione 8.
-# Il genere non si esprime in una catena OWL, serve una regola.
+# zio / zia a partire da hasParentSibling e dal genere
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>

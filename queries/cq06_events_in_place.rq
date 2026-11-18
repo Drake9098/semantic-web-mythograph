@@ -1,6 +1,5 @@
-# CQ6 — Quali eventi sono ambientati in un luogo o in un luogo che vi si trova? (default: Sicilia)
-# locatedIn è transitiva; un luogo mitico conta se la tradizione lo identifica
-# con un luogo reale (identifiedWith). Parametro: ?target.
+# CQ6 - Quali eventi sono ambientati in un luogo o in un luogo che vi si trova? (default: Sicilia)
+# locatedIn è transitiva; i luoghi mitici contano tramite identifiedWith.
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>

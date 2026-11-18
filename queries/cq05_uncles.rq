@@ -1,6 +1,5 @@
-# CQ5 — Chi sono gli zii e le zie di un personaggio? (default: Eracle)
-# hasParentSibling viene da una catena OWL 2 (hasParent ∘ hasSibling),
-# zio/zia da una regola CONSTRUCT che aggiunge il genere.
+# CQ5 - Chi sono gli zii e le zie di un personaggio? (default: Eracle)
+# Catena hasParent + hasSibling, poi il genere distingue zio e zia.
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>

@@ -1,15 +1,6 @@
-"""Ragionamento su tre livelli.
+"""Ragionamento: regole CONSTRUCT, poi owlrl (OWL 2 RL), poi HermiT (OWL 2 DL).
 
-1. ``rules``   regole SPARQL CONSTRUCT (ontology/rules/*.rq), applicate fino a
-               punto fisso, nello stile degli esempi di lezione
-               (``g += g.query(CONSTRUCT ...)``).
-2. ``owlrl``   chiusura OWL 2 RL con la libreria owlrl.
-3. ``hermit``  reasoner OWL 2 DL HermiT (via owlready2, richiede Java):
-               classificazione completa e controllo di consistenza.
-
-Ogni livello restituisce solo le triple NUOVE e "interessanti" (vedi
-``keep_triple``), così la UI può mostrare da quale livello viene ogni
-inferenza.
+Ogni livello restituisce solo le triple nuove, così si sa chi ha dedotto cosa.
 """
 from __future__ import annotations
 
@@ -43,9 +34,7 @@ def keep_triple(s, p, o) -> bool:
     return str(p).startswith((str(MYTH), *EXTERNAL_NS))
 
 
-# --------------------------------------------------------------------------- #
-# Livello 1 — regole CONSTRUCT
-# --------------------------------------------------------------------------- #
+# --- livello 1: regole CONSTRUCT
 def load_rules() -> list[tuple[str, str]]:
     return [(f.stem, f.read_text(encoding="utf-8")) for f in sorted(RULES_DIR.glob("*.rq"))]
 
@@ -69,9 +58,7 @@ def apply_rules(graph: Graph, max_rounds: int = 20) -> Graph:
     return new
 
 
-# --------------------------------------------------------------------------- #
-# Livello 2 — OWL 2 RL (owlrl)
-# --------------------------------------------------------------------------- #
+# --- livello 2: OWL RL
 @dataclass
 class RLResult:
     inferred: Graph
@@ -88,8 +75,6 @@ def apply_owlrl(graph: Graph) -> RLResult:
     # owlrl scrive le violazioni come  [] a err:ErrorMessage ; err:error "..."
     err = URIRef("http://www.daml.org/2002/03/agents/agent-ont#error")
     errors = [str(o) for o in work.objects(None, err)]
-    # In OWL RL l'inconsistenza si manifesta come un individuo di tipo owl:Nothing
-    # o come violazioni segnalate da owlrl.
     nothing = [s for s in work.subjects(RDF.type, OWL.Nothing) if s != OWL.Nothing]
     errors += [f"{s} è istanza di owl:Nothing" for s in nothing]
     new = Graph()
@@ -99,9 +84,7 @@ def apply_owlrl(graph: Graph) -> RLResult:
     return RLResult(new, consistent=not errors, errors=errors)
 
 
-# --------------------------------------------------------------------------- #
-# Livello 3 — OWL 2 DL (HermiT via owlready2)
-# --------------------------------------------------------------------------- #
+# --- livello 3: HermiT
 @dataclass
 class DLResult:
     available: bool
@@ -166,7 +149,7 @@ def apply_hermit(graph: Graph) -> DLResult:
     from owlready2.base import OwlReadyInconsistentOntologyError
 
     owlready2.JAVA_EXE = find_java()
-    # Una JVM a 32 bit non riesce ad allocare i 2 GB di default di owlready2.
+    # la JVM a 32 bit non regge i 2 GB di default
     owlready2.reasoning.JAVA_MEMORY = 1000
 
     dl = _dl_input(graph)
@@ -186,8 +169,7 @@ def apply_hermit(graph: Graph) -> DLResult:
     new = Graph()
     for s, p, o in result.triples((None, None, None)):
         t = (s, p, o)
-        # owlready2 ritipizza i letterali (es. "vv. 1-10" → xsd:string): non
-        # sono inferenze vere, e HermiT qui non deduce nuovi valori di dati.
+        # owlready2 ritipizza i letterali: non sono inferenze
         if isinstance(o, Literal):
             continue
         if t not in dl and keep_triple(*t):

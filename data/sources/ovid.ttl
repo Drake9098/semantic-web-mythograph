@@ -1,20 +1,5 @@
-###############################################################################
-#  Fonte: OVIDIO, Metamorfosi (8 d.C.)
-#  Named graph: <https://example.org/mythograph/graph/ovid>
-#
-#  Ovidio racconta in latino i miti greci, con i nomi romani (Giove, Venere,
-#  Cupido…). Qui usiamo le risorse romane, e poi dichiariamo l'identificazione
-#  che Ovidio stesso fa: Venere = Afrodite, Giove = Zeus…
-#
-#  SCELTA DI MODELLAZIONE (conciliazione dei termini, lezione 10):
-#  - in shared.ttl le figure romane e greche sono collegate solo da
-#    myth:romanCounterpart (relazione debole, simmetrica);
-#  - QUI, e solo qui, si asserisce owl:sameAs. Il named graph limita la
-#    portata dell'identità: in Esiodo e Omero Giove e Zeus restano distinti.
-#    Dentro la versione di Ovidio il reasoner copia ogni fatto su Venere anche
-#    su Afrodite, così le query sulla figura greca trovano anche Ovidio.
-#  Riferimenti: libro in numeri romani + versi (es. "V 385-395").
-###############################################################################
+# Ovidio, Metamorfosi -> grafo g:ovid
+# Nomi romani. Il sameAs con i nomi greci sta solo qui, non in shared.ttl.
 
 @prefix :        <https://example.org/mythograph/resource/> .
 @prefix myth:    <https://example.org/mythograph/ontology#> .
@@ -23,7 +8,7 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-# ============================== IDENTIFICAZIONI (interpretatio romana) ======
+# identificazioni (interpretatio romana)
 :Jupiter    owl:sameAs :Zeus .
 :Neptune    owl:sameAs :Poseidon .
 :Ceres      owl:sameAs :Demeter .
@@ -36,7 +21,7 @@
 :Cupid      owl:sameAs :Eros .
 :Sol        owl:sameAs :Helios .
 
-# ============================== PASSI CITATI ================================
+# passi citati
 :Met_I_163_243   a myth:Passage ; myth:inWork :Metamorphoses ; myth:locus "I 163-243" ; rdfs:label "Metamorfosi, I 163-243"@it .
 :Met_I_452_567   a myth:Passage ; myth:inWork :Metamorphoses ; myth:locus "I 452-567" ; rdfs:label "Metamorfosi, I 452-567"@it .
 :Met_I_750_II_328 a myth:Passage ; myth:inWork :Metamorphoses ; myth:locus "I 750 - II 328" ; rdfs:label "Metamorfosi, I 750 - II 328"@it .
@@ -48,21 +33,21 @@
 :Met_XIII_738_897 a myth:Passage ; myth:inWork :Metamorphoses ; myth:locus "XIII 738-897" ; rdfs:label "Metamorfosi, XIII 738-897"@it .
 :Met_XIV_1_74    a myth:Passage ; myth:inWork :Metamorphoses ; myth:locus "XIV 1-74" ; rdfs:label "Metamorfosi, XIV 1-74"@it .
 
-# ============================== LICAONE (I 163-243) ==========================
+# licaone (i 163-243)
 :Lycaon myth:rulesOver :Arcadia ; myth:transformedInto :Wolf .
 :MetamorphosisOfLycaon a myth:Metamorphosis ;
     rdfs:label "Giove trasforma Licaone in lupo"@it, "Jupiter turns Lycaon into a wolf"@en ;
     myth:hasAgent :Jupiter ; myth:hasPatient :Lycaon ; myth:setIn :Arcadia ;
     myth:attestedIn :Met_I_163_243 .
 
-# ============================== APOLLO E DAFNE (I 452-567) ===================
+# apollo e dafne (i 452-567)
 :Daphne myth:hasFather :Peneus ; myth:transformedInto :LaurelTree .
 :ApolloAndDaphne a myth:Metamorphosis ;
     rdfs:label "Dafne, inseguita da Apollo, diventa alloro"@it, "Daphne becomes a laurel"@en ;
     myth:hasAgent :Cupid ; myth:hasParticipant :Apollo ; myth:hasPatient :Daphne ;
     myth:attestedIn :Met_I_452_567 .
 
-# ============================== FETONTE (I 750 - II 328) =====================
+# fetonte (i 750 - ii 328)
 :Phaethon myth:hasFather :Sol ; myth:hasMother :Clymene .
 :Jupiter  myth:killed :Phaethon .                      # col fulmine (II 304-324)
 :FallOfPhaethon a myth:Event ;
@@ -70,17 +55,15 @@
     myth:hasAgent :Jupiter ; myth:hasPatient :Phaethon ; myth:hasParticipant :Sol ;
     myth:attestedIn :Met_I_750_II_328 .
 
-# ============================== VENERE, MARTE, VULCANO (IV 171-189) ==========
+# venere, marte, vulcano (iv 171-189)
 :Venus myth:hasSpouse :Vulcan .
 :VenusAndMars a myth:Event ;
     rdfs:label "Il Sole svela a Vulcano l'adulterio di Venere e Marte"@it, "Venus and Mars caught by Vulcan"@en ;
     myth:hasParticipant :Venus, :Mars, :Vulcan, :Sol ;
     myth:attestedIn :Met_IV_171_189 .
 
-# ============================== MEDUSA (IV 765-803) ==========================
-# Versione ovidiana: Medusa era una fanciulla bellissima; dopo che Nettuno la
-# violò nel tempio di Minerva, la dea le mutò i capelli in serpenti.
-# (In Esiodo è una Gorgone fin dalla nascita, figlia di Forco e Ceto.)
+# medusa (iv 765-803)
+# fanciulla trasformata da Minerva (in Esiodo è Gorgone dalla nascita)
 :MetamorphosisOfMedusa a myth:Metamorphosis ;
     rdfs:label "Minerva muta i capelli di Medusa in serpenti"@it, "Minerva transforms Medusa"@en ;
     myth:hasAgent :Minerva ; myth:hasPatient :Medusa ; myth:hasParticipant :Neptune ;
@@ -91,15 +74,14 @@
     myth:attestedIn :Met_IV_765_803 ;
     myth:versionNote "Per Ovidio Medusa nasce fanciulla e diventa mostro per punizione di Minerva; per Esiodo è Gorgone dalla nascita."@it .
 
-# ============================== TIFEO SOTTO LA SICILIA (V 346-358) ===========
-# La Sicilia (Trinacria) schiaccia il gigante: la destra sotto il Peloro, la
-# sinistra sotto il Pachino, le gambe sotto il Lilibeo, la testa sotto l'Etna.
+# tifeo sotto la sicilia (v 346-358)
+# Peloro, Pachino, Lilibeo, e l'Etna sulla testa
 :TyphonUnderEtna a myth:Event ;
     rdfs:label "Tifeo imprigionato sotto la Sicilia, con l'Etna sul capo"@it, "Typhoeus buried under Sicily"@en ;
     myth:hasPatient :Typhon ; myth:setIn :Etna ;
     myth:attestedIn :Met_V_346_358 .
 
-# ============================== IL RATTO DI PROSERPINA (V 359-571) ===========
+# il ratto di proserpina (v 359-571)
 :Cupid      myth:hasMother :Venus .                       # Venere lo chiama "figlio" (V 363-366)
 :Proserpina myth:hasFather :Jupiter ; myth:hasMother :Ceres .   # V 514-522
 :Dis        myth:hasSpouse :Proserpina .
@@ -122,12 +104,12 @@
     myth:setIn :Sicily ;
     myth:attestedIn :Met_V_438_571 .
 
-# Cupido figlio di Venere contro Eros primordiale senza genitori (Esiodo).
+# in conflitto con Esiodo (Eros senza genitori)
 :claim_ovid_cupid_mother a rdf:Statement ;
     rdf:subject :Cupid ; rdf:predicate myth:hasMother ; rdf:object :Venus ;
     myth:attestedIn :Met_V_359_395 .
 
-# ============================== ACI E GALATEA (XIII 738-897) =================
+# aci e galatea (xiii 738-897)
 :Acis    myth:hasFather :Faunus ; myth:hasMother :Symaethis ;    # XIII 750
          myth:transformedInto :AcisRiver .
 :Galatea myth:hasFather :Nereus .                                 # una Nereide
@@ -140,8 +122,8 @@
     myth:setIn :Etna ;
     myth:attestedIn :Met_XIII_738_897 .
 
-# ============================== SCILLA (XIV 1-74) ============================
-# Per Ovidio Scilla era una fanciulla, mutata in mostro da Circe per gelosia.
+# scilla (xiv 1-74)
+# fanciulla mutata in mostro da Circe
 :Circe myth:hasFather :Sol .
 :MetamorphosisOfScylla a myth:Metamorphosis ;
     rdfs:label "Circe trasforma Scilla in mostro"@it, "Circe transforms Scylla"@en ;

@@ -1,8 +1,5 @@
-# CQ1 — Chi sono i genitori di un personaggio secondo ciascuna fonte?
-# Si interroga la VISTA di ogni fonte (asserite + dedotte), così compare anche
-# Ovidio, che usa i nomi romani: nel suo grafo Venere owl:sameAs Afrodite, e il
-# reasoner copia i fatti di Venere su Afrodite. Il FILTER nasconde i doppioni
-# con il nome romano. Parametro: ?target (default res:Aphrodite)
+# CQ1 - Chi sono i genitori di un personaggio secondo ciascuna fonte?
+# Usa le viste per fonte, così include anche Ovidio (nomi romani); il FILTER toglie i doppioni romani.
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>

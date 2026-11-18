@@ -1,19 +1,10 @@
-"""Collegamento a Wikidata e DBpedia (linked data).
+"""Collega le risorse a Wikidata/DBpedia e scrive data/links.ttl.
 
-    python -m mythograph.enrich            # ricerca QID (usa la cache) + query federata
-    python -m mythograph.enrich --refresh  # rifà anche la ricerca dei QID
+    python -m mythograph.enrich [--refresh]
 
-Passo 1 — RICERCA. Per ogni personaggio, luogo, opera e autore cerca su Wikidata
-le entità con la stessa etichetta inglese (query SPARQL a blocchi) e sceglie il candidato la cui
-descrizione è coerente col tipo (es. "Greek goddess…" per una divinità). I
-risultati vanno in data/wikidata_cache.json, che si può correggere a mano;
-OVERRIDES fissa i casi ambigui. Nessun identificativo è inventato.
-
-Passo 2 — QUERY FEDERATA (lezione 8, parola chiave SERVICE). Una query SPARQL
-eseguita da rdflib sul NOSTRO grafo ("quali risorse hanno un sameAs verso
-Wikidata?") delega una parte all'endpoint pubblico di Wikidata ("dammi le
-coordinate e la pagina Wikipedia di queste entità"). Il risultato è salvato in
-data/links.ttl, così la build e l'interfaccia funzionano anche offline.
+1. cerca i QID per etichetta inglese (cache in data/wikidata_cache.json,
+   casi ambigui fissati in OVERRIDES);
+2. query federata (SERVICE) per coordinate e pagina Wikipedia.
 """
 from __future__ import annotations
 
@@ -32,8 +23,7 @@ from .namespaces import (DBR, GEO, LINKS_FILE, MYTH, ONTOLOGY_FILE, PREFIXES, QU
 USER_AGENT = "MythoGraph/0.1 (university Semantic Web course project)"
 ENDPOINT = "https://query.wikidata.org/sparql"
 
-# Parole che, nella descrizione inglese di Wikidata, rendono un candidato
-# coerente col tipo della nostra risorsa. Ogni parola trovata vale 1 punto.
+# parole chiave nella descrizione di Wikidata, per tipo di risorsa
 KEYWORDS = {
     "character": ["mytholog", "goddess", "god of", "god ", "deity", "titan", "nymph", "oceanid", "nereid",
                   "hero", "trojan", "cyclop", "monster", "primordial", "son of", "daughter of", "iliad",
@@ -47,16 +37,14 @@ KEYWORDS = {
     "work": ["poem", "epic", "compendium", "hesiod", "homer", "ovid", "myth"],
     "author": ["poet", "writer", "author", "mythograph"],
 }
-# Descrizioni da scartare: opere, fiction, omonimi moderni.
+# opere, fiction, omonimi
 EXCLUDE = ["tragedy", "play by", "opera by", "film", "novel", "album", "song", "fresco", "painting",
            "musical", "star trek", "dc universe", "marvel", "disney", "video game", "dungeons",
            "village in", "county", "genus", "species", "ship", "given name", "journal", "new york",
            "metope", "pelt", "asteroid", "moon of", "planet"]
-# Bonus/penalità: una figura greca preferisce "greek", una romana "roman".
 PREFER = {"character": ("greek", "roman"), "roman": ("roman", "greek")}
 
-# Etichetta inglese ESATTA da cercare su Wikidata quando diversa dalla nostra.
-# None = non collegare (nessuna entità corrispondente o troppo ambigua).
+# etichetta da cercare se diversa dalla nostra; None = non collegare
 SEARCH_TERMS: dict[str, str | None] = {
     "TartarusPlace": None, "Charis": None, "Symaethis": None, "AcisRiver": None,
     "LandOfCyclopes": None, "StraitOfScylla": None, "Underworld": None,
@@ -64,12 +52,10 @@ SEARCH_TERMS: dict[str, str | None] = {
     "Etna": "Mount Etna", "LakePergus": "Lake Pergusa", "Apollodorus": "Pseudo-Apollodorus",
     "Odyssey": "Odyssey", "Iliad": "Iliad", "MountOlympus": "Mount Olympus",
     "StraitOfMessina": "Strait of Messina",
-    # etichette inglesi usate da Wikidata (trascrizioni diverse dalle nostre)
     "Alcmene": "Alkmene", "Crius": "Kreios", "Cythera": "Kythira", "Erebus": "Erebos",
     "Hydra": "Hydra", "Bibliotheca": "Bibliotheca",
 }
-# QID fissati a mano dopo aver controllato la descrizione su Wikidata
-# (sovrascrivono la ricerca automatica).
+# QID controllati a mano
 OVERRIDES: dict[str, str | None] = {
     "Aglaea": "Q4439972",       # una delle Cariti (l'omonima figlia di Manteo è un'altra)
     "Briareus": "Q849647",      # uno dei Centimani
@@ -173,7 +159,7 @@ def lookup(refresh: bool = False) -> dict:
         best = None
         for qid, desc, links in candidates.get(term, []):
             sc = score(desc, kind)
-            # tra i candidati coerenti vince il più noto (più pagine Wikipedia collegate)
+            # a parità vince quello con più sitelinks
             key = (min(sc, 2), links)
             if sc > 0 and (best is None or key > best[0]):
                 best = (key, qid, desc)
@@ -186,8 +172,7 @@ def lookup(refresh: bool = False) -> dict:
 
 
 def _identify_rdflib_requests() -> None:
-    """rdflib invia le richieste SERVICE con User-Agent "rdflibForAnUser"; la
-    policy di Wikidata chiede di identificare il client. Sostituiamo l'header."""
+    """Wikidata vuole uno User-Agent che identifichi il client: rdflib non lo permette."""
     import rdflib.plugins.sparql.evaluate as ev
     if getattr(ev, "_mythograph_patched", False):
         return

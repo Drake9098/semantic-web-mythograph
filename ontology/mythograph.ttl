@@ -1,12 +1,5 @@
-###############################################################################
-#  MythoGraph — TBox (schema dell'ontologia)
-#
-#  Contiene SOLO la parte terminologica: classi, proprietà, assiomi.
-#  I fatti (ABox) stanno in data/shared.ttl e data/sources/*.ttl,
-#  uno per ogni fonte antica, caricati come named graph separati.
-#
-#  Ogni blocco è commentato con il concetto del corso che applica.
-###############################################################################
+# MythoGraph - schema (TBox): classi, proprietà, assiomi.
+# I fatti stanno in data/shared.ttl e in data/sources/ (un file per fonte).
 
 @prefix myth:    <https://example.org/mythograph/ontology#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -22,8 +15,7 @@
     dcterms:description "Ontologia delle genealogie e dei miti greci, con le fonti antiche (Esiodo, Omero, Apollodoro, Ovidio) modellate come named graph distinti."@it ;
     owl:versionInfo "0.1.0" .
 
-# Le proprietà "prese in prestito" da altri vocabolari vanno dichiarate,
-# altrimenti un reasoner OWL DL (HermiT) rifiuta l'ontologia.
+# dichiarazioni richieste da HermiT per le proprietà di altri vocabolari
 dcterms:creator a owl:ObjectProperty .
 dcterms:source  a owl:AnnotationProperty .
 dcterms:title   a owl:AnnotationProperty .
@@ -31,15 +23,13 @@ dcterms:description a owl:AnnotationProperty .
 dcterms:date    a owl:AnnotationProperty .
 skos:prefLabel  a owl:AnnotationProperty .
 
-###############################################################################
-#  1. GERARCHIA DELLE CLASSI  (RDFS: rdfs:subClassOf — lezioni 9-10)
-###############################################################################
+# ---------------------------------------------------------------- classi
 
 myth:Character a owl:Class ;
     rdfs:label "Personaggio"@it, "Character"@en ;
     rdfs:comment "Qualunque figura che agisce nel mito: divinità, mortali, creature."@it .
 
-# --- Divinità -----------------------------------------------------------------
+# divinità
 myth:Deity a owl:Class ; rdfs:subClassOf myth:Character ;
     rdfs:label "Divinità"@it, "Deity"@en, "θεός"@grc .
 
@@ -63,7 +53,7 @@ myth:Nymph a owl:Class ; rdfs:subClassOf myth:MinorDeity ;
 myth:Muse a owl:Class ; rdfs:subClassOf myth:MinorDeity ;
     rdfs:label "Musa"@it, "Muse"@en, "Μοῦσα"@grc .
 
-# --- Immortali e mortali -------------------------------------------------------
+# immortali / mortali
 myth:Immortal a owl:Class ; rdfs:subClassOf myth:Character ;
     rdfs:label "Immortale"@it, "Immortal"@en, "ἀθάνατος"@grc ;
     rdfs:comment "Esseri che non possono morire: le divinità, ma anche mostri come Tifone."@it .
@@ -79,7 +69,7 @@ myth:Human a owl:Class ; rdfs:subClassOf myth:Mortal ;
 myth:Ruler a owl:Class ; rdfs:subClassOf myth:Human ;
     rdfs:label "Sovrano"@it, "Ruler"@en .
 
-# --- Creature -----------------------------------------------------------------
+# creature
 myth:Creature a owl:Class ; rdfs:subClassOf myth:Character ;
     rdfs:label "Creatura"@it, "Creature"@en .
 
@@ -89,13 +79,13 @@ myth:Monster a owl:Class ; rdfs:subClassOf myth:Creature ;
 myth:Cyclops a owl:Class ; rdfs:subClassOf myth:Creature ;
     rdfs:label "Ciclope"@it, "Cyclops"@en, "Κύκλωψ"@grc .
 
-# --- Genere (serve a rdfs:range per classificare, vedi hasFather/hasMother) --
+# genere (usato dal range di hasFather / hasMother)
 myth:Male a owl:Class ; rdfs:subClassOf myth:Character ;
     rdfs:label "Maschile"@it, "Male"@en .
 myth:Female a owl:Class ; rdfs:subClassOf myth:Character ;
     rdfs:label "Femminile"@it, "Female"@en .
 
-# --- Eventi (allineati a CIDOC CRM E5 Event in alignments.ttl) --------------
+# eventi
 myth:Event a owl:Class ;
     rdfs:label "Evento mitico"@it, "Mythical event"@en .
 
@@ -114,7 +104,7 @@ myth:Birth a owl:Class ; rdfs:subClassOf myth:Event ;
 myth:Metamorphosis a owl:Class ; rdfs:subClassOf myth:Event ;
     rdfs:label "Metamorfosi"@it, "Metamorphosis"@en .
 
-# --- Luoghi -------------------------------------------------------------------
+# luoghi
 myth:Place a owl:Class ;
     rdfs:label "Luogo"@it, "Place"@en .
 
@@ -126,7 +116,7 @@ myth:MythicalPlace a owl:Class ; rdfs:subClassOf myth:Place ;
     rdfs:label "Luogo mitico"@it, "Mythical place"@en ;
     rdfs:comment "Luogo che esiste solo nel racconto (Tartaro, Ade…)."@it .
 
-# --- Fonti --------------------------------------------------------------------
+# fonti
 myth:LiteraryWork a owl:Class ;
     rdfs:label "Opera letteraria"@it, "Literary work"@en .
 
@@ -137,24 +127,16 @@ myth:Passage a owl:Class ;
 myth:Author a owl:Class ;
     rdfs:label "Autore antico"@it, "Ancient author"@en .
 
-# --- Ambiti di competenza delle divinità (SKOS) -------------------------------
+# ambiti delle divinità
 myth:Domain a owl:Class ; rdfs:subClassOf skos:Concept ;
     rdfs:label "Ambito"@it, "Domain"@en ;
     rdfs:comment "Ambito di competenza di una divinità (cielo, mare, oltretomba…)."@it .
 skos:Concept a owl:Class .
 
-###############################################################################
-#  2. DISGIUNZIONI  (OWL: owl:disjointWith / owl:AllDisjointClasses)
-#     Servono al reasoner per trovare contraddizioni.
-###############################################################################
-
-# Nessuno è contemporaneamente immortale e mortale
-# (quindi nemmeno divinità e mortale, perché Deity ⊑ Immortal).
+# ----------------------------------------------------------- disgiunzioni
 myth:Immortal owl:disjointWith myth:Mortal .
 
-# Assioma di COPERTURA: ogni personaggio è immortale O mortale.
-# Insieme alla disgiunzione forma una partizione. È un'unione nella parte
-# destra di un assioma: NON esprimibile in OWL 2 RL, serve un reasoner DL.
+# copertura: ogni personaggio è immortale o mortale (serve HermiT, non RL)
 myth:Character rdfs:subClassOf [ a owl:Class ; owl:unionOf ( myth:Immortal myth:Mortal ) ] .
 
 myth:Male owl:disjointWith myth:Female .
@@ -164,28 +146,20 @@ myth:RealPlace owl:disjointWith myth:MythicalPlace .
 [] a owl:AllDisjointClasses ;
    owl:members ( myth:Character myth:Event myth:Place myth:LiteraryWork myth:Passage myth:Author myth:Domain ) .
 
-###############################################################################
-#  3. PROPRIETÀ DI PARENTELA
-#     rdfs:subPropertyOf, rdfs:domain/range, owl:inverseOf,
-#     owl:SymmetricProperty, owl:TransitiveProperty, owl:FunctionalProperty,
-#     owl:propertyChainAxiom
-###############################################################################
+# -------------------------------------------------------------- parentela
 
 myth:hasParent a owl:ObjectProperty ;
     rdfs:label "ha genitore"@it, "has parent"@en ;
     rdfs:domain myth:Character ; rdfs:range myth:Character ;
-    rdfs:subPropertyOf myth:hasAncestor ;          # ogni genitore è un antenato
-    owl:inverseOf myth:hasChild .                  # Zeus hasChild Eracle ⇒ Eracle hasParent Zeus
+    rdfs:subPropertyOf myth:hasAncestor ;
+    owl:inverseOf myth:hasChild .
 
 myth:hasChild a owl:ObjectProperty ;
     rdfs:label "ha figlio/a"@it, "has child"@en ;
     rdfs:domain myth:Character ; rdfs:range myth:Character .
 
-# hasFather e hasMother sono sottoproprietà di hasParent (lezione 9).
-# Il loro rdfs:range classifica automaticamente il genere (lezione 10, esempio navi).
-# Sono FUNZIONALI: in una stessa versione del mito si ha al più un padre e una madre.
-# È proprio questo vincolo che fa esplodere la fusione ingenua delle fonti
-# (Afrodite: padre Urano per Esiodo, Zeus per Omero).
+# funzionali: un solo padre e una sola madre per fonte.
+# è questo che rende inconsistente la fusione delle fonti (Afrodite).
 myth:hasFather a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:label "ha padre"@it, "has father"@en ;
     rdfs:subPropertyOf myth:hasParent ;
@@ -208,16 +182,13 @@ myth:hasSpouse a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:label "ha coniuge"@it, "has spouse"@en ;
     rdfs:domain myth:Character ; rdfs:range myth:Character .
 
-# Fratelli: simmetrica. NON la definiamo come catena hasParent ∘ hasChild,
-# perché la catena renderebbe ognuno fratello di se stesso.
-# La deduciamo con una regola CONSTRUCT con FILTER(?x != ?y) (ontology/rules/).
+# niente catena hasParent o hasChild (ognuno sarebbe fratello di sé):
+# la calcola la regola rules/08_sibling.rq
 myth:hasSibling a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:label "ha fratello/sorella"@it, "has sibling"@en ;
     rdfs:domain myth:Character ; rdfs:range myth:Character .
 
-# Zii: catena di proprietà OWL 2 (hasParent ∘ hasSibling ⊑ hasParentSibling).
-# Il genere (zio vs zia) NON è esprimibile in una catena: lo aggiunge una regola
-# CONSTRUCT (hasUncle / hasAunt), come nell'esempio hasUncle della lezione 8.
+# zii: catena hasParent + hasSibling; zio/zia li distingue rules/10_uncle_aunt.rq
 myth:hasParentSibling a owl:ObjectProperty ;
     rdfs:label "ha zio/zia"@it, "has parent's sibling"@en ;
     owl:propertyChainAxiom ( myth:hasParent myth:hasSibling ) .
@@ -230,9 +201,7 @@ myth:hasAunt a owl:ObjectProperty ;
     rdfs:label "ha zia"@it, "has aunt"@en ;
     rdfs:subPropertyOf myth:hasParentSibling .
 
-###############################################################################
-#  4. ALTRE RELAZIONI TRA PERSONAGGI, EVENTI, LUOGHI
-###############################################################################
+# ------------------------------------------------ eventi, luoghi, altro
 
 myth:killed a owl:ObjectProperty ;
     rdfs:label "uccise"@it, "killed"@en ;
@@ -242,8 +211,6 @@ myth:killed a owl:ObjectProperty ;
 myth:killedBy a owl:ObjectProperty ;
     rdfs:label "ucciso da"@it, "killed by"@en .
 
-# Eventi: chi partecipa. hasAgent (chi agisce) e hasPatient (chi subisce)
-# sono sottoproprietà di hasParticipant.
 myth:hasParticipant a owl:ObjectProperty ;
     rdfs:label "ha partecipante"@it, "has participant"@en ;
     rdfs:domain myth:Event ; rdfs:range myth:Character ;
@@ -268,8 +235,7 @@ myth:locatedIn a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:label "si trova in"@it, "located in"@en ;
     rdfs:domain myth:Place ; rdfs:range myth:Place .
 
-# Un luogo mitico può essere identificato dalla tradizione con un luogo reale
-# (es. Trinacria omerica → Sicilia). Non è sameAs: è un'identificazione erudita.
+# es. Trinacria -> Sicilia (identificazione della tradizione, non sameAs)
 myth:identifiedWith a owl:ObjectProperty ;
     rdfs:label "identificato con"@it, "identified with"@en ;
     rdfs:domain myth:MythicalPlace ; rdfs:range myth:RealPlace .
@@ -282,7 +248,6 @@ myth:bornIn a owl:ObjectProperty ;
     rdfs:label "nato/a a"@it, "born in"@en ;
     rdfs:domain myth:Character ; rdfs:range myth:Place .
 
-# Usare un domain per classificare (lezione 10): chi "governa un regno" è un sovrano.
 myth:rulesOver a owl:ObjectProperty ;
     rdfs:label "regna su"@it, "rules over"@en ;
     rdfs:domain myth:Character .
@@ -295,21 +260,16 @@ myth:transformedInto a owl:ObjectProperty ;
     rdfs:label "trasformato in"@it, "transformed into"@en ;
     rdfs:domain myth:Character .
 
-# Forme naturali in cui un personaggio viene trasformato (Metamorfosi).
 myth:NaturalForm a owl:Class ;
     rdfs:label "Forma naturale"@it, "Natural form"@en ;
     rdfs:comment "Animale, pianta o elemento naturale in cui un personaggio viene trasformato (lupo, alloro…)."@it .
 
-# Corrispettivo romano: simmetrica, e volutamente NON owl:sameAs.
-# Zeus e Giove non sono "la stessa risorsa": hanno culti, miti e attributi
-# in parte diversi; sameAs fonderebbe tutte le loro proprietà.
+# volutamente non sameAs (fonderebbe tutto); sameAs solo nel grafo di Ovidio
 myth:romanCounterpart a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:label "corrispettivo romano"@it, "Roman counterpart"@en ;
     rdfs:domain myth:Deity ; rdfs:range myth:Deity .
 
-###############################################################################
-#  5. FONTI E ATTESTAZIONI  (Dublin Core, reificazione — lezioni 4, 11)
-###############################################################################
+# ------------------------------------------------------- fonti e passi
 
 myth:attestedIn a owl:ObjectProperty ;
     rdfs:label "attestato in"@it, "attested in"@en ;
@@ -336,51 +296,41 @@ myth:sourceGraph a owl:AnnotationProperty ;
 myth:versionNote a owl:AnnotationProperty ;
     rdfs:label "nota sulla versione"@it .
 
-# Nota: le affermazioni reificate (rdf:Statement, rdf:subject/predicate/object)
-# sono metadati di provenienza. Sono interrogabili in SPARQL ma vengono escluse
-# dall'input del reasoner DL, perché il vocabolario rdf: è riservato in OWL 2 DL.
+# le rdf:Statement non vengono passate a HermiT (vocabolario rdf: riservato in DL)
 
-###############################################################################
-#  6. RESTRIZIONI E CLASSI DEFINITE  (OWL 2 — programma parte II)
-###############################################################################
+# ---------------------------------------- restrizioni e classi definite
 
-# --- Cardinalità: al massimo due genitori (in una stessa versione) ----------
+# max 2 genitori
 myth:Character rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty myth:hasParent ;
     owl:maxCardinality "2"^^xsd:nonNegativeInteger ] .
 
-# --- Gli immortali non possono essere uccisi ----------------------------------
-# Con la copertura Immortal ⊔ Mortal, HermiT ragiona PER CASI:
-#   l'Idra è stata uccisa ⇒ non può essere Immortal ⇒ deve essere Mortal.
-# Nessuno ha scritto "l'Idra è mortale": lo deduce solo il reasoner DL.
+# gli immortali non possono essere uccisi (+ copertura: chi è ucciso è mortale)
 myth:Immortal rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty myth:killedBy ;
     owl:maxCardinality "0"^^xsd:nonNegativeInteger ] .
 
-# --- hasValue: ogni olimpico risiede sull'Olimpo ----------------------------
+# gli olimpici stanno sull'Olimpo
 myth:Olympian rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty myth:residesIn ;
     owl:hasValue <https://example.org/mythograph/resource/MountOlympus> ] .
 
-# --- someValuesFrom: ogni passo appartiene a un'opera ----------------------
+# ogni passo appartiene a un'opera
 myth:Passage rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty myth:inWork ;
     owl:someValuesFrom myth:LiteraryWork ] .
 
-# --- allValuesFrom: i genitori di un essere umano sono personaggi ----------
-#     antropomorfi (divinità o umani), mai mostri.
+# i genitori di un umano sono dei o umani
 myth:Human rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty myth:hasParent ;
     owl:allValuesFrom [ a owl:Class ; owl:unionOf ( myth:Deity myth:Human ) ] ] .
 
-# --- CLASSE DEFINITA: semidio --------------------------------------------------
-# Semidio ≡ Umano ⊓ ∃hasParent.Divinità
-# Nessun individuo viene dichiarato semidio: è il reasoner a classificarli.
+# semidio = umano con almeno un genitore divino (nessuno è dichiarato tale)
 myth:Demigod a owl:Class ;
     rdfs:label "Semidio"@it, "Demigod"@en, "ἡμίθεος"@grc ;
     owl:equivalentClass [
@@ -390,8 +340,7 @@ myth:Demigod a owl:Class ;
             [ a owl:Restriction ; owl:onProperty myth:hasParent ; owl:someValuesFrom myth:Deity ]
         ) ] .
 
-# --- CLASSE DEFINITA: eroe (con owl:unionOf) ---------------------------------
-# Eroe ≡ Umano ⊓ ∃participatesIn.(ImpresaEroica ⊔ Guerra)
+# eroe = umano che partecipa a un'impresa o a una guerra
 myth:Hero a owl:Class ;
     rdfs:label "Eroe"@it, "Hero"@en, "ἥρως"@grc ;
     owl:equivalentClass [
@@ -402,7 +351,7 @@ myth:Hero a owl:Class ;
               owl:someValuesFrom [ a owl:Class ; owl:unionOf ( myth:HeroicDeed myth:War ) ] ]
         ) ] .
 
-# --- CLASSE DEFINITA: sovrano (oltre al domain di rulesOver) ----------------
+# sovrano = umano che regna su un luogo
 myth:Ruler owl:equivalentClass [
     a owl:Class ;
     owl:intersectionOf (

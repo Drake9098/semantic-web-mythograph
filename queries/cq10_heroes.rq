@@ -1,5 +1,5 @@
-# CQ10 — Quali personaggi sono eroi e a quali imprese hanno partecipato?
-# Hero ≡ Human ⊓ ∃participatesIn.(HeroicDeed ⊔ War)  (owl:unionOf)
+# CQ10 - Quali personaggi sono eroi e a quali imprese hanno partecipato?
+# Hero = umano che partecipa a un'impresa o a una guerra (classe definita).
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>

@@ -1,9 +1,4 @@
-###############################################################################
-#  Fonte: OMERO, Iliade e Odissea (VIII sec. a.C.)
-#  Named graph: <https://example.org/mythograph/graph/homer>
-#
-#  Riferimenti: libro in numeri romani + versi (es. "Il. V 370-430").
-###############################################################################
+# Omero, Iliade e Odissea -> grafo g:homer
 
 @prefix :        <https://example.org/mythograph/resource/> .
 @prefix myth:    <https://example.org/mythograph/ontology#> .
@@ -12,7 +7,7 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-# ============================== PASSI CITATI ================================
+# passi citati
 :Il_I_1_10      a myth:Passage ; myth:inWork :Iliad ; myth:locus "I 1-10" ; rdfs:label "Iliade, I 1-10"@it .
 :Il_I_351_360   a myth:Passage ; myth:inWork :Iliad ; myth:locus "I 351-360" ; rdfs:label "Iliade, I 351-360"@it .
 :Il_I_571_594   a myth:Passage ; myth:inWork :Iliad ; myth:locus "I 571-594" ; rdfs:label "Iliade, I 571-594"@it .
@@ -40,23 +35,21 @@
 :Od_XII_260_419 a myth:Passage ; myth:inWork :Odyssey ; myth:locus "XII 260-419" ; rdfs:label "Odissea, XII 260-419"@it .
 :Od_XIV_435     a myth:Passage ; myth:inWork :Odyssey ; myth:locus "XIV 435" ; rdfs:label "Odissea, XIV 435"@it .
 
-# ============================== I FIGLI DI CRONO E REA =======================
-# "Siamo tre fratelli, figli di Crono, che Rea partorì: Zeus, io e Ade"
-# (parla Poseidone, Il. XV 187-193). Spartizione del cosmo in cielo/mare/inferi.
+# i figli di crono e rea
+# Il. XV 187-193: Zeus, Poseidone e Ade figli di Crono e Rea; cielo, mare, inferi
 :Zeus     myth:hasFather :Cronus ; myth:hasMother :Rhea ; myth:hasDomain :Sky .
 :Poseidon myth:hasFather :Cronus ; myth:hasMother :Rhea ; myth:hasDomain :Sea .
 :Hades    myth:hasFather :Cronus ; myth:hasMother :Rhea ; myth:hasDomain :UnderworldRealm ;
           myth:rulesOver :Underworld .
 :Hera     myth:hasFather :Cronus ; myth:hasMother :Rhea .        # Il. IV 59; XIV 203-204
 
-# Cosmogonia alternativa: in Omero è Oceano l'origine degli dèi (Il. XIV 201).
+# Il. XIV 201: per Omero l'origine degli dei è Oceano
 :Oceanus myth:versionNote "Per Omero, Oceano è «origine degli dèi» e Teti (titanide) la «madre» (Il. XIV 201): una cosmogonia diversa da quella di Esiodo, che parte da Caos."@it .
 
 :Zeus myth:hasSpouse :Hera .                                     # "sorella e sposa", Il. XVI 432
 
-# ============================== AFRODITE (Il. V 370-430) =====================
-# Versione omerica: Afrodite è figlia di ZEUS e di DIONE.
-# In contraddizione con Esiodo (padre Urano, nessuna madre).
+# afrodite (il. v 370-430)
+# figlia di Zeus e Dione (in Esiodo: Urano, nessuna madre)
 :Aphrodite myth:hasFather :Zeus ; myth:hasMother :Dione .
 
 :claim_hom_aphrodite_father a rdf:Statement ;
@@ -66,9 +59,8 @@
     rdf:subject :Aphrodite ; rdf:predicate myth:hasMother ; rdf:object :Dione ;
     myth:attestedIn :Il_V_370_430 .
 
-# ============================== EFESTO =======================================
-# In Omero Efesto ha un padre, Zeus (Il. I 571-594): Zeus lo scaglia
-# dall'Olimpo ed egli cade a Lemno. In Esiodo invece non ha padre.
+# efesto
+# qui ha un padre, Zeus, che lo scaglia a Lemno (in Esiodo nessun padre)
 :Hephaestus myth:hasFather :Zeus ; myth:hasMother :Hera .
 :claim_hom_hephaestus_father a rdf:Statement ;
     rdf:subject :Hephaestus ; rdf:predicate myth:hasFather ; rdf:object :Zeus ;
@@ -79,11 +71,10 @@
     myth:hasAgent :Zeus ; myth:hasPatient :Hephaestus ; myth:setIn :Lemnos ;
     myth:attestedIn :Il_I_571_594 .
 
-# Anche dentro Omero le versioni divergono: nell'Iliade la sposa di Efesto è
-# Charis (XVIII 382-383), nell'Odissea è Afrodite (VIII 266-366).
+# sposa: Charis nell'Iliade (XVIII 382-383), Afrodite nell'Odissea (VIII 266-366)
 :Hephaestus myth:hasSpouse :Charis, :Aphrodite .
 
-# ============================== ALTRI FIGLI DI ZEUS ==========================
+# altri figli di zeus
 :Athena   myth:hasFather :Zeus .                                 # Il. V 875-880 (Zeus la generò da solo)
 :Apollo   myth:hasFather :Zeus ; myth:hasMother :Leto .          # Il. I 9
 :Artemis  myth:hasFather :Zeus ; myth:hasMother :Leto .          # Il. XXI 497-506
@@ -103,18 +94,17 @@
     myth:hasParticipant :Heracles, :Hera, :Alcmene ; myth:setIn :Thebes ;
     myth:attestedIn :Il_XIX_95_133 .
 
-# Od. XI 601-604: Odisseo vede l'ombra di Eracle nell'Ade, mentre Eracle
-# "in persona" siede tra gli dèi, sposo di Ebe.
+# Od. XI 601-604: Eracle tra gli dei, sposo di Ebe
 :Heracles myth:hasSpouse :Hebe .
 
-# ============================== ACHILLE ======================================
+# achille
 :Achilles myth:hasFather :Peleus ; myth:hasMother :Thetis .      # Il. I 1; I 351-360
 :Thetis   myth:hasFather :Nereus .                               # Il. I 358 ("il vecchio padre")
 :Peleus   myth:hasFather :Aeacus ; myth:hasSpouse :Thetis .     # Il. XXI 189
 :Aeacus   myth:hasFather :Zeus .                                 # Il. XXI 189
 :Patroclus myth:hasFather :Menoetius .
 
-# ============================== TROIA ========================================
+# troia
 :Priam  myth:hasSpouse :Hecuba ; myth:rulesOver :Troy .
 :Hector myth:hasFather :Priam ; myth:hasMother :Hecuba ; myth:hasSpouse :Andromache .
 :Paris  myth:hasFather :Priam .
@@ -135,11 +125,11 @@
     rdf:subject :Achilles ; rdf:predicate myth:killed ; rdf:object :Hector ;
     myth:attestedIn :Il_XXII_326_363 .
 
-# ============================== ODISSEA ======================================
+# odissea
 :Odysseus  myth:hasFather :Laertes ; myth:hasSpouse :Penelope ; myth:rulesOver :Ithaca .
 :Telemachus myth:hasFather :Odysseus ; myth:hasMother :Penelope .
 
-# Polifemo: figlio di Poseidone e della ninfa Toosa, figlia di Forco (Od. I 68-73).
+# Od. I 68-73
 :Polyphemus myth:hasFather :Poseidon ; myth:hasMother :Thoosa .
 :Thoosa     myth:hasFather :Phorcys .
 
