@@ -114,6 +114,60 @@ Il nucleo da non saltare: **Afrodite → Fonti → Eracle**.
 - **Domain e range validano?** No, deducono: chi è padre di qualcuno viene classificato maschio.
 - **Mondo aperto?** Efesto in Esiodo non ha padre: l'ho dovuto scrivere, altrimenti sarebbe solo "sconosciuto".
 
+## Se mi chiede una query live
+
+Scheda **SPARQL**. L'editor parte già con la query 1, quindi basta premere Esegui.
+Prefissi da avere in cima (sono già nell'editor):
+
+```sparql
+PREFIX myth: <https://example.org/mythograph/ontology#>
+PREFIX res:  <https://example.org/mythograph/resource/>
+PREFIX g:    <https://example.org/mythograph/graph/>
+```
+
+**1. Figli di Zeus, fonte per fonte** (già pronta). Poi la cambio dal vivo:
+`res:Zeus` → `res:Hera` e `hasFather` → `hasMother` (figli di Era).
+```sparql
+SELECT ?fonte ?figlio WHERE {
+  GRAPH ?fonte { ?figlio myth:hasFather res:Zeus }
+  GRAPH g:meta { ?fonte a myth:SourceGraph }
+}
+```
+> Cerco chi ha come padre Zeus dentro ogni grafo-fonte; g:meta mi serve solo per
+> prendere i grafi delle fonti.
+
+**2. Chi ha ucciso chi, secondo Omero**
+```sparql
+SELECT ?uccisore ?vittima WHERE {
+  GRAPH g:homer { ?uccisore myth:killed ?vittima }
+}
+```
+> Achille-Ettore, Ettore-Patroclo, Patroclo-Sarpedonte.
+
+**3. Asserito o dedotto? (la più efficace)** Due ASK, una dopo l'altra:
+```sparql
+ASK { GRAPH g:hesiod { res:Heracles a myth:Demigod } }
+```
+→ **false**: Esiodo non lo scrive.
+```sparql
+ASK { GRAPH <https://example.org/mythograph/graph/view/hesiod> { res:Heracles a myth:Demigod } }
+```
+→ **true**: nella vista con le deduzioni sì. Lo ha dedotto il reasoner.
+
+**4. Antenati di Achille secondo Omero**
+```sparql
+SELECT ?antenato WHERE {
+  GRAPH <https://example.org/mythograph/graph/view/homer> { res:Achilles myth:hasAncestor ?antenato }
+}
+```
+> Peleo, Teti, Eaco, Nereo, Zeus, Crono, Rea: scritti sono solo i genitori.
+
+**Da ricordare**
+- Gli identificativi sono in inglese: `res:Heracles`, `res:Achilles`, `res:Aphrodite`, `res:Hera`.
+- Proprietà utili: `hasFather`, `hasMother`, `hasParent`, `hasAncestor`, `hasSpouse`, `killed`, `setIn`.
+- Classi utili: `Deity`, `Olympian`, `Human`, `Demigod`, `Hero`, `Mortal`.
+- `g:view/hesiod` **non** si può abbreviare (la `/` non è ammessa): va l'IRI completo.
+
 ## Consigli
 
 - Parlo alla prof, non allo schermo: clicco, mi giro, spiego.

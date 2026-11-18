@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MythoGraph</title>
-  <link rel="stylesheet" href="/static/style.css?v=4">
+  <link rel="stylesheet" href="/static/style.css?v=5">
   <script src="/static/vendor/cytoscape.min.js"></script>
   <link rel="stylesheet" href="/static/vendor/leaflet.css">
   <script src="/static/vendor/leaflet.js"></script>
@@ -87,9 +87,9 @@
       <div class="tab-body" id="tab-conflicts" hidden></div>
       <div class="tab-body" id="tab-cq" hidden></div>
       <div class="tab-body" id="tab-sparql" hidden>
-        <p class="hint">Query di sola lettura sul dataset. I named graph sono
-          <code>g:hesiod</code>, <code>g:homer</code> (asserite), <code>g:view/…</code> (asserite + dedotte),
-          <code>g:inferred/…/rules|owlrl|hermit</code>, <code>g:ontology</code>, <code>g:shared</code>, <code>g:meta</code>.</p>
+        <p class="hint">Query di sola lettura. Grafi: <code>g:hesiod</code>, <code>g:homer</code>, <code>g:ovid</code> (asserite),
+          <code>g:shared</code>, <code>g:ontology</code>, <code>g:meta</code>. Per le viste con le deduzioni serve l'IRI completo:
+          <code>&lt;https://example.org/mythograph/graph/view/hesiod&gt;</code> (idem <code>homer</code>, <code>ovid</code>).</p>
         <textarea id="sparql-text" spellcheck="false"></textarea>
         <div class="row"><button id="sparql-run" class="primary">Esegui</button><span id="sparql-msg" class="muted"></span></div>
         <div id="sparql-out"></div>
@@ -98,6 +98,6 @@
     </aside>
   </main>
 
-  <script src="/static/app.js?v=5"></script>
+  <script src="/static/app.js?v=6"></script>
 </body>
 </html>
