@@ -1,0 +1,24 @@
+# graph: work
+# Quali personaggi entrano nel grafo, primo passo: i protagonisti dei cicli
+# (tables/cycles.ttl) e chi è legato a loro da genitori, coniugi, uccisioni
+# o figli noti (almeno 20 voci di Wikipedia: Eracle ha decine di figli minori).
+CONSTRUCT { ?seed map:inScope true . ?x map:inScope true . }
+WHERE {
+  ?seed map:seed true ;
+        map:extracted true .
+  OPTIONAL {
+    {
+      # padre, madre, coniuge, chi lo ha ucciso
+      ?seed p:P22/ps:P22 | p:P25/ps:P25 | p:P26/ps:P26 | p:P157/ps:P157 ?x .
+    } UNION {
+      # coniuge dichiarato dall'altra parte, chi è stato ucciso da lui
+      ?x p:P26/ps:P26 | p:P157/ps:P157 ?seed .
+    } UNION {
+      # figli: dichiarati dal genitore o dal figlio
+      ?seed p:P40/ps:P40 | ^(ps:P22)/^(p:P22) | ^(ps:P25)/^(p:P25) ?x .
+      ?x wikibase:sitelinks ?n .
+      FILTER(?n >= 20)
+    }
+    ?x map:extracted true .
+  }
+}

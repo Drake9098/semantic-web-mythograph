@@ -1,0 +1,17 @@
+# CQ12 - Quali fonti antiche si contraddicono da sole?
+# Esempio: Esiodo dà alle Moire come madre sia la Notte sia Temi.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+PREFIX res:  <https://example.org/mythograph/resource/>
+PREFIX g:    <https://example.org/mythograph/graph/>
+
+SELECT ?fonte ?personaggio ?proprieta (GROUP_CONCAT(STRAFTER(STR(?v), "resource/"); separator=" / ") AS ?valori) WHERE {
+  GRAPH g:meta {
+    ?c a myth:InternalConflict ; myth:inGraph ?fonte ; myth:about ?personaggio ;
+       myth:onProperty ?proprieta ; myth:conflictingValue ?v .
+  }
+}
+GROUP BY ?c ?fonte ?personaggio ?proprieta
+ORDER BY ?fonte ?personaggio

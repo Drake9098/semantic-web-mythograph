@@ -1,0 +1,17 @@
+# Generato da `python -m mythograph.mapping` (affermazioni del grafo g:hesiod). Non modificare a mano.
+@prefix myth: <https://example.org/mythograph/ontology#> .
+@prefix res: <https://example.org/mythograph/resource/> .
+
+res:Dione myth:hasFather res:Oceanus ;
+    myth:hasMother res:Tethys .
+
+res:Hecate myth:hasMother res:Asteria .
+
+res:Nemesis myth:hasMother res:Nyx .
+
+res:Nereus myth:hasFather res:Pontus ;
+    myth:hasMother res:Gaia .
+
+res:Uranus myth:hasMother res:Gaia,
+        res:Hemera .
+

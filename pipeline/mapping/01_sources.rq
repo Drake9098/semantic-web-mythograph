@@ -1,0 +1,7 @@
+# graph: work
+# Ogni opera citata come fonte va nel grafo del suo autore (tables/sources.ttl).
+CONSTRUCT { ?work map:inGraph ?graph . }
+WHERE {
+  ?work wdt:P50 ?author .
+  ?author map:graph ?graph .
+}

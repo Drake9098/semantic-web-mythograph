@@ -1,0 +1,18 @@
+# CQ6 - Chi ha regnato su un luogo? (default: Micene)
+# rulesOver non è mai scritto: catena holdsTitle + titleOver ("re di Micene" -> Micene).
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+PREFIX res:  <https://example.org/mythograph/resource/>
+PREFIX g:    <https://example.org/mythograph/graph/>
+
+SELECT DISTINCT ?sovrano ?titolo WHERE {
+  GRAPH g:meta { ?vista myth:viewOf g:wikidata }
+  GRAPH ?vista {
+    ?sovrano myth:rulesOver ?target ;
+             myth:holdsTitle ?titolo .
+    ?titolo myth:titleOver ?target .
+  }
+}
+ORDER BY ?sovrano

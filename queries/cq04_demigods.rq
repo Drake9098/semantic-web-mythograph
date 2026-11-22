@@ -1,10 +1,8 @@
-# CQ4 - Quali personaggi sono semidei, e perché?
-# Demigod è una classe definita: nessuno è dichiarato semidio, li classifica il reasoner.
+# CQ4 - Quali personaggi sono semidei, e chi è il genitore divino?
+# Semidio = mortale con un genitore divino (classe definita): lo classifica il reasoner.
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX myth: <https://example.org/mythograph/ontology#>
 PREFIX res:  <https://example.org/mythograph/resource/>
 PREFIX g:    <https://example.org/mythograph/graph/>

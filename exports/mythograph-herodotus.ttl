@@ -1,0 +1,906 @@
+# Generato da `python -m mythograph.build`. Da aprire in Protégé.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix myth: <https://example.org/mythograph/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix res: <https://example.org/mythograph/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+geo1:long a owl:DatatypeProperty ;
+    rdfs:label "longitude"@en,
+        "longitudine"@it ;
+    rdfs:range xsd:decimal .
+
+skos:definition a owl:AnnotationProperty .
+
+skos:example a owl:AnnotationProperty .
+
+<https://example.org/mythograph/data/herodotus> a owl:Ontology ;
+    rdfs:label "MythoGraph - Erodoto"@it ;
+    rdfs:comment "Generato dalla build: ontologia (core, regole SWRL, allineamenti) più gli individui di questo grafo. Avviare HermiT per vedere le deduzioni."@it .
+
+<https://example.org/mythograph/ontology> dcterms:description "Ontology of Greek mythological genealogies. Ancient sources disagree: each source is a separate named graph, and consistency constraints (one father, one mother) hold within a source, not across sources."@en,
+        "Ontologia delle genealogie della mitologia greca. Le fonti antiche si contraddicono: ogni fonte è un named graph separato, e i vincoli di coerenza (un solo padre, una sola madre) valgono dentro una fonte, non tra fonti diverse."@it ;
+    dcterms:title "MythoGraph"@en,
+        "MythoGraph"@it ;
+    rdfs:comment "Modulo core. I vincoli per singola fonte stanno in <https://example.org/mythograph/ontology/constraints>, le regole SWRL in <https://example.org/mythograph/ontology/rules>."@it ;
+    owl:versionIRI <https://example.org/mythograph/ontology/0.2.0> ;
+    owl:versionInfo "0.2.0" .
+
+myth:ConsanguineousSpouse a owl:Class ;
+    rdfs:label "Consanguineous spouse"@en,
+        "Sposo/a di un consanguineo"@it ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( myth:Character [ a owl:Restriction ;
+                        owl:onProperty myth:marriedRelative ;
+                        owl:someValuesFrom myth:Character ] ) ] ;
+    skos:definition "A character married to a sibling, an ancestor or a descendant."@en,
+        "Personaggio sposato con un fratello, una sorella, un antenato o un discendente."@it ;
+    skos:example "Zeus ed Era sono fratelli."@it .
+
+myth:Cyclops a owl:Class ;
+    rdfs:label "Cyclops"@en,
+        "Κύκλωψ"@grc,
+        "Ciclope"@it ;
+    rdfs:subClassOf myth:Creature ;
+    skos:definition "A one-eyed giant."@en,
+        "Gigante con un solo occhio."@it .
+
+myth:Deceased a owl:Class ;
+    rdfs:label "Deceased"@en,
+        "Defunto"@it ;
+    rdfs:subClassOf myth:Mortal ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf ( [ a owl:Restriction ;
+                        owl:onProperty myth:diedIn ;
+                        owl:someValuesFrom myth:Place ] [ a owl:Restriction ;
+                        owl:onProperty myth:mannerOfDeath ;
+                        owl:someValuesFrom myth:MannerOfDeath ] ) ] ;
+    skos:definition "A character whose place or manner of death is known."@en,
+        "Personaggio di cui si conosce il luogo o il modo della morte."@it .
+
+myth:Giant a owl:Class ;
+    rdfs:label "Giant"@en,
+        "Γίγας"@grc,
+        "Gigante"@it ;
+    rdfs:subClassOf myth:Creature ;
+    skos:definition "A son of Gaia who fought the gods."@en,
+        "Figlio di Gea che combatté contro gli dei."@it .
+
+myth:Gorgon a owl:Class ;
+    rdfs:label "Gorgon"@en,
+        "Γοργώ"@grc,
+        "Gorgone"@it ;
+    rdfs:subClassOf myth:Monster ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue res:Gorgon ;
+            owl:onProperty myth:memberOf ] ;
+    skos:definition "One of the Gorgons (Medusa, Stheno, Euryale)."@en,
+        "Una delle Gorgoni (Medusa, Steno, Euriale)."@it .
+
+myth:Hero a owl:Class ;
+    rdfs:label "Hero"@en,
+        "ἥρως"@grc,
+        "Eroe"@it ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( myth:Mortal [ a owl:Restriction ;
+                        owl:onProperty myth:killed ;
+                        owl:someValuesFrom myth:Monster ] ) ] ;
+    skos:definition "A mortal who killed a monster."@en,
+        "Mortale che ha ucciso un mostro."@it ;
+    skos:example "Perseo, che uccise Medusa."@it .
+
+myth:HomericCharacter a owl:Class ;
+    rdfs:label "Homeric character"@en,
+        "Personaggio omerico"@it ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( myth:Character [ a owl:Restriction ;
+                        owl:onProperty myth:appearsIn ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:oneOf ( res:Iliad res:Odyssey ) ] ] ) ] ;
+    skos:definition "A character appearing in the Iliad or the Odyssey."@en,
+        "Personaggio presente nell'Iliade o nell'Odissea."@it .
+
+myth:Human a owl:Class ;
+    rdfs:label "Human"@en,
+        "ἄνθρωπος"@grc,
+        "Essere umano"@it ;
+    rdfs:subClassOf myth:Mortal ;
+    skos:definition "A human character."@en,
+        "Personaggio umano."@it .
+
+myth:Kinslayer a owl:Class ;
+    rdfs:label "Kinslayer"@en,
+        "Uccisore di consanguinei"@it ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( myth:Character [ a owl:Restriction ;
+                        owl:onProperty myth:killedRelative ;
+                        owl:someValuesFrom myth:Character ] ) ] ;
+    skos:definition "A character who killed a relative or their spouse."@en,
+        "Personaggio che ha ucciso un parente o il coniuge."@it .
+
+myth:Muse a owl:Class ;
+    rdfs:label "Muse"@en,
+        "Μοῦσα"@grc,
+        "Musa"@it ;
+    rdfs:subClassOf myth:MinorDeity ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue res:Muse ;
+            owl:onProperty myth:memberOf ] ;
+    skos:definition "One of the Muses, daughters of Zeus and Mnemosyne."@en,
+        "Una delle Muse, figlie di Zeus e Mnemosine."@it .
+
+myth:Nereid a owl:Class ;
+    rdfs:label "Nereid"@en,
+        "Νηρηΐς"@grc,
+        "Nereide"@it ;
+    rdfs:subClassOf myth:Nymph ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue res:Nereids ;
+            owl:onProperty myth:memberOf ] ;
+    skos:definition "A sea nymph of the Nereids, daughters of Nereus."@en,
+        "Ninfa marina del gruppo delle Nereidi, figlie di Nereo."@it .
+
+myth:Oceanid a owl:Class ;
+    rdfs:label "Oceanid"@en,
+        "Ὠκεανίς"@grc,
+        "Oceanina"@it ;
+    rdfs:subClassOf myth:Nymph ;
+    skos:definition "A nymph, daughter of Oceanus and Tethys."@en,
+        "Ninfa figlia di Oceano e Teti."@it .
+
+myth:OedipalFigure a owl:Class ;
+    rdfs:label "Oedipal figure"@en,
+        "Figura edipica"@it ;
+    rdfs:comment "Il reasoner la classifica sotto Parricida, Uccisore di consanguinei e Sposo di un consanguineo."@it ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( myth:Parricide [ a owl:Restriction ;
+                        owl:onProperty myth:marriedAncestor ;
+                        owl:someValuesFrom myth:Character ] ) ] ;
+    skos:definition "Someone who kills an ancestor and marries an ancestor."@en,
+        "Chi uccide un antenato e sposa un antenato."@it .
+
+myth:Olympian a owl:Class ;
+    rdfs:label "Olympian"@en,
+        "Olimpico"@it ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( myth:Deity [ a owl:Restriction ;
+                        owl:hasValue res:TwelveOlympians ;
+                        owl:onProperty myth:memberOf ] ) ] ;
+    skos:definition "A deity belonging to the Twelve Olympians."@en,
+        "Divinità che fa parte dei Dodici dell'Olimpo."@it .
+
+myth:Primordial a owl:Class ;
+    rdfs:label "Primordial deity"@en,
+        "Divinità primordiale"@it ;
+    rdfs:subClassOf myth:Deity ;
+    skos:definition "The first beings born at the origin of the cosmos (Chaos, Gaia, Uranus...)."@en,
+        "Le prime entità nate all'origine del cosmo (Caos, Gea, Urano...)."@it .
+
+myth:RealPlace a owl:Class ;
+    rdfs:label "Real place"@en,
+        "Luogo reale"@it ;
+    owl:disjointWith myth:MythicalPlace ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( myth:Place [ a owl:Restriction ;
+                        owl:onProperty geo1:lat ;
+                        owl:someValuesFrom xsd:decimal ] ) ] ;
+    skos:definition "A place with geographic coordinates."@en,
+        "Luogo con coordinate geografiche."@it .
+
+myth:Ruler a owl:Class ;
+    rdfs:label "Ruler"@en,
+        "ἄναξ"@grc,
+        "Sovrano"@it ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( myth:Character [ a owl:Restriction ;
+                        owl:onProperty myth:holdsTitle ;
+                        owl:someValuesFrom myth:RoyalTitle ] ) ] ;
+    skos:definition "A character holding a royal title."@en,
+        "Personaggio che detiene un titolo regale."@it .
+
+myth:Titan a owl:Class ;
+    rdfs:label "Titan"@en,
+        "Τιτάν"@grc,
+        "Titano"@it ;
+    rdfs:subClassOf myth:Deity ;
+    skos:definition "Children of Uranus and Gaia, the divine generation before the Olympians."@en,
+        "Figli di Urano e Gea, la generazione divina prima degli Olimpi."@it .
+
+myth:bornIn a owl:ObjectProperty ;
+    rdfs:label "born in"@en,
+        "nato/a a"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:Place .
+
+myth:hasGrandparent a owl:ObjectProperty ;
+    rdfs:label "has grandparent"@en,
+        "ha nonno/a"@it ;
+    rdfs:subPropertyOf myth:hasAncestor ;
+    owl:propertyChainAxiom ( myth:hasParent myth:hasParent ) .
+
+myth:inSourceGraph a owl:AnnotationProperty ;
+    rdfs:label "nel named graph"@it ;
+    rdfs:comment "Il named graph della fonte a cui appartiene un'opera."@it .
+
+myth:residesIn a owl:ObjectProperty ;
+    rdfs:label "resides in"@en,
+        "risiede in"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:Place .
+
+myth:rulesOver a owl:ObjectProperty ;
+    rdfs:label "rules over"@en,
+        "regna su"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:Place ;
+    owl:propertyChainAxiom ( myth:holdsTitle myth:titleOver ) .
+
+myth:swrlText a owl:AnnotationProperty ;
+    rdfs:label "regola in forma leggibile"@it .
+
+myth:writtenBy a owl:ObjectProperty ;
+    rdfs:label "written by"@en,
+        "scritta da"@it ;
+    rdfs:domain myth:LiteraryWork ;
+    rdfs:range myth:Author ;
+    rdfs:subPropertyOf dcterms:creator .
+
+<https://example.org/mythograph/ontology/alignments> rdfs:label "MythoGraph - allineamenti"@it .
+
+<https://example.org/mythograph/ontology/constraints> rdfs:label "MythoGraph - vincoli per fonte"@it ;
+    rdfs:comment "Da importare solo quando si ragiona su una singola fonte."@it .
+
+<https://example.org/mythograph/ontology/rules> rdfs:label "MythoGraph - regole SWRL"@it ;
+    rdfs:comment "Regole SWRL: genitori dal genere, fratelli, zii, delitti in famiglia, matrimoni tra consanguinei."@it .
+
+dcterms:creator a owl:ObjectProperty ;
+    rdfs:label "creator"@en .
+
+fabio:Work a owl:Class ;
+    rdfs:label "FaBiO Work"@en .
+
+crm:E21_Person a owl:Class ;
+    rdfs:label "E21 Person"@en .
+
+crm:E28_Conceptual_Object a owl:Class ;
+    rdfs:label "E28 Conceptual Object"@en .
+
+crm:E33_Linguistic_Object a owl:Class ;
+    rdfs:label "E33 Linguistic Object"@en .
+
+crm:E53_Place a owl:Class ;
+    rdfs:label "E53 Place"@en .
+
+crm:E74_Group a owl:Class ;
+    rdfs:label "E74 Group"@en .
+
+geo1:lat a owl:DatatypeProperty ;
+    rdfs:label "latitude"@en,
+        "latitudine"@it ;
+    rdfs:range xsd:decimal .
+
+foaf:Person a owl:Class ;
+    rdfs:label "FOAF Person"@en .
+
+myth:Demigod a owl:Class ;
+    rdfs:label "Demigod"@en,
+        "ἡμίθεος"@grc,
+        "Semidio"@it ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( myth:Mortal [ a owl:Restriction ;
+                        owl:onProperty myth:hasParent ;
+                        owl:someValuesFrom myth:Deity ] ) ] ;
+    skos:definition "A mortal with at least one divine parent."@en,
+        "Mortale con almeno un genitore divino."@it ;
+    skos:example "Eracle, figlio di Zeus e della mortale Alcmena."@it .
+
+myth:MythicalPlace a owl:Class ;
+    rdfs:label "Mythical place"@en,
+        "Luogo mitico"@it ;
+    rdfs:subClassOf myth:Place ;
+    skos:definition "A place that exists only in the story (Tartarus, Elysium...)."@en,
+        "Luogo che esiste solo nel racconto (Tartaro, Campi Elisi...)."@it .
+
+myth:Parricide a owl:Class ;
+    rdfs:label "Parricide"@en,
+        "Parricida"@it ;
+    rdfs:comment "Non è dichiarata sottoclasse di Kinslayer: lo deduce il reasoner dalla gerarchia delle proprietà."@it ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( myth:Character [ a owl:Restriction ;
+                        owl:onProperty myth:killedAncestor ;
+                        owl:someValuesFrom myth:Character ] ) ] ;
+    skos:definition "A character who killed one of their ancestors."@en,
+        "Personaggio che ha ucciso un proprio antenato."@it .
+
+myth:RoyalTitle a owl:Class ;
+    rdfs:label "Royal title"@en,
+        "Titolo regale"@it ;
+    rdfs:subClassOf myth:Title ;
+    skos:definition "The title of king or queen of a place."@en,
+        "Titolo di re o regina di un luogo."@it .
+
+myth:appearsIn a owl:ObjectProperty ;
+    rdfs:label "appears in"@en,
+        "compare in"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:LiteraryWork .
+
+myth:diedIn a owl:ObjectProperty ;
+    rdfs:label "died in"@en,
+        "morto/a a"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:Place .
+
+myth:hasAunt a owl:ObjectProperty ;
+    rdfs:label "has aunt"@en,
+        "ha zia"@it ;
+    rdfs:range myth:Female ;
+    rdfs:subPropertyOf myth:hasParentSibling .
+
+myth:hasChild a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has child"@en,
+        "ha figlio/a"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:Character ;
+    rdfs:subPropertyOf myth:hasDescendant .
+
+myth:hasUncle a owl:ObjectProperty ;
+    rdfs:label "has uncle"@en,
+        "ha zio"@it ;
+    rdfs:range myth:Male ;
+    rdfs:subPropertyOf myth:hasParentSibling .
+
+myth:killedDescendant a owl:ObjectProperty ;
+    rdfs:label "killed a descendant"@en,
+        "uccise un discendente"@it ;
+    rdfs:subPropertyOf myth:killedRelative .
+
+myth:killedSibling a owl:ObjectProperty ;
+    rdfs:label "killed a sibling"@en,
+        "uccise fratello/sorella"@it ;
+    rdfs:subPropertyOf myth:killedRelative .
+
+myth:killedSpouse a owl:ObjectProperty ;
+    rdfs:label "killed their spouse"@en,
+        "uccise il coniuge"@it ;
+    rdfs:subPropertyOf myth:killedRelative .
+
+myth:mannerOfDeath a owl:ObjectProperty ;
+    rdfs:label "manner of death"@en,
+        "modo della morte"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:MannerOfDeath .
+
+myth:marriedDescendant a owl:ObjectProperty ;
+    rdfs:label "married to a descendant"@en,
+        "sposato con un discendente"@it ;
+    rdfs:subPropertyOf myth:marriedRelative .
+
+myth:marriedSibling a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "married to sibling"@en,
+        "sposato con fratello/sorella"@it ;
+    rdfs:subPropertyOf myth:marriedRelative .
+
+myth:titleOver a owl:ObjectProperty ;
+    rdfs:label "title over"@en,
+        "titolo su"@it ;
+    rdfs:domain myth:Title ;
+    rdfs:range myth:Place ;
+    skos:definition "The place the title gives power over."@en,
+        "Il luogo su cui il titolo dà potere."@it .
+
+res:Amphitryon a myth:Character,
+        myth:Male ;
+    rdfs:label "Αμφιτρύωνας"@el,
+        "Amphitryon"@en,
+        "Ἀμφιτρύων , Amphitryōn"@grc,
+        "Anfitrione"@it,
+        "Amphitruo"@la ;
+    myth:hasChild res:Heracles .
+
+res:Echidna a owl:NamedIndividual,
+        myth:Character .
+
+res:Gorgon a owl:NamedIndividual,
+        myth:Group .
+
+res:Iliad a owl:NamedIndividual,
+        myth:LiteraryWork .
+
+res:Muse a owl:NamedIndividual,
+        myth:Group .
+
+res:Nereids a owl:NamedIndividual,
+        myth:Group .
+
+res:Odyssey a owl:NamedIndividual,
+        myth:LiteraryWork .
+
+res:TwelveOlympians a owl:NamedIndividual,
+        myth:Group .
+
+res:Typhon a owl:NamedIndividual,
+        myth:Character .
+
+myth:Author a owl:Class ;
+    rdfs:label "Ancient author"@en,
+        "Autore antico"@it ;
+    rdfs:subClassOf crm:E21_Person,
+        foaf:Person ;
+    skos:definition "The author of a literary work."@en,
+        "Autore di un'opera letteraria."@it .
+
+myth:Immortal a owl:Class ;
+    rdfs:label "Immortal"@en,
+        "ἀθάνατος"@grc,
+        "Immortale"@it ;
+    rdfs:comment "Dentro una fonte non può essere ucciso (modulo constraints)."@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty myth:killedBy ],
+        myth:Character ;
+    owl:disjointWith myth:Mortal ;
+    skos:definition "A character who cannot die."@en,
+        "Personaggio che non può morire."@it .
+
+myth:MinorDeity a owl:Class ;
+    rdfs:label "Minor deity"@en,
+        "Divinità minore"@it ;
+    rdfs:subClassOf myth:Deity ;
+    skos:definition "A deity tied to a place or to an aspect of nature."@en,
+        "Divinità legata a un luogo o a un aspetto della natura."@it .
+
+myth:Nymph a owl:Class ;
+    rdfs:label "Nymph"@en,
+        "νύμφη"@grc,
+        "Ninfa"@it ;
+    rdfs:subClassOf myth:Female,
+        myth:MinorDeity ;
+    skos:definition "Minor female nature deity (waters, woods, mountains)."@en,
+        "Divinità femminile minore della natura (acque, boschi, monti)."@it .
+
+myth:hasFather a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has father"@en,
+        "ha padre"@it ;
+    rdfs:comment "Funzionale solo dentro una fonte: vedi il modulo constraints."@it ;
+    rdfs:range myth:Male ;
+    rdfs:subPropertyOf myth:hasParent .
+
+myth:hasMother a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has mother"@en,
+        "ha madre"@it ;
+    rdfs:comment "Funzionale solo dentro una fonte: vedi il modulo constraints."@it ;
+    rdfs:range myth:Female ;
+    rdfs:subPropertyOf myth:hasParent .
+
+myth:holdsTitle a owl:ObjectProperty ;
+    rdfs:label "holds title"@en,
+        "detiene il titolo"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:Title .
+
+myth:killedAncestor a owl:ObjectProperty ;
+    rdfs:label "killed an ancestor"@en,
+        "uccise un antenato"@it ;
+    rdfs:subPropertyOf myth:killedRelative .
+
+myth:killedBy a owl:ObjectProperty ;
+    rdfs:label "killed by"@en,
+        "ucciso da"@it .
+
+myth:marriedAncestor a owl:ObjectProperty ;
+    rdfs:label "married to an ancestor"@en,
+        "sposato con un antenato"@it ;
+    rdfs:subPropertyOf myth:marriedRelative ;
+    owl:inverseOf myth:marriedDescendant .
+
+res:Heracles a myth:Character,
+        myth:Demigod,
+        myth:Male ;
+    rdfs:label "Heracles",
+        "Ηρακλής"@el,
+        "Heracles"@en,
+        "Ηρακλής , Hēraklēs"@grc,
+        "Eracle"@it,
+        "Hercules"@la .
+
+myth:MannerOfDeath a owl:Class ;
+    rdfs:label "Manner of death"@en,
+        "Modo della morte"@it ;
+    skos:definition "How a character died (in battle, suicide...)."@en,
+        "Come è morto un personaggio (in battaglia, suicidio...)."@it .
+
+myth:Monster a owl:Class ;
+    rdfs:label "Monster"@en,
+        "τέρας"@grc,
+        "Mostro"@it ;
+    rdfs:subClassOf myth:Creature ;
+    skos:definition "A monstrous creature (dragons, gorgons, serpents...)."@en,
+        "Creatura mostruosa (draghi, gorgoni, serpenti...)."@it .
+
+myth:hasDescendant a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "has descendant"@en,
+        "ha discendente"@it ;
+    skos:definition "Child, child's child, and so on."@en,
+        "Figlio, figlio del figlio, e così via."@it .
+
+<urn:swrl:var#a> a swrl:Variable .
+
+<urn:swrl:var#u> a swrl:Variable .
+
+myth:Creature a owl:Class ;
+    rdfs:label "Creature"@en,
+        "Creatura"@it ;
+    rdfs:subClassOf myth:Character ;
+    skos:definition "A mythical being, neither human nor godlike in form."@en,
+        "Essere mitico non umano e non divino nell'aspetto."@it .
+
+myth:Title a owl:Class ;
+    rdfs:label "Title"@en,
+        "Titolo"@it ;
+    skos:definition "An office or title held by a character."@en,
+        "Carica o titolo detenuto da un personaggio."@it .
+
+myth:hasAncestor a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "has ancestor"@en,
+        "ha antenato"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:Character ;
+    owl:inverseOf myth:hasDescendant ;
+    skos:definition "Parent, parent's parent, and so on."@en,
+        "Genitore, genitore del genitore, e così via."@it .
+
+myth:hasParentSibling a owl:ObjectProperty ;
+    rdfs:label "has parent's sibling"@en,
+        "ha zio/zia"@it ;
+    owl:propertyChainAxiom ( myth:hasParent myth:hasSibling ) .
+
+myth:hasSibling a owl:IrreflexiveProperty,
+        owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "has sibling"@en,
+        "ha fratello/sorella"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:Character .
+
+myth:hasSpouse a owl:IrreflexiveProperty,
+        owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "has spouse"@en,
+        "ha coniuge"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:Character .
+
+myth:marriedRelative a owl:ObjectProperty ;
+    rdfs:label "married to a relative"@en,
+        "sposato con un consanguineo"@it ;
+    rdfs:subPropertyOf myth:hasSpouse .
+
+myth:memberOf a owl:ObjectProperty ;
+    rdfs:label "member of"@en,
+        "membro di"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:Group .
+
+myth:Deity a owl:Class ;
+    rdfs:label "Deity"@en,
+        "θεός"@grc,
+        "Divinità"@it ;
+    rdfs:subClassOf myth:Immortal ;
+    skos:definition "A divine, immortal being."@en,
+        "Essere divino e immortale."@it .
+
+myth:LiteraryWork a owl:Class ;
+    rdfs:label "Literary work"@en,
+        "Opera letteraria"@it ;
+    rdfs:subClassOf fabio:Work,
+        crm:E33_Linguistic_Object ;
+    skos:definition "An ancient work telling the myths."@en,
+        "Opera antica che racconta i miti."@it .
+
+myth:killedRelative a owl:ObjectProperty ;
+    rdfs:label "killed a relative"@en,
+        "uccise un consanguineo"@it ;
+    rdfs:subPropertyOf myth:killed .
+
+myth:Female a owl:Class ;
+    rdfs:label "Female"@en,
+        "Femminile"@it ;
+    rdfs:subClassOf myth:Character ;
+    skos:definition "A female character."@en,
+        "Personaggio di genere femminile."@it .
+
+myth:Group a owl:Class ;
+    rdfs:label "Group"@en,
+        "Gruppo"@it ;
+    rdfs:subClassOf crm:E74_Group ;
+    skos:definition "A named collective of characters (the Twelve Olympians, the Muses, the Nereids...)."@en,
+        "Insieme di personaggi con un nome collettivo (i Dodici dell'Olimpo, le Muse, le Nereidi...)."@it .
+
+myth:Male a owl:Class ;
+    rdfs:label "Male"@en,
+        "Maschile"@it ;
+    rdfs:subClassOf myth:Character ;
+    owl:disjointWith myth:Female ;
+    skos:definition "A male character."@en,
+        "Personaggio di genere maschile."@it .
+
+myth:killed a owl:ObjectProperty ;
+    rdfs:label "killed"@en,
+        "uccise"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:Character ;
+    owl:inverseOf myth:killedBy .
+
+<urn:swrl:var#p> a swrl:Variable .
+
+myth:Mortal a owl:Class ;
+    rdfs:label "Mortal"@en,
+        "θνητός"@grc,
+        "Mortale"@it ;
+    rdfs:subClassOf myth:Character ;
+    skos:definition "A character who is bound to die."@en,
+        "Personaggio destinato a morire."@it .
+
+myth:Place a owl:Class ;
+    rdfs:label "Place"@en,
+        "Luogo"@it ;
+    rdfs:subClassOf crm:E53_Place ;
+    skos:definition "A place where a character is born, lives, dies or rules."@en,
+        "Luogo in cui un personaggio nasce, vive, muore o regna."@it .
+
+myth:hasParent a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has parent"@en,
+        "ha genitore"@it ;
+    rdfs:domain myth:Character ;
+    rdfs:range myth:Character ;
+    rdfs:subPropertyOf myth:hasAncestor ;
+    owl:inverseOf myth:hasChild ;
+    skos:definition "Father or mother."@en,
+        "Padre o madre."@it .
+
+<urn:swrl:var#y> a swrl:Variable .
+
+<urn:swrl:var#x> a swrl:Variable .
+
+myth:Character a owl:Class ;
+    rdfs:label "Character"@en,
+        "Personaggio"@it ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf ( myth:Immortal myth:Mortal ) ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onProperty myth:hasParent ],
+        crm:E28_Conceptual_Object ;
+    skos:definition "Any figure acting in myth: gods, mortals, creatures."@en,
+        "Qualunque figura che agisce nel mito: divinità, mortali, creature."@it .
+
+[] a owl:AllDifferent ;
+    owl:distinctMembers ( res:Amphitryon res:Heracles ) .
+
+[] a swrl:Imp ;
+    rdfs:label "padre"@it ;
+    rdfs:comment "A male parent is the father."@en,
+        "Un genitore maschio è il padre."@it ;
+    swrl:body ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#p> ;
+                swrl:propertyPredicate myth:hasParent ] [ a swrl:ClassAtom ;
+                swrl:argument1 <urn:swrl:var#p> ;
+                swrl:classPredicate myth:Male ] ) ;
+    swrl:head ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#p> ;
+                swrl:propertyPredicate myth:hasFather ] ) ;
+    myth:swrlText "hasParent(?x,?p) ^ Male(?p) -> hasFather(?x,?p)" .
+
+[] a swrl:Imp ;
+    rdfs:label "fratelli"@it ;
+    rdfs:comment "Two different characters sharing a parent are siblings."@en,
+        "Due personaggi diversi con un genitore in comune sono fratelli."@it ;
+    swrl:body ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#p> ;
+                swrl:propertyPredicate myth:hasParent ] [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#y> ;
+                swrl:argument2 <urn:swrl:var#p> ;
+                swrl:propertyPredicate myth:hasParent ] [ a swrl:DifferentIndividualsAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ] ) ;
+    swrl:head ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:hasSibling ] ) ;
+    myth:swrlText "hasParent(?x,?p) ^ hasParent(?y,?p) ^ differentFrom(?x,?y) -> hasSibling(?x,?y)" .
+
+[] a swrl:Imp ;
+    rdfs:label "zio"@it ;
+    rdfs:comment "A parent's brother is an uncle."@en,
+        "Il fratello di un genitore è lo zio."@it ;
+    swrl:body ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#u> ;
+                swrl:propertyPredicate myth:hasParentSibling ] [ a swrl:ClassAtom ;
+                swrl:argument1 <urn:swrl:var#u> ;
+                swrl:classPredicate myth:Male ] ) ;
+    swrl:head ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#u> ;
+                swrl:propertyPredicate myth:hasUncle ] ) ;
+    myth:swrlText "hasParentSibling(?x,?u) ^ Male(?u) -> hasUncle(?x,?u)" .
+
+[] a swrl:Imp ;
+    rdfs:label "zia"@it ;
+    rdfs:comment "A parent's sister is an aunt."@en,
+        "La sorella di un genitore è la zia."@it ;
+    swrl:body ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#a> ;
+                swrl:propertyPredicate myth:hasParentSibling ] [ a swrl:ClassAtom ;
+                swrl:argument1 <urn:swrl:var#a> ;
+                swrl:classPredicate myth:Female ] ) ;
+    swrl:head ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#a> ;
+                swrl:propertyPredicate myth:hasAunt ] ) ;
+    myth:swrlText "hasParentSibling(?x,?a) ^ Female(?a) -> hasAunt(?x,?a)" .
+
+[] a swrl:Imp ;
+    rdfs:label "parricidio"@it ;
+    rdfs:comment "Killing one's ancestor is parricide."@en,
+        "Chi uccide un proprio antenato commette parricidio."@it ;
+    swrl:body ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:killed ] [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:hasAncestor ] ) ;
+    swrl:head ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:killedAncestor ] ) ;
+    myth:swrlText "killed(?x,?y) ^ hasAncestor(?x,?y) -> killedAncestor(?x,?y)" .
+
+[] a swrl:Imp ;
+    rdfs:label "figlicidio"@it ;
+    rdfs:comment "Killing one's descendant."@en,
+        "Chi uccide un proprio discendente."@it ;
+    swrl:body ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:killed ] [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:hasDescendant ] ) ;
+    swrl:head ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:killedDescendant ] ) ;
+    myth:swrlText "killed(?x,?y) ^ hasDescendant(?x,?y) -> killedDescendant(?x,?y)" .
+
+[] a swrl:Imp ;
+    rdfs:label "fratricidio"@it ;
+    rdfs:comment "Killing one's sibling."@en,
+        "Chi uccide un fratello o una sorella."@it ;
+    swrl:body ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:killed ] [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:hasSibling ] ) ;
+    swrl:head ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:killedSibling ] ) ;
+    myth:swrlText "killed(?x,?y) ^ hasSibling(?x,?y) -> killedSibling(?x,?y)" .
+
+[] a swrl:Imp ;
+    rdfs:label "uxoricidio"@it ;
+    rdfs:comment "Killing one's spouse."@en,
+        "Chi uccide il proprio coniuge."@it ;
+    swrl:body ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:killed ] [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:hasSpouse ] ) ;
+    swrl:head ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:killedSpouse ] ) ;
+    myth:swrlText "killed(?x,?y) ^ hasSpouse(?x,?y) -> killedSpouse(?x,?y)" .
+
+[] a swrl:Imp ;
+    rdfs:label "nozze tra fratelli"@it ;
+    rdfs:comment "Spouses who are also siblings."@en,
+        "Coniugi che sono anche fratelli."@it ;
+    swrl:body ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:hasSpouse ] [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:hasSibling ] ) ;
+    swrl:head ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:marriedSibling ] ) ;
+    myth:swrlText "hasSpouse(?x,?y) ^ hasSibling(?x,?y) -> marriedSibling(?x,?y)" .
+
+[] a swrl:Imp ;
+    rdfs:label "nozze con un antenato"@it ;
+    rdfs:comment "A spouse who is also an ancestor."@en,
+        "Coniuge che è anche un antenato."@it ;
+    swrl:body ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:hasSpouse ] [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:hasAncestor ] ) ;
+    swrl:head ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#y> ;
+                swrl:propertyPredicate myth:marriedAncestor ] ) ;
+    myth:swrlText "hasSpouse(?x,?y) ^ hasAncestor(?x,?y) -> marriedAncestor(?x,?y)" .
+
+[] a swrl:Imp ;
+    rdfs:label "madre"@it ;
+    rdfs:comment "A female parent is the mother."@en,
+        "Un genitore femmina è la madre."@it ;
+    swrl:body ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#p> ;
+                swrl:propertyPredicate myth:hasParent ] [ a swrl:ClassAtom ;
+                swrl:argument1 <urn:swrl:var#p> ;
+                swrl:classPredicate myth:Female ] ) ;
+    swrl:head ( [ a swrl:IndividualPropertyAtom ;
+                swrl:argument1 <urn:swrl:var#x> ;
+                swrl:argument2 <urn:swrl:var#p> ;
+                swrl:propertyPredicate myth:hasMother ] ) ;
+    myth:swrlText "hasParent(?x,?p) ^ Female(?p) -> hasMother(?x,?p)" .
+
+[] a owl:Class ;
+    rdfs:subClassOf myth:Mortal ;
+    owl:intersectionOf ( [ a owl:Restriction ;
+                owl:onProperty myth:hasFather ;
+                owl:someValuesFrom myth:Mortal ] [ a owl:Restriction ;
+                owl:onProperty myth:hasMother ;
+                owl:someValuesFrom myth:Mortal ] ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf myth:Monster ;
+    owl:intersectionOf ( myth:Creature [ a owl:Restriction ;
+                owl:onProperty myth:hasParent ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:oneOf ( res:Typhon res:Echidna ) ] ] ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( myth:Character myth:Group myth:Place myth:Title myth:MannerOfDeath myth:LiteraryWork myth:Author ) .
+

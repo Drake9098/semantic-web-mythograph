@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MythoGraph</title>
-  <link rel="stylesheet" href="/static/style.css?v=5">
+  <link rel="stylesheet" href="/static/style.css?v=6">
   <script src="/static/vendor/cytoscape.min.js"></script>
   <link rel="stylesheet" href="/static/vendor/leaflet.css">
   <script src="/static/vendor/leaflet.js"></script>
@@ -72,11 +72,11 @@
                 il grafo si ricentra su di lui e qui compare la sua scheda.</li>
             <li><strong>Vista</strong>: <em>Vicinato</em> mostra i vicini a 1 o 2 passi; <em>Albero genealogico</em>
                 mostra antenati (sopra) e discendenti (sotto); <em>Tutto il grafo</em> è la panoramica completa.</li>
-            <li><strong>Fonte</strong>: scegli Esiodo, Omero o tutte. Con "Tutte" gli archi sono
-                <span style="color:#b8691c;font-weight:600">arancio</span> (Esiodo) e
-                <span style="color:#2b6c94;font-weight:600">blu</span> (Omero).</li>
-            <li><strong>Mappa dei luoghi</strong>: i luoghi reali con le coordinate prese da Wikidata
-                (query federata) e i miti ambientati lì.</li>
+            <li><strong>Fonte</strong>: <em>Wikidata</em> raccoglie tutte le versioni; le fonti antiche
+                (Esiodo, Omero, Apollodoro...) contengono solo ciò che Wikidata attribuisce a loro.
+                Con "Tutte le fonti antiche" ogni fonte ha il suo colore.</li>
+            <li><strong>Mappa dei luoghi</strong>: i luoghi con coordinate (da Wikidata) e i personaggi
+                nati, morti o regnanti lì.</li>
             <li><strong>inferite</strong>: togli la spunta per vedere solo ciò che le fonti dicono esplicitamente.</li>
           </ol>
           <p>Linee <span class="k-solid">continue</span> = affermazioni <em>asserite</em>;
@@ -87,9 +87,9 @@
       <div class="tab-body" id="tab-conflicts" hidden></div>
       <div class="tab-body" id="tab-cq" hidden></div>
       <div class="tab-body" id="tab-sparql" hidden>
-        <p class="hint">Query di sola lettura. Grafi: <code>g:hesiod</code>, <code>g:homer</code>, <code>g:ovid</code> (asserite),
-          <code>g:shared</code>, <code>g:ontology</code>, <code>g:meta</code>. Per le viste con le deduzioni serve l'IRI completo:
-          <code>&lt;https://example.org/mythograph/graph/view/hesiod&gt;</code> (idem <code>homer</code>, <code>ovid</code>).</p>
+        <p class="hint">Query di sola lettura. Grafi: <code>g:wikidata</code>, <code>g:hesiod</code>, <code>g:homer</code>,
+          <code>g:apollodorus</code>... (asserite), <code>g:shared</code>, <code>g:ontology</code>, <code>g:meta</code>. Per le viste con le deduzioni serve l'IRI completo:
+          <code>&lt;https://example.org/mythograph/graph/view/wikidata&gt;</code> (idem per le altre fonti).</p>
         <textarea id="sparql-text" spellcheck="false"></textarea>
         <div class="row"><button id="sparql-run" class="primary">Esegui</button><span id="sparql-msg" class="muted"></span></div>
         <div id="sparql-out"></div>
@@ -98,6 +98,6 @@
     </aside>
   </main>
 
-  <script src="/static/app.js?v=6"></script>
+  <script src="/static/app.js?v=7"></script>
 </body>
 </html>

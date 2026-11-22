@@ -1,5 +1,7 @@
 # Tour della presentazione (revisione del 19/11)
 
+> Versione del 19/11, prima della revisione: i dati ora vengono da Wikidata (vedi `docs/pipeline.md`).
+
 Obiettivo: far vedere che il progetto l'ho capito io. Spiegazione a grandi linee,
 quasi tutta nell'interfaccia, un solo file e una sola query. Circa 10 minuti.
 

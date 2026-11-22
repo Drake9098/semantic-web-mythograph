@@ -1,0 +1,14 @@
+# Passo 2: le affermazioni sui personaggi, nel modello completo di Wikidata:
+# valore, rango (preferred/normal/deprecated) e opera citata come fonte (P248).
+# {{ITEMS}}: un blocco di personaggi; {{PROPS}}: le proprietà di tables/properties.ttl
+SELECT ?item ?prop ?st ?value ?rank ?work WHERE {
+  VALUES ?item { {{ITEMS}} }
+  VALUES ?prop { {{PROPS}} }
+  ?item ?prop ?st .
+  ?st wikibase:rank ?rank .
+  ?wdprop wikibase:claim ?prop ;
+          wikibase:statementProperty ?ps .
+  ?st ?ps ?value .
+  FILTER(isIRI(?value))
+  OPTIONAL { ?st prov:wasDerivedFrom/pr:P248 ?work . }
+}

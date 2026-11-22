@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Protégé: risolve gli owl:imports sui file locali -->
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri name="https://example.org/mythograph/ontology" uri="mythograph.ttl"/>
+    <uri name="https://example.org/mythograph/ontology/constraints" uri="constraints.ttl"/>
+    <uri name="https://example.org/mythograph/ontology/rules" uri="rules.ttl"/>
+    <uri name="https://example.org/mythograph/ontology/alignments" uri="alignments.ttl"/>
+</catalog>

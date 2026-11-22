@@ -11,7 +11,7 @@ from rdflib.namespace import RDFS
 from .namespaces import GRAPH, MYTH, OUTPUT_FILE, QUERIES_DIR, RES, SKOS
 
 CQ_DEFAULTS = {
-    1: RES.Aphrodite, 3: RES.Heracles, 5: RES.Heracles, 6: RES.Sicily,
+    1: RES.Aphrodite, 3: RES.Heracles, 5: RES.Heracles, 6: RES.Mycenae, 7: RES.Uranus,
 }
 
 
@@ -37,8 +37,10 @@ def load_cqs() -> dict[int, CompetencyQuestion]:
 
 
 class Store:
+    """Il TriG generato, caricato in un Dataset rdflib (un grafo per fonte)."""
+
     def __init__(self, path=OUTPUT_FILE):
-        self.ds = Dataset()
+        self.ds = Dataset(default_union=True)   # le query senza GRAPH vedono tutti i grafi
         self.ds.parse(path, format="trig")
         self.cqs = load_cqs()
 
@@ -56,7 +58,7 @@ class Store:
     @cached_property
     def _labels(self) -> dict[URIRef, dict[str, str]]:
         labels: dict[URIRef, dict[str, str]] = {}
-        for gname in ("ontology", "alignments", "shared", *self.sources):
+        for gname in ("ontology", "rules", "alignments", "shared", *self.sources):
             g = self.graph(gname)
             for prop in (RDFS.label, SKOS.prefLabel):
                 for s, o in g.subject_objects(prop):

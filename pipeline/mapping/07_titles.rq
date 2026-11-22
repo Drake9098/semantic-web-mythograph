@@ -1,0 +1,25 @@
+# graph: shared
+# Titoli: il luogo su cui danno potere (P1001) e quali sono regali (re, regina...).
+CONSTRUCT {
+  ?t a ?royal ;
+     myth:titleOver ?place .
+  ?place rdfs:label ?placeLabel .
+}
+WHERE {
+  ?x map:inScope true ;
+     ?p ?st .
+  ?st ps:P39 ?title .
+  ?title map:key ?tkey .
+  BIND(IRI(CONCAT(STR(res:), ?tkey)) AS ?t)
+  OPTIONAL {
+    ?title rdfs:label ?en .
+    FILTER(LANG(?en) = "en" && REGEX(?en, "king|queen|ruler|tyrant|monarch", "i"))
+    BIND(myth:RoyalTitle AS ?royal)
+  }
+  OPTIONAL {
+    ?title wdt:P1001 ?wdplace .
+    ?wdplace map:key ?pkey .
+    BIND(IRI(CONCAT(STR(res:), ?pkey)) AS ?place)
+    OPTIONAL { ?wdplace rdfs:label ?placeLabel . FILTER(LANG(?placeLabel) IN ("it", "en")) }
+  }
+}

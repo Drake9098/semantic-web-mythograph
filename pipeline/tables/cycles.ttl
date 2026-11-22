@@ -1,0 +1,32 @@
+# I cicli mitici scelti e i loro protagonisti: da qui parte la selezione dei personaggi
+# (mapping/02_scope.rq). Ogni protagonista porta con sé genitori, coniugi, figli noti,
+# chi ha ucciso e chi lo ha ucciso; poi si risale agli antenati (02b_ancestors.rq).
+# Ogni ciclo è qui per le deduzioni che permette.
+
+@prefix map:  <https://example.org/mythograph/pipeline#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Tebe: parricidio e nozze con la madre (figura edipica)
+wd:Q130890  map:seed true ; rdfs:label "Oedipus" ; map:cycle "Tebe" .
+# Atridi: figlicidio (Ifigenia), sovrani di Micene, genealogie lunghe
+wd:Q128176  map:seed true ; rdfs:label "Agamemnon" ; map:cycle "Atridi" .
+wd:Q192407  map:seed true ; rdfs:label "Orestes" ; map:cycle "Atridi" .
+# Argo: eroe (Medusa), semidio, sovrano
+wd:Q130832  map:seed true ; rdfs:label "Perseus" ; map:cycle "Argo" .
+# Eracle: eroe, semidio
+wd:Q122248  map:seed true ; rdfs:label "Heracles" ; map:cycle "Eracle" .
+# Atene: i fratellastri uccisi (figli di Poseidone), il Minotauro
+wd:Q1320718 map:seed true ; rdfs:label "Theseus" ; map:cycle "Atene" .
+# Troia: semidei (Achille figlio della Nereide Teti, Enea figlio di Afrodite)
+wd:Q41746   map:seed true ; rdfs:label "Achilles" ; map:cycle "Troia" .
+wd:Q82732   map:seed true ; rdfs:label "Aeneas" ; map:cycle "Troia" .
+# Odissea: Cassifone sposa il fratellastro Telemaco e lo uccide
+wd:Q47231   map:seed true ; rdfs:label "Odysseus" ; map:cycle "Odissea" .
+wd:Q1401858 map:seed true ; rdfs:label "Cassiphone" ; map:cycle "Odissea" .
+# Argonauti: Medea uccide i figli; versioni in conflitto sulla sua famiglia
+wd:Q174278  map:seed true ; rdfs:label "Medea" ; map:cycle "Argonauti" .
+wd:Q176758  map:seed true ; rdfs:label "Jason" ; map:cycle "Argonauti" .
+wd:Q143880  map:seed true ; rdfs:label "Athamas" ; map:cycle "Argonauti" .
+# Corinto: Bellerofonte e la Chimera
+wd:Q189872  map:seed true ; rdfs:label "Bellerophon" ; map:cycle "Corinto" .

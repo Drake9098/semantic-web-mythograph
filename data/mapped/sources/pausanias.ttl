@@ -1,0 +1,6 @@
+# Generato da `python -m mythograph.mapping` (affermazioni del grafo g:pausanias). Non modificare a mano.
+@prefix myth: <https://example.org/mythograph/ontology#> .
+@prefix res: <https://example.org/mythograph/resource/> .
+
+res:Hippocoon myth:killedBy res:Heracles .
+

@@ -1,0 +1,2133 @@
+# Generato da `python -m mythograph.mapping` (affermazioni del grafo g:wikidata). Non modificare a mano.
+@prefix myth: <https://example.org/mythograph/ontology#> .
+@prefix res: <https://example.org/mythograph/resource/> .
+
+res:Asteropaios myth:appearsIn res:Iliad ;
+    myth:killedBy res:Achilles .
+
+res:Athis myth:appearsIn res:Metamorphoses ;
+    myth:bornIn res:Ganges ;
+    myth:diedIn res:Ethiopia ;
+    myth:killedBy res:Perseus ;
+    myth:mannerOfDeath res:DeathInBattle,
+        res:Homicide .
+
+res:Briseus myth:appearsIn res:Iliad ;
+    myth:killedBy res:Achilles .
+
+res:Cephalus myth:hasChild res:Alcimede ;
+    myth:memberOf res:CephalusAndProcris .
+
+res:Dryope myth:hasChild res:Tarquitus .
+
+res:Echeclus myth:appearsIn res:Iliad ;
+    myth:killedBy res:Achilles ;
+    myth:mannerOfDeath res:DeathInBattle .
+
+res:Eurydice_Q1378429 myth:hasSpouse res:Aeneas .
+
+res:Iphition myth:appearsIn res:Iliad ;
+    myth:killedBy res:Achilles .
+
+res:Iphitos myth:bornIn res:Oechalia_Q107550037 ;
+    myth:diedIn res:Tiryns ;
+    myth:holdsTitle res:KingInGreekMythology ;
+    myth:killedBy res:Heracles ;
+    myth:mannerOfDeath res:Homicide .
+
+res:Leodes myth:appearsIn res:Odyssey ;
+    myth:holdsTitle res:Augur ;
+    myth:killedBy res:Odysseus .
+
+res:Mynes myth:appearsIn res:Iliad ;
+    myth:holdsTitle res:KingInGreekMythology ;
+    myth:killedBy res:Achilles .
+
+res:Phylas_Q3744926 myth:holdsTitle res:KingInGreekMythology ;
+    myth:killedBy res:Heracles ;
+    myth:mannerOfDeath res:DeathInBattle .
+
+res:Rigmus myth:appearsIn res:Iliad ;
+    myth:bornIn res:Troy ;
+    myth:killedBy res:Achilles ;
+    myth:mannerOfDeath res:DeathInBattle .
+
+res:Timalcus myth:killedBy res:Theseus .
+
+res:Trous myth:appearsIn res:Iliad ;
+    myth:killedBy res:Achilles .
+
+res:Aleus myth:hasChild res:Auge ;
+    myth:holdsTitle res:MythologicalKingOfArcadia .
+
+res:Anchises myth:hasChild res:Aeneas ;
+    myth:holdsTitle res:KingOfTroy .
+
+res:Coon myth:hasFather res:Antenor ;
+    myth:killedBy res:Agamemnon .
+
+res:Creon_Q786573 myth:hasChild res:Glauce ;
+    myth:holdsTitle res:KingOfCorinth .
+
+res:Cycnus myth:hasFather res:Ares ;
+    myth:killedBy res:Heracles ;
+    myth:mannerOfDeath res:DeathInBattle .
+
+res:Cynortas myth:hasChild res:Oebalus ;
+    myth:holdsTitle res:MythologicalKingOfSparta .
+
+res:Cyzicus myth:appearsIn res:Argonautica ;
+    myth:hasFather res:Apollo ;
+    myth:holdsTitle res:KingInGreekMythology ;
+    myth:killedBy res:Heracles,
+        res:Jason ;
+    myth:mannerOfDeath res:DeathInBattle .
+
+res:Deiopites myth:appearsIn res:Iliad ;
+    myth:hasFather res:Priam ;
+    myth:killedBy res:Odysseus .
+
+res:Democoon myth:appearsIn res:Iliad ;
+    myth:hasFather res:Priam ;
+    myth:killedBy res:Odysseus .
+
+res:Demoleon myth:appearsIn res:Iliad ;
+    myth:hasFather res:Antenor ;
+    myth:killedBy res:Achilles ;
+    myth:mannerOfDeath res:DeathInBattle .
+
+res:Dryops_Q3715373 myth:appearsIn res:Iliad ;
+    myth:hasFather res:Priam ;
+    myth:killedBy res:Achilles .
+
+res:Gorgopis myth:hasSpouse res:Athamas .
+
+res:Hypsipyle myth:hasSpouse res:Jason .
+
+res:Iphidamas myth:hasFather res:Antenor ;
+    myth:killedBy res:Agamemnon ;
+    myth:mannerOfDeath res:DeathInBattle .
+
+res:Isus myth:appearsIn res:Iliad ;
+    myth:hasFather res:Priam ;
+    myth:killedBy res:Agamemnon .
+
+res:Leontophron myth:hasFather res:Odysseus ;
+    myth:killedBy res:Odysseus,
+        res:Telemachus .
+
+res:Lycaon_Q3268334 myth:hasFather res:Ares ;
+    myth:killedBy res:Heracles .
+
+res:Lycus_Q1393416 myth:hasMother res:Dirce ;
+    myth:holdsTitle res:KingOfThebe ;
+    myth:killedBy res:Heracles .
+
+res:Minotaur myth:hasMother res:Pasiphae ;
+    myth:killedBy res:Theseus ;
+    myth:residesIn res:LabyrinthOfKnossos .
+
+res:Omphale myth:hasSpouse res:Heracles ;
+    myth:holdsTitle res:KingOfLydia .
+
+res:Polydorus_Q29626641 myth:appearsIn res:Iliad ;
+    myth:hasFather res:Priam ;
+    myth:killedBy res:Achilles .
+
+res:Porthaon myth:hasChild res:Oeneus ;
+    myth:holdsTitle res:KingOfCalydon .
+
+res:Tarquitus myth:appearsIn res:Aeneid ;
+    myth:killedBy res:Aeneas .
+
+res:Themisto myth:hasSpouse res:Athamas .
+
+res:Tros myth:hasChild res:Ilus ;
+    myth:holdsTitle res:KingOfTroy .
+
+res:Zeuxippe_Q46845955 myth:hasChild res:Athamas .
+
+res:Acrisius myth:hasChild res:Danae ;
+    myth:hasFather res:Abas ;
+    myth:holdsTitle res:KingOfArgos .
+
+res:Aegina_Q321298 myth:hasChild res:Aeacus ;
+    myth:hasFather res:Asopus ;
+    myth:memberOf res:Naiad .
+
+res:Aethra myth:appearsIn res:TheSuppliants ;
+    myth:hasChild res:Theseus ;
+    myth:hasFather res:Pittheus .
+
+res:Alcimedusa myth:hasFather res:Iobates ;
+    myth:hasSpouse res:Bellerophon .
+
+res:Alcimenes_Q21548251 myth:hasFather res:Glaucus_Q1232714 ;
+    myth:hasSibling res:Bellerophon,
+        res:Piren ;
+    myth:killedBy res:Bellerophon ;
+    myth:residesIn res:Corinth .
+
+res:Alcyoneus myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:killedBy res:Heracles .
+
+res:Amphinome_Q21548505 myth:hasChild res:Jason ;
+    myth:hasSpouse res:Aeson .
+
+res:Amphitryon myth:hasChild res:Heracles ;
+    myth:hasFather res:Alcaeus ;
+    myth:hasSpouse res:Alkmene ;
+    myth:holdsTitle res:KingOfMycenae ;
+    myth:residesIn res:Thebes_Q11225429 .
+
+res:Ananke myth:hasChild res:Chaos ;
+    myth:hasFather res:Chronos ;
+    myth:hasSpouse res:Chronos .
+
+res:Anius_Q135479720 myth:hasFather res:Aeneas .
+
+res:Antiphus myth:appearsIn res:Iliad ;
+    myth:hasFather res:Priam ;
+    myth:hasMother res:Hecuba ;
+    myth:killedBy res:Agamemnon .
+
+res:Ascanius myth:hasFather res:Aeneas ;
+    myth:hasMother res:Creusa ;
+    myth:holdsTitle res:King .
+
+res:Astymedusa myth:hasFather res:Sthenelus ;
+    myth:hasSpouse res:Oedipus .
+
+res:Auge myth:hasChild res:Telephus ;
+    myth:hasFather res:Aleus .
+
+res:Cassiopeia myth:hasChild res:Andromeda ;
+    myth:hasSpouse res:CepheusKingOfAethiopia .
+
+res:CecropsII myth:hasChild res:PandionII ;
+    myth:hasFather res:Erechtheus ;
+    myth:holdsTitle res:KingOfAthens .
+
+res:Chimera myth:hasChild res:NemeanLion ;
+    myth:hasFather res:Typhon ;
+    myth:hasMother res:Echidna ;
+    myth:killedBy res:Bellerophon .
+
+res:Clytia_Q58324367 myth:hasChild res:Medea ;
+    myth:hasSpouse res:Aeetes .
+
+res:Creon myth:hasChild res:Megara_Q929768 ;
+    myth:holdsTitle res:KingOfThebe ;
+    myth:residesIn res:Thebes_Q11225429 .
+
+res:Danae myth:hasChild res:Perseus ;
+    myth:hasFather res:Acrisius .
+
+res:Democoon_Q21548783 myth:hasFather res:Heracles ;
+    myth:hasMother res:Megara_Q929768 ;
+    myth:killedBy res:Heracles .
+
+res:DemophonOfAthens myth:hasFather res:Theseus ;
+    myth:hasSibling res:Acamas ;
+    myth:holdsTitle res:KingOfAthens ;
+    myth:memberOf res:AcamasAndDemophon .
+
+res:Dirce myth:hasChild res:Lycus_Q1393416 ;
+    myth:hasFather res:Achelous,
+        res:Helios .
+
+res:Electra_Q858663 myth:hasChild res:Harmonia ;
+    myth:hasFather res:Atlas ;
+    myth:hasMother res:Pleione .
+
+res:Emathion myth:hasFather res:Tithonus ;
+    myth:hasMother res:Eos ;
+    myth:holdsTitle res:MythologicalKingOfAethiopia ;
+    myth:killedBy res:Heracles ;
+    myth:mannerOfDeath res:Homicide .
+
+res:Enyo myth:appearsIn res:Theogony ;
+    myth:hasChild res:Harmonia,
+        res:Oenomaus ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Hera ;
+    myth:residesIn res:Olympus .
+
+res:Ephialtes myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:killedBy res:Apollo,
+        res:Heracles .
+
+res:Erechtheus myth:hasChild res:CecropsII ;
+    myth:hasFather res:PandionI ;
+    myth:holdsTitle res:KingOfAthens .
+
+res:Erichthonius myth:hasChild res:PandionI ;
+    myth:hasFather res:Hephaestus ;
+    myth:holdsTitle res:KingOfAthens .
+
+res:Euryganeia myth:hasChild res:Antigone_Q131351,
+        res:Eteocles,
+        res:Ismene,
+        res:Polynices ;
+    myth:hasSibling res:Jocasta ;
+    myth:hasSpouse res:Oedipus .
+
+res:Eurylyte myth:hasChild res:Medea ;
+    myth:hasSpouse res:Aeetes .
+
+res:Eurytos myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:killedBy res:Dionysus,
+        res:Heracles .
+
+res:Hippocoon myth:hasFather res:Oebalus ;
+    myth:holdsTitle res:MythologicalKingOfSparta ;
+    myth:killedBy res:Heracles .
+
+res:Ilus myth:hasChild res:Laomedon ;
+    myth:hasFather res:Tros ;
+    myth:holdsTitle res:KingOfTroy .
+
+res:Io myth:appearsIn res:PrometheusBound ;
+    myth:hasChild res:Epaphus ;
+    myth:hasFather res:Inachus .
+
+res:Iobates myth:hasChild res:Alcimedusa,
+        res:Phylonoe ;
+    myth:holdsTitle res:Monarch .
+
+res:Labdacus myth:hasChild res:Laius ;
+    myth:hasFather res:Polydorus_Q1061554 ;
+    myth:holdsTitle res:KingOfThebe .
+
+res:Laertes myth:hasChild res:Odysseus ;
+    myth:hasSpouse res:Anticlea ;
+    myth:holdsTitle res:KingInGreekMythology .
+
+res:LinusOfThrace myth:hasFather res:Apollo,
+        res:Oeagrus ;
+    myth:hasMother res:Calliope,
+        res:Clio ;
+    myth:killedBy res:Heracles .
+
+res:Lycomedes myth:hasChild res:Deidamia ;
+    myth:holdsTitle res:KingInGreekMythology .
+
+res:Medebrontes myth:hasFather res:Heracles ;
+    myth:hasMother res:Megara_Q929768 ;
+    myth:killedBy res:Heracles .
+
+res:Memnon myth:appearsIn res:Aethiopis,
+        res:Metamorphoses,
+        res:Posthomerica ;
+    myth:hasFather res:Tithonus ;
+    myth:hasMother res:Eos ;
+    myth:holdsTitle res:MythologicalKingOfAethiopia ;
+    myth:killedBy res:Achilles .
+
+res:Minyas myth:hasChild res:Athamas ;
+    myth:hasFather res:Poseidon ;
+    myth:holdsTitle res:KingOfOrcomenus .
+
+res:Oeagrus myth:hasFather res:Ares ;
+    myth:hasSpouse res:Calliope ;
+    myth:holdsTitle res:MythologicalKingOfThrace .
+
+res:Ophion myth:hasChild res:Uranus ;
+    myth:hasSpouse res:Eurynome .
+
+res:Orthrus myth:hasChild res:NemeanLion ;
+    myth:hasFather res:Typhon ;
+    myth:hasMother res:Echidna ;
+    myth:killedBy res:Heracles .
+
+res:PandionI myth:hasChild res:Erechtheus ;
+    myth:hasFather res:Erichthonius ;
+    myth:holdsTitle res:KingOfAthens .
+
+res:Pandora myth:hasChild res:Pyrrha ;
+    myth:hasSpouse res:Epimetheus .
+
+res:Periphetes myth:hasFather res:Hephaestus,
+        res:Poseidon ;
+    myth:killedBy res:Theseus .
+
+res:Phylonoe myth:hasFather res:Iobates ;
+    myth:hasSpouse res:Bellerophon .
+
+res:Pleisthenes myth:hasChild res:Agamemnon,
+        res:Menelaus ;
+    myth:hasFather res:Atreus,
+        res:Pelops ;
+    myth:hasMother res:Aerope,
+        res:Hippodamia .
+
+res:Porphyrion myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:killedBy res:Heracles,
+        res:Zeus .
+
+res:Procrustes myth:hasChild res:Sinis ;
+    myth:hasFather res:Poseidon .
+
+res:Sciron myth:hasFather res:Pelops,
+        res:Poseidon ;
+    myth:holdsTitle res:KingInGreekMythology ;
+    myth:killedBy res:Theseus .
+
+res:Sinis myth:hasFather res:Poseidon,
+        res:Procrustes ;
+    myth:holdsTitle res:KingInGreekMythology ;
+    myth:killedBy res:Theseus .
+
+res:Tantalus myth:hasChild res:Pelops ;
+    myth:hasFather res:Zeus ;
+    myth:hasSpouse res:Dione ;
+    myth:holdsTitle res:KingOfLydia,
+        res:KingOfPhrygia .
+
+res:Telephus myth:appearsIn res:Mysians,
+        res:Telephus_Q97664084 ;
+    myth:hasFather res:Heracles ;
+    myth:hasMother res:Auge ;
+    myth:holdsTitle res:KingInGreekMythology .
+
+res:Tisamenus myth:hasFather res:Orestes ;
+    myth:hasMother res:Hermione ;
+    myth:holdsTitle res:KingOfAchaea,
+        res:KingOfArgos,
+        res:KingOfMycenae,
+        res:MythologicalKingOfSparta .
+
+res:Abas myth:hasChild res:Acrisius ;
+    myth:hasFather res:Lynceus_Q7877819 ;
+    myth:hasMother res:Hypermnestra ;
+    myth:holdsTitle res:KingOfArgos .
+
+res:Acamas myth:appearsIn res:Iliad ;
+    myth:hasFather res:Theseus ;
+    myth:hasMother res:Phaedra ;
+    myth:hasSibling res:DemophonOfAthens ;
+    myth:holdsTitle res:KingInGreekMythology ;
+    myth:memberOf res:AcamasAndDemophon .
+
+res:Aeacus myth:bornIn res:Aegina ;
+    myth:hasChild res:Peleus ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Aegina_Q321298 ;
+    myth:holdsTitle res:KingOfMyrmidons .
+
+res:Aegyptus myth:hasChild res:Lynceus_Q7877819 ;
+    myth:hasFather res:Belus ;
+    myth:hasSibling res:Danaus ;
+    myth:holdsTitle res:MythologicalKingOfEgypt .
+
+res:Alcimede myth:hasChild res:Jason ;
+    myth:hasSpouse res:Aeson .
+
+res:Alcimenes myth:hasFather res:Jason ;
+    myth:hasMother res:Medea ;
+    myth:hasSibling res:Tisander ;
+    myth:killedBy res:Medea .
+
+res:Antenor myth:hasChild res:Coon,
+        res:Demoleon,
+        res:Iphidamas .
+
+res:Autolycus myth:hasChild res:Anticlea,
+        res:Polymede ;
+    myth:hasFather res:Hermes .
+
+res:Callirhoe myth:hasChild res:Echidna ;
+    myth:hasFather res:Oceanus ;
+    myth:hasMother res:Tethys .
+
+res:Chronos myth:hasChild res:Aether,
+        res:Ananke,
+        res:Chaos,
+        res:Erebos .
+
+res:Chrysaor myth:hasFather res:Poseidon ;
+    myth:hasMother res:Medusa ;
+    myth:holdsTitle res:KingInGreekMythology .
+
+res:Danaus myth:hasChild res:Hypermnestra ;
+    myth:hasFather res:Belus ;
+    myth:hasSibling res:Aegyptus ;
+    myth:holdsTitle res:KingOfArgos,
+        res:MythologicalKingOfLibya .
+
+res:Deidamia myth:hasChild res:Neoptolemus ;
+    myth:hasFather res:Lycomedes ;
+    myth:hasSpouse res:Achilles .
+
+res:Epaphus myth:hasChild res:Libya ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Io ;
+    myth:holdsTitle res:MythologicalKingOfEgypt .
+
+res:Euros myth:hasChild res:Otrera ;
+    myth:hasFather res:Astraeus ;
+    myth:hasMother res:Eos .
+
+res:Eurynome_Q956831 myth:hasChild res:Bellerophon ;
+    myth:hasFather res:Nisos ;
+    myth:hasSpouse res:Glaucus_Q1232714 .
+
+res:Glauce myth:hasFather res:Creon_Q786573 ;
+    myth:hasSpouse res:Jason .
+
+res:Hebe myth:appearsIn res:Iliad ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Hera ;
+    myth:hasSpouse res:Heracles .
+
+res:Helle myth:hasFather res:Athamas ;
+    myth:hasMother res:Nephele ;
+    myth:hasSibling res:Phrixus ;
+    myth:memberOf res:PhrixusAndHelle .
+
+res:Hermes myth:appearsIn res:Iliad,
+        res:Odyssey,
+        res:PrometheusBound,
+        res:Q59756366 ;
+    myth:hasChild res:Autolycus ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Maia ;
+    myth:memberOf res:TwelveOlympians .
+
+res:Hippolytus myth:hasFather res:Theseus ;
+    myth:hasMother res:Antiope_Q580862,
+        res:Hippolyta .
+
+res:Hyllus myth:hasFather res:Heracles ;
+    myth:hasMother res:Deianira ;
+    myth:hasSibling res:Macaria .
+
+res:Hypermnestra myth:hasChild res:Abas ;
+    myth:hasFather res:Danaus ;
+    myth:hasSpouse res:Lynceus_Q7877819 ;
+    myth:memberOf res:DaughtersOfDanaus .
+
+res:Inachus myth:hasChild res:Io ;
+    myth:hasFather res:Oceanus ;
+    myth:hasMother res:Tethys ;
+    myth:holdsTitle res:KingOfArgos .
+
+res:Laius myth:hasChild res:Oedipus ;
+    myth:hasFather res:Labdacus ;
+    myth:hasSpouse res:Jocasta ;
+    myth:holdsTitle res:KingOfThebe ;
+    myth:killedBy res:Oedipus .
+
+res:Laomedon myth:hasChild res:Priam,
+        res:Tithonus ;
+    myth:hasFather res:Ilus ;
+    myth:holdsTitle res:KingOfTroy .
+
+res:Learchus myth:hasFather res:Athamas ;
+    myth:hasMother res:Ino ;
+    myth:hasSibling res:Melicertes ;
+    myth:killedBy res:Athamas .
+
+res:Libya myth:hasChild res:Agenor,
+        res:Belus ;
+    myth:hasFather res:Epaphus .
+
+res:Lynceus_Q7877819 myth:hasChild res:Abas ;
+    myth:hasFather res:Aegyptus ;
+    myth:hasSpouse res:Hypermnestra ;
+    myth:holdsTitle res:KingOfArgos ;
+    myth:memberOf res:SonsOfAegyptus .
+
+res:Macaria myth:hasFather res:Heracles ;
+    myth:hasMother res:Deianira ;
+    myth:hasSibling res:Hyllus .
+
+res:Maia myth:hasChild res:Hermes ;
+    myth:hasFather res:Atlas ;
+    myth:hasMother res:Pleione .
+
+res:Medusa myth:hasChild res:Chrysaor ;
+    myth:hasFather res:Phorcys ;
+    myth:hasMother res:Ceto ;
+    myth:killedBy res:Perseus ;
+    myth:memberOf res:Gorgon .
+
+res:Melicertes myth:hasFather res:Athamas ;
+    myth:hasMother res:Ino ;
+    myth:hasSibling res:Learchus .
+
+res:Nisos myth:hasChild res:Eurynome_Q956831 ;
+    myth:hasFather res:PandionII ;
+    myth:hasSibling res:Aegeus ;
+    myth:holdsTitle res:KingOfAthens,
+        res:KingOfMegara .
+
+res:Oeneus myth:hasChild res:Deianira ;
+    myth:hasFather res:Porthaon ;
+    myth:hasSpouse res:Althaea ;
+    myth:holdsTitle res:KingOfCalydon .
+
+res:Oenopion myth:hasFather res:Dionysus,
+        res:Rhadamanthus,
+        res:Theseus ;
+    myth:hasMother res:Ariadne ;
+    myth:holdsTitle res:KingInGreekMythology .
+
+res:Otrera myth:hasChild res:Antiope_Q580862,
+        res:Hippolyta ;
+    myth:hasFather res:Euros ;
+    myth:holdsTitle res:QueenOfAmazons .
+
+res:PandionII myth:hasChild res:Aegeus,
+        res:Nisos ;
+    myth:hasFather res:CecropsII ;
+    myth:holdsTitle res:KingOfAthens .
+
+res:Peleus myth:bornIn res:Aegina ;
+    myth:hasChild res:Achilles ;
+    myth:hasFather res:Aeacus ;
+    myth:hasSpouse res:Thetis ;
+    myth:holdsTitle res:KingOfMyrmidons,
+        res:KingOfPhtiotis .
+
+res:Penelope myth:appearsIn res:Heroides,
+        res:MadnessOfOdysseus,
+        res:Odyssey ;
+    myth:hasChild res:Telemachus ;
+    myth:hasSpouse res:Odysseus .
+
+res:Phrixus myth:hasFather res:Athamas ;
+    myth:hasMother res:Nephele ;
+    myth:hasSibling res:Helle ;
+    myth:memberOf res:PhrixusAndHelle .
+
+res:Piren myth:hasFather res:Glaucus_Q1232714 ;
+    myth:hasSibling res:Bellerophon ;
+    myth:killedBy res:Bellerophon .
+
+res:Pittheus myth:hasChild res:Aethra ;
+    myth:hasFather res:Pelops ;
+    myth:hasMother res:Hippodamia ;
+    myth:holdsTitle res:KingOfArgolis .
+
+res:Salmoneus myth:hasChild res:Tyro ;
+    myth:hasFather res:Aiolos ;
+    myth:hasMother res:Enarete ;
+    myth:holdsTitle res:KingOfElis .
+
+res:Sterope myth:hasChild res:Oenomaus ;
+    myth:hasFather res:Atlas ;
+    myth:hasMother res:Pleione ;
+    myth:memberOf res:Asterope_Q29655160 .
+
+res:Styx myth:hasChild res:Echidna ;
+    myth:hasFather res:Oceanus ;
+    myth:hasMother res:Tethys .
+
+res:Thestius myth:hasChild res:Althaea,
+        res:Leda ;
+    myth:hasFather res:Ares ;
+    myth:hasMother res:Aphrodite .
+
+res:Tisander myth:hasFather res:Jason ;
+    myth:hasMother res:Medea ;
+    myth:hasSibling res:Alcimenes ;
+    myth:killedBy res:Medea .
+
+res:Troilus myth:hasFather res:Apollo,
+        res:Priam ;
+    myth:hasMother res:Hecuba ;
+    myth:killedBy res:Achilles ;
+    myth:mannerOfDeath res:Homicide .
+
+res:Achelous myth:hasSpouse res:Calliope .
+
+res:Aegeus myth:hasChild res:Theseus ;
+    myth:hasFather res:PandionII ;
+    myth:hasSibling res:Nisos ;
+    myth:hasSpouse res:Medea ;
+    myth:holdsTitle res:KingOfAthens ;
+    myth:mannerOfDeath res:Suicide .
+
+res:Alkmene myth:hasChild res:Heracles ;
+    myth:hasFather res:Electryon ;
+    myth:hasSpouse res:Amphitryon,
+        res:Rhadamanthus .
+
+res:Althaea myth:hasChild res:Deianira ;
+    myth:hasFather res:Thestius ;
+    myth:hasSibling res:Leda ;
+    myth:hasSpouse res:Oeneus .
+
+res:Anticlea myth:hasChild res:Odysseus ;
+    myth:hasFather res:Autolycus ;
+    myth:hasSibling res:Polymede ;
+    myth:hasSpouse res:Laertes .
+
+res:Asia myth:hasChild res:Atlas,
+        res:Prometheus ;
+    myth:hasFather res:Oceanus ;
+    myth:hasMother res:Tethys .
+
+res:Clio myth:hasFather res:Zeus ;
+    myth:hasMother res:Mnemosyne ;
+    myth:hasSibling res:Calliope ;
+    myth:memberOf res:Muse .
+
+res:Cretheus myth:hasChild res:Aeson ;
+    myth:hasFather res:Aiolos ;
+    myth:hasMother res:Enarete ;
+    myth:hasSpouse res:Tyro ;
+    myth:holdsTitle res:KingOfIolcus .
+
+res:Creusa myth:hasChild res:Ascanius ;
+    myth:hasFather res:Priam ;
+    myth:hasMother res:Hecuba ;
+    myth:hasSpouse res:Aeneas .
+
+res:Deucalion myth:hasChild res:Hellen ;
+    myth:hasFather res:Prometheus ;
+    myth:hasMother res:Klymene ;
+    myth:hasSibling res:Phaedra ;
+    myth:hasSpouse res:Pyrrha ;
+    myth:memberOf res:DeucalionAndPyrrha .
+
+res:Eidyia myth:hasChild res:Medea ;
+    myth:hasFather res:Oceanus ;
+    myth:hasMother res:Tethys ;
+    myth:hasSpouse res:Aeetes .
+
+res:Electra myth:appearsIn res:Electra_Q540161,
+        res:Elektra,
+        res:Elektra_Q3721900,
+        res:Idomeneo,
+        res:TheDivineComedy,
+        res:TheLibationBearers ;
+    myth:hasFather res:Agamemnon ;
+    myth:hasMother res:Clytemnestra ;
+    myth:hasSibling res:Iphigenia,
+        res:Orestes ;
+    myth:memberOf res:OrestesAndElectra .
+
+res:Eurynome myth:hasChild res:Asopus ;
+    myth:hasFather res:Oceanus ;
+    myth:hasMother res:Tethys ;
+    myth:hasSpouse res:Ophion .
+
+res:Hector myth:appearsIn res:Iliad,
+        res:TheDivineComedy ;
+    myth:diedIn res:Troy ;
+    myth:hasFather res:Priam ;
+    myth:hasMother res:Hecuba ;
+    myth:hasSibling res:Deiphobus,
+        res:Paris ;
+    myth:killedBy res:Achilles .
+
+res:Ladon myth:hasFather res:Phorcys,
+        res:Typhon ;
+    myth:hasMother res:Ceto,
+        res:Echidna ;
+    myth:killedBy res:Heracles .
+
+res:Leto myth:appearsIn res:Iliad ;
+    myth:hasChild res:Apollo ;
+    myth:hasFather res:Coeus ;
+    myth:hasMother res:Phoebe ;
+    myth:hasSibling res:Asteria .
+
+res:Megara_Q929768 myth:hasChild res:Democoon_Q21548783,
+        res:Medebrontes ;
+    myth:hasFather res:Creon ;
+    myth:hasSpouse res:Heracles .
+
+res:Merope myth:hasChild res:Glaucus_Q1232714 ;
+    myth:hasFather res:Atlas ;
+    myth:hasMother res:Pleione ;
+    myth:hasSpouse res:Sisyphus .
+
+res:Nemesis myth:hasChild res:HelenOfTroy ;
+    myth:hasFather res:Erebos,
+        res:Oceanus ;
+    myth:hasMother res:Nyx,
+        res:Tethys .
+
+res:Neoptolemus myth:diedIn res:SanctuaryOfPythianApolloAtDelphi ;
+    myth:hasFather res:Achilles ;
+    myth:hasMother res:Deidamia ;
+    myth:hasSpouse res:Hermione ;
+    myth:killedBy res:Orestes .
+
+res:Nephele myth:hasChild res:Helle,
+        res:Phrixus ;
+    myth:hasFather res:Oceanus ;
+    myth:hasSpouse res:Athamas .
+
+res:Oenomaus myth:hasChild res:Hippodamia ;
+    myth:hasFather res:Ares ;
+    myth:hasMother res:Sterope ;
+    myth:holdsTitle res:KingInGreekMythology .
+
+res:Perse myth:hasChild res:Aeetes,
+        res:Circe,
+        res:Pasiphae,
+        res:Perses_Q2071913 ;
+    myth:hasFather res:Oceanus .
+
+res:Polymede myth:hasChild res:Jason ;
+    myth:hasFather res:Autolycus ;
+    myth:hasSibling res:Anticlea ;
+    myth:hasSpouse res:Aeson .
+
+res:Pyrrha myth:hasChild res:Hellen ;
+    myth:hasFather res:Epimetheus ;
+    myth:hasMother res:Pandora ;
+    myth:hasSpouse res:Deucalion ;
+    myth:memberOf res:DeucalionAndPyrrha .
+
+res:Selene myth:hasChild res:NemeanLion ;
+    myth:hasFather res:Hyperion ;
+    myth:hasMother res:Theia ;
+    myth:hasSibling res:Eos,
+        res:Helios .
+
+res:Telephassa myth:hasChild res:Cadmus,
+        res:Europa,
+        res:Phoenix_Q1145956 ;
+    myth:hasSpouse res:Agenor ;
+    myth:holdsTitle res:KingInGreekMythology .
+
+res:Thetis myth:appearsIn res:Iliad ;
+    myth:hasChild res:Achilles ;
+    myth:hasFather res:Nereus ;
+    myth:hasMother res:Doris ;
+    myth:hasSpouse res:Peleus,
+        res:Poseidon ;
+    myth:memberOf res:Nereids .
+
+res:Aerope myth:hasChild res:Agamemnon,
+        res:Menelaus ;
+    myth:hasFather res:Catreus ;
+    myth:hasSpouse res:Atreus .
+
+res:Antiope_Q580862 myth:appearsIn res:Q20502242,
+        res:TheDinnerParty,
+        res:TheSwordIsForged ;
+    myth:hasChild res:Hippolytus ;
+    myth:hasFather res:Ares ;
+    myth:hasMother res:Otrera ;
+    myth:hasSibling res:Hippolyta ;
+    myth:hasSpouse res:Theseus ;
+    myth:holdsTitle res:QueenOfAmazons .
+
+res:Asteria myth:hasChild res:Hecate ;
+    myth:hasFather res:Coeus ;
+    myth:hasMother res:Phoebe ;
+    myth:hasSibling res:Leto ;
+    myth:hasSpouse res:Perses .
+
+res:Astraeus myth:hasChild res:Euros ;
+    myth:hasFather res:Kreios ;
+    myth:hasMother res:Eurybia ;
+    myth:hasSibling res:Perses ;
+    myth:hasSpouse res:Eos .
+
+res:Catreus myth:hasChild res:Aerope ;
+    myth:hasFather res:Minos ;
+    myth:hasMother res:Pasiphae ;
+    myth:hasSibling res:Ariadne,
+        res:Phaedra ;
+    myth:holdsTitle res:KingOfCrete .
+
+res:CepheusKingOfAethiopia myth:hasChild res:Andromeda ;
+    myth:hasFather res:Agenor,
+        res:Belus,
+        res:Phoenix_Q1145956 ;
+    myth:hasSpouse res:Cassiopeia ;
+    myth:holdsTitle res:KingInGreekMythology .
+
+res:Coeus myth:hasChild res:Asteria,
+        res:Leto ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSpouse res:Phoebe ;
+    myth:memberOf res:Uranids .
+
+res:Deiphobus myth:appearsIn res:Aeneid,
+        res:Iliad ;
+    myth:hasFather res:Priam ;
+    myth:hasMother res:Hecuba ;
+    myth:hasSibling res:Hector,
+        res:Paris ;
+    myth:hasSpouse res:HelenOfTroy ;
+    myth:killedBy res:HelenOfTroy,
+        res:Menelaus,
+        res:Odysseus ;
+    myth:mannerOfDeath res:Homicide .
+
+res:Doris myth:hasChild res:Calypso,
+        res:Glauce,
+        res:Thetis ;
+    myth:hasFather res:Oceanus ;
+    myth:hasMother res:Tethys ;
+    myth:hasSpouse res:Nereus .
+
+res:Eurybia myth:hasChild res:Astraeus,
+        res:Perses ;
+    myth:hasFather res:Pontus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSpouse res:Kreios .
+
+res:Hermione myth:hasChild res:Tisamenus ;
+    myth:hasFather res:Menelaus ;
+    myth:hasMother res:HelenOfTroy ;
+    myth:hasSpouse res:Neoptolemus,
+        res:Orestes ;
+    myth:residesIn res:Sparta .
+
+res:Hippodamia myth:hasChild res:Atreus,
+        res:Pittheus,
+        res:Pleisthenes ;
+    myth:hasFather res:Oenomaus ;
+    myth:hasSpouse res:Pelops .
+
+res:Hippolyta myth:hasChild res:Hippolytus ;
+    myth:hasFather res:Ares ;
+    myth:hasMother res:Otrera ;
+    myth:hasSibling res:Antiope_Q580862 ;
+    myth:hasSpouse res:Theseus ;
+    myth:holdsTitle res:QueenOfAmazons .
+
+res:Leda myth:hasChild res:Clytemnestra,
+        res:HelenOfTroy ;
+    myth:hasFather res:Thestius ;
+    myth:hasSibling res:Althaea ;
+    myth:hasSpouse res:Tyndareus .
+
+res:Mnemosyne myth:hasChild res:Calliope,
+        res:Clio ;
+    myth:hasFather res:Uranus,
+        res:Zeus ;
+    myth:hasMother res:Gaia ;
+    myth:memberOf res:Uranids .
+
+res:NemeanLion myth:hasFather res:Typhon ;
+    myth:hasMother res:Echidna ;
+    myth:killedBy res:Heracles ;
+    myth:memberOf res:HeraclesAndTheNemeanLion ;
+    myth:residesIn res:Nemea .
+
+res:Oebalus myth:hasChild res:Hippocoon,
+        res:Tyndareus ;
+    myth:hasFather res:Cynortas,
+        res:Perieres ;
+    myth:hasSpouse res:Gorgophone ;
+    myth:holdsTitle res:MythologicalKingOfSparta .
+
+res:Perses myth:hasChild res:Hecate ;
+    myth:hasFather res:Kreios ;
+    myth:hasMother res:Eurybia ;
+    myth:hasSibling res:Astraeus,
+        res:Circe,
+        res:Pasiphae ;
+    myth:hasSpouse res:Asteria .
+
+res:Phoebe myth:hasChild res:Asteria,
+        res:Leto ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSpouse res:Coeus ;
+    myth:memberOf res:Uranids .
+
+res:Phoenix_Q1145956 myth:hasChild res:CepheusKingOfAethiopia ;
+    myth:hasFather res:Agenor ;
+    myth:hasMother res:Telephassa ;
+    myth:hasSibling res:Cadmus,
+        res:Europa ;
+    myth:holdsTitle res:KingOfTyre .
+
+res:Polydorus_Q1061554 myth:hasChild res:Labdacus ;
+    myth:hasFather res:Cadmus ;
+    myth:hasMother res:Harmonia ;
+    myth:hasSibling res:Ino,
+        res:Semele ;
+    myth:holdsTitle res:KingOfThebe .
+
+res:Semele myth:hasChild res:Dionysus ;
+    myth:hasFather res:Cadmus ;
+    myth:hasMother res:Harmonia ;
+    myth:hasSibling res:Ino,
+        res:Polydorus_Q1061554 .
+
+res:Tartarus myth:hasChild res:Echidna,
+        res:Typhon ;
+    myth:hasSibling res:Nyx ;
+    myth:hasSpouse res:Gaia .
+
+res:Telegonus myth:appearsIn res:Fabulae ;
+    myth:hasFather res:Odysseus ;
+    myth:hasMother res:Circe ;
+    myth:hasSibling res:Cassiphone,
+        res:Latinus ;
+    myth:hasSpouse res:Penelope .
+
+res:Telemachus myth:appearsIn res:MadnessOfOdysseus,
+        res:Odyssey ;
+    myth:hasChild res:Latinus ;
+    myth:hasFather res:Odysseus ;
+    myth:hasMother res:Penelope ;
+    myth:hasSpouse res:Cassiphone,
+        res:Circe ;
+    myth:killedBy res:Cassiphone ;
+    myth:mannerOfDeath res:Homicide .
+
+res:Tithonus myth:hasChild res:Emathion,
+        res:Memnon ;
+    myth:hasFather res:Laomedon ;
+    myth:hasSibling res:Priam ;
+    myth:hasSpouse res:Eos .
+
+res:Tyndareus myth:hasChild res:Clytemnestra ;
+    myth:hasFather res:Oebalus,
+        res:Perieres ;
+    myth:hasMother res:Gorgophone ;
+    myth:hasSpouse res:Leda ;
+    myth:holdsTitle res:MythologicalKingOfSparta .
+
+res:Tyro myth:hasChild res:Aeson ;
+    myth:hasFather res:Salmoneus ;
+    myth:hasSpouse res:Cretheus,
+        res:Poseidon,
+        res:Sisyphus .
+
+res:Aeson myth:hasChild res:Jason ;
+    myth:hasFather res:Cretheus ;
+    myth:hasMother res:Tyro ;
+    myth:hasSpouse res:Alcimede,
+        res:Amphinome_Q21548505,
+        res:Polymede ;
+    myth:holdsTitle res:KingOfPhtiotis .
+
+res:Alcaeus myth:hasChild res:Amphitryon ;
+    myth:hasFather res:Perseus ;
+    myth:hasMother res:Andromeda ;
+    myth:hasSibling res:Electryon,
+        res:Gorgophone,
+        res:Sthenelus ;
+    myth:holdsTitle res:KingInGreekMythology .
+
+res:Antigone_Q131351 myth:hasFather res:Oedipus ;
+    myth:hasMother res:Jocasta ;
+    myth:hasSibling res:Eteocles,
+        res:Ismene,
+        res:Polynices .
+
+res:Apollo myth:appearsIn res:Alceste,
+        res:Iliad,
+        res:PilgrimOfEternity,
+        res:WhoMournsForAdonais ;
+    myth:bornIn res:Cynthus,
+        res:Delos ;
+    myth:hasChild res:Cyzicus,
+        res:LinusOfThrace,
+        res:Troilus ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Leto ;
+    myth:memberOf res:DiiConsentes,
+        res:TwelveOlympians ;
+    myth:residesIn res:Olympus .
+
+res:Asopus myth:hasChild res:Aegina_Q321298 ;
+    myth:hasFather res:Oceanus,
+        res:Poseidon,
+        res:Zeus ;
+    myth:hasMother res:Eurynome,
+        res:Tethys ;
+    myth:holdsTitle res:KingOfPlataea .
+
+res:Atreus myth:hasChild res:Agamemnon,
+        res:Menelaus ;
+    myth:hasFather res:Pelops ;
+    myth:hasMother res:Hippodamia ;
+    myth:hasSpouse res:Aerope ;
+    myth:holdsTitle res:KingOfMycenae .
+
+res:Belus myth:hasChild res:Aegyptus,
+        res:CepheusKingOfAethiopia,
+        res:Danaus ;
+    myth:hasFather res:Poseidon ;
+    myth:hasMother res:Libya ;
+    myth:hasSibling res:Agenor ;
+    myth:holdsTitle res:MythologicalKingOfEgypt .
+
+res:Calliope myth:hasChild res:LinusOfThrace ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Mnemosyne ;
+    myth:hasSibling res:Clio ;
+    myth:hasSpouse res:Achelous,
+        res:Oeagrus ;
+    myth:memberOf res:Muse .
+
+res:Calypso myth:appearsIn res:Odyssey ;
+    myth:hasChild res:Latinus,
+        res:Telegonus ;
+    myth:hasFather res:Atlas,
+        res:Nereus ;
+    myth:hasMother res:Doris,
+        res:Pleione,
+        res:Tethys ;
+    myth:memberOf res:Nereids .
+
+res:Cassiphone myth:appearsIn res:Alexandra ;
+    myth:hasFather res:Odysseus ;
+    myth:hasMother res:Circe ;
+    myth:hasSibling res:Latinus,
+        res:Telegonus .
+
+res:Ceto myth:hasChild res:Echidna,
+        res:Ladon,
+        res:Medusa ;
+    myth:hasFather res:Pontus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSpouse res:Phorcys .
+
+res:Chaos myth:appearsIn res:Q59756366 ;
+    myth:hasChild res:Erebos,
+        res:Gaia,
+        res:Nyx,
+        res:Tartarus,
+        res:Uranus ;
+    myth:hasFather res:Chronos ;
+    myth:hasMother res:Ananke .
+
+res:Deianira myth:hasChild res:Hyllus,
+        res:Macaria ;
+    myth:hasFather res:Oeneus ;
+    myth:hasMother res:Althaea ;
+    myth:hasSpouse res:Heracles ;
+    myth:mannerOfDeath res:Suicide .
+
+res:Dionysus myth:appearsIn res:Dionysiaca,
+        res:Q59756366,
+        res:TheBacchae ;
+    myth:hasChild res:Deianira,
+        res:Oenopion ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Demeter,
+        res:Semele ;
+    myth:hasSpouse res:Ariadne ;
+    myth:memberOf res:TwelveOlympians .
+
+res:Electryon myth:hasChild res:Alkmene ;
+    myth:hasFather res:Perseus ;
+    myth:hasMother res:Andromeda ;
+    myth:hasSibling res:Alcaeus,
+        res:Gorgophone,
+        res:Sthenelus ;
+    myth:holdsTitle res:KingOfMycenae .
+
+res:Enarete myth:hasChild res:Athamas,
+        res:Cretheus,
+        res:Perieres,
+        res:Salmoneus,
+        res:Sisyphus ;
+    myth:hasSpouse res:Aiolos .
+
+res:Eteocles myth:hasFather res:Oedipus ;
+    myth:hasMother res:Jocasta ;
+    myth:hasSibling res:Antigone_Q131351,
+        res:Ismene,
+        res:Polynices ;
+    myth:holdsTitle res:Monarch ;
+    myth:mannerOfDeath res:DeathInBattle .
+
+res:Europa myth:bornIn res:Tyre ;
+    myth:hasChild res:Minos,
+        res:Rhadamanthus ;
+    myth:hasFather res:Agenor ;
+    myth:hasMother res:Telephassa ;
+    myth:hasSibling res:Cadmus,
+        res:Phoenix_Q1145956 .
+
+res:Glaucus_Q1232714 myth:hasChild res:Alcimenes_Q21548251,
+        res:Bellerophon,
+        res:Piren ;
+    myth:hasFather res:Sisyphus ;
+    myth:hasMother res:Merope ;
+    myth:hasSpouse res:Eurynome_Q956831 ;
+    myth:holdsTitle res:KingOfCorinth .
+
+res:Hellen myth:hasChild res:Aiolos ;
+    myth:hasFather res:Deucalion,
+        res:Prometheus,
+        res:Zeus ;
+    myth:hasMother res:Klymene,
+        res:Pyrrha .
+
+res:Hemera myth:hasChild res:Gaia,
+        res:Uranus ;
+    myth:hasFather res:Erebos ;
+    myth:hasMother res:Nyx ;
+    myth:hasSibling res:Aether ;
+    myth:hasSpouse res:Aether .
+
+res:Hephaestus myth:appearsIn res:Iliad,
+        res:PrometheusBound ;
+    myth:hasChild res:Erichthonius,
+        res:Periphetes,
+        res:Rhadamanthus ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Hera ;
+    myth:hasSibling res:Ares ;
+    myth:hasSpouse res:Aphrodite ;
+    myth:memberOf res:TwelveOlympians .
+
+res:Iphigenia myth:diedIn res:Aulis ;
+    myth:hasFather res:Agamemnon,
+        res:Theseus ;
+    myth:hasMother res:Clytemnestra,
+        res:HelenOfTroy ;
+    myth:hasSibling res:Electra,
+        res:Orestes ;
+    myth:killedBy res:Agamemnon .
+
+res:Ismene myth:appearsIn res:Antigone,
+        res:SevenAgainstThebes ;
+    myth:hasFather res:Oedipus ;
+    myth:hasMother res:Jocasta ;
+    myth:hasSibling res:Antigone_Q131351,
+        res:Eteocles,
+        res:Polynices .
+
+res:Kreios myth:hasChild res:Astraeus,
+        res:Perses ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSpouse res:Eurybia ;
+    myth:memberOf res:Uranids .
+
+res:Latinus myth:appearsIn res:TheDivineComedy,
+        res:Theogony ;
+    myth:hasFather res:Odysseus,
+        res:Telemachus ;
+    myth:hasMother res:Circe ;
+    myth:hasSibling res:Cassiphone,
+        res:Telegonus ;
+    myth:holdsTitle res:ListOfLatinKingsOfAlbaLonga .
+
+res:Nereus myth:hasChild res:Calypso,
+        res:Thetis ;
+    myth:hasFather res:Pontus ;
+    myth:hasMother res:Gaia,
+        res:Tethys ;
+    myth:hasSpouse res:Doris .
+
+res:Paris myth:appearsIn res:Iliad,
+        res:JudgementOfParis,
+        res:TheDivineComedy ;
+    myth:hasFather res:Priam ;
+    myth:hasMother res:Hecuba ;
+    myth:hasSibling res:Deiphobus,
+        res:Hector ;
+    myth:hasSpouse res:HelenOfTroy .
+
+res:Pelops myth:hasChild res:Atreus,
+        res:Pittheus,
+        res:Pleisthenes,
+        res:Sciron ;
+    myth:hasFather res:Tantalus ;
+    myth:hasSpouse res:Hippodamia ;
+    myth:holdsTitle res:KingOfAchaea .
+
+res:Perieres myth:hasChild res:Oebalus,
+        res:Tyndareus ;
+    myth:hasFather res:Aiolos ;
+    myth:hasMother res:Enarete ;
+    myth:hasSibling res:Sisyphus ;
+    myth:hasSpouse res:Gorgophone ;
+    myth:holdsTitle res:KingOfMessenia .
+
+res:Perses_Q2071913 myth:hasChild res:Hecate ;
+    myth:hasFather res:Helios ;
+    myth:hasMother res:Perse ;
+    myth:hasSibling res:Aeetes,
+        res:Circe,
+        res:Pasiphae ;
+    myth:holdsTitle res:KingOfColchis,
+        res:KingOfTauris ;
+    myth:killedBy res:Medea .
+
+res:Phorcys myth:hasChild res:Echidna,
+        res:Ladon,
+        res:Medusa ;
+    myth:hasFather res:Pontus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSpouse res:Ceto .
+
+res:Polynices myth:hasFather res:Oedipus ;
+    myth:hasMother res:Jocasta ;
+    myth:hasSibling res:Antigone_Q131351,
+        res:Eteocles,
+        res:Ismene ;
+    myth:holdsTitle res:KingOfThebe ;
+    myth:mannerOfDeath res:DeathInBattle .
+
+res:Pontus myth:hasChild res:Ceto,
+        res:Eurybia,
+        res:Nereus,
+        res:Phorcys ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Uranus .
+
+res:Rhadamanthus myth:hasChild res:Oenopion ;
+    myth:hasFather res:Hephaestus,
+        res:Zeus ;
+    myth:hasMother res:Europa ;
+    myth:hasSibling res:Minos ;
+    myth:hasSpouse res:Alkmene ;
+    myth:holdsTitle res:KingOfCrete .
+
+res:Sthenelus myth:hasChild res:Astymedusa ;
+    myth:hasFather res:Perseus ;
+    myth:hasMother res:Andromeda ;
+    myth:hasSibling res:Alcaeus,
+        res:Electryon,
+        res:Gorgophone ;
+    myth:holdsTitle res:KingOfTiryns .
+
+res:Aeneas myth:appearsIn res:Aeneid,
+        res:Iliad,
+        res:Rhesus,
+        res:TheDivineComedy ;
+    myth:hasChild res:Anius_Q135479720,
+        res:Ascanius ;
+    myth:hasFather res:Anchises ;
+    myth:hasMother res:Aphrodite ;
+    myth:hasSpouse res:Anius_Q135479720,
+        res:Creusa .
+
+res:Aiolos myth:hasChild res:Athamas,
+        res:Cretheus,
+        res:Perieres,
+        res:Salmoneus,
+        res:Sisyphus ;
+    myth:hasFather res:Hellen ;
+    myth:hasSpouse res:Enarete .
+
+res:Andromeda myth:appearsIn res:Metamorphoses ;
+    myth:hasChild res:Alcaeus,
+        res:Electryon,
+        res:Gorgophone,
+        res:Sthenelus ;
+    myth:hasFather res:CepheusKingOfAethiopia ;
+    myth:hasMother res:Cassiopeia ;
+    myth:hasSpouse res:Perseus .
+
+res:Ariadne myth:hasChild res:Oenopion ;
+    myth:hasFather res:Minos ;
+    myth:hasMother res:Pasiphae ;
+    myth:hasSibling res:Catreus,
+        res:Phaedra ;
+    myth:hasSpouse res:Dionysus .
+
+res:Clytemnestra myth:appearsIn res:Electra_Q540161,
+        res:TheLibationBearers ;
+    myth:hasChild res:Electra,
+        res:Iphigenia,
+        res:Orestes ;
+    myth:hasFather res:Tyndareus ;
+    myth:hasMother res:Leda ;
+    myth:hasSibling res:HelenOfTroy ;
+    myth:hasSpouse res:Agamemnon .
+
+res:Demeter myth:appearsIn res:Q59756366 ;
+    myth:hasChild res:Hecate ;
+    myth:hasFather res:Cronus ;
+    myth:hasMother res:Rhea ;
+    myth:hasSibling res:Hera,
+        res:Poseidon,
+        res:Zeus ;
+    myth:memberOf res:TwelveOlympians .
+
+res:Dione myth:appearsIn res:Iliad ;
+    myth:hasChild res:Aphrodite,
+        res:Dionysus ;
+    myth:hasFather res:Aether,
+        res:Oceanus,
+        res:Uranus ;
+    myth:hasMother res:Gaia,
+        res:Tethys .
+
+res:Epimetheus myth:hasChild res:Pyrrha ;
+    myth:hasFather res:Iapetos ;
+    myth:hasMother res:Klymene,
+        res:Themis ;
+    myth:hasSibling res:Atlas,
+        res:Prometheus ;
+    myth:hasSpouse res:Pandora ;
+    myth:holdsTitle res:KingOfSicyon .
+
+res:Erebos myth:hasChild res:Aether,
+        res:Hemera,
+        res:Nemesis ;
+    myth:hasFather res:Chaos ;
+    myth:hasSibling res:Nyx ;
+    myth:hasSpouse res:Nyx .
+
+res:Hecuba myth:appearsIn res:Aeneid,
+        res:Hecuba_Q1115611,
+        res:Iliad,
+        res:TheTrojanWomen ;
+    myth:hasChild res:Antiphus,
+        res:Creusa,
+        res:Deiphobus,
+        res:Hector,
+        res:Paris,
+        res:Troilus ;
+    myth:hasSpouse res:Priam .
+
+res:Ino myth:hasChild res:Learchus,
+        res:Melicertes ;
+    myth:hasFather res:Cadmus ;
+    myth:hasMother res:Harmonia ;
+    myth:hasSibling res:Polydorus_Q1061554,
+        res:Semele ;
+    myth:hasSpouse res:Athamas .
+
+res:Menelaus myth:appearsIn res:Iliad ;
+    myth:hasChild res:Hermione ;
+    myth:hasFather res:Atreus ;
+    myth:hasMother res:Aerope ;
+    myth:hasSibling res:Agamemnon ;
+    myth:hasSpouse res:HelenOfTroy ;
+    myth:holdsTitle res:MythologicalKingOfSparta .
+
+res:Minos myth:appearsIn res:TheDivineComedy ;
+    myth:hasChild res:Ariadne,
+        res:Catreus,
+        res:Phaedra ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Europa ;
+    myth:hasSibling res:Rhadamanthus ;
+    myth:hasSpouse res:Pasiphae ;
+    myth:holdsTitle res:KingOfCrete .
+
+res:Orestes myth:appearsIn res:Electra_Q540161,
+        res:TheLibationBearers ;
+    myth:hasChild res:Tisamenus ;
+    myth:hasFather res:Agamemnon ;
+    myth:hasMother res:Clytemnestra ;
+    myth:hasSibling res:Electra,
+        res:Iphigenia ;
+    myth:hasSpouse res:Hermione ;
+    myth:holdsTitle res:KingOfArgos,
+        res:KingOfMycenae,
+        res:MythologicalKingOfSparta ;
+    myth:memberOf res:OrestesAndElectra .
+
+res:Phaedra myth:hasChild res:Acamas ;
+    myth:hasFather res:Minos ;
+    myth:hasMother res:Pasiphae ;
+    myth:hasSibling res:Ariadne,
+        res:Catreus ;
+    myth:hasSpouse res:Theseus ;
+    myth:holdsTitle res:KingOfAthens ;
+    myth:mannerOfDeath res:Suicide .
+
+res:Sisyphus myth:appearsIn res:HowTheCossacksBecameOlympians,
+        res:Q59756366,
+        res:TheMythOfSisyphus ;
+    myth:hasChild res:Glaucus_Q1232714 ;
+    myth:hasFather res:Aiolos ;
+    myth:hasMother res:Enarete ;
+    myth:hasSibling res:Perieres ;
+    myth:hasSpouse res:Merope,
+        res:Tyro ;
+    myth:holdsTitle res:KingOfCorinth .
+
+res:Typhon myth:hasChild res:Chimera,
+        res:Ladon,
+        res:NemeanLion,
+        res:Orthrus ;
+    myth:hasFather res:Tartarus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSpouse res:Echidna .
+
+res:Aether myth:hasChild res:Dione,
+        res:Gaia,
+        res:Uranus ;
+    myth:hasFather res:Erebos ;
+    myth:hasMother res:Nyx ;
+    myth:hasSibling res:Hemera ;
+    myth:hasSpouse res:Hemera .
+
+res:Agenor myth:hasChild res:Cadmus,
+        res:CepheusKingOfAethiopia,
+        res:Europa,
+        res:Phoenix_Q1145956 ;
+    myth:hasFather res:Poseidon ;
+    myth:hasMother res:Libya ;
+    myth:hasSibling res:Belus ;
+    myth:hasSpouse res:Telephassa ;
+    myth:holdsTitle res:KingOfPhoenicia,
+        res:KingOfTyre .
+
+res:Cadmus myth:hasChild res:Ino,
+        res:Polydorus_Q1061554,
+        res:Semele ;
+    myth:hasFather res:Agenor ;
+    myth:hasMother res:Telephassa ;
+    myth:hasSibling res:Europa,
+        res:Phoenix_Q1145956 ;
+    myth:hasSpouse res:Harmonia ;
+    myth:holdsTitle res:KingOfThebe .
+
+res:Gorgophone myth:hasChild res:Hippocoon,
+        res:Tyndareus ;
+    myth:hasFather res:Perseus ;
+    myth:hasMother res:Andromeda ;
+    myth:hasSibling res:Alcaeus,
+        res:Electryon,
+        res:Sthenelus ;
+    myth:hasSpouse res:Oebalus,
+        res:Perieres .
+
+res:Hecate myth:hasChild res:Circe,
+        res:Medea ;
+    myth:hasFather res:Perses,
+        res:Perses_Q2071913,
+        res:Zeus ;
+    myth:hasMother res:Asteria,
+        res:Demeter,
+        res:Hera .
+
+res:Jocasta myth:hasChild res:Antigone_Q131351,
+        res:Eteocles,
+        res:Ismene,
+        res:Oedipus,
+        res:Polynices ;
+    myth:hasSibling res:Creon,
+        res:Euryganeia ;
+    myth:hasSpouse res:Laius,
+        res:Oedipus .
+
+res:Nyx myth:appearsIn res:Q59756366 ;
+    myth:hasChild res:Aether,
+        res:Hemera,
+        res:Nemesis ;
+    myth:hasFather res:Chaos ;
+    myth:hasSibling res:Erebos,
+        res:Gaia,
+        res:Tartarus ;
+    myth:hasSpouse res:Erebos .
+
+res:Pleione myth:hasChild res:Calypso,
+        res:Electra_Q858663,
+        res:Maia,
+        res:Merope,
+        res:Sterope ;
+    myth:hasFather res:Oceanus ;
+    myth:hasMother res:Tethys ;
+    myth:hasSpouse res:Atlas .
+
+res:Aphrodite myth:appearsIn res:Q59756366 ;
+    myth:hasChild res:Aeneas,
+        res:Harmonia ;
+    myth:hasFather res:Uranus,
+        res:Zeus ;
+    myth:hasMother res:Dione,
+        res:Gaia ;
+    myth:hasSpouse res:Hephaestus ;
+    myth:memberOf res:TwelveOlympians ;
+    myth:residesIn res:Olympus .
+
+res:Eos myth:appearsIn res:Iliad,
+        res:Odyssey ;
+    myth:hasChild res:Emathion,
+        res:Euros,
+        res:Memnon ;
+    myth:hasFather res:Hyperion ;
+    myth:hasMother res:Theia ;
+    myth:hasSibling res:Helios,
+        res:Selene ;
+    myth:hasSpouse res:Astraeus,
+        res:Tithonus ;
+    myth:residesIn res:Aeaea,
+        res:Kerne,
+        res:Sky .
+
+res:Harmonia myth:hasChild res:Ino,
+        res:Polydorus_Q1061554,
+        res:Semele ;
+    myth:hasFather res:Ares ;
+    myth:hasMother res:Aphrodite ;
+    myth:hasSpouse res:Cadmus .
+
+res:Helios myth:hasChild res:Aeetes,
+        res:Circe,
+        res:Dirce,
+        res:Pasiphae,
+        res:Perses_Q2071913 ;
+    myth:hasFather res:Hyperion ;
+    myth:hasMother res:Theia ;
+    myth:hasSibling res:Eos,
+        res:Selene ;
+    myth:residesIn res:PalaceOfHelios .
+
+res:Klymene myth:hasChild res:Atlas,
+        res:Deucalion,
+        res:Epimetheus,
+        res:Hellen,
+        res:Prometheus ;
+    myth:hasFather res:Oceanus ;
+    myth:hasMother res:Tethys ;
+    myth:hasSpouse res:Iapetos,
+        res:Prometheus ;
+    myth:memberOf res:Oceanids .
+
+res:Perseus myth:appearsIn res:Metamorphoses ;
+    myth:hasChild res:Alcaeus,
+        res:Electryon,
+        res:Gorgophone,
+        res:Sthenelus ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Danae ;
+    myth:hasSpouse res:Andromeda ;
+    myth:holdsTitle res:KingOfArgos,
+        res:KingOfMycenae,
+        res:KingOfTiryns .
+
+res:Prometheus myth:appearsIn res:PrometheusBound,
+        res:SmallMoralWorks ;
+    myth:hasChild res:Deucalion,
+        res:Hellen ;
+    myth:hasFather res:Iapetos ;
+    myth:hasMother res:Asia,
+        res:Klymene,
+        res:Themis ;
+    myth:hasSibling res:Atlas,
+        res:Epimetheus ;
+    myth:hasSpouse res:Klymene .
+
+res:Aeetes myth:hasChild res:Circe,
+        res:Medea ;
+    myth:hasFather res:Helios ;
+    myth:hasMother res:Perse ;
+    myth:hasSibling res:Circe,
+        res:Pasiphae,
+        res:Perses_Q2071913 ;
+    myth:hasSpouse res:Clytia_Q58324367,
+        res:Eidyia,
+        res:Eurylyte ;
+    myth:holdsTitle res:KingOfColchis .
+
+res:Bellerophon myth:hasFather res:Glaucus_Q1232714,
+        res:Poseidon ;
+    myth:hasMother res:Eurynome_Q956831 ;
+    myth:hasSibling res:Alcimenes_Q21548251,
+        res:Piren ;
+    myth:hasSpouse res:Alcimedusa,
+        res:Phylonoe .
+
+res:Jason myth:appearsIn res:Argonautica ;
+    myth:hasChild res:Alcimenes,
+        res:Tisander ;
+    myth:hasFather res:Aeson ;
+    myth:hasMother res:Alcimede,
+        res:Amphinome_Q21548505,
+        res:Polymede ;
+    myth:hasSpouse res:Glauce,
+        res:Hypsipyle,
+        res:Medea .
+
+res:Oedipus myth:hasChild res:Antigone_Q131351,
+        res:Eteocles,
+        res:Ismene,
+        res:Polynices ;
+    myth:hasFather res:Laius ;
+    myth:hasMother res:Jocasta ;
+    myth:hasSpouse res:Astymedusa,
+        res:Euryganeia,
+        res:Jocasta ;
+    myth:holdsTitle res:KingOfThebe .
+
+res:Ares myth:appearsIn res:Iliad,
+        res:Q59756366 ;
+    myth:hasChild res:Antiope_Q580862,
+        res:Cycnus,
+        res:Harmonia,
+        res:Hippolyta,
+        res:Lycaon_Q3268334,
+        res:Oenomaus,
+        res:Thestius ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Hera ;
+    myth:hasSpouse res:Aphrodite ;
+    myth:memberOf res:TwelveOlympians .
+
+res:Atlas myth:hasChild res:Calypso,
+        res:Electra_Q858663,
+        res:Maia,
+        res:Merope,
+        res:Sterope ;
+    myth:hasFather res:Iapetos ;
+    myth:hasMother res:Asia,
+        res:Klymene ;
+    myth:hasSibling res:Epimetheus,
+        res:Prometheus ;
+    myth:hasSpouse res:Pleione ;
+    myth:holdsTitle res:KingOfAtlantis .
+
+res:Echidna myth:bornIn res:Night ;
+    myth:hasChild res:Chimera,
+        res:Ladon,
+        res:NemeanLion,
+        res:Orthrus ;
+    myth:hasFather res:Chrysaor,
+        res:Phorcys,
+        res:Tartarus ;
+    myth:hasMother res:Callirhoe,
+        res:Ceto,
+        res:Gaia,
+        res:Styx ;
+    myth:hasSpouse res:Typhon ;
+    myth:mannerOfDeath res:Homicide .
+
+res:Hera myth:appearsIn res:Iliad ;
+    myth:hasChild res:Ares,
+        res:Enyo,
+        res:Hebe,
+        res:Hecate,
+        res:Hephaestus ;
+    myth:hasFather res:Cronus ;
+    myth:hasMother res:Rhea ;
+    myth:hasSibling res:Demeter,
+        res:Poseidon,
+        res:Zeus ;
+    myth:hasSpouse res:Zeus ;
+    myth:memberOf res:TwelveOlympians .
+
+res:Pasiphae myth:hasChild res:Ariadne,
+        res:Catreus,
+        res:Minotaur,
+        res:Phaedra ;
+    myth:hasFather res:Helios ;
+    myth:hasMother res:Perse ;
+    myth:hasSibling res:Aeetes,
+        res:Circe,
+        res:Perses_Q2071913 ;
+    myth:hasSpouse res:Minos .
+
+res:Circe myth:appearsIn res:AndreaeAlciatiEmblematumLibellus,
+        res:Odyssey ;
+    myth:hasChild res:Cassiphone,
+        res:Latinus,
+        res:Telegonus ;
+    myth:hasFather res:Aeetes,
+        res:Helios ;
+    myth:hasMother res:Hecate,
+        res:Perse ;
+    myth:hasSibling res:Aeetes,
+        res:Pasiphae,
+        res:Perses_Q2071913 ;
+    myth:hasSpouse res:Telemachus ;
+    myth:residesIn res:Aeaea .
+
+res:HelenOfTroy myth:appearsIn res:Aeneid,
+        res:Iliad,
+        res:Odyssey,
+        res:TheDivineComedy ;
+    myth:hasChild res:Hermione,
+        res:Iphigenia ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Leda ;
+    myth:hasSibling res:Clytemnestra ;
+    myth:hasSpouse res:Achilles,
+        res:Deiphobus,
+        res:Menelaus,
+        res:Paris,
+        res:Theseus .
+
+res:Medea myth:appearsIn res:Argonautica,
+        res:Medea_Q286381,
+        res:Medea_Q3332727 ;
+    myth:hasChild res:Alcimenes,
+        res:Tisander ;
+    myth:hasFather res:Aeetes ;
+    myth:hasMother res:Clytia_Q58324367,
+        res:Eidyia,
+        res:Eurylyte,
+        res:Hecate ;
+    myth:hasSpouse res:Aegeus,
+        res:Jason .
+
+res:Themis myth:hasChild res:Epimetheus,
+        res:Prometheus ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Cronus,
+        res:Hyperion,
+        res:Iapetos,
+        res:Oceanus,
+        res:Rhea,
+        res:Tethys,
+        res:Theia ;
+    myth:hasSpouse res:Zeus ;
+    myth:memberOf res:Uranids .
+
+res:Agamemnon myth:appearsIn res:Iliad ;
+    myth:hasChild res:Electra,
+        res:Iphigenia,
+        res:Orestes ;
+    myth:hasFather res:Atreus ;
+    myth:hasMother res:Aerope ;
+    myth:hasSibling res:Menelaus ;
+    myth:hasSpouse res:Clytemnestra ;
+    myth:holdsTitle res:KingOfMycenae .
+
+res:Athamas myth:hasChild res:Helle,
+        res:Learchus,
+        res:Melicertes,
+        res:Phrixus ;
+    myth:hasFather res:Aiolos,
+        res:Minyas ;
+    myth:hasMother res:Enarete,
+        res:Zeuxippe_Q46845955 ;
+    myth:hasSpouse res:Gorgopis,
+        res:Ino,
+        res:Nephele,
+        res:Themisto ;
+    myth:holdsTitle res:KingOfOrcomenus .
+
+res:Hyperion myth:hasChild res:Eos,
+        res:Helios,
+        res:Selene ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Cronus,
+        res:Iapetos,
+        res:Oceanus,
+        res:Rhea,
+        res:Tethys,
+        res:Theia,
+        res:Themis ;
+    myth:hasSpouse res:Theia ;
+    myth:memberOf res:Uranids .
+
+res:Iapetos myth:hasChild res:Atlas,
+        res:Epimetheus,
+        res:Prometheus ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Cronus,
+        res:Hyperion,
+        res:Oceanus,
+        res:Rhea,
+        res:Tethys,
+        res:Theia,
+        res:Themis ;
+    myth:hasSpouse res:Klymene ;
+    myth:memberOf res:Uranids .
+
+res:Odysseus myth:appearsIn res:Iliad,
+        res:MadnessOfOdysseus,
+        res:Odyssey ;
+    myth:hasChild res:Cassiphone,
+        res:Latinus,
+        res:Leontophron,
+        res:Telegonus,
+        res:Telemachus ;
+    myth:hasFather res:Laertes,
+        res:Sisyphus ;
+    myth:hasMother res:Anticlea ;
+    myth:hasSpouse res:Penelope ;
+    myth:holdsTitle res:KingInGreekMythology .
+
+res:Theia myth:hasChild res:Eos,
+        res:Helios,
+        res:Selene ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Cronus,
+        res:Hyperion,
+        res:Iapetos,
+        res:Oceanus,
+        res:Rhea,
+        res:Tethys,
+        res:Themis ;
+    myth:hasSpouse res:Hyperion ;
+    myth:memberOf res:Uranids .
+
+res:Cronus myth:hasChild res:Demeter,
+        res:Hera,
+        res:Kreios,
+        res:Poseidon,
+        res:Zeus ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Hyperion,
+        res:Iapetos,
+        res:Oceanus,
+        res:Rhea,
+        res:Tethys,
+        res:Theia,
+        res:Themis ;
+    myth:hasSpouse res:Rhea ;
+    myth:memberOf res:Uranids ;
+    myth:residesIn res:MountOthrys .
+
+res:Priam myth:appearsIn res:Aeneid,
+        res:Iliad ;
+    myth:diedIn res:Troy ;
+    myth:hasChild res:Antiphus,
+        res:Creusa,
+        res:Deiopites,
+        res:Deiphobus,
+        res:Democoon,
+        res:Dryops_Q3715373,
+        res:Hector,
+        res:Isus,
+        res:Paris,
+        res:Polydorus_Q29626641,
+        res:Troilus ;
+    myth:hasFather res:Laomedon ;
+    myth:hasSibling res:Tithonus ;
+    myth:hasSpouse res:Hecuba ;
+    myth:holdsTitle res:KingOfTroy ;
+    myth:killedBy res:Neoptolemus ;
+    myth:mannerOfDeath res:Homicide .
+
+res:Rhea myth:hasChild res:Demeter,
+        res:Hera,
+        res:Poseidon,
+        res:Zeus ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Cronus,
+        res:Hyperion,
+        res:Iapetos,
+        res:Oceanus,
+        res:Tethys,
+        res:Theia,
+        res:Themis ;
+    myth:hasSpouse res:Cronus ;
+    myth:memberOf res:Uranids .
+
+res:Theseus myth:appearsIn res:Q59756366,
+        res:TheSuppliants ;
+    myth:hasChild res:Acamas,
+        res:DemophonOfAthens,
+        res:Hippolytus,
+        res:Iphigenia ;
+    myth:hasFather res:Aegeus,
+        res:Poseidon ;
+    myth:hasMother res:Aethra ;
+    myth:hasSpouse res:Antiope_Q580862,
+        res:Ariadne,
+        res:HelenOfTroy,
+        res:Hippolyta,
+        res:Phaedra ;
+    myth:holdsTitle res:KingOfAthens ;
+    myth:killedBy res:Lycomedes ;
+    myth:mannerOfDeath res:Homicide .
+
+res:Achilles myth:appearsIn res:Iliad,
+        res:Q59756366,
+        res:TheDivineComedy ;
+    myth:diedIn res:Troy ;
+    myth:hasChild res:Neoptolemus ;
+    myth:hasFather res:Peleus ;
+    myth:hasMother res:Thetis ;
+    myth:hasSpouse res:Deidamia,
+        res:HelenOfTroy ;
+    myth:holdsTitle res:KingOfMyrmidons ;
+    myth:killedBy res:Paris .
+
+res:Poseidon myth:appearsIn res:Iliad,
+        res:Odyssey,
+        res:Q59756366 ;
+    myth:hasChild res:Agenor,
+        res:Asopus,
+        res:Bellerophon,
+        res:Belus,
+        res:Chrysaor,
+        res:Minyas,
+        res:Periphetes,
+        res:Procrustes,
+        res:Sciron,
+        res:Sinis,
+        res:Theseus ;
+    myth:hasFather res:Cronus ;
+    myth:hasMother res:Rhea ;
+    myth:hasSibling res:Demeter,
+        res:Hera,
+        res:Zeus ;
+    myth:hasSpouse res:Tyro ;
+    myth:memberOf res:TwelveOlympians .
+
+res:Oceanus myth:appearsIn res:PrometheusBound ;
+    myth:hasChild res:Achelous,
+        res:Asia,
+        res:Asopus,
+        res:Callirhoe,
+        res:Calypso,
+        res:Dione,
+        res:Doris,
+        res:Eidyia,
+        res:Eurynome,
+        res:Inachus,
+        res:Klymene,
+        res:Nemesis,
+        res:Nephele,
+        res:Pleione,
+        res:Styx ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Cronus,
+        res:Hyperion,
+        res:Iapetos,
+        res:Rhea,
+        res:Tethys,
+        res:Theia,
+        res:Themis ;
+    myth:hasSpouse res:Tethys ;
+    myth:memberOf res:Uranids ;
+    myth:residesIn res:ArcadiaRegionalUnit .
+
+res:Tethys myth:hasChild res:Achelous,
+        res:Asia,
+        res:Asopus,
+        res:Callirhoe,
+        res:Calypso,
+        res:Dione,
+        res:Doris,
+        res:Eidyia,
+        res:Eurynome,
+        res:Inachus,
+        res:Klymene,
+        res:Nemesis,
+        res:Nereus,
+        res:Pleione,
+        res:Styx ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Cronus,
+        res:Hyperion,
+        res:Iapetos,
+        res:Oceanus,
+        res:Rhea,
+        res:Theia,
+        res:Themis ;
+    myth:hasSpouse res:Oceanus ;
+    myth:memberOf res:Uranids .
+
+res:Uranus myth:hasChild res:Alcyoneus,
+        res:Aphrodite,
+        res:Coeus,
+        res:Cronus,
+        res:Dione,
+        res:Ephialtes,
+        res:Eurytos,
+        res:Hyperion,
+        res:Iapetos,
+        res:Kreios,
+        res:Mnemosyne,
+        res:Oceanus,
+        res:Phoebe,
+        res:Porphyrion,
+        res:Rhea,
+        res:Tethys,
+        res:Theia,
+        res:Themis ;
+    myth:hasFather res:Aether,
+        res:Chaos,
+        res:Ophion ;
+    myth:hasMother res:Gaia,
+        res:Hemera ;
+    myth:hasSibling res:Pontus ;
+    myth:hasSpouse res:Gaia .
+
+res:Heracles myth:bornIn res:Thebes_Q11225429 ;
+    myth:hasChild res:Democoon_Q21548783,
+        res:Hyllus,
+        res:Macaria,
+        res:Medebrontes,
+        res:Telephus ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Alkmene ;
+    myth:hasSpouse res:Deianira,
+        res:Hebe,
+        res:Megara_Q929768,
+        res:Omphale .
+
+res:Zeus myth:appearsIn res:Iliad,
+        res:Odyssey,
+        res:Q59756366 ;
+    myth:hasChild res:Aeacus,
+        res:Aphrodite,
+        res:Apollo,
+        res:Ares,
+        res:Asopus,
+        res:Calliope,
+        res:Clio,
+        res:Dionysus,
+        res:Enyo,
+        res:Epaphus,
+        res:Harmonia,
+        res:Hebe,
+        res:Hecate,
+        res:HelenOfTroy,
+        res:Hellen,
+        res:Hephaestus,
+        res:Heracles,
+        res:Hermes,
+        res:Minos,
+        res:Mnemosyne,
+        res:Perseus,
+        res:Rhadamanthus,
+        res:Tantalus ;
+    myth:hasFather res:Cronus ;
+    myth:hasMother res:Rhea ;
+    myth:hasSibling res:Demeter,
+        res:Hera,
+        res:Poseidon ;
+    myth:hasSpouse res:Hera,
+        res:Themis ;
+    myth:memberOf res:TwelveOlympians .
+
+res:Gaia myth:hasChild res:Alcyoneus,
+        res:Aphrodite,
+        res:Ceto,
+        res:Coeus,
+        res:Cronus,
+        res:Dione,
+        res:Echidna,
+        res:Ephialtes,
+        res:Eurybia,
+        res:Eurytos,
+        res:Hyperion,
+        res:Iapetos,
+        res:Kreios,
+        res:Mnemosyne,
+        res:Nereus,
+        res:Oceanus,
+        res:Phoebe,
+        res:Phorcys,
+        res:Pontus,
+        res:Porphyrion,
+        res:Rhea,
+        res:Tethys,
+        res:Theia,
+        res:Themis,
+        res:Typhon,
+        res:Uranus ;
+    myth:hasFather res:Aether,
+        res:Chaos ;
+    myth:hasMother res:Hemera ;
+    myth:hasSibling res:Nyx ;
+    myth:hasSpouse res:Tartarus,
+        res:Uranus .
+

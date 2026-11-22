@@ -1,0 +1,30 @@
+# MythoGraph - vincoli che valgono dentro UNA fonte (una versione del mito).
+# In ogni fonte un personaggio ha un solo padre, una sola madre, al massimo due genitori,
+# e un immortale non viene ucciso. Wikidata mescola le versioni: Asclepio è un dio
+# ma Zeus lo uccide (diventa dio dopo la morte, in un'altra tradizione).
+# Wikidata nel suo insieme raccoglie tutte le versioni e li viola (Afrodite ha due
+# padri): per questo il modulo si applica solo ai grafi delle singole fonti.
+# La build aggiunge a ogni fonte un owl:AllDifferent sui suoi personaggi.
+
+@prefix myth: <https://example.org/mythograph/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/mythograph/ontology/constraints>
+    a owl:Ontology ;
+    owl:imports <https://example.org/mythograph/ontology> ;
+    rdfs:label "MythoGraph - vincoli per fonte"@it ;
+    rdfs:comment "Da importare solo quando si ragiona su una singola fonte."@it .
+
+myth:hasFather a owl:FunctionalProperty .
+myth:hasMother a owl:FunctionalProperty .
+
+myth:Character rdfs:subClassOf [
+    a owl:Restriction ; owl:onProperty myth:hasParent ;
+    owl:maxCardinality "2"^^xsd:nonNegativeInteger ] .
+
+# un immortale non può essere ucciso; con la copertura del core: chi è ucciso è mortale
+myth:Immortal rdfs:subClassOf [
+    a owl:Restriction ; owl:onProperty myth:killedBy ;
+    owl:maxCardinality "0"^^xsd:nonNegativeInteger ] .

@@ -28,9 +28,9 @@ LEVEL_LABELS = {
 # archi disegnati (le inverse no, sarebbero doppi)
 EDGE_PROPS = {
     MYTH.hasFather: "family", MYTH.hasMother: "family", MYTH.hasParent: "family",
-    MYTH.hasSpouse: "spouse", MYTH.killed: "killed",
+    MYTH.hasChild: "family", MYTH.hasSpouse: "spouse", MYTH.killed: "killed",
     MYTH.hasAgent: "event", MYTH.hasPatient: "event", MYTH.hasParticipant: "event",
-    MYTH.setIn: "place", MYTH.bornIn: "place", MYTH.rulesOver: "place",
+    MYTH.setIn: "place", MYTH.bornIn: "place", MYTH.diedIn: "place", MYTH.rulesOver: "place",
 }
 SYMMETRIC = {MYTH.hasSpouse}
 
@@ -84,9 +84,14 @@ def node_json(node) -> dict:
             "internal": str(node).startswith(str(RES))}
 
 
+def ancient_sources() -> list[str]:
+    meta = store.graph("meta")
+    return [s for s in store.sources if meta.value(GRAPH[s], MYTH.constrained) != Literal(False)]
+
+
 def check_source(source: str) -> list[str]:
-    if source == "all":
-        return store.sources
+    if source == "all":                     # tutte le fonti antiche (Wikidata a parte)
+        return ancient_sources()
     if source not in store.sources:
         raise HTTPException(404, f"Fonte sconosciuta: {source}")
     return [source]
@@ -139,14 +144,15 @@ def sources():
     out = []
     for name in [*store.sources, "merged-naive"]:
         gid = GRAPH[name]
-        works = [store.label(w) for w in store.graph("shared").subjects(MYTH.sourceGraph, gid)]
+        works = sorted(store.label(w) for w in store.graph("shared").subjects(MYTH.inSourceGraph, gid))
         def val(p):
             v = meta.value(gid, p)
             return v.toPython() if v is not None else None
         out.append({
             "name": name,
-            "label": {"hesiod": "Esiodo", "homer": "Omero", "apollodorus": "Apollodoro",
-                      "ovid": "Ovidio", "merged-naive": "Fusione ingenua"}.get(name, name),
+            "label": str(meta.value(gid, RDFS.label) or name),
+            "constrained": val(MYTH.constrained),
+            "internalConflicts": len(list(meta.subjects(MYTH.inGraph, gid))),
             "works": works,
             "asserted": val(MYTH.assertedTriples),
             "inferred": {lvl: val(MYTH[f"inferredBy_{lvl}"]) for lvl in LEVELS},
@@ -173,6 +179,8 @@ def graph(source: str = "all", inferred: bool = True, events: bool = False, plac
         if kind == "place" and not places:
             return
         s, o = canonical(s), canonical(o)
+        if p == MYTH.hasChild:              # disegnato come genitore, nel verso del figlio
+            s, o, p = o, s, MYTH.hasParent
         if s == o:
             return
         if p in SYMMETRIC and str(o) < str(s):
@@ -261,8 +269,8 @@ def entity(ident: str, source: str = "all"):
         "wikidata": next((str(o) for o in links_g.objects(node, OWL.sameAs) if str(o).startswith(str(WD))), None),
         "dbpedia": next((str(o) for o in links_g.objects(node, OWL.sameAs) if str(o).startswith(str(DBR))), None),
         "wikipedia": next((str(o) for o in links_g.objects(node, RDFS.seeAlso)), None),
-        "lat": (v.toPython() if (v := links_g.value(node, GEO.lat)) is not None else None),
-        "long": (v.toPython() if (v := links_g.value(node, GEO.long)) is not None else None),
+        "lat": (v.toPython() if (v := store.graph("shared").value(node, GEO.lat)) is not None else None),
+        "long": (v.toPython() if (v := store.graph("shared").value(node, GEO.long)) is not None else None),
     }
     roman = [node_json(r) for r, g in ROMAN_TO_GREEK.items() if g == node]
     greek = node_json(ROMAN_TO_GREEK[node]) if node in ROMAN_TO_GREEK else None
@@ -341,8 +349,8 @@ def sparql(req: SparqlRequest):
 def _coords(place, seen=None):
     """Coordinate del luogo, o del luogo che lo contiene / con cui è identificato."""
     seen = seen or set()
-    links_g, shared = store.graph("links"), store.graph("shared")
-    lat, lon = links_g.value(place, GEO.lat), links_g.value(place, GEO.long)
+    shared = store.graph("shared")
+    lat, lon = shared.value(place, GEO.lat), shared.value(place, GEO.long)
     if lat is not None and lon is not None:
         return float(lat), float(lon), place
     seen.add(place)
@@ -354,12 +362,14 @@ def _coords(place, seen=None):
 
 @app.get("/api/places")
 def places(source: str = "all"):
-    """Luoghi reali con coordinate (da Wikidata) e gli eventi ambientati lì."""
+    """Luoghi con coordinate (da Wikidata) e i personaggi nati, morti o regnanti lì."""
     srcs = check_source(source)
     out: dict[str, dict] = {}
     for src in srcs:
         view = store.graph(f"view/{src}")
-        for event, place in view.subject_objects(MYTH.setIn):
+        pairs = [(c, pl) for p in (MYTH.bornIn, MYTH.diedIn, MYTH.residesIn, MYTH.rulesOver)
+                 for c, pl in view.subject_objects(p)]
+        for event, place in pairs:
             if canonical(event) != event:
                 continue
             found = _coords(place)
@@ -371,7 +381,7 @@ def places(source: str = "all"):
             entry["events"].append({"id": local(event), "label": store.label(event), "source": src,
                                     "place": store.label(place), "approx": anchor != place})
     # anche i luoghi reali senza eventi, per mostrare la geografia del dataset
-    for place in store.graph("shared").subjects(RDF.type, MYTH.RealPlace):
+    for place in set(store.graph("shared").subjects(GEO.lat, None)):
         found = _coords(place)
         if found and found[2] == place and local(place) not in out:
             out[local(place)] = {"id": local(place), "label": store.label(place),

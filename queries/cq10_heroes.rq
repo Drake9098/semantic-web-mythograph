@@ -1,19 +1,17 @@
-# CQ10 - Quali personaggi sono eroi e a quali imprese hanno partecipato?
-# Hero = umano che partecipa a un'impresa o a una guerra (classe definita).
+# CQ10 - Quali personaggi sono eroi, e quale mostro hanno ucciso?
+# Eroe = mortale che ha ucciso un mostro (classe definita).
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX myth: <https://example.org/mythograph/ontology#>
 PREFIX res:  <https://example.org/mythograph/resource/>
 PREFIX g:    <https://example.org/mythograph/graph/>
 
-SELECT DISTINCT ?fonte ?eroe ?impresa WHERE {
-  GRAPH g:meta { ?vista myth:viewOf ?fonte }
+SELECT DISTINCT ?eroe ?mostro WHERE {
+  GRAPH g:meta { ?vista myth:viewOf g:wikidata }
   GRAPH ?vista {
-    ?eroe a myth:Hero ; myth:participatesIn ?impresa .
-    { ?impresa a myth:HeroicDeed } UNION { ?impresa a myth:War }
+    ?eroe a myth:Hero ; myth:killed ?mostro .
+    ?mostro a myth:Monster .
   }
 }
-ORDER BY ?eroe ?fonte
+ORDER BY ?eroe

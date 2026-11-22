@@ -1,0 +1,16 @@
+# graph: links
+# Collegamenti al Web dei dati: owl:sameAs verso Wikidata e DBpedia.
+CONSTRUCT {
+  ?r owl:sameAs ?item , ?dbpedia ;
+     rdfs:seeAlso ?article .
+}
+WHERE {
+  ?item map:key ?key .
+  FILTER(EXISTS { ?item map:inScope true } || NOT EXISTS { ?item map:extracted true })
+  BIND(IRI(CONCAT(STR(res:), ?key)) AS ?r)
+  OPTIONAL {
+    ?article schema:about ?item ;
+             schema:isPartOf <https://en.wikipedia.org/> .
+    BIND(IRI(CONCAT("http://dbpedia.org/resource/", STRAFTER(STR(?article), "/wiki/"))) AS ?dbpedia)
+  }
+}

@@ -1,22 +1,16 @@
-# CQ7 - Quale opera e quale passo attestano un'affermazione?
-# Legge le affermazioni reificate (rdf:Statement) con il loro passo.
+# CQ7 - Quali opere antiche attestano le parentele di un personaggio? (default: Urano)
+# Ogni named graph corrisponde a un autore; le opere sono collegate al grafo.
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX myth: <https://example.org/mythograph/ontology#>
 PREFIX res:  <https://example.org/mythograph/resource/>
 PREFIX g:    <https://example.org/mythograph/graph/>
 
-SELECT ?fonte ?soggetto ?predicato ?oggetto ?opera ?passo ?nota WHERE {
-  GRAPH g:meta { ?fonte a myth:SourceGraph }
-  GRAPH ?fonte {
-    ?st a rdf:Statement ;
-        rdf:subject ?soggetto ; rdf:predicate ?predicato ; rdf:object ?oggetto ;
-        myth:attestedIn ?p .
-    ?p myth:inWork ?opera ; myth:locus ?passo .
-    OPTIONAL { ?st myth:versionNote ?nota }
-  }
+SELECT ?fonte ?opera ?relazione ?parente WHERE {
+  GRAPH g:meta { ?fonte a myth:SourceGraph ; myth:constrained true }
+  GRAPH ?fonte { ?target ?relazione ?parente }
+  VALUES ?relazione { myth:hasFather myth:hasMother myth:hasChild myth:hasSpouse myth:hasSibling }
+  OPTIONAL { GRAPH g:shared { ?opera myth:inSourceGraph ?fonte } }
 }
-ORDER BY ?soggetto ?fonte
+ORDER BY ?fonte ?relazione

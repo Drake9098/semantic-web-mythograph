@@ -1,0 +1,28 @@
+# graph: per source
+# Affermazioni: proprietà di Wikidata -> proprietà di MythoGraph (tables/properties.ttl).
+# Eseguita una volta per named graph, con ?graph già fissato:
+#  - g:wikidata riceve tutte le affermazioni (tutte le versioni del mito);
+#  - g:hesiod, g:homer, ... solo quelle che citano un'opera dell'autore.
+CONSTRUCT { ?s ?property ?o . }
+WHERE {
+  ?item map:inScope true ;
+        map:key ?key ;
+        ?p ?st .
+  ?wdprop map:toProperty ?property ;
+          wikibase:claim ?p ;
+          wikibase:statementProperty ?ps .
+  ?st ?ps ?value ;
+      wikibase:rank ?rank .
+  FILTER(?rank != wikibase:DeprecatedRank)
+  ?value map:key ?valueKey .
+  FILTER NOT EXISTS { ?value map:ignore true }
+  # parentele e uccisioni: l'altro personaggio deve essere nel grafo;
+  # luoghi, gruppi, titoli, opere: non devono essere personaggi
+  FILTER(IF(EXISTS { ?wdprop map:kinship true },
+            EXISTS { ?value map:inScope true },
+            NOT EXISTS { ?value map:extracted true }))
+  FILTER(?graph = g:wikidata
+         || EXISTS { ?st prov:wasDerivedFrom/pr:P248/map:inGraph ?graph })
+  BIND(IRI(CONCAT(STR(res:), ?key)) AS ?s)
+  BIND(IRI(CONCAT(STR(res:), ?valueKey)) AS ?o)
+}

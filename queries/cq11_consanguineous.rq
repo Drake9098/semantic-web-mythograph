@@ -1,0 +1,18 @@
+# CQ11 - Chi ha sposato un consanguineo? E chi è una figura edipica?
+# Regole SWRL (coniuge + fratello/antenato) e classi definite sopra di esse.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+PREFIX res:  <https://example.org/mythograph/resource/>
+PREFIX g:    <https://example.org/mythograph/graph/>
+
+SELECT DISTINCT ?personaggio ?legame ?coniuge ?edipico WHERE {
+  GRAPH g:meta { ?vista myth:viewOf g:wikidata }
+  GRAPH ?vista {
+    ?personaggio ?legame ?coniuge .
+    VALUES ?legame { myth:marriedSibling myth:marriedAncestor }
+    BIND(EXISTS { ?personaggio a myth:OedipalFigure } AS ?edipico)
+  }
+}
+ORDER BY DESC(?edipico) ?legame ?personaggio

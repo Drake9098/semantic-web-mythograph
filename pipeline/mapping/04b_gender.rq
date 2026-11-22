@@ -1,0 +1,20 @@
+# graph: shared
+# Genere (P21) -> myth:Male / myth:Female.
+# Chi risulterebbe sia maschio sia femmina (Ceneo, Ifi: cambiano sesso nel mito)
+# resta senza genere: la classe sarebbe incoerente (Male e Female sono disgiunte).
+CONSTRUCT { ?r a ?class . }
+WHERE {
+  ?item map:inScope true ;
+        map:key ?key ;
+        p:P21 ?st .
+  ?st ps:P21 ?gender ;
+      wikibase:rank ?rank .
+  FILTER(?rank != wikibase:DeprecatedRank)
+  ?gender map:under ?anchor .
+  ?anchor map:toClass ?class .
+  FILTER NOT EXISTS {
+    ?item p:P21/ps:P21/map:under/map:toClass ?other .
+    FILTER(?other != ?class)
+  }
+  BIND(IRI(CONCAT(STR(res:), ?key)) AS ?r)
+}

@@ -1,0 +1,14 @@
+# graph: work
+# Secondo passo: i genitori noti (almeno 20 voci di Wikipedia) di chi è già dentro.
+# Le query "work" si ripetono finché non aggiungono niente: così si risale
+# di generazione in generazione fino ai primordiali (Caos, Gea, Urano).
+CONSTRUCT { ?parent map:inScope true . }
+WHERE {
+  ?x map:inScope true .
+  { ?x p:P22 ?st . ?st ps:P22 ?parent . }
+  UNION { ?x p:P25 ?st . ?st ps:P25 ?parent . }
+  UNION { ?st ps:P40 ?x . ?parent p:P40 ?st . }
+  ?parent map:extracted true ;
+          wikibase:sitelinks ?n .
+  FILTER(?n >= 20)
+}

@@ -1,0 +1,20 @@
+# graph: shared
+# Le opere antiche citate come fonti, con il loro autore.
+CONSTRUCT {
+  ?w a myth:LiteraryWork ;
+     rdfs:label ?wlabel ;
+     myth:writtenBy ?a ;
+     myth:inSourceGraph ?graph .
+  ?a a myth:Author ;
+     rdfs:label ?alabel .
+}
+WHERE {
+  ?work map:inGraph ?graph ;
+        map:key ?wkey ;
+        wdt:P50 ?author .
+  ?author map:key ?akey .
+  BIND(IRI(CONCAT(STR(res:), ?wkey)) AS ?w)
+  BIND(IRI(CONCAT(STR(res:), ?akey)) AS ?a)
+  OPTIONAL { ?work rdfs:label ?wlabel . FILTER(LANG(?wlabel) IN ("it", "en")) }
+  OPTIONAL { ?author rdfs:label ?alabel . FILTER(LANG(?alabel) IN ("it", "en")) }
+}

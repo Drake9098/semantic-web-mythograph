@@ -1,0 +1,7 @@
+# Passo 5: per ogni classe usata, quali classi "ancora" della tabella ha sopra di sé
+# (P279* = sottoclasse di, a qualunque profondità).
+SELECT ?class ?anchor WHERE {
+  VALUES ?class { {{ITEMS}} }
+  VALUES ?anchor { {{ANCHORS}} }
+  ?class wdt:P279* ?anchor .
+}

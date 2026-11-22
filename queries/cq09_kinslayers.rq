@@ -1,0 +1,15 @@
+# CQ9 - Chi ha ucciso un proprio parente?
+# Wikidata dice solo "ucciso da"; il legame di parentela lo aggiungono le regole SWRL.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX myth: <https://example.org/mythograph/ontology#>
+PREFIX res:  <https://example.org/mythograph/resource/>
+PREFIX g:    <https://example.org/mythograph/graph/>
+
+SELECT DISTINCT ?uccisore ?delitto ?vittima WHERE {
+  GRAPH g:meta { ?vista myth:viewOf g:wikidata }
+  GRAPH ?vista { ?uccisore ?delitto ?vittima }
+  VALUES ?delitto { myth:killedAncestor myth:killedDescendant myth:killedSibling myth:killedSpouse }
+}
+ORDER BY ?delitto ?uccisore

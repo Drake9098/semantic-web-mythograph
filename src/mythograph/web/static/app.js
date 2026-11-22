@@ -27,7 +27,8 @@ const CATEGORY = {
   event: ["#7e57c2", "Evento"], place: ["#26a69a", "Luogo reale"], mythplace: ["#80cbc4", "Luogo mitico"],
   other: ["#9e9e9e", "Altro"],
 };
-const SOURCE_COLORS = { hesiod: "#b8691c", homer: "#2b6c94", apollodorus: "#5c7a2e", ovid: "#7b4a91" };
+const SOURCE_COLORS = { hesiod: "#b8691c", homer: "#2b6c94", apollodorus: "#5c7a2e", pausanias: "#7b4a91",
+  diodorus: "#a33b5c", herodotus: "#3d7f7a", hyginus: "#8a6d1f", apollonius: "#4b5aa8", wikidata: "#6b6b6b" };
 const LEVEL_TEXT = { asserted: "asserita", shared: "condivisa", rules: "regola", owlrl: "OWL RL", hermit: "HermiT" };
 const LEVEL_HELP = {
   asserted: "Affermata esplicitamente dalla fonte",
@@ -37,7 +38,7 @@ const LEVEL_HELP = {
   hermit: "Dedotta dal reasoner OWL 2 DL HermiT",
 };
 
-const state = { sources: [], current: null, cy: null, source: "all", view: "hood", depth: 1, data: null };
+const state = { sources: [], current: null, cy: null, source: "wikidata", view: "hood", depth: 1, data: null };
 
 /* ------------------------------------------------------------------ helpers */
 const sourceLabel = (name) => (state.sources.find((s) => s.name === name) || {}).label || name;
@@ -467,8 +468,10 @@ async function main() {
   initCy();
   state.sources = await api("/api/sources");
   const sel = $("#source");
-  sel.replaceChildren(el("option", { value: "all" }, "Tutte le fonti"),
-    ...state.sources.filter((s) => s.name !== "merged-naive").map((s) => el("option", { value: s.name }, `${s.label} (${s.works.join(", ")})`)));
+  sel.replaceChildren(el("option", { value: "all" }, "Tutte le fonti antiche"),
+    ...state.sources.filter((s) => s.name !== "merged-naive").map((s) =>
+      el("option", { value: s.name }, s.works.length ? `${s.label} (${s.works.join(", ")})` : s.label)));
+  sel.value = state.source;
   sel.addEventListener("change", () => { state.source = sel.value; loadGraph(); if (state.current) renderEntity(state.current); });
   ["#inferred", "#events", "#places"].forEach((id) => $(id).addEventListener("change", loadGraph));
   $("#view").addEventListener("change", (ev) => { state.view = ev.target.value; $("#depth-field").hidden = state.view !== "hood"; render(); });

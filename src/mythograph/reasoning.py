@@ -9,7 +9,8 @@ import shutil
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from rdflib import BNode, Graph, Literal, URIRef
+from rdflib import BNode, Graph, Literal, Namespace, URIRef
+from rdflib.collection import Collection
 from rdflib.namespace import OWL, RDF, RDFS
 
 from .namespaces import EXTERNAL_NS, MYTH, RES, ROOT
@@ -39,11 +40,46 @@ def load_rules() -> list[tuple[str, str]]:
     return [(f.stem, f.read_text(encoding="utf-8")) for f in sorted(RULES_DIR.glob("*.rq"))]
 
 
+SWRL = Namespace("http://www.w3.org/2003/11/swrl#")
+
+
+def swrl_to_sparql(tbox: Graph) -> list[tuple[str, str]]:
+    """Traduce le regole SWRL dell'ontologia in CONSTRUCT: corpo -> WHERE, testa -> template.
+
+    differentFrom diventa FILTER(?x != ?y): qui vale l'ipotesi dei nomi unici.
+    """
+    def var(node) -> str:
+        return "?" + str(node).rsplit("#", 1)[-1]
+
+    def atoms(lst) -> list[str]:
+        out = []
+        for a in Collection(tbox, lst):
+            kind = tbox.value(a, RDF.type)
+            x, y = tbox.value(a, SWRL.argument1), tbox.value(a, SWRL.argument2)
+            if kind == SWRL.ClassAtom:
+                out.append(f"{var(x)} a <{tbox.value(a, SWRL.classPredicate)}> .")
+            elif kind == SWRL.IndividualPropertyAtom:
+                out.append(f"{var(x)} <{tbox.value(a, SWRL.propertyPredicate)}> {var(y)} .")
+            elif kind == SWRL.DifferentIndividualsAtom:
+                out.append(f"FILTER({var(x)} != {var(y)})")
+            else:
+                raise ValueError(f"atomo SWRL non gestito: {kind}")
+        return out
+
+    rules = []
+    for imp in tbox.subjects(RDF.type, SWRL.Imp):
+        name = str(tbox.value(imp, RDFS.label) or "swrl")
+        head = " ".join(atoms(tbox.value(imp, SWRL.head)))
+        body = " ".join(atoms(tbox.value(imp, SWRL.body)))
+        rules.append((f"swrl: {name}", f"CONSTRUCT {{ {head} }} WHERE {{ {body} }}"))
+    return sorted(rules)
+
+
 def apply_rules(graph: Graph, max_rounds: int = 20) -> Graph:
-    """Applica tutte le regole finché non si producono più triple nuove."""
+    """Applica tutte le regole (file .rq + SWRL tradotte) finché non producono più triple nuove."""
     work = Graph()
     work += graph
-    rules = load_rules()
+    rules = load_rules() + swrl_to_sparql(graph)
     for _ in range(max_rounds):
         before = len(work)
         for _name, query in rules:
@@ -62,7 +98,7 @@ def apply_rules(graph: Graph, max_rounds: int = 20) -> Graph:
 @dataclass
 class RLResult:
     inferred: Graph
-    consistent: bool
+    consistent: bool | None
     errors: list[str] = field(default_factory=list)
 
 
@@ -91,6 +127,7 @@ class DLResult:
     consistent: bool | None
     inferred: Graph
     message: str = ""
+    tbox: Graph = field(default_factory=Graph)
 
 
 _JAVA_CANDIDATES = [
@@ -129,17 +166,18 @@ def java_available() -> bool:
 
 
 def _dl_input(graph: Graph) -> Graph:
-    """Rimuove la reificazione: il vocabolario rdf: è riservato in OWL 2 DL."""
+    """Toglie la reificazione (vocabolario riservato in OWL 2 DL) e gli owl:imports (i moduli sono già qui)."""
     statements = set(graph.subjects(RDF.type, RDF.Statement))
     out = Graph()
     for s, p, o in graph:
-        if s in statements or p in _REIFICATION_PREDICATES:
+        if s in statements or p in _REIFICATION_PREDICATES or p == OWL.imports:
             continue
         out.add((s, p, o))
     return out
 
 
-def apply_hermit(graph: Graph) -> DLResult:
+def apply_hermit(graph: Graph, infer: bool = True) -> DLResult:
+    """infer=False: solo controllo di coerenza."""
     if not java_available():
         return DLResult(False, None, Graph(), "Java non trovato: HermiT saltato.")
 
@@ -159,13 +197,22 @@ def apply_hermit(graph: Graph) -> DLResult:
     onto.load(fileobj=io.BytesIO(data), format="ntriples")
     try:
         with onto:
-            sync_reasoner_hermit(world, infer_property_values=True, debug=0)
+            sync_reasoner_hermit(world, infer_property_values=infer, debug=0)
     except OwlReadyInconsistentOntologyError:
         return DLResult(True, False, Graph(), "HermiT: ontologia INCONSISTENTE.")
     except owlready2.OwlReadyJavaError as exc:  # pragma: no cover - dipende dall'ambiente
         return DLResult(False, None, Graph(), f"Errore Java/HermiT: {exc}")
+    if not infer:
+        return DLResult(True, True, Graph(), "HermiT: ontologia consistente.")
 
     result = world.as_rdflib_graph()
+    # classificazione della TBox: sottoclassi dedotte tra classi con nome (Parricide ⊑ Kinslayer)
+    tbox = Graph()
+    for c, sup in result.subject_objects(RDFS.subClassOf):
+        if (isinstance(c, URIRef) and isinstance(sup, URIRef) and c != sup
+                and str(c).startswith(str(MYTH)) and str(sup).startswith(str(MYTH))
+                and (c, RDFS.subClassOf, sup) not in dl):
+            tbox.add((c, RDFS.subClassOf, sup))
     new = Graph()
     for s, p, o in result.triples((None, None, None)):
         t = (s, p, o)
@@ -174,7 +221,7 @@ def apply_hermit(graph: Graph) -> DLResult:
             continue
         if t not in dl and keep_triple(*t):
             new.add(t)
-    return DLResult(True, True, new, "HermiT: ontologia consistente.")
+    return DLResult(True, True, new, "HermiT: ontologia consistente.", tbox)
 
 
 def _as_graph(*graphs: Graph) -> Graph:
@@ -192,14 +239,36 @@ class SourceReasoning:
 
 
 def reason(base: Graph) -> SourceReasoning:
-    """Esegue i tre livelli in cascata su ``base`` (TBox + shared + fonte)."""
+    """I tre livelli in cascata su ``base`` (TBox + entità comuni + fonte)."""
     rules = apply_rules(base)
     rl = apply_owlrl(_as_graph(base, rules))
     rl.inferred -= rules
     dl = apply_hermit(_as_graph(base, rules, rl.inferred))
     dl.inferred -= rules
     dl.inferred -= rl.inferred
+    dl.inferred += superclass_closure(_as_graph(base, rules, rl.inferred, dl.inferred), dl.tbox)
     return SourceReasoning(rules, rl, dl)
+
+
+def superclass_closure(g: Graph, inferred_tbox: Graph) -> Graph:
+    """HermiT restituisce solo la classe più specifica: aggiungo le superclassi con nome."""
+    hier = Graph()
+    for c, sup in g.subject_objects(RDFS.subClassOf):
+        if isinstance(c, URIRef) and isinstance(sup, URIRef):
+            hier.add((c, RDFS.subClassOf, sup))
+    hier += inferred_tbox
+    supers: dict = {}
+    out = Graph()
+    for x, c in list(g.subject_objects(RDF.type)):
+        if not isinstance(c, URIRef):
+            continue
+        if c not in supers:
+            supers[c] = set(hier.transitive_objects(c, RDFS.subClassOf)) - {c}
+        for sup in supers[c]:
+            t = (x, RDF.type, sup)
+            if t not in g and keep_triple(*t):
+                out.add(t)
+    return out
 
 
 __all__ = ["reason", "apply_rules", "apply_owlrl", "apply_hermit", "keep_triple", "java_available"]

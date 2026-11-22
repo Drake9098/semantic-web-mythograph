@@ -1,0 +1,17 @@
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX geo:      <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX schema:   <http://schema.org/>
+PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd:       <http://www.wikidata.org/entity/>
+PREFIX wdt:      <http://www.wikidata.org/prop/direct/>
+PREFIX p:        <http://www.wikidata.org/prop/>
+PREFIX ps:       <http://www.wikidata.org/prop/statement/>
+PREFIX pr:       <http://www.wikidata.org/prop/reference/>
+PREFIX map:      <https://example.org/mythograph/pipeline#>
+PREFIX myth:     <https://example.org/mythograph/ontology#>
+PREFIX res:      <https://example.org/mythograph/resource/>
+PREFIX g:        <https://example.org/mythograph/graph/>

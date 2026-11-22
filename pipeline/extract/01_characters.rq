@@ -1,0 +1,8 @@
+# Passo 1: i personaggi che sono istanza di una di quelle classi
+# e hanno almeno una parentela. {{CLASSES}}: il risultato del passo 0.
+SELECT DISTINCT ?item ?sitelinks WHERE {
+  VALUES ?class { {{CLASSES}} }
+  ?item wdt:P31 ?class ;
+        wikibase:sitelinks ?sitelinks .
+  FILTER EXISTS { ?item wdt:P22|wdt:P25|wdt:P26|wdt:P40|wdt:P3373 [] }
+}

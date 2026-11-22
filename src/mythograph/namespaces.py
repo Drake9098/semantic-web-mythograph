@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 MYTH = Namespace("https://example.org/mythograph/ontology#")    # TBox
 RES = Namespace("https://example.org/mythograph/resource/")     # individui
 GRAPH = Namespace("https://example.org/mythograph/graph/")      # named graph
+MAP = Namespace("https://example.org/mythograph/pipeline#")     # vocabolario delle tabelle di mapping
 DCTERMS = Namespace("http://purl.org/dc/terms/")
 SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
 CRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
@@ -20,13 +21,20 @@ GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
 # Vocabolari esterni a cui MythoGraph si allinea (alignments.ttl)
 EXTERNAL_NS = (str(CRM), str(FABIO), str(FOAF))
 
-ONTOLOGY_FILE = ROOT / "ontology" / "mythograph.ttl"
-ALIGNMENTS_FILE = ROOT / "ontology" / "alignments.ttl"
-SHARED_FILE = ROOT / "data" / "shared.ttl"
-LINKS_FILE = ROOT / "data" / "links.ttl"
-WIKIDATA_CACHE = ROOT / "data" / "wikidata_cache.json"
-SOURCES_DIR = ROOT / "data" / "sources"
+ONTOLOGY_DIR = ROOT / "ontology"
+ONTOLOGY_FILE = ONTOLOGY_DIR / "mythograph.ttl"          # core
+CONSTRAINTS_FILE = ONTOLOGY_DIR / "constraints.ttl"      # vincoli per singola fonte
+SWRL_FILE = ONTOLOGY_DIR / "rules.ttl"                   # regole SWRL
+ALIGNMENTS_FILE = ONTOLOGY_DIR / "alignments.ttl"
+
+PIPELINE_DIR = ROOT / "pipeline"                         # query e tabelle della pipeline
+RAW_DIR = ROOT / "data" / "raw"                          # passo 1-2: Wikidata grezzo
+MAPPED_DIR = ROOT / "data" / "mapped"                    # passo 3: tradotto in myth:
+SHARED_FILE = MAPPED_DIR / "shared.ttl"
+LINKS_FILE = MAPPED_DIR / "links.ttl"
+SOURCES_DIR = MAPPED_DIR / "sources"
 OUTPUT_FILE = ROOT / "data" / "generated" / "mythograph.trig"
+EXPORTS_DIR = ROOT / "exports"                           # file per Protégé
 QUERIES_DIR = ROOT / "queries"
 
 PREFIXES = {

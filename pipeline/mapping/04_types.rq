@@ -1,0 +1,27 @@
+# graph: shared
+# Classi: "istanza di" (P31) tradotta con tables/classes.ttl (il genere è in 04b),
+# usando per ogni classe di Wikidata la classe della tabella più specifica (03b).
+CONSTRUCT { ?r a ?class . }
+WHERE {
+  ?wdprop map:typing true ;
+          wikibase:claim ?p ;
+          wikibase:statementProperty ?ps .
+  ?item map:inScope true ;
+        map:key ?key ;
+        ?p ?st .
+  ?st ?ps ?wdclass ;
+      wikibase:rank ?rank .
+  FILTER(?rank != wikibase:DeprecatedRank)
+  ?wdclass map:specific ?anchor .
+  ?anchor map:toClass ?class .
+  # una classe da mortale insieme a una da divinità (Alala) o da creatura
+  # (Leone di Nemea): vale la seconda
+  FILTER NOT EXISTS {
+    ?anchor map:mortal true .
+    ?item ?p ?st2 .
+    ?st2 ?ps ?wdclass2 .
+    ?wdclass2 map:specific ?anchor2 .
+    { ?anchor2 map:divine true } UNION { ?anchor2 map:creature true }
+  }
+  BIND(IRI(CONCAT(STR(res:), ?key)) AS ?r)
+}

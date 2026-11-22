@@ -107,6 +107,9 @@ select, input[type=search], input[type=text], textarea {
 .src-badge { font-size: 11px; font-weight: 600; color: #fff; padding: 1px 7px; border-radius: 4px; }
 .src-hesiod { background: var(--hesiod); } .src-homer { background: var(--homer); }
 .src-apollodorus { background: var(--apollodorus); } .src-ovid { background: var(--ovid); }
+.src-pausanias { background: #7b4a91; } .src-diodorus { background: #a33b5c; }
+.src-herodotus { background: #3d7f7a; } .src-hyginus { background: #8a6d1f; }
+.src-apollonius { background: #4b5aa8; } .src-wikidata { background: #6b6b6b; }
 .src-shared { background: #8d8478; } .src-merged-naive { background: var(--bad); }
 .facts { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 .facts td { padding: 4px 4px; border-bottom: 1px solid var(--surface-2); vertical-align: top; }

@@ -1,10 +1,8 @@
 # CQ1 - Chi sono i genitori di un personaggio secondo ciascuna fonte?
-# Usa le viste per fonte, così include anche Ovidio (nomi romani); il FILTER toglie i doppioni romani.
+# Una riga per fonte: le versioni si leggono una accanto all'altra.
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX myth: <https://example.org/mythograph/ontology#>
 PREFIX res:  <https://example.org/mythograph/resource/>
 PREFIX g:    <https://example.org/mythograph/graph/>
@@ -13,6 +11,5 @@ SELECT ?fonte ?relazione ?genitore WHERE {
   GRAPH g:meta { ?vista myth:viewOf ?fonte }
   GRAPH ?vista { ?target ?relazione ?genitore }
   VALUES ?relazione { myth:hasFather myth:hasMother }
-  FILTER NOT EXISTS { GRAPH g:shared { ?genitore myth:romanCounterpart ?greco } }
 }
 ORDER BY ?fonte ?relazione

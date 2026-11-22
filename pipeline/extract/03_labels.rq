@@ -1,0 +1,11 @@
+# Passo 3: nomi in italiano, inglese, greco e latino, numero di voci Wikipedia,
+# voce inglese di Wikipedia (serve per il collegamento a DBpedia).
+SELECT ?item ?label ?lang ?sitelinks ?article WHERE {
+  VALUES ?item { {{ITEMS}} }
+  OPTIONAL { ?item rdfs:label ?label .
+             BIND(LANG(?label) AS ?lang)
+             FILTER(?lang IN ("it", "en", "el", "grc", "la")) }
+  OPTIONAL { ?item wikibase:sitelinks ?sitelinks . }
+  OPTIONAL { ?article schema:about ?item ;
+                      schema:isPartOf <https://en.wikipedia.org/> . }
+}

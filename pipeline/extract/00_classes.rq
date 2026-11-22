@@ -1,0 +1,7 @@
+# Passo 0: le classi della mitologia greca con tutte le sottoclassi (P279*).
+# {{CLASSES}}: le classi segnate con map:selects in tables/classes.ttl.
+# Esempio: "divinità delle acque greche" è sottoclasse di "divinità greca".
+SELECT DISTINCT ?class WHERE {
+  VALUES ?top { {{CLASSES}} }
+  ?class wdt:P279* ?top .
+}

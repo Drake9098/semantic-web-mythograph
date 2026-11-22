@@ -1,0 +1,12 @@
+# graph: shared
+# Personaggi: IRI leggibile (res:Zeus), nomi in più lingue, tipo myth:Character.
+CONSTRUCT {
+  ?r a myth:Character ;
+     rdfs:label ?label .
+}
+WHERE {
+  ?item map:inScope true ;
+        map:key ?key .
+  BIND(IRI(CONCAT(STR(res:), ?key)) AS ?r)
+  OPTIONAL { ?item rdfs:label ?label . }
+}

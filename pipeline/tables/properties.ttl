@@ -1,0 +1,30 @@
+# Tabella di corrispondenza: proprietà di Wikidata -> proprietà di MythoGraph.
+# map:typing   = il valore è una classe (P31): si traduce con tables/classes.ttl
+# map:kinship  = il valore deve essere un altro personaggio scaricato
+
+@prefix map:  <https://example.org/mythograph/pipeline#> .
+@prefix myth: <https://example.org/mythograph/ontology#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+wd:P31   rdfs:label "instance of"         ; map:typing true .
+wd:P21   rdfs:label "sex or gender"       .   # tradotta da mapping/04b_gender.rq
+
+wd:P22   rdfs:label "father"              ; map:toProperty myth:hasFather  ; map:kinship true .
+wd:P25   rdfs:label "mother"              ; map:toProperty myth:hasMother  ; map:kinship true .
+wd:P40   rdfs:label "child"               ; map:toProperty myth:hasChild   ; map:kinship true .
+wd:P26   rdfs:label "spouse"              ; map:toProperty myth:hasSpouse  ; map:kinship true .
+wd:P3373 rdfs:label "sibling"             ; map:toProperty myth:hasSibling ; map:kinship true .
+wd:P157  rdfs:label "killed by"           ; map:toProperty myth:killedBy   ; map:kinship true .
+
+wd:P19   rdfs:label "place of birth"      ; map:toProperty myth:bornIn .
+wd:P20   rdfs:label "place of death"      ; map:toProperty myth:diedIn .
+wd:P551  rdfs:label "residence"           ; map:toProperty myth:residesIn .
+wd:P1196 rdfs:label "manner of death"     ; map:toProperty myth:mannerOfDeath .
+wd:P361  rdfs:label "part of"             ; map:toProperty myth:memberOf .
+wd:P1441 rdfs:label "present in work"     ; map:toProperty myth:appearsIn .
+wd:P39   rdfs:label "position held"       ; map:toProperty myth:holdsTitle .
+
+# valori da non tradurre ("parte di: mitologia greca" non è un gruppo)
+wd:Q34726  rdfs:label "Greek mythology" ; map:ignore true .
+wd:Q122173 rdfs:label "Roman mythology" ; map:ignore true .

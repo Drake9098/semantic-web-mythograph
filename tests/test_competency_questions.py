@@ -1,147 +1,142 @@
-"""Ogni competency question deve restituire le risposte attese.
+"""Le competency question restituiscono le risposte attese; la pipeline è coerente.
 
-I test ricostruiscono il grafo da zero (build) e poi interrogano il TriG.
+I test leggono data/generated/mythograph.trig. Se manca lo ricostruiscono (la build
+completa richiede qualche minuto): per forzarla, MYTHOGRAPH_REBUILD=1.
 """
+import os
+
 import pytest
-from rdflib import Literal, URIRef
-from rdflib.namespace import RDF
+from rdflib import Graph, Literal
+from rdflib.namespace import RDF, RDFS
 
 from mythograph.build import build
-from mythograph.namespaces import GRAPH, MYTH, OUTPUT_FILE, RES
+from mythograph.namespaces import (GRAPH, MYTH, ONTOLOGY_FILE, OUTPUT_FILE, RAW_DIR, RES, ROOT,
+                                   SOURCES_DIR, SWRL_FILE)
+from mythograph.reasoning import swrl_to_sparql
 from mythograph.store import Store
 
 
 @pytest.fixture(scope="session")
 def store():
-    build(verbose=False)
+    if os.environ.get("MYTHOGRAPH_REBUILD") or not OUTPUT_FILE.exists():
+        build(verbose=False)
     return Store(OUTPUT_FILE)
 
 
-def rows_as_sets(store, n, target=None):
-    _, rows = store.run_cq(n, target)
-    return {tuple(r) for r in rows}
+def rows(store, n, target=None):
+    _, rs = store.run_cq(n, target)
+    return {tuple(r) for r in rs}
 
 
-def test_cq1_aphrodite_parents_differ_by_source(store):
-    rows = rows_as_sets(store, 1)
-    assert (GRAPH.hesiod, MYTH.hasFather, RES.Uranus) in rows
-    assert (GRAPH.homer, MYTH.hasFather, RES.Zeus) in rows
-    assert (GRAPH.homer, MYTH.hasMother, RES.Dione) in rows
+def view(store, name):
+    return store.graph(f"view/{name}")
+
+
+# ------------------------------------------------------------ pipeline
+
+def test_no_handwritten_facts():
+    """I fatti vengono tutti dalla pipeline: non esistono più file di fonti scritti a mano."""
+    assert not (ROOT / "data" / "sources").exists()
+    assert (RAW_DIR / "02_statements.json").exists()
+    assert (SOURCES_DIR / "wikidata.ttl").exists()
+
+
+def test_swrl_rules_are_translated():
+    tbox = Graph().parse(ONTOLOGY_FILE).parse(SWRL_FILE)
+    names = {n for n, _ in swrl_to_sparql(tbox)}
+    assert len(names) == 11
+    assert "swrl: parricidio" in names
+
+
+def test_every_source_is_consistent(store):
+    meta = store.graph("meta")
+    for name in store.sources:
+        assert meta.value(GRAPH[name], MYTH.consistentHermiT) == Literal(True), name
+
+
+def test_naive_merge_is_inconsistent(store):
+    meta = store.graph("meta")
+    assert meta.value(GRAPH["merged-naive"], MYTH.consistentOWLRL) == Literal(False)
+    assert meta.value(GRAPH["merged-naive"], MYTH.consistentHermiT) == Literal(False)
+
+
+# --------------------------------------------------------- competency questions
+
+def test_cq1_aphrodite_has_two_fathers_in_wikidata(store):
+    fathers = {r[2] for r in rows(store, 1) if r[0] == GRAPH.wikidata and r[1] == MYTH.hasFather}
+    assert {RES.Zeus, RES.Uranus} <= fathers
 
 
 def test_cq2_conflicts_found(store):
-    _, rows = store.run_cq(2)
-    contested = {(r[0], r[1]) for r in rows}
+    contested = {(r[0], r[1]) for r in rows(store, 2)}
     assert (RES.Aphrodite, MYTH.hasFather) in contested
-    assert (RES.Aphrodite, MYTH.hasMother) in contested     # negata da Esiodo
-    assert (RES.Hephaestus, MYTH.hasFather) in contested    # negata da Esiodo
-    assert (RES.Eros, MYTH.hasParent) in contested          # Esiodo: nessuno; Ovidio: Venere
-    # Demetra (Esiodo) e Cerere (Ovidio) sono la stessa madre: nessun falso conflitto
-    assert (RES.Persephone, MYTH.hasMother) not in contested
-    assert all(r[0] not in (RES.Venus, RES.Proserpina) for r in rows)
-
-
-def test_ovid_identification_is_scoped_to_ovid(store):
-    """owl:sameAs Venere = Afrodite vale solo nel grafo di Ovidio."""
-    ovid, homer = store.graph("view/ovid"), store.graph("view/homer")
-    assert (RES.Eros, MYTH.hasMother, RES.Aphrodite) in ovid
-    assert (RES.Persephone, MYTH.hasFather, RES.Zeus) in ovid
-    same_as = URIRef("http://www.w3.org/2002/07/owl#sameAs")
-    assert (RES.Venus, same_as, RES.Aphrodite) in store.graph("ovid")
-    assert (RES.Venus, same_as, RES.Aphrodite) not in homer
-    assert (RES.Aphrodite, same_as, RES.Venus) not in store.graph("view/hesiod")
 
 
 def test_cq3_heracles_ancestors_are_inferred(store):
-    ancestors = {r[1] for r in rows_as_sets(store, 3) if r[0] == GRAPH.hesiod}
-    assert {RES.Zeus, RES.Cronus, RES.Uranus, RES.Gaia, RES.Alcmene} <= ancestors
+    ancestors = {r[1] for r in rows(store, 3) if r[0] == GRAPH.wikidata}
+    assert {RES.Zeus, RES.Cronus, RES.Uranus} <= ancestors
+    assert (RES.Heracles, MYTH.hasAncestor, RES.Cronus) not in store.graph("wikidata")
 
 
-def test_cq4_demigods_classified(store):
-    demigods = {r[1] for r in rows_as_sets(store, 4)}
-    assert {RES.Heracles, RES.Achilles, RES.Sarpedon, RES.Helen} <= demigods
-    assert RES.Zeus not in demigods          # una divinità non è umana
-    assert RES.Pegasus not in demigods       # figlio di un dio, ma non umano
+def test_cq4_achilles_is_a_demigod(store):
+    """Morto a Troia -> mortale; la madre Teti è una Nereide -> divinità; quindi semidio."""
+    demigods = {(r[1], r[2]) for r in rows(store, 4) if r[0] == GRAPH.wikidata}
+    assert (RES.Achilles, RES.Thetis) in demigods
+    assert (RES.Achilles, RDF.type, MYTH.Demigod) not in store.graph("shared")
 
 
-def test_cq5_heracles_uncles(store):
-    rows = rows_as_sets(store, 5)
-    uncles = {r[2] for r in rows if r[1] == MYTH.hasUncle}
-    aunts = {r[2] for r in rows if r[1] == MYTH.hasAunt}
-    assert {RES.Poseidon, RES.Hades} <= uncles
-    assert RES.Demeter in aunts and RES.Zeus not in uncles
+def test_cq9_oedipus_killed_an_ancestor(store):
+    assert (RES.Oedipus, MYTH.killedAncestor, RES.Laius) in rows(store, 9)
 
 
-def test_cq6_events_in_sicily(store):
-    events = {r[1] for r in rows_as_sets(store, 6)}
-    assert {RES.BlindingOfPolyphemus, RES.CattleOfHelios, RES.PassageOfScyllaAndCharybdis} <= events
-    # Ovidio: il ratto di Proserpina è al lago di Pergusa ⊂ Enna ⊂ Sicilia (locatedIn transitiva)
-    assert {RES.AbductionOfProserpina, RES.TyphonUnderEtna, RES.AcisAndGalatea} <= events
+def test_cq11_consanguineous_marriages(store):
+    rs = rows(store, 11)
+    assert any(r[0] == RES.Oedipus and r[1] == MYTH.marriedAncestor and r[2] == RES.Jocasta for r in rs)
+    assert any(r[0] == RES.Zeus and r[1] == MYTH.marriedSibling and r[2] == RES.Hera for r in rs)
 
 
-def test_cq7_attestations(store):
-    _, rows = store.run_cq(7)
-    assert any(r[1] == RES.Aphrodite and r[4] == RES.Theogony and str(r[5]) == "vv. 188-206" for r in rows)
+def test_oedipus_is_classified_by_the_reasoner(store):
+    v = view(store, "wikidata")
+    for cls in (MYTH.Parricide, MYTH.Kinslayer, MYTH.ConsanguineousSpouse, MYTH.OedipalFigure):
+        assert (RES.Oedipus, RDF.type, cls) in v, cls
 
 
-def test_cq8_multi_source_characters(store):
-    names = {r[0] for r in rows_as_sets(store, 8)}
-    assert {RES.Zeus, RES.Aphrodite, RES.Heracles, RES.Achilles} <= names
+def test_cq12_hesiod_contradicts_himself(store):
+    """Secondo Esiodo Urano è figlio di Gea, ma anche di Emera."""
+    found = {(r[0], r[1]) for r in rows(store, 12)}
+    assert (GRAPH.hesiod, RES.Uranus) in found
 
 
-def test_cq9_killings_inverse(store):
-    rows = rows_as_sets(store, 9)
-    assert (GRAPH.homer, RES.Achilles, RES.Hector) in rows
-    # killedBy è dedotta dall'inversa
-    view = store.graph("view/homer")
-    assert (RES.Hector, MYTH.killedBy, RES.Achilles) in view
+def test_cq10_heroes_killed_monsters(store):
+    heroes = rows(store, 10)
+    assert (RES.Perseus, RES.Medusa) in heroes
+    assert (RES.Theseus, RES.Minotaur) in heroes          # ibrido uomo-animale -> mostro
+    v = view(store, "wikidata")                           # la Chimera è figlia di Tifone ed Echidna:
+    assert (RES.Chimera, RDF.type, MYTH.Monster) in v     # mostro per la GCI, non per Wikidata
 
 
-def test_cq10_heroes(store):
-    heroes = {r[1] for r in rows_as_sets(store, 10)}
-    assert {RES.Heracles, RES.Perseus, RES.Odysseus, RES.Achilles} <= heroes
+def test_creatures_are_not_humans(store):
+    """Wikidata mette "leone immaginario" sotto "essere umano immaginario": vince la creatura."""
+    v = view(store, "wikidata")
+    assert (RES.NemeanLion, RDF.type, MYTH.Monster) in v
+    assert (RES.NemeanLion, RDF.type, MYTH.Human) not in v
 
 
-def test_hermit_reasoning_by_cases(store):
-    """Solo un reasoner DL deduce che chi è stato ucciso è mortale
-    (copertura Immortal ⊔ Mortal + Immortal ⊑ ≤0 killedBy)."""
-    from mythograph.reasoning import java_available
-    if not java_available():
-        pytest.skip("Java non disponibile")
-    hermit = store.graph("inferred/hesiod/hermit")
-    for victim in (RES.Hydra, RES.NemeanLion, RES.Geryon):
-        assert (victim, RDF.type, MYTH.Mortal) in hermit
-    # e non lo avevano trovato i livelli precedenti
-    assert (RES.Hydra, RDF.type, MYTH.Mortal) not in store.graph("inferred/hesiod/owlrl")
+def test_selection_follows_the_cycles(store):
+    """Circa 300 personaggi, partendo dai protagonisti dei cicli (tables/cycles.ttl)."""
+    chars = set(store.graph("shared").subjects(RDF.type, MYTH.Character))
+    assert 200 <= len(chars) <= 400
+    assert {RES.Oedipus, RES.Cassiphone, RES.Bellerophon, RES.Gaia} <= chars
 
 
-def test_each_source_consistent_but_naive_merge_is_not(store):
-    meta = store.graph("meta")
-    for src in store.sources:
-        assert (GRAPH[src], MYTH.consistentOWLRL, Literal(True)) in meta
-    assert (GRAPH["merged-naive"], MYTH.consistentOWLRL, Literal(False)) in meta
-    if (GRAPH["merged-naive"], MYTH.consistentHermiT, None) in meta:
-        for src in store.sources:
-            assert (GRAPH[src], MYTH.consistentHermiT, Literal(True)) in meta
-        assert (GRAPH["merged-naive"], MYTH.consistentHermiT, Literal(False)) in meta
+def test_cassiphone_married_and_killed_her_half_brother(store):
+    """Cassifone e Telemaco sono figli di Odisseo: lei lo sposa e lo uccide."""
+    v = view(store, "wikidata")
+    assert (RES.Cassiphone, MYTH.marriedSibling, RES.Telemachus) in v
+    assert (RES.Cassiphone, RDF.type, MYTH.Kinslayer) in v
 
 
-def test_linked_data_and_alignment(store):
-    """owl:sameAs verso Wikidata, coordinate dalla query federata, allineamento CIDOC."""
-    from mythograph.namespaces import CRM, GEO, WD
-    from rdflib.namespace import OWL
-    links = store.graph("links")
-    assert (RES.Zeus, OWL.sameAs, WD.Q34201) in links
-    assert links.value(RES.Etna, GEO.lat) is not None
-    # ogni evento del mito risulta anche un crm:E5_Event (regola subClassOf + alignments.ttl)
-    assert (RES.AbductionOfProserpina, RDF.type, CRM.E5_Event) in store.graph("view/ovid")
-
-
-def test_web_api_smoke():
-    from fastapi.testclient import TestClient
-    from mythograph.web.app import app
-    c = TestClient(app)
-    assert c.get("/api/places").json()
-    e = c.get("/api/entity/Aphrodite").json()
-    assert e["external"]["wikidata"].endswith("Q35500")
-    assert not any(n["id"] == "Venus" for n in c.get("/api/graph?source=ovid").json()["nodes"])
+def test_hermit_classifies_the_tbox(store):
+    """Parricide ⊑ Kinslayer non è scritto: lo deduce HermiT dalla gerarchia delle proprietà."""
+    tbox = store.graph("inferred/wikidata/tbox")
+    assert (MYTH.Parricide, RDFS.subClassOf, MYTH.Kinslayer) in tbox

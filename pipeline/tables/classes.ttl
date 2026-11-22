@@ -1,0 +1,47 @@
+# Tabella di corrispondenza: classi di Wikidata -> classi di MythoGraph.
+# map:selects  = la classe serve anche a scegliere i personaggi da scaricare.
+# map:mortal / map:divine = classi da mortale e da divinità: se Wikidata le dà
+#   entrambe allo stesso personaggio, vale la divinità (vedi mapping/04_types.rq).
+# map:creature = classi da creatura: battono anche loro quelle da mortale. Il Leone
+#   di Nemea è "leone immaginario", che Wikidata mette sotto "essere umano immaginario".
+# Le altre classi valgono anche per le sottoclassi (P279*): "dio della guerra"
+# è sottoclasse di "divinità", quindi diventa myth:Deity.
+
+@prefix map:  <https://example.org/mythograph/pipeline#> .
+@prefix myth: <https://example.org/mythograph/ontology#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# --- classi della mitologia greca (selezione)
+wd:Q22988604  rdfs:label "mythological Greek character"  ; map:selects true ; map:toClass myth:Character .
+wd:Q22989102  rdfs:label "Greek deity"                   ; map:selects true ; map:toClass myth:Deity ; map:divine true .
+wd:Q45713     rdfs:label "titan"                         ; map:selects true ; map:toClass myth:Titan ; map:divine true .
+wd:Q878099    rdfs:label "Greek primordial deity"        ; map:selects true ; map:toClass myth:Primordial ; map:divine true .
+wd:Q113103481 rdfs:label "Olympian god"                  ; map:selects true ; map:toClass myth:Olympian ; map:divine true .
+wd:Q128430    rdfs:label "cyclops"                       ; map:selects true ; map:toClass myth:Cyclops .
+wd:Q23015925  rdfs:label "demigod of Greek mythology"    ; map:selects true ; map:toClass myth:Demigod ; map:mortal true .
+wd:Q3346693   rdfs:label "Greek nymph"                   ; map:selects true ; map:toClass myth:Nymph ; map:divine true .
+wd:Q182406    rdfs:label "Oceanids"                      ; map:selects true ; map:toClass myth:Oceanid ; map:divine true .
+wd:Q12502038  rdfs:label "Greek heroes"                  ; map:selects true ; map:toClass myth:Hero ; map:mortal true .
+
+# --- classi generiche (valgono con tutte le sottoclassi)
+wd:Q178885    rdfs:label "deity"              ; map:toClass myth:Deity ; map:divine true .
+wd:Q205985    rdfs:label "goddess"            ; map:toClass myth:Deity, myth:Female ; map:divine true .
+wd:Q373916    rdfs:label "nymph"              ; map:toClass myth:Nymph ; map:divine true .
+wd:Q66016     rdfs:label "Muse"               ; map:toClass myth:Muse ; map:divine true .
+wd:Q466470    rdfs:label "demigod"            ; map:toClass myth:Demigod ; map:mortal true .
+wd:Q5         rdfs:label "human"              ; map:toClass myth:Human ; map:mortal true .
+wd:Q15632617  rdfs:label "fictional human"    ; map:toClass myth:Human ; map:mortal true .
+wd:Q2239243   rdfs:label "legendary creature" ; map:toClass myth:Creature ; map:creature true .
+wd:Q276453    rdfs:label "monster"            ; map:toClass myth:Monster ; map:creature true .
+wd:Q7559      rdfs:label "dragon"             ; map:toClass myth:Monster ; map:creature true .
+wd:Q102059    rdfs:label "gorgon"             ; map:toClass myth:Monster ; map:creature true .
+wd:Q20902363  rdfs:label "mythical human-animal hybrid" ; map:toClass myth:Monster ; map:creature true .   # Minotauro
+wd:Q16326794  rdfs:label "mythological serpent"         ; map:toClass myth:Monster ; map:creature true .   # Idra
+wd:Q2280977   rdfs:label "hellhound"                    ; map:toClass myth:Monster ; map:creature true .   # Cerbero
+wd:Q3707571   rdfs:label "giant"              ; map:toClass myth:Giant .
+
+# --- genere (P21)
+wd:Q6581097   rdfs:label "male"   ; map:toClass myth:Male .
+wd:Q6581072   rdfs:label "female" ; map:toClass myth:Female .
+

@@ -1,41 +1,29 @@
-# CQ2 - Quali affermazioni genealogiche sono contestate tra fonti?
-# Due casi: padre/madre diversi tra due fonti, oppure una fonte lo esclude e un'altra lo afferma.
-# I nomi romani si confrontano tramite quelli greci (Cerere = Demetra).
+# CQ2 - Quali parentele sono contestate?
+# Due casi: due fonti antiche danno padri (o madri) diversi; oppure Wikidata
+# raccoglie più versioni per lo stesso personaggio.
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX myth: <https://example.org/mythograph/ontology#>
 PREFIX res:  <https://example.org/mythograph/resource/>
 PREFIX g:    <https://example.org/mythograph/graph/>
 
 SELECT ?personaggio ?proprieta ?valore1 ?fonte1 ?valore2 ?fonte2 ?tipo WHERE {
   {
-    GRAPH g:meta { ?v1 myth:viewOf ?fonte1 . ?v2 myth:viewOf ?fonte2 }
-    GRAPH ?v1 { ?personaggio myth:hasFather ?valore1 }
-    GRAPH ?v2 { ?personaggio myth:hasFather ?valore2 }
-    FILTER(?valore1 != ?valore2 && STR(?fonte1) < STR(?fonte2))
-    BIND(myth:hasFather AS ?proprieta)
-    BIND("valori diversi" AS ?tipo)
-  } UNION {
-    GRAPH g:meta { ?v1 myth:viewOf ?fonte1 . ?v2 myth:viewOf ?fonte2 }
-    GRAPH ?v1 { ?personaggio myth:hasMother ?valore1 }
-    GRAPH ?v2 { ?personaggio myth:hasMother ?valore2 }
-    FILTER(?valore1 != ?valore2 && STR(?fonte1) < STR(?fonte2))
-    BIND(myth:hasMother AS ?proprieta)
-    BIND("valori diversi" AS ?tipo)
-  } UNION {
-    GRAPH g:meta { ?fonte1 a myth:SourceGraph . ?v2 myth:viewOf ?fonte2 }
-    FILTER(?fonte1 != ?fonte2)
-    GRAPH ?fonte1 { ?personaggio a ?r . ?r owl:maxCardinality ?zero ; owl:onProperty ?proprieta . }
-    FILTER(?zero = 0)
+    VALUES ?proprieta { myth:hasFather myth:hasMother }
+    GRAPH g:meta { ?v1 myth:viewOf ?fonte1 . ?v2 myth:viewOf ?fonte2 .
+                   ?fonte1 myth:constrained true . ?fonte2 myth:constrained true . }
+    GRAPH ?v1 { ?personaggio ?proprieta ?valore1 }
     GRAPH ?v2 { ?personaggio ?proprieta ?valore2 }
-    BIND("nessuno (negato esplicitamente)" AS ?valore1)
-    BIND("negazione esplicita" AS ?tipo)
+    FILTER(?valore1 != ?valore2 && STR(?fonte1) < STR(?fonte2))
+    BIND("fonti diverse" AS ?tipo)
+  } UNION {
+    VALUES ?proprieta { myth:hasFather myth:hasMother }
+    GRAPH g:wikidata { ?personaggio ?proprieta ?valore1 , ?valore2 }
+    FILTER(STR(?valore1) < STR(?valore2))
+    BIND(g:wikidata AS ?fonte1)
+    BIND(g:wikidata AS ?fonte2)
+    BIND("versioni diverse in Wikidata" AS ?tipo)
   }
-  FILTER NOT EXISTS { GRAPH g:shared { ?personaggio myth:romanCounterpart ?a1 } }
-  FILTER NOT EXISTS { GRAPH g:shared { ?valore2 myth:romanCounterpart ?a2 } }
-  FILTER NOT EXISTS { GRAPH g:shared { ?valore1 myth:romanCounterpart ?a3 } }
 }
 ORDER BY ?personaggio ?proprieta

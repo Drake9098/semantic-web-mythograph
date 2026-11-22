@@ -1,0 +1,19 @@
+# Generato da `python -m mythograph.mapping` (affermazioni del grafo g:diodorus). Non modificare a mano.
+@prefix myth: <https://example.org/mythograph/ontology#> .
+@prefix res: <https://example.org/mythograph/resource/> .
+
+res:Iphitos myth:killedBy res:Heracles .
+
+res:Phylas_Q3744926 myth:killedBy res:Heracles ;
+    myth:mannerOfDeath res:DeathInBattle .
+
+res:Alcimenes myth:hasFather res:Jason ;
+    myth:hasMother res:Medea ;
+    myth:hasSibling res:Tisander ;
+    myth:killedBy res:Medea .
+
+res:Tisander myth:hasFather res:Jason ;
+    myth:hasMother res:Medea ;
+    myth:hasSibling res:Alcimenes ;
+    myth:killedBy res:Medea .
+

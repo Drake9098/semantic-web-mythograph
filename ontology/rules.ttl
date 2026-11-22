@@ -1,0 +1,148 @@
+# MythoGraph - modulo delle regole SWRL.
+# Servono dove OWL non arriva: OWL non sa dire "x uccise y E y è un antenato di x"
+# (due proprietà sugli stessi due individui). Protégé le mostra nella scheda SWRL,
+# HermiT le applica. La build le traduce anche in SPARQL CONSTRUCT (reasoning.py).
+
+@prefix myth: <https://example.org/mythograph/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix var:  <urn:swrl:var#> .
+
+<https://example.org/mythograph/ontology/rules>
+    a owl:Ontology ;
+    owl:imports <https://example.org/mythograph/ontology> ;
+    rdfs:label "MythoGraph - regole SWRL"@it ;
+    rdfs:comment "Regole SWRL: genitori dal genere, fratelli, zii, delitti in famiglia, matrimoni tra consanguinei."@it .
+
+myth:swrlText a owl:AnnotationProperty ;
+    rdfs:label "regola in forma leggibile"@it .
+
+var:a a swrl:Variable .
+var:p a swrl:Variable .
+var:u a swrl:Variable .
+var:x a swrl:Variable .
+var:y a swrl:Variable .
+
+# hasParent(?x,?p) ^ Male(?p) -> hasFather(?x,?p)
+[] a swrl:Imp ;
+    rdfs:label "padre"@it ;
+    rdfs:comment "Un genitore maschio è il padre."@it , "A male parent is the father."@en ;
+    myth:swrlText "hasParent(?x,?p) ^ Male(?p) -> hasFather(?x,?p)" ;
+    swrl:body ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasParent ; swrl:argument1 var:x ; swrl:argument2 var:p ]
+        [ a swrl:ClassAtom ; swrl:classPredicate myth:Male ; swrl:argument1 var:p ] ) ;
+    swrl:head ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasFather ; swrl:argument1 var:x ; swrl:argument2 var:p ] ) .
+
+# hasParent(?x,?p) ^ Female(?p) -> hasMother(?x,?p)
+[] a swrl:Imp ;
+    rdfs:label "madre"@it ;
+    rdfs:comment "Un genitore femmina è la madre."@it , "A female parent is the mother."@en ;
+    myth:swrlText "hasParent(?x,?p) ^ Female(?p) -> hasMother(?x,?p)" ;
+    swrl:body ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasParent ; swrl:argument1 var:x ; swrl:argument2 var:p ]
+        [ a swrl:ClassAtom ; swrl:classPredicate myth:Female ; swrl:argument1 var:p ] ) ;
+    swrl:head ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasMother ; swrl:argument1 var:x ; swrl:argument2 var:p ] ) .
+
+# hasParent(?x,?p) ^ hasParent(?y,?p) ^ differentFrom(?x,?y) -> hasSibling(?x,?y)
+[] a swrl:Imp ;
+    rdfs:label "fratelli"@it ;
+    rdfs:comment "Due personaggi diversi con un genitore in comune sono fratelli."@it , "Two different characters sharing a parent are siblings."@en ;
+    myth:swrlText "hasParent(?x,?p) ^ hasParent(?y,?p) ^ differentFrom(?x,?y) -> hasSibling(?x,?y)" ;
+    swrl:body ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasParent ; swrl:argument1 var:x ; swrl:argument2 var:p ]
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasParent ; swrl:argument1 var:y ; swrl:argument2 var:p ]
+        [ a swrl:DifferentIndividualsAtom ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) ;
+    swrl:head ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasSibling ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) .
+
+# hasParentSibling(?x,?u) ^ Male(?u) -> hasUncle(?x,?u)
+[] a swrl:Imp ;
+    rdfs:label "zio"@it ;
+    rdfs:comment "Il fratello di un genitore è lo zio."@it , "A parent's brother is an uncle."@en ;
+    myth:swrlText "hasParentSibling(?x,?u) ^ Male(?u) -> hasUncle(?x,?u)" ;
+    swrl:body ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasParentSibling ; swrl:argument1 var:x ; swrl:argument2 var:u ]
+        [ a swrl:ClassAtom ; swrl:classPredicate myth:Male ; swrl:argument1 var:u ] ) ;
+    swrl:head ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasUncle ; swrl:argument1 var:x ; swrl:argument2 var:u ] ) .
+
+# hasParentSibling(?x,?a) ^ Female(?a) -> hasAunt(?x,?a)
+[] a swrl:Imp ;
+    rdfs:label "zia"@it ;
+    rdfs:comment "La sorella di un genitore è la zia."@it , "A parent's sister is an aunt."@en ;
+    myth:swrlText "hasParentSibling(?x,?a) ^ Female(?a) -> hasAunt(?x,?a)" ;
+    swrl:body ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasParentSibling ; swrl:argument1 var:x ; swrl:argument2 var:a ]
+        [ a swrl:ClassAtom ; swrl:classPredicate myth:Female ; swrl:argument1 var:a ] ) ;
+    swrl:head ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasAunt ; swrl:argument1 var:x ; swrl:argument2 var:a ] ) .
+
+# killed(?x,?y) ^ hasAncestor(?x,?y) -> killedAncestor(?x,?y)
+[] a swrl:Imp ;
+    rdfs:label "parricidio"@it ;
+    rdfs:comment "Chi uccide un proprio antenato commette parricidio."@it , "Killing one's ancestor is parricide."@en ;
+    myth:swrlText "killed(?x,?y) ^ hasAncestor(?x,?y) -> killedAncestor(?x,?y)" ;
+    swrl:body ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:killed ; swrl:argument1 var:x ; swrl:argument2 var:y ]
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasAncestor ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) ;
+    swrl:head ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:killedAncestor ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) .
+
+# killed(?x,?y) ^ hasDescendant(?x,?y) -> killedDescendant(?x,?y)
+[] a swrl:Imp ;
+    rdfs:label "figlicidio"@it ;
+    rdfs:comment "Chi uccide un proprio discendente."@it , "Killing one's descendant."@en ;
+    myth:swrlText "killed(?x,?y) ^ hasDescendant(?x,?y) -> killedDescendant(?x,?y)" ;
+    swrl:body ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:killed ; swrl:argument1 var:x ; swrl:argument2 var:y ]
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasDescendant ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) ;
+    swrl:head ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:killedDescendant ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) .
+
+# killed(?x,?y) ^ hasSibling(?x,?y) -> killedSibling(?x,?y)
+[] a swrl:Imp ;
+    rdfs:label "fratricidio"@it ;
+    rdfs:comment "Chi uccide un fratello o una sorella."@it , "Killing one's sibling."@en ;
+    myth:swrlText "killed(?x,?y) ^ hasSibling(?x,?y) -> killedSibling(?x,?y)" ;
+    swrl:body ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:killed ; swrl:argument1 var:x ; swrl:argument2 var:y ]
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasSibling ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) ;
+    swrl:head ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:killedSibling ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) .
+
+# killed(?x,?y) ^ hasSpouse(?x,?y) -> killedSpouse(?x,?y)
+[] a swrl:Imp ;
+    rdfs:label "uxoricidio"@it ;
+    rdfs:comment "Chi uccide il proprio coniuge."@it , "Killing one's spouse."@en ;
+    myth:swrlText "killed(?x,?y) ^ hasSpouse(?x,?y) -> killedSpouse(?x,?y)" ;
+    swrl:body ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:killed ; swrl:argument1 var:x ; swrl:argument2 var:y ]
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasSpouse ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) ;
+    swrl:head ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:killedSpouse ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) .
+
+# hasSpouse(?x,?y) ^ hasSibling(?x,?y) -> marriedSibling(?x,?y)
+[] a swrl:Imp ;
+    rdfs:label "nozze tra fratelli"@it ;
+    rdfs:comment "Coniugi che sono anche fratelli."@it , "Spouses who are also siblings."@en ;
+    myth:swrlText "hasSpouse(?x,?y) ^ hasSibling(?x,?y) -> marriedSibling(?x,?y)" ;
+    swrl:body ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasSpouse ; swrl:argument1 var:x ; swrl:argument2 var:y ]
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasSibling ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) ;
+    swrl:head ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:marriedSibling ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) .
+
+# hasSpouse(?x,?y) ^ hasAncestor(?x,?y) -> marriedAncestor(?x,?y)
+[] a swrl:Imp ;
+    rdfs:label "nozze con un antenato"@it ;
+    rdfs:comment "Coniuge che è anche un antenato."@it , "A spouse who is also an ancestor."@en ;
+    myth:swrlText "hasSpouse(?x,?y) ^ hasAncestor(?x,?y) -> marriedAncestor(?x,?y)" ;
+    swrl:body ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasSpouse ; swrl:argument1 var:x ; swrl:argument2 var:y ]
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:hasAncestor ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) ;
+    swrl:head ( 
+        [ a swrl:IndividualPropertyAtom ; swrl:propertyPredicate myth:marriedAncestor ; swrl:argument1 var:x ; swrl:argument2 var:y ] ) .
+

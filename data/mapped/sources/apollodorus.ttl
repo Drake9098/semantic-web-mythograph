@@ -1,0 +1,35 @@
+# Generato da `python -m mythograph.mapping` (affermazioni del grafo g:apollodorus). Non modificare a mano.
+@prefix myth: <https://example.org/mythograph/ontology#> .
+@prefix res: <https://example.org/mythograph/resource/> .
+
+res:Aegeus myth:hasSpouse res:Medea .
+
+res:Dione myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia .
+
+res:Echidna myth:hasChild res:Chimera,
+        res:Ladon,
+        res:NemeanLion,
+        res:Orthrus ;
+    myth:hasFather res:Tartarus ;
+    myth:hasMother res:Gaia ;
+    myth:mannerOfDeath res:Homicide .
+
+res:LinusOfThrace myth:hasFather res:Oeagrus .
+
+res:Gorgophone myth:hasChild res:Tyndareus ;
+    myth:hasFather res:Perseus ;
+    myth:hasSpouse res:Perieres .
+
+res:Oebalus myth:hasChild res:Hippocoon,
+        res:Tyndareus ;
+    myth:hasFather res:Perieres .
+
+res:Perieres myth:hasChild res:Oebalus,
+        res:Tyndareus ;
+    myth:hasSpouse res:Gorgophone .
+
+res:Tyndareus myth:hasFather res:Oebalus,
+        res:Perieres ;
+    myth:hasMother res:Gorgophone .
+

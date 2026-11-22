@@ -1,0 +1,2775 @@
+# Generato da `python -m mythograph.mapping` (collegamenti). Non modificare a mano.
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix res: <https://example.org/mythograph/resource/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+res:Abas rdfs:seeAlso <https://en.wikipedia.org/wiki/Abas_(son_of_Lynceus)> ;
+    owl:sameAs dbr:Abas_\(son_of_Lynceus\),
+        wd:Q305607 .
+
+res:Acamas rdfs:seeAlso <https://en.wikipedia.org/wiki/Acamas_(son_of_Theseus)> ;
+    owl:sameAs dbr:Acamas_\(son_of_Theseus\),
+        wd:Q348668 .
+
+res:AcamasAndDemophon owl:sameAs wd:Q27779249 .
+
+res:AchaeaPhthiotis rdfs:seeAlso <https://en.wikipedia.org/wiki/Achaea_Phthiotis> ;
+    owl:sameAs dbr:Achaea_Phthiotis,
+        wd:Q2089144 .
+
+res:Achelaos owl:sameAs wd:Q3604317 .
+
+res:Acheloides owl:sameAs wd:Q2633927 .
+
+res:Achelous rdfs:seeAlso <https://en.wikipedia.org/wiki/Achelous> ;
+    owl:sameAs dbr:Achelous,
+        wd:Q391379 .
+
+res:Achilles rdfs:seeAlso <https://en.wikipedia.org/wiki/Achilles> ;
+    owl:sameAs dbr:Achilles,
+        wd:Q41746 .
+
+res:Acrisius rdfs:seeAlso <https://en.wikipedia.org/wiki/Acrisius> ;
+    owl:sameAs dbr:Acrisius,
+        wd:Q208017 .
+
+res:ActsOfPhilip rdfs:seeAlso <https://en.wikipedia.org/wiki/Acts_of_Philip> ;
+    owl:sameAs dbr:Acts_of_Philip,
+        wd:Q3629162 .
+
+res:AdLycophronem owl:sameAs wd:Q103979798 .
+
+res:Adrastus_Q18643761 owl:sameAs wd:Q18643761 .
+
+res:Aeacus rdfs:seeAlso <https://en.wikipedia.org/wiki/Aeacus> ;
+    owl:sameAs dbr:Aeacus,
+        wd:Q206187 .
+
+res:Aeaea rdfs:seeAlso <https://en.wikipedia.org/wiki/Aeaea> ;
+    owl:sameAs dbr:Aeaea,
+        wd:Q403366 .
+
+res:Aeetes rdfs:seeAlso <https://en.wikipedia.org/wiki/Ae%C3%ABtes> ;
+    owl:sameAs dbr:Ae%C3%ABtes,
+        wd:Q241971 .
+
+res:Aegeus rdfs:seeAlso <https://en.wikipedia.org/wiki/Aegeus> ;
+    owl:sameAs dbr:Aegeus,
+        wd:Q191725 .
+
+res:Aegina rdfs:seeAlso <https://en.wikipedia.org/wiki/Aegina> ;
+    owl:sameAs dbr:Aegina,
+        wd:Q191082 .
+
+res:Aegina_Q321298 rdfs:seeAlso <https://en.wikipedia.org/wiki/Aegina_(mythology)> ;
+    owl:sameAs dbr:Aegina_\(mythology\),
+        wd:Q321298 .
+
+res:Aegyptus rdfs:seeAlso <https://en.wikipedia.org/wiki/Aegyptus> ;
+    owl:sameAs dbr:Aegyptus,
+        wd:Q404844 .
+
+res:Aemilia_Q125243728 owl:sameAs wd:Q125243728 .
+
+res:Aemilius150a owl:sameAs wd:Q34462566 .
+
+res:Aeneas rdfs:seeAlso <https://en.wikipedia.org/wiki/Aeneas> ;
+    owl:sameAs dbr:Aeneas,
+        wd:Q82732 .
+
+res:Aeneid rdfs:seeAlso <https://en.wikipedia.org/wiki/Aeneid> ;
+    owl:sameAs dbr:Aeneid,
+        wd:Q60220 .
+
+res:Aerope rdfs:seeAlso <https://en.wikipedia.org/wiki/Aerope> ;
+    owl:sameAs dbr:Aerope,
+        wd:Q508543 .
+
+res:Aeschylus rdfs:seeAlso <https://en.wikipedia.org/wiki/Aeschylus> ;
+    owl:sameAs dbr:Aeschylus,
+        wd:Q40939 .
+
+res:Aeson rdfs:seeAlso <https://en.wikipedia.org/wiki/Aeson> ;
+    owl:sameAs dbr:Aeson,
+        wd:Q410082 .
+
+res:Aetae owl:sameAs wd:Q21548017 .
+
+res:Aether rdfs:seeAlso <https://en.wikipedia.org/wiki/Aether_(mythology)> ;
+    owl:sameAs dbr:Aether_\(mythology\),
+        wd:Q189175 .
+
+res:Aethiopis rdfs:seeAlso <https://en.wikipedia.org/wiki/Aethiopis> ;
+    owl:sameAs dbr:Aethiopis,
+        wd:Q410483 .
+
+res:Aethon owl:sameAs wd:Q1371462 .
+
+res:Aethra rdfs:seeAlso <https://en.wikipedia.org/wiki/Aethra_(mother_of_Theseus)> ;
+    owl:sameAs dbr:Aethra_\(mother_of_Theseus\),
+        wd:Q11921121 .
+
+res:Agamemnon rdfs:seeAlso <https://en.wikipedia.org/wiki/Agamemnon> ;
+    owl:sameAs dbr:Agamemnon,
+        wd:Q128176 .
+
+res:AgelausOfNaupactus rdfs:seeAlso <https://en.wikipedia.org/wiki/Agelaus_of_Naupactus> ;
+    owl:sameAs dbr:Agelaus_of_Naupactus,
+        wd:Q1073743 .
+
+res:Agenor rdfs:seeAlso <https://en.wikipedia.org/wiki/Agenor> ;
+    owl:sameAs dbr:Agenor,
+        wd:Q392631 .
+
+res:Aiolos rdfs:seeAlso <https://en.wikipedia.org/wiki/Aeolus_(son_of_Hellen)> ;
+    owl:sameAs dbr:Aeolus_\(son_of_Hellen\),
+        wd:Q406388 .
+
+res:Aithiolas owl:sameAs wd:Q19983086 .
+
+res:AlbertCamus rdfs:seeAlso <https://en.wikipedia.org/wiki/Albert_Camus> ;
+    owl:sameAs dbr:Albert_Camus,
+        wd:Q34670 .
+
+res:Alcaeus owl:sameAs wd:Q142739 .
+
+res:Alceste rdfs:seeAlso <https://en.wikipedia.org/wiki/Alceste_(Gluck)> ;
+    owl:sameAs dbr:Alceste_\(Gluck\),
+        wd:Q1046495 .
+
+res:Alcimede rdfs:seeAlso <https://en.wikipedia.org/wiki/Alcimede_(mother_of_Jason)> ;
+    owl:sameAs dbr:Alcimede_\(mother_of_Jason\),
+        wd:Q2718542 .
+
+res:Alcimedusa rdfs:seeAlso <https://en.wikipedia.org/wiki/Alcimedusa> ;
+    owl:sameAs dbr:Alcimedusa,
+        wd:Q127922830 .
+
+res:Alcimenes owl:sameAs wd:Q2832183 .
+
+res:Alcimenes_Q21548251 owl:sameAs wd:Q21548251 .
+
+res:Alcyoneus rdfs:seeAlso <https://en.wikipedia.org/wiki/Alcyoneus> ;
+    owl:sameAs dbr:Alcyoneus,
+        wd:Q653681 .
+
+res:Aleus rdfs:seeAlso <https://en.wikipedia.org/wiki/Aleus> ;
+    owl:sameAs dbr:Aleus,
+        wd:Q1536527 .
+
+res:Alexandra owl:sameAs wd:Q2643574 .
+
+res:Alkmene rdfs:seeAlso <https://en.wikipedia.org/wiki/Alcmene> ;
+    owl:sameAs dbr:Alcmene,
+        wd:Q190543 .
+
+res:Alkyonides rdfs:seeAlso <https://en.wikipedia.org/wiki/Alcyonides> ;
+    owl:sameAs dbr:Alcyonides,
+        wd:Q2350201 .
+
+res:Almo rdfs:seeAlso <https://en.wikipedia.org/wiki/Almo_(god)> ;
+    owl:sameAs dbr:Almo_\(god\),
+        wd:Q4733856 .
+
+res:Aloeus_Q55525572 rdfs:seeAlso <https://en.wikipedia.org/wiki/Aloeus> ;
+    owl:sameAs dbr:Aloeus,
+        wd:Q55525572 .
+
+res:Althaea rdfs:seeAlso <https://en.wikipedia.org/wiki/Althaea_(mythology)> ;
+    owl:sameAs dbr:Althaea_\(mythology\),
+        wd:Q440440 .
+
+res:Amata rdfs:seeAlso <https://en.wikipedia.org/wiki/Amata> ;
+    owl:sameAs dbr:Amata,
+        wd:Q455503 .
+
+res:Amazons rdfs:seeAlso <https://en.wikipedia.org/wiki/Amazons> ;
+    owl:sameAs dbr:Amazons,
+        wd:Q134154 .
+
+res:Amphinome_Q21548505 owl:sameAs wd:Q21548505 .
+
+res:Amphitryon rdfs:seeAlso <https://en.wikipedia.org/wiki/Amphitryon> ;
+    owl:sameAs dbr:Amphitryon,
+        wd:Q206214 .
+
+res:Ananke rdfs:seeAlso <https://en.wikipedia.org/wiki/Ananke> ;
+    owl:sameAs dbr:Ananke,
+        wd:Q332246 .
+
+res:Anchises rdfs:seeAlso <https://en.wikipedia.org/wiki/Anchises> ;
+    owl:sameAs dbr:Anchises,
+        wd:Q211953 .
+
+res:AncientCorinth rdfs:seeAlso <https://en.wikipedia.org/wiki/Ancient_Corinth> ;
+    owl:sameAs dbr:Ancient_Corinth,
+        wd:Q1363688 .
+
+res:AncientLibya rdfs:seeAlso <https://en.wikipedia.org/wiki/Ancient_Libya> ;
+    owl:sameAs dbr:Ancient_Libya,
+        wd:Q2370577 .
+
+res:AncientRome rdfs:seeAlso <https://en.wikipedia.org/wiki/Ancient_Rome> ;
+    owl:sameAs dbr:Ancient_Rome,
+        wd:Q1747689 .
+
+res:AndreaAlciato rdfs:seeAlso <https://en.wikipedia.org/wiki/Andrea_Alciato> ;
+    owl:sameAs dbr:Andrea_Alciato,
+        wd:Q464471 .
+
+res:AndreaeAlciatiEmblematumLibellus owl:sameAs wd:Q141429059 .
+
+res:Andromache_Q512802 rdfs:seeAlso <https://en.wikipedia.org/wiki/Andromache_(play)> ;
+    owl:sameAs dbr:Andromache_\(play\),
+        wd:Q512802 .
+
+res:Andromeda rdfs:seeAlso <https://en.wikipedia.org/wiki/Andromeda_(mythology)> ;
+    owl:sameAs dbr:Andromeda_\(mythology\),
+        wd:Q161582 .
+
+res:Anemoi rdfs:seeAlso <https://en.wikipedia.org/wiki/Anemoi> ;
+    owl:sameAs dbr:Anemoi,
+        wd:Q476682 .
+
+res:AnemoiThuellai owl:sameAs wd:Q47730356 .
+
+res:AngelaBeesleyStarling rdfs:seeAlso <https://en.wikipedia.org/wiki/Angela_Beesley> ;
+    owl:sameAs dbr:Angela_Beesley,
+        wd:Q219533 .
+
+res:Anius_Q135479720 owl:sameAs wd:Q135479720 .
+
+res:Antenor rdfs:seeAlso <https://en.wikipedia.org/wiki/Antenor_(Trojan)> ;
+    owl:sameAs dbr:Antenor_\(Trojan\),
+        wd:Q571969 .
+
+res:Antenor1 owl:sameAs wd:Q19988482 .
+
+res:Antias owl:sameAs wd:Q21548732 .
+
+res:Anticlea rdfs:seeAlso <https://en.wikipedia.org/wiki/Anticlea> ;
+    owl:sameAs dbr:Anticlea,
+        wd:Q576170 .
+
+res:Antigone rdfs:seeAlso <https://en.wikipedia.org/wiki/Antigone_(Sophocles_play)> ;
+    owl:sameAs dbr:Antigone_\(Sophocles_play\),
+        wd:Q241077 .
+
+res:Antigone_Q131351 rdfs:seeAlso <https://en.wikipedia.org/wiki/Antigone> ;
+    owl:sameAs dbr:Antigone,
+        wd:Q131351 .
+
+res:Antikleia1 owl:sameAs wd:Q19988906 .
+
+res:Antilochus_Q21548741 owl:sameAs wd:Q21548741 .
+
+res:Antiope_Q580862 rdfs:seeAlso <https://en.wikipedia.org/wiki/Antiope_(Amazon)> ;
+    owl:sameAs dbr:Antiope_\(Amazon\),
+        wd:Q580862 .
+
+res:Antiphus owl:sameAs wd:Q582141 .
+
+res:Anton owl:sameAs wd:Q41510110 .
+
+res:Aphrodite rdfs:seeAlso <https://en.wikipedia.org/wiki/Aphrodite> ;
+    owl:sameAs dbr:Aphrodite,
+        wd:Q35500 .
+
+res:Apollo rdfs:seeAlso <https://en.wikipedia.org/wiki/Apollo> ;
+    owl:sameAs dbr:Apollo,
+        wd:Q37340 .
+
+res:ApolloniusOfRhodes rdfs:seeAlso <https://en.wikipedia.org/wiki/Apollonius_of_Rhodes> ;
+    owl:sameAs dbr:Apollonius_of_Rhodes,
+        wd:Q192638 .
+
+res:ArcadiaRegionalUnit rdfs:seeAlso <https://en.wikipedia.org/wiki/Arcadia_(regional_unit)> ;
+    owl:sameAs dbr:Arcadia_\(regional_unit\),
+        wd:Q170054 .
+
+res:Arcadia_Q168786 rdfs:seeAlso <https://en.wikipedia.org/wiki/Arcadia_(utopia)> ;
+    owl:sameAs dbr:Arcadia_\(utopia\),
+        wd:Q168786 .
+
+res:ArctinusOfMiletus rdfs:seeAlso <https://en.wikipedia.org/wiki/Arctinus_of_Miletus> ;
+    owl:sameAs dbr:Arctinus_of_Miletus,
+        wd:Q554683 .
+
+res:Ares rdfs:seeAlso <https://en.wikipedia.org/wiki/Ares> ;
+    owl:sameAs dbr:Ares,
+        wd:Q40901 .
+
+res:Arethusa rdfs:seeAlso <https://en.wikipedia.org/wiki/Arethusa_(nymph)> ;
+    owl:sameAs dbr:Arethusa_\(nymph\),
+        wd:Q643456 .
+
+res:Arethusa_Q122167835 owl:sameAs wd:Q122167835 .
+
+res:Arge owl:sameAs wd:Q644285 .
+
+res:Argolis owl:sameAs wd:Q12649101 .
+
+res:Argonautica rdfs:seeAlso <https://en.wikipedia.org/wiki/Argonautica> ;
+    owl:sameAs dbr:Argonautica,
+        wd:Q739529 .
+
+res:Argonautica_Q648918 owl:sameAs wd:Q648918 .
+
+res:Ariadne rdfs:seeAlso <https://en.wikipedia.org/wiki/Ariadne> ;
+    owl:sameAs dbr:Ariadne,
+        wd:Q184874 .
+
+res:Arion rdfs:seeAlso <https://en.wikipedia.org/wiki/Arion_(horse)> ;
+    owl:sameAs dbr:Arion_\(horse\),
+        wd:Q842435 .
+
+res:Ascanius rdfs:seeAlso <https://en.wikipedia.org/wiki/Ascanius> ;
+    owl:sameAs dbr:Ascanius,
+        wd:Q655566 .
+
+res:Asia rdfs:seeAlso <https://en.wikipedia.org/wiki/Asia_(Oceanid)> ;
+    owl:sameAs dbr:Asia_\(Oceanid\),
+        wd:Q605744 .
+
+res:Asopus rdfs:seeAlso <https://en.wikipedia.org/wiki/Asopus> ;
+    owl:sameAs dbr:Asopus,
+        wd:Q622781 .
+
+res:Astacus_Q135916867 owl:sameAs wd:Q135916867 .
+
+res:Asteria rdfs:seeAlso <https://en.wikipedia.org/wiki/Asteria> ;
+    owl:sameAs dbr:Asteria,
+        wd:Q18642285 .
+
+res:Asteria_Q45275452 owl:sameAs wd:Q45275452 .
+
+res:Asteropaios rdfs:seeAlso <https://en.wikipedia.org/wiki/Asteropaios> ;
+    owl:sameAs dbr:Asteropaios,
+        wd:Q748909 .
+
+res:Asterope_Q29655160 rdfs:seeAlso <https://en.wikipedia.org/wiki/Asterope_(mythology)> ;
+    owl:sameAs dbr:Asterope_\(mythology\),
+        wd:Q29655160 .
+
+res:AstraPlaneta rdfs:seeAlso <https://en.wikipedia.org/wiki/Planetae> ;
+    owl:sameAs dbr:Planetae,
+        wd:Q5709717 .
+
+res:Astraeus rdfs:seeAlso <https://en.wikipedia.org/wiki/Astraeus> ;
+    owl:sameAs dbr:Astraeus,
+        wd:Q250588 .
+
+res:Astymedusa rdfs:seeAlso <https://en.wikipedia.org/wiki/Astymedusa> ;
+    owl:sameAs dbr:Astymedusa,
+        wd:Q3627547 .
+
+res:Athamas rdfs:seeAlso <https://en.wikipedia.org/wiki/Athamas> ;
+    owl:sameAs dbr:Athamas,
+        wd:Q143880 .
+
+res:Athamas_Q45273775 owl:sameAs wd:Q45273775 .
+
+res:Athens_Q13534153 owl:sameAs wd:Q13534153 .
+
+res:Athis rdfs:seeAlso <https://en.wikipedia.org/wiki/Athis_(mythology)> ;
+    owl:sameAs dbr:Athis_\(mythology\),
+        wd:Q3514860 .
+
+res:Atlas rdfs:seeAlso <https://en.wikipedia.org/wiki/Atlas_(mythology)> ;
+    owl:sameAs dbr:Atlas_\(mythology\),
+        wd:Q130818 .
+
+res:Atreus rdfs:seeAlso <https://en.wikipedia.org/wiki/Atreus> ;
+    owl:sameAs dbr:Atreus,
+        wd:Q192469 .
+
+res:Atreus_Q45275848 owl:sameAs wd:Q45275848 .
+
+res:Atys rdfs:seeAlso <https://en.wikipedia.org/wiki/Atys_of_Lydia> ;
+    owl:sameAs dbr:Atys_of_Lydia,
+        wd:Q3628093 .
+
+res:Auge rdfs:seeAlso <https://en.wikipedia.org/wiki/Auge> ;
+    owl:sameAs dbr:Auge,
+        wd:Q760213 .
+
+res:Augur rdfs:seeAlso <https://en.wikipedia.org/wiki/Augur> ;
+    owl:sameAs dbr:Augur,
+        wd:Q215909 .
+
+res:Aulis rdfs:seeAlso <https://en.wikipedia.org/wiki/Aulis_(ancient_Greece)> ;
+    owl:sameAs dbr:Aulis_\(ancient_Greece\),
+        wd:Q4821780 .
+
+res:Aurora rdfs:seeAlso <https://en.wikipedia.org/wiki/Aurora_(mythology)> ;
+    owl:sameAs dbr:Aurora_\(mythology\),
+        wd:Q178831 .
+
+res:Autolycus rdfs:seeAlso <https://en.wikipedia.org/wiki/Autolycus> ;
+    owl:sameAs dbr:Autolycus,
+        wd:Q463107 .
+
+res:Autolycus_Q45273481 owl:sameAs wd:Q45273481 .
+
+res:Balius owl:sameAs wd:Q9164605 .
+
+res:Bdella owl:sameAs wd:Q56056114 .
+
+res:Bellerophon rdfs:seeAlso <https://en.wikipedia.org/wiki/Bellerophon> ;
+    owl:sameAs dbr:Bellerophon,
+        wd:Q189872 .
+
+res:Belus rdfs:seeAlso <https://en.wikipedia.org/wiki/Belus_(Egyptian)> ;
+    owl:sameAs dbr:Belus_\(Egyptian\),
+        wd:Q617753 .
+
+res:BenjaminHedericus rdfs:seeAlso <https://en.wikipedia.org/wiki/Benjamin_Hedericus> ;
+    owl:sameAs dbr:Benjamin_Hedericus,
+        wd:Q817533 .
+
+res:Bibliotheca rdfs:seeAlso <https://en.wikipedia.org/wiki/Bibliotheca_(Apollodorus)> ;
+    owl:sameAs dbr:Bibliotheca_\(Apollodorus\),
+        wd:Q817383 .
+
+res:BibliothecaHistorica rdfs:seeAlso <https://en.wikipedia.org/wiki/Bibliotheca_Historica> ;
+    owl:sameAs dbr:Bibliotheca_Historica,
+        wd:Q672803 .
+
+res:Bibliotheca_Q2593363 rdfs:seeAlso <https://en.wikipedia.org/wiki/Bibliotheca_(Photius)> ;
+    owl:sameAs dbr:Bibliotheca_\(Photius\),
+        wd:Q2593363 .
+
+res:Briseus rdfs:seeAlso <https://en.wikipedia.org/wiki/Briseus> ;
+    owl:sameAs dbr:Briseus,
+        wd:Q734411 .
+
+res:BrockhausAndEfronEncyclopedicDictionary rdfs:seeAlso <https://en.wikipedia.org/wiki/Brockhaus_and_Efron_Encyclopedic_Dictionary> ;
+    owl:sameAs dbr:Brockhaus_and_Efron_Encyclopedic_Dictionary,
+        wd:Q602358 .
+
+res:BrutusOfTroy rdfs:seeAlso <https://en.wikipedia.org/wiki/Brutus_of_Troy> ;
+    owl:sameAs dbr:Brutus_of_Troy,
+        wd:Q994929 .
+
+res:Cadmus rdfs:seeAlso <https://en.wikipedia.org/wiki/Cadmus> ;
+    owl:sameAs dbr:Cadmus,
+        wd:Q27613 .
+
+res:Caelus rdfs:seeAlso <https://en.wikipedia.org/wiki/Caelus> ;
+    owl:sameAs dbr:Caelus,
+        wd:Q3360794 .
+
+res:Calibos owl:sameAs wd:Q42401759 .
+
+res:Caligo owl:sameAs wd:Q4286521 .
+
+res:Calliope rdfs:seeAlso <https://en.wikipedia.org/wiki/Calliope> ;
+    owl:sameAs dbr:Calliope,
+        wd:Q103975 .
+
+res:Callirhoe rdfs:seeAlso <https://en.wikipedia.org/wiki/Callirhoe_(Oceanid)> ;
+    owl:sameAs dbr:Callirhoe_\(Oceanid\),
+        wd:Q913161 .
+
+res:Calydon rdfs:seeAlso <https://en.wikipedia.org/wiki/Calydon> ;
+    owl:sameAs dbr:Calydon,
+        wd:Q750313 .
+
+res:Calypso rdfs:seeAlso <https://en.wikipedia.org/wiki/Calypso_(mythology)> ;
+    owl:sameAs dbr:Calypso_\(mythology\),
+        wd:Q48961 .
+
+res:CassellSDictionaryOfNorseMythLegend owl:sameAs wd:Q130556767 .
+
+res:Cassiopeia rdfs:seeAlso <https://en.wikipedia.org/wiki/Cassiopeia_(mother_of_Andromeda)> ;
+    owl:sameAs dbr:Cassiopeia_\(mother_of_Andromeda\),
+        wd:Q207681 .
+
+res:Cassiphone rdfs:seeAlso <https://en.wikipedia.org/wiki/Cassiphone> ;
+    owl:sameAs dbr:Cassiphone,
+        wd:Q1401858 .
+
+res:CastorAndPollux rdfs:seeAlso <https://en.wikipedia.org/wiki/Castor_and_Pollux> ;
+    owl:sameAs dbr:Castor_and_Pollux,
+        wd:Q190103 .
+
+res:CatalogOfTheGermanNationalLibrary owl:sameAs wd:Q23833686 .
+
+res:Catreus rdfs:seeAlso <https://en.wikipedia.org/wiki/Catreus> ;
+    owl:sameAs dbr:Catreus,
+        wd:Q754835 .
+
+res:CecropsII rdfs:seeAlso <https://en.wikipedia.org/wiki/Cecrops_II> ;
+    owl:sameAs dbr:Cecrops_II,
+        wd:Q974346 .
+
+res:Cephalus rdfs:seeAlso <https://en.wikipedia.org/wiki/Cephalus_(son_of_Deion)> ;
+    owl:sameAs dbr:Cephalus_\(son_of_Deion\),
+        wd:Q643504 .
+
+res:CephalusAndProcris owl:sameAs wd:Q16742061 .
+
+res:CepheusKingOfAethiopia rdfs:seeAlso <https://en.wikipedia.org/wiki/Cepheus_(father_of_Andromeda)> ;
+    owl:sameAs dbr:Cepheus_\(father_of_Andromeda\),
+        wd:Q858116 .
+
+res:Ceres rdfs:seeAlso <https://en.wikipedia.org/wiki/Ceres_(mythology)> ;
+    owl:sameAs dbr:Ceres_\(mythology\),
+        wd:Q32102 .
+
+res:Ceto rdfs:seeAlso <https://en.wikipedia.org/wiki/Ceto> ;
+    owl:sameAs dbr:Ceto,
+        wd:Q209489 .
+
+res:Chaos rdfs:seeAlso <https://en.wikipedia.org/wiki/Chaos_(mythology)> ;
+    owl:sameAs dbr:Chaos_\(mythology\),
+        wd:Q131090 .
+
+res:Charites rdfs:seeAlso <https://en.wikipedia.org/wiki/Charites> ;
+    owl:sameAs dbr:Charites,
+        wd:Q184353 .
+
+res:Chimaera owl:sameAs wd:Q45267119 .
+
+res:Chimera rdfs:seeAlso <https://en.wikipedia.org/wiki/Chimera_(mythology)> ;
+    owl:sameAs dbr:Chimera_\(mythology\),
+        wd:Q182790 .
+
+res:Chronos rdfs:seeAlso <https://en.wikipedia.org/wiki/Chronos> ;
+    owl:sameAs dbr:Chronos,
+        wd:Q272918 .
+
+res:Chrysaor rdfs:seeAlso <https://en.wikipedia.org/wiki/Chrysaor> ;
+    owl:sameAs dbr:Chrysaor,
+        wd:Q320660 .
+
+res:Chrysomallos owl:sameAs wd:Q1088867 .
+
+res:Circe rdfs:seeAlso <https://en.wikipedia.org/wiki/Circe> ;
+    owl:sameAs dbr:Circe,
+        wd:Q187602 .
+
+res:ClashOfTheTitans rdfs:seeAlso <https://en.wikipedia.org/wiki/Clash_of_the_Titans_(1981_film)> ;
+    owl:sameAs dbr:Clash_of_the_Titans_\(1981_film\),
+        wd:Q1049545 .
+
+res:Clio rdfs:seeAlso <https://en.wikipedia.org/wiki/Clio> ;
+    owl:sameAs dbr:Clio,
+        wd:Q103968 .
+
+res:Clytemnestra rdfs:seeAlso <https://en.wikipedia.org/wiki/Clytemnestra> ;
+    owl:sameAs dbr:Clytemnestra,
+        wd:Q131157 .
+
+res:Clytia rdfs:seeAlso <https://en.wikipedia.org/wiki/Clytie> ;
+    owl:sameAs dbr:Clytie,
+        wd:Q58318523 .
+
+res:Clytia_Q58324367 owl:sameAs wd:Q58324367 .
+
+res:Coeus rdfs:seeAlso <https://en.wikipedia.org/wiki/Coeus> ;
+    owl:sameAs dbr:Coeus,
+        wd:Q182837 .
+
+res:ColchianDragon rdfs:seeAlso <https://en.wikipedia.org/wiki/Colchian_Dragon> ;
+    owl:sameAs dbr:Colchian_Dragon,
+        wd:Q4228783 .
+
+res:Coon rdfs:seeAlso <https://en.wikipedia.org/wiki/Co%C3%B6n> ;
+    owl:sameAs dbr:Co%C3%B6n,
+        wd:Q1173681 .
+
+res:Corinth rdfs:seeAlso <https://en.wikipedia.org/wiki/Corinth_(modern_city)> ;
+    owl:sameAs dbr:Corinth_\(modern_city\),
+        wd:Q103011 .
+
+res:CorradoAugias rdfs:seeAlso <https://en.wikipedia.org/wiki/Corrado_Augias> ;
+    owl:sameAs dbr:Corrado_Augias,
+        wd:Q1130103 .
+
+res:Cotys owl:sameAs wd:Q6029215 .
+
+res:Creon rdfs:seeAlso <https://en.wikipedia.org/wiki/Creon_(king_of_Thebes)> ;
+    owl:sameAs dbr:Creon_\(king_of_Thebes\),
+        wd:Q732066 .
+
+res:Creon_Q786573 rdfs:seeAlso <https://en.wikipedia.org/wiki/Creon_(king_of_Corinth)> ;
+    owl:sameAs dbr:Creon_\(king_of_Corinth\),
+        wd:Q786573 .
+
+res:CretanBull rdfs:seeAlso <https://en.wikipedia.org/wiki/Cretan_Bull> ;
+    owl:sameAs dbr:Cretan_Bull,
+        wd:Q746198 .
+
+res:Cretheus owl:sameAs wd:Q869665 .
+
+res:Creusa rdfs:seeAlso <https://en.wikipedia.org/wiki/Creusa_(wife_of_Aeneas)> ;
+    owl:sameAs dbr:Creusa_\(wife_of_Aeneas\),
+        wd:Q375174 .
+
+res:Creusa_Q45187904 owl:sameAs wd:Q45187904 .
+
+res:CrommyonianSow rdfs:seeAlso <https://en.wikipedia.org/wiki/Crommyonian_Sow> ;
+    owl:sameAs dbr:Crommyonian_Sow,
+        wd:Q1751992 .
+
+res:Cronus rdfs:seeAlso <https://en.wikipedia.org/wiki/Cronus> ;
+    owl:sameAs dbr:Cronus,
+        wd:Q44204 .
+
+res:Curetes_Q12879305 rdfs:seeAlso <https://en.wikipedia.org/wiki/Curetes_(tribe)> ;
+    owl:sameAs dbr:Curetes_\(tribe\),
+        wd:Q12879305 .
+
+res:Cyclops rdfs:seeAlso <https://en.wikipedia.org/wiki/Cyclopes> ;
+    owl:sameAs dbr:Cyclopes,
+        wd:Q128430 .
+
+res:Cycnus rdfs:seeAlso <https://en.wikipedia.org/wiki/Cycnus_(son_of_Ares)> ;
+    owl:sameAs dbr:Cycnus_\(son_of_Ares\),
+        wd:Q577245 .
+
+res:Cynortas rdfs:seeAlso <https://en.wikipedia.org/wiki/Cynortas> ;
+    owl:sameAs dbr:Cynortas,
+        wd:Q1466824 .
+
+res:Cynthus rdfs:seeAlso <https://en.wikipedia.org/wiki/Cynthus> ;
+    owl:sameAs dbr:Cynthus,
+        wd:Q285086 .
+
+res:Cyzicus rdfs:seeAlso <https://en.wikipedia.org/wiki/Cyzicus_(mythology)> ;
+    owl:sameAs dbr:Cyzicus_\(mythology\),
+        wd:Q1795211 .
+
+res:CzechNationalAuthorityDatabase rdfs:seeAlso <https://en.wikipedia.org/wiki/NKC_(identifier)> ;
+    owl:sameAs dbr:NKC_\(identifier\),
+        wd:Q13550863 .
+
+res:DAulairesBookOfGreekMyths owl:sameAs wd:Q138857878 .
+
+res:DGRBM1870Medeia owl:sameAs wd:Q47507256 .
+
+res:Damascus_Q59533019 owl:sameAs wd:Q59533019 .
+
+res:Danae rdfs:seeAlso <https://en.wikipedia.org/wiki/Dana%C3%AB> ;
+    owl:sameAs dbr:Dana%C3%AB,
+        wd:Q190582 .
+
+res:Danaus rdfs:seeAlso <https://en.wikipedia.org/wiki/Danaus> ;
+    owl:sameAs dbr:Danaus,
+        wd:Q210883 .
+
+res:DanteAlighieri rdfs:seeAlso <https://en.wikipedia.org/wiki/Dante_Alighieri> ;
+    owl:sameAs dbr:Dante_Alighieri,
+        wd:Q1067 .
+
+res:DaughtersOfDanaus rdfs:seeAlso <https://en.wikipedia.org/wiki/Dana%C3%AFdes> ;
+    owl:sameAs dbr:Dana%C3%AFdes,
+        wd:Q724907 .
+
+res:DeFluviis rdfs:seeAlso <https://en.wikipedia.org/wiki/De_fluviis> ;
+    owl:sameAs dbr:De_fluviis,
+        wd:Q87206209 .
+
+res:DeathInBattle owl:sameAs wd:Q18663901 .
+
+res:Deianira rdfs:seeAlso <https://en.wikipedia.org/wiki/Deianira> ;
+    owl:sameAs dbr:Deianira,
+        wd:Q272000 .
+
+res:Deidamia rdfs:seeAlso <https://en.wikipedia.org/wiki/Deidamia_(daughter_of_Lycomedes)> ;
+    owl:sameAs dbr:Deidamia_\(daughter_of_Lycomedes\),
+        wd:Q431387 .
+
+res:Deiopites owl:sameAs wd:Q15816329 .
+
+res:Deiphobus rdfs:seeAlso <https://en.wikipedia.org/wiki/Deiphobus> ;
+    owl:sameAs dbr:Deiphobus,
+        wd:Q736813 .
+
+res:Delos rdfs:seeAlso <https://en.wikipedia.org/wiki/Delos> ;
+    owl:sameAs dbr:Delos,
+        wd:Q173148 .
+
+res:Demeter rdfs:seeAlso <https://en.wikipedia.org/wiki/Demeter> ;
+    owl:sameAs dbr:Demeter,
+        wd:Q40730 .
+
+res:Democoon rdfs:seeAlso <https://en.wikipedia.org/wiki/Democoon> ;
+    owl:sameAs dbr:Democoon,
+        wd:Q3705324 .
+
+res:Democoon_Q21548783 owl:sameAs wd:Q21548783 .
+
+res:Demoleon rdfs:seeAlso <https://en.wikipedia.org/wiki/Demoleon> ;
+    owl:sameAs dbr:Demoleon,
+        wd:Q3044434 .
+
+res:Demoleon1 owl:sameAs wd:Q64223908 .
+
+res:DemophonOfAthens rdfs:seeAlso <https://en.wikipedia.org/wiki/Demophon_of_Athens> ;
+    owl:sameAs dbr:Demophon_of_Athens,
+        wd:Q912376 .
+
+res:DescriptionOfGreece rdfs:seeAlso <https://en.wikipedia.org/wiki/Description_of_Greece> ;
+    owl:sameAs dbr:Description_of_Greece,
+        wd:Q3825645 .
+
+res:Deucalion rdfs:seeAlso <https://en.wikipedia.org/wiki/Deucalion> ;
+    owl:sameAs dbr:Deucalion,
+        wd:Q207715 .
+
+res:DeucalionAndPyrrha owl:sameAs wd:Q3706234 .
+
+res:Deucalion_Q59780229 owl:sameAs wd:Q59780229 .
+
+res:Dies rdfs:seeAlso <https://en.wikipedia.org/wiki/Dies_(mythology)> ;
+    owl:sameAs dbr:Dies_\(mythology\),
+        wd:Q18206465 .
+
+res:DiiConsentes rdfs:seeAlso <https://en.wikipedia.org/wiki/Dii_Consentes> ;
+    owl:sameAs dbr:Dii_Consentes,
+        wd:Q1183096 .
+
+res:DiodorusSiculus rdfs:seeAlso <https://en.wikipedia.org/wiki/Diodorus_Siculus> ;
+    owl:sameAs dbr:Diodorus_Siculus,
+        wd:Q171241 .
+
+res:Dione rdfs:seeAlso <https://en.wikipedia.org/wiki/Dione_(Titaness)> ;
+    owl:sameAs dbr:Dione_\(Titaness\),
+        wd:Q199923 .
+
+res:Dione_Q16697870 rdfs:seeAlso <https://en.wikipedia.org/wiki/Dione_(mythology)> ;
+    owl:sameAs dbr:Dione_\(mythology\),
+        wd:Q16697870 .
+
+res:Dionysiaca rdfs:seeAlso <https://en.wikipedia.org/wiki/Dionysiaca> ;
+    owl:sameAs dbr:Dionysiaca,
+        wd:Q634519 .
+
+res:Dionysus rdfs:seeAlso <https://en.wikipedia.org/wiki/Dionysus> ;
+    owl:sameAs dbr:Dionysus,
+        wd:Q41680 .
+
+res:Dirce rdfs:seeAlso <https://en.wikipedia.org/wiki/Dirce> ;
+    owl:sameAs dbr:Dirce,
+        wd:Q850192 .
+
+res:Doris rdfs:seeAlso <https://en.wikipedia.org/wiki/Doris_(Oceanid)> ;
+    owl:sameAs dbr:Doris_\(Oceanid\),
+        wd:Q726279 .
+
+res:DrakonNemeios owl:sameAs wd:Q126914528 .
+
+res:Dryope rdfs:seeAlso <https://en.wikipedia.org/wiki/Dryope_(daughter_of_Dryops)> ;
+    owl:sameAs dbr:Dryope_\(daughter_of_Dryops\),
+        wd:Q910403 .
+
+res:Dryops_Q3715373 owl:sameAs wd:Q3715373 .
+
+res:EB11Eteocles owl:sameAs wd:Q76512116 .
+
+res:EB11Melicertes owl:sameAs wd:Q75948680 .
+
+res:EB11Neoptolemus owl:sameAs wd:Q76130618 .
+
+res:EB11Pelops owl:sameAs wd:Q76129427 .
+
+res:EB11Phaedra owl:sameAs wd:Q76513998 .
+
+res:EB11Sarpedon owl:sameAs wd:Q50825870 .
+
+res:EB11Telemachus owl:sameAs wd:Q76807912 .
+
+res:Echeclus owl:sameAs wd:Q667189 .
+
+res:Echidna rdfs:seeAlso <https://en.wikipedia.org/wiki/Echidna_(mythology)> ;
+    owl:sameAs dbr:Echidna_\(mythology\),
+        wd:Q185670 .
+
+res:Echidna_Q45177716 owl:sameAs wd:Q45177716 .
+
+res:EdgarParinDAulaire rdfs:seeAlso <https://en.wikipedia.org/wiki/Edgar_Parin_d%27Aulaire> ;
+    owl:sameAs dbr:Edgar_Parin_d%27Aulaire,
+        wd:Q55942469 .
+
+res:Eidyia rdfs:seeAlso <https://en.wikipedia.org/wiki/Idyia> ;
+    owl:sameAs dbr:Idyia,
+        wd:Q2293877 .
+
+res:Electra rdfs:seeAlso <https://en.wikipedia.org/wiki/Electra> ;
+    owl:sameAs dbr:Electra,
+        wd:Q131651 .
+
+res:Electra_Q540161 rdfs:seeAlso <https://en.wikipedia.org/wiki/Electra_(Euripides_play)> ;
+    owl:sameAs dbr:Electra_\(Euripides_play\),
+        wd:Q540161 .
+
+res:Electra_Q858663 rdfs:seeAlso <https://en.wikipedia.org/wiki/Electra_(Pleiad)> ;
+    owl:sameAs dbr:Electra_\(Pleiad\),
+        wd:Q858663 .
+
+res:Electryon rdfs:seeAlso <https://en.wikipedia.org/wiki/Electryon> ;
+    owl:sameAs dbr:Electryon,
+        wd:Q26296 .
+
+res:Elektra rdfs:seeAlso <https://en.wikipedia.org/wiki/Elektra_(opera)> ;
+    owl:sameAs dbr:Elektra_\(opera\),
+        wd:Q731927 .
+
+res:Elektra_Q3721900 owl:sameAs wd:Q3721900 .
+
+res:Emathion owl:sameAs wd:Q17138459 .
+
+res:Enarete rdfs:seeAlso <https://en.wikipedia.org/wiki/Enarete> ;
+    owl:sameAs dbr:Enarete,
+        wd:Q48665 .
+
+res:EncyclopdiaBritannicaOnline rdfs:seeAlso <https://en.wikipedia.org/wiki/Britannica.com> ;
+    owl:sameAs dbr:Britannica.com,
+        wd:Q5375741 .
+
+res:EncyclopediaOfAncientDeities_Q111913652 owl:sameAs wd:Q111913652 .
+
+res:Enyo rdfs:seeAlso <https://en.wikipedia.org/wiki/Enyo> ;
+    owl:sameAs dbr:Enyo,
+        wd:Q747657 .
+
+res:Eos rdfs:seeAlso <https://en.wikipedia.org/wiki/Eos> ;
+    owl:sameAs dbr:Eos,
+        wd:Q178417 .
+
+res:Epaphus rdfs:seeAlso <https://en.wikipedia.org/wiki/Epaphus> ;
+    owl:sameAs dbr:Epaphus,
+        wd:Q675699 .
+
+res:Ephialtes owl:sameAs wd:Q1249106 .
+
+res:Epimetheus rdfs:seeAlso <https://en.wikipedia.org/wiki/Epimetheus> ;
+    owl:sameAs dbr:Epimetheus,
+        wd:Q41054 .
+
+res:EpitomeOfThePhilippicHistoryOfPompeiusTrogus rdfs:seeAlso <https://en.wikipedia.org/wiki/Epitome_of_the_Philippic_History_of_Pompeius_Trogus> ;
+    owl:sameAs dbr:Epitome_of_the_Philippic_History_of_Pompeius_Trogus,
+        wd:Q87213120 .
+
+res:Erebos rdfs:seeAlso <https://en.wikipedia.org/wiki/Erebus> ;
+    owl:sameAs dbr:Erebus,
+        wd:Q131122 .
+
+res:Erechtheus rdfs:seeAlso <https://en.wikipedia.org/wiki/Erechtheus> ;
+    owl:sameAs dbr:Erechtheus,
+        wd:Q301219 .
+
+res:Erichthonius rdfs:seeAlso <https://en.wikipedia.org/wiki/Erichthonius_(son_of_Hephaestus)> ;
+    owl:sameAs dbr:Erichthonius_\(son_of_Hephaestus\),
+        wd:Q644921 .
+
+res:Erinyes rdfs:seeAlso <https://en.wikipedia.org/wiki/Erinyes> ;
+    owl:sameAs dbr:Erinyes,
+        wd:Q180262 .
+
+res:Eryx owl:sameAs wd:Q430157 .
+
+res:Eteocles rdfs:seeAlso <https://en.wikipedia.org/wiki/Eteocles> ;
+    owl:sameAs dbr:Eteocles,
+        wd:Q506550 .
+
+res:Ethiopia rdfs:seeAlso <https://en.wikipedia.org/wiki/Ethiopia> ;
+    owl:sameAs dbr:Ethiopia,
+        wd:Q115 .
+
+res:EthnicaOfStephanus owl:sameAs wd:Q28042380 .
+
+res:EugenPridik owl:sameAs wd:Q1372825 .
+
+res:EumedesSonOfHippocoon owl:sameAs wd:Q106540916 .
+
+res:Euripides rdfs:seeAlso <https://en.wikipedia.org/wiki/Euripides> ;
+    owl:sameAs dbr:Euripides,
+        wd:Q48305 .
+
+res:Europa rdfs:seeAlso <https://en.wikipedia.org/wiki/Europa_(consort_of_Zeus)> ;
+    owl:sameAs dbr:Europa_\(consort_of_Zeus\),
+        wd:Q165170 .
+
+res:Euros rdfs:seeAlso <https://en.wikipedia.org/wiki/Eurus> ;
+    owl:sameAs dbr:Eurus,
+        wd:Q836518 .
+
+res:Eurybia rdfs:seeAlso <https://en.wikipedia.org/wiki/Eurybia_(mythology)> ;
+    owl:sameAs dbr:Eurybia_\(mythology\),
+        wd:Q506285 .
+
+res:Eurydice_Q1378429 owl:sameAs wd:Q1378429 .
+
+res:Euryganeia rdfs:seeAlso <https://en.wikipedia.org/wiki/Euryganeia> ;
+    owl:sameAs dbr:Euryganeia,
+        wd:Q1378458 .
+
+res:Eurylyte owl:sameAs wd:Q1378483 .
+
+res:Eurynome rdfs:seeAlso <https://en.wikipedia.org/wiki/Eurynome_(Oceanid)> ;
+    owl:sameAs dbr:Eurynome_\(Oceanid\),
+        wd:Q548099 .
+
+res:Eurynome_Q956831 rdfs:seeAlso <https://en.wikipedia.org/wiki/Eurynome_(daughter_of_Nisus)> ;
+    owl:sameAs dbr:Eurynome_\(daughter_of_Nisus\),
+        wd:Q956831 .
+
+res:Eurytos owl:sameAs wd:Q3060927 .
+
+res:EvangelineWalton rdfs:seeAlso <https://en.wikipedia.org/wiki/Evangeline_Walton> ;
+    owl:sameAs dbr:Evangeline_Walton,
+        wd:Q273105 .
+
+res:Fabulae rdfs:seeAlso <https://en.wikipedia.org/wiki/Fabulae> ;
+    owl:sameAs dbr:Fabulae,
+        wd:Q3738147 .
+
+res:Faunus rdfs:seeAlso <https://en.wikipedia.org/wiki/Faunus> ;
+    owl:sameAs dbr:Faunus,
+        wd:Q3089703 .
+
+res:FedorMishchenko owl:sameAs wd:Q4298556 .
+
+res:Fontes owl:sameAs wd:Q61640774 .
+
+res:Gaia rdfs:seeAlso <https://en.wikipedia.org/wiki/Gaia> ;
+    owl:sameAs dbr:Gaia,
+        wd:Q93172 .
+
+res:GaiusJuliusHyginus rdfs:seeAlso <https://en.wikipedia.org/wiki/Gaius_Julius_Hyginus> ;
+    owl:sameAs dbr:Gaius_Julius_Hyginus,
+        wd:Q298376 .
+
+res:GaiusValeriusFlaccus rdfs:seeAlso <https://en.wikipedia.org/wiki/Valerius_Flaccus_(poet)> ;
+    owl:sameAs dbr:Valerius_Flaccus_\(poet\),
+        wd:Q316090 .
+
+res:Ganges rdfs:seeAlso <https://en.wikipedia.org/wiki/Ganges> ;
+    owl:sameAs dbr:Ganges,
+        wd:Q5089 .
+
+res:GeorgKnaack owl:sameAs wd:Q1505016 .
+
+res:GermanNationalLibrary rdfs:seeAlso <https://en.wikipedia.org/wiki/German_National_Library> ;
+    owl:sameAs dbr:German_National_Library,
+        wd:Q27302 .
+
+res:GiacomoLeopardi rdfs:seeAlso <https://en.wikipedia.org/wiki/Giacomo_Leopardi> ;
+    owl:sameAs dbr:Giacomo_Leopardi,
+        wd:Q172599 .
+
+res:Giants rdfs:seeAlso <https://en.wikipedia.org/wiki/Giants_(Greek_mythology)> ;
+    owl:sameAs dbr:Giants_\(Greek_mythology\),
+        wd:Q191192 .
+
+res:Glauce rdfs:seeAlso <https://en.wikipedia.org/wiki/Creusa_(daughter_of_Creon)> ;
+    owl:sameAs dbr:Creusa_\(daughter_of_Creon\),
+        wd:Q269058 .
+
+res:Glaucus_Q1232714 rdfs:seeAlso <https://en.wikipedia.org/wiki/Glaucus_(son_of_Sisyphus)> ;
+    owl:sameAs dbr:Glaucus_\(son_of_Sisyphus\),
+        wd:Q1232714 .
+
+res:Glaucus_Q45178802 owl:sameAs wd:Q45178802 .
+
+res:Gorgon rdfs:seeAlso <https://en.wikipedia.org/wiki/Gorgons> ;
+    owl:sameAs dbr:Gorgons,
+        wd:Q102059 .
+
+res:Gorgophone rdfs:seeAlso <https://en.wikipedia.org/wiki/Gorgophone_(daughter_of_Perseus)> ;
+    owl:sameAs dbr:Gorgophone_\(daughter_of_Perseus\),
+        wd:Q950523 .
+
+res:Gorgopis owl:sameAs wd:Q61862484 .
+
+res:Graeae rdfs:seeAlso <https://en.wikipedia.org/wiki/Graeae> ;
+    owl:sameAs dbr:Graeae,
+        wd:Q257768 .
+
+res:GreekMythology rdfs:seeAlso <https://en.wikipedia.org/wiki/Greek_mythology> ;
+    owl:sameAs dbr:Greek_mythology,
+        wd:Q34726 .
+
+res:GroupOfAuthors owl:sameAs wd:Q1690980 .
+
+res:GrundlichesMythologischesLexicon owl:sameAs wd:Q21139260 .
+
+res:Harmonia rdfs:seeAlso <https://en.wikipedia.org/wiki/Harmonia> ;
+    owl:sameAs dbr:Harmonia,
+        wd:Q978079 .
+
+res:Hebe rdfs:seeAlso <https://en.wikipedia.org/wiki/Hebe_(mythology)> ;
+    owl:sameAs dbr:Hebe_\(mythology\),
+        wd:Q131125 .
+
+res:Hecate rdfs:seeAlso <https://en.wikipedia.org/wiki/Hecate> ;
+    owl:sameAs dbr:Hecate,
+        wd:Q131575 .
+
+res:Hecatoncheires rdfs:seeAlso <https://en.wikipedia.org/wiki/Hecatoncheires> ;
+    owl:sameAs dbr:Hecatoncheires,
+        wd:Q175255 .
+
+res:Hector rdfs:seeAlso <https://en.wikipedia.org/wiki/Hector> ;
+    owl:sameAs dbr:Hector,
+        wd:Q159666 .
+
+res:Hector_Q45274945 owl:sameAs wd:Q45274945 .
+
+res:Hecuba rdfs:seeAlso <https://en.wikipedia.org/wiki/Hecuba> ;
+    owl:sameAs dbr:Hecuba,
+        wd:Q193433 .
+
+res:Hecuba_Q1115611 rdfs:seeAlso <https://en.wikipedia.org/wiki/Hecuba_(play)> ;
+    owl:sameAs dbr:Hecuba_\(play\),
+        wd:Q1115611 .
+
+res:HelenOfTroy rdfs:seeAlso <https://en.wikipedia.org/wiki/Helen_of_Troy> ;
+    owl:sameAs dbr:Helen_of_Troy,
+        wd:Q164061 .
+
+res:Helena owl:sameAs wd:Q45181358 .
+
+res:Heliadae rdfs:seeAlso <https://en.wikipedia.org/wiki/Heliadae> ;
+    owl:sameAs dbr:Heliadae,
+        wd:Q1215951 .
+
+res:Helios rdfs:seeAlso <https://en.wikipedia.org/wiki/Helios> ;
+    owl:sameAs dbr:Helios,
+        wd:Q134270 .
+
+res:Helle rdfs:seeAlso <https://en.wikipedia.org/wiki/Helle_(mythology)> ;
+    owl:sameAs dbr:Helle_\(mythology\),
+        wd:Q638578 .
+
+res:Hellen rdfs:seeAlso <https://en.wikipedia.org/wiki/Hellen> ;
+    owl:sameAs dbr:Hellen,
+        wd:Q336428 .
+
+res:Hemera rdfs:seeAlso <https://en.wikipedia.org/wiki/Hemera> ;
+    owl:sameAs dbr:Hemera,
+        wd:Q192107 .
+
+res:Hephaestus rdfs:seeAlso <https://en.wikipedia.org/wiki/Hephaestus> ;
+    owl:sameAs dbr:Hephaestus,
+        wd:Q44384 .
+
+res:Hera rdfs:seeAlso <https://en.wikipedia.org/wiki/Hera> ;
+    owl:sameAs dbr:Hera,
+        wd:Q38012 .
+
+res:Heracles rdfs:seeAlso <https://en.wikipedia.org/wiki/Heracles> ;
+    owl:sameAs dbr:Heracles,
+        wd:Q122248 .
+
+res:HeraclesAndTheNemeanLion owl:sameAs wd:Q123241556 .
+
+res:Hermes rdfs:seeAlso <https://en.wikipedia.org/wiki/Hermes> ;
+    owl:sameAs dbr:Hermes,
+        wd:Q41484 .
+
+res:Hermione rdfs:seeAlso <https://en.wikipedia.org/wiki/Hermione_(mythology)> ;
+    owl:sameAs dbr:Hermione_\(mythology\),
+        wd:Q658523 .
+
+res:Herodotus rdfs:seeAlso <https://en.wikipedia.org/wiki/Herodotus> ;
+    owl:sameAs dbr:Herodotus,
+        wd:Q26825 .
+
+res:Heroides rdfs:seeAlso <https://en.wikipedia.org/wiki/Heroides> ;
+    owl:sameAs dbr:Heroides,
+        wd:Q1236672 .
+
+res:Hesiod rdfs:seeAlso <https://en.wikipedia.org/wiki/Hesiod> ;
+    owl:sameAs dbr:Hesiod,
+        wd:Q44233 .
+
+res:Hesperides rdfs:seeAlso <https://en.wikipedia.org/wiki/Hesperides> ;
+    owl:sameAs dbr:Hesperides,
+        wd:Q165938 .
+
+res:Hippocoon rdfs:seeAlso <https://en.wikipedia.org/wiki/Hippocoon_(king_of_Sparta)> ;
+    owl:sameAs dbr:Hippocoon_\(king_of_Sparta\),
+        wd:Q342279 .
+
+res:Hippodamia rdfs:seeAlso <https://en.wikipedia.org/wiki/Hippodamia_(daughter_of_Oenomaus)> ;
+    owl:sameAs dbr:Hippodamia_\(daughter_of_Oenomaus\),
+        wd:Q328354 .
+
+res:Hippolyta rdfs:seeAlso <https://en.wikipedia.org/wiki/Hippolyta> ;
+    owl:sameAs dbr:Hippolyta,
+        wd:Q210303 .
+
+res:Hippolytus rdfs:seeAlso <https://en.wikipedia.org/wiki/Hippolytus_of_Athens> ;
+    owl:sameAs dbr:Hippolytus_of_Athens,
+        wd:Q338201 .
+
+res:Histories rdfs:seeAlso <https://en.wikipedia.org/wiki/Histories_(Herodotus)> ;
+    owl:sameAs dbr:Histories_\(Herodotus\),
+        wd:Q746583 .
+
+res:Homer rdfs:seeAlso <https://en.wikipedia.org/wiki/Homer> ;
+    owl:sameAs dbr:Homer,
+        wd:Q6691 .
+
+res:Homicide rdfs:seeAlso <https://en.wikipedia.org/wiki/Homicide> ;
+    owl:sameAs dbr:Homicide,
+        wd:Q149086 .
+
+res:Horae rdfs:seeAlso <https://en.wikipedia.org/wiki/Horae> ;
+    owl:sameAs dbr:Horae,
+        wd:Q201411 .
+
+res:HowTheCossacksBecameOlympians owl:sameAs wd:Q4208820 .
+
+res:HugoHepding owl:sameAs wd:Q1635148 .
+
+res:HugoVonHofmannsthal rdfs:seeAlso <https://en.wikipedia.org/wiki/Hugo_von_Hofmannsthal> ;
+    owl:sameAs dbr:Hugo_von_Hofmannsthal,
+        wd:Q51513 .
+
+res:HyginusMythographus owl:sameAs wd:Q1231590 .
+
+res:Hyllus rdfs:seeAlso <https://en.wikipedia.org/wiki/Hyllus> ;
+    owl:sameAs dbr:Hyllus,
+        wd:Q847268 .
+
+res:HymnToApolloI owl:sameAs wd:Q3798932 .
+
+res:Hyperion rdfs:seeAlso <https://en.wikipedia.org/wiki/Hyperion_(Titan)> ;
+    owl:sameAs dbr:Hyperion_\(Titan\),
+        wd:Q179209 .
+
+res:Hypermnestra rdfs:seeAlso <https://en.wikipedia.org/wiki/Hypermnestra> ;
+    owl:sameAs dbr:Hypermnestra,
+        wd:Q472784 .
+
+res:Hypsipyle rdfs:seeAlso <https://en.wikipedia.org/wiki/Hypsipyle> ;
+    owl:sameAs dbr:Hypsipyle,
+        wd:Q775296 .
+
+res:ISegretiDiRoma owl:sameAs wd:Q63339741 .
+
+res:Iaera_Q10299840 owl:sameAs wd:Q10299840 .
+
+res:Iapetos rdfs:seeAlso <https://en.wikipedia.org/wiki/Iapetus> ;
+    owl:sameAs dbr:Iapetus,
+        wd:Q179543 .
+
+res:Idomeneo rdfs:seeAlso <https://en.wikipedia.org/wiki/Idomeneo> ;
+    owl:sameAs dbr:Idomeneo,
+        wd:Q723559 .
+
+res:Iliad rdfs:seeAlso <https://en.wikipedia.org/wiki/Iliad> ;
+    owl:sameAs dbr:Iliad,
+        wd:Q8275 .
+
+res:Iliade owl:sameAs wd:Q21666067 .
+
+res:Ilus rdfs:seeAlso <https://en.wikipedia.org/wiki/Ilus_(son_of_Tros)> ;
+    owl:sameAs dbr:Ilus_\(son_of_Tros\),
+        wd:Q1495743 .
+
+res:Inachus rdfs:seeAlso <https://en.wikipedia.org/wiki/Inachus> ;
+    owl:sameAs dbr:Inachus,
+        wd:Q735623 .
+
+res:IngriDAulaire rdfs:seeAlso <https://en.wikipedia.org/wiki/Ingri_d%27Aulaire> ;
+    owl:sameAs dbr:Ingri_d%27Aulaire,
+        wd:Q17118093 .
+
+res:Ino rdfs:seeAlso <https://en.wikipedia.org/wiki/Ino_(mythology)> ;
+    owl:sameAs dbr:Ino_\(mythology\),
+        wd:Q223690 .
+
+res:IntegratedAuthorityFile rdfs:seeAlso <https://en.wikipedia.org/wiki/Integrated_Authority_File> ;
+    owl:sameAs dbr:Integrated_Authority_File,
+        wd:Q36578 .
+
+res:Io rdfs:seeAlso <https://en.wikipedia.org/wiki/Io_(mythology)> ;
+    owl:sameAs dbr:Io_\(mythology\),
+        wd:Q179014 .
+
+res:Iobates rdfs:seeAlso <https://en.wikipedia.org/wiki/Iobates> ;
+    owl:sameAs dbr:Iobates,
+        wd:Q1456409 .
+
+res:Iolcos rdfs:seeAlso <https://en.wikipedia.org/wiki/Iolcus> ;
+    owl:sameAs dbr:Iolcus,
+        wd:Q662613 .
+
+res:Iphidamas owl:sameAs wd:Q2497780 .
+
+res:Iphidamas1 owl:sameAs wd:Q123409865 .
+
+res:Iphigenia rdfs:seeAlso <https://en.wikipedia.org/wiki/Iphigenia> ;
+    owl:sameAs dbr:Iphigenia,
+        wd:Q192673 .
+
+res:Iphigenia_Q45179570 owl:sameAs wd:Q45179570 .
+
+res:Iphition owl:sameAs wd:Q3792190 .
+
+res:Iphitos rdfs:seeAlso <https://en.wikipedia.org/wiki/Iphitus_(son_of_Eurytus)> ;
+    owl:sameAs dbr:Iphitus_\(son_of_Eurytus\),
+        wd:Q1672196 .
+
+res:IsaacTzetzes owl:sameAs wd:Q3154779 .
+
+res:Ismene rdfs:seeAlso <https://en.wikipedia.org/wiki/Ismene> ;
+    owl:sameAs dbr:Ismene,
+        wd:Q753902 .
+
+res:Ismenius owl:sameAs wd:Q45176836 .
+
+res:Isus rdfs:seeAlso <https://en.wikipedia.org/wiki/Isus_(mythology)> ;
+    owl:sameAs dbr:Isus_\(mythology\),
+        wd:Q3155610 .
+
+res:Iulus owl:sameAs wd:Q16523986 .
+
+res:IvanShitz owl:sameAs wd:Q19916541 .
+
+res:JakobEscherBurkli owl:sameAs wd:Q1678995 .
+
+res:Jason rdfs:seeAlso <https://en.wikipedia.org/wiki/Jason> ;
+    owl:sameAs dbr:Jason,
+        wd:Q176758 .
+
+res:JimmyWales rdfs:seeAlso <https://en.wikipedia.org/wiki/Jimmy_Wales> ;
+    owl:sameAs dbr:Jimmy_Wales,
+        wd:Q181 .
+
+res:Jocasta rdfs:seeAlso <https://en.wikipedia.org/wiki/Jocasta> ;
+    owl:sameAs dbr:Jocasta,
+        wd:Q131445 .
+
+res:JohnTzetzes rdfs:seeAlso <https://en.wikipedia.org/wiki/John_Tzetzes> ;
+    owl:sameAs dbr:John_Tzetzes,
+        wd:Q530515 .
+
+res:JudgementOfParis rdfs:seeAlso <https://en.wikipedia.org/wiki/Judgement_of_Paris> ;
+    owl:sameAs dbr:Judgement_of_Paris,
+        wd:Q1784308 .
+
+res:Justin rdfs:seeAlso <https://en.wikipedia.org/wiki/Justin_(historian)> ;
+    owl:sameAs dbr:Justin_\(historian\),
+        wd:Q210853 .
+
+res:Keres rdfs:seeAlso <https://en.wikipedia.org/wiki/Keres> ;
+    owl:sameAs dbr:Keres,
+        wd:Q403964 .
+
+res:Kerne owl:sameAs wd:Q1428361 .
+
+res:King rdfs:seeAlso <https://en.wikipedia.org/wiki/King> ;
+    owl:sameAs dbr:King,
+        wd:Q12097 .
+
+res:KingInGreekMythology owl:sameAs wd:Q24434794 .
+
+res:KingOfAchaea owl:sameAs wd:Q27927515 .
+
+res:KingOfArgolis owl:sameAs wd:Q27926935 .
+
+res:KingOfArgos owl:sameAs wd:Q27924370 .
+
+res:KingOfAthens owl:sameAs wd:Q13534353 .
+
+res:KingOfAtlantis owl:sameAs wd:Q27928377 .
+
+res:KingOfCalydon owl:sameAs wd:Q27928369 .
+
+res:KingOfColchis owl:sameAs wd:Q27927549 .
+
+res:KingOfCorinth owl:sameAs wd:Q27925170 .
+
+res:KingOfCrete owl:sameAs wd:Q27924377 .
+
+res:KingOfElis owl:sameAs wd:Q27926262 .
+
+res:KingOfIolcus owl:sameAs wd:Q27927527 .
+
+res:KingOfLydia owl:sameAs wd:Q27926942 .
+
+res:KingOfMegara owl:sameAs wd:Q27926261 .
+
+res:KingOfMessenia owl:sameAs wd:Q27924389 .
+
+res:KingOfMycenae owl:sameAs wd:Q27924374 .
+
+res:KingOfMyrmidons owl:sameAs wd:Q27927537 .
+
+res:KingOfOrcomenus owl:sameAs wd:Q27926263 .
+
+res:KingOfPhoenicia owl:sameAs wd:Q27926939 .
+
+res:KingOfPhrygia owl:sameAs wd:Q27926943 .
+
+res:KingOfPhtiotis owl:sameAs wd:Q27927541 .
+
+res:KingOfPlataea owl:sameAs wd:Q27926970 .
+
+res:KingOfSicyon owl:sameAs wd:Q27926245 .
+
+res:KingOfTauris owl:sameAs wd:Q27927551 .
+
+res:KingOfThebe owl:sameAs wd:Q13533319 .
+
+res:KingOfTiryns owl:sameAs wd:Q27924386 .
+
+res:KingOfTroy owl:sameAs wd:Q11945180 .
+
+res:KingOfTyre owl:sameAs wd:Q100401310 .
+
+res:Klymene rdfs:seeAlso <https://en.wikipedia.org/wiki/Clymene_(wife_of_Iapetus)> ;
+    owl:sameAs dbr:Clymene_\(wife_of_Iapetus\),
+        wd:Q836792 .
+
+res:Korybantes rdfs:seeAlso <https://en.wikipedia.org/wiki/Korybantes> ;
+    owl:sameAs dbr:Korybantes,
+        wd:Q631406 .
+
+res:Kreios rdfs:seeAlso <https://en.wikipedia.org/wiki/Crius> ;
+    owl:sameAs dbr:Crius,
+        wd:Q192136 .
+
+res:Labdacus rdfs:seeAlso <https://en.wikipedia.org/wiki/Labdacus> ;
+    owl:sameAs dbr:Labdacus,
+        wd:Q847005 .
+
+res:LabyrinthOfKnossos owl:sameAs wd:Q1091243 .
+
+res:Ladon rdfs:seeAlso <https://en.wikipedia.org/wiki/Ladon_(mythology)> ;
+    owl:sameAs dbr:Ladon_\(mythology\),
+        wd:Q274600 .
+
+res:Laertes rdfs:seeAlso <https://en.wikipedia.org/wiki/Laertes_(father_of_Odysseus)> ;
+    owl:sameAs dbr:Laertes_\(father_of_Odysseus\),
+        wd:Q748296 .
+
+res:Laius rdfs:seeAlso <https://en.wikipedia.org/wiki/Laius> ;
+    owl:sameAs dbr:Laius,
+        wd:Q463898 .
+
+res:Laomedon rdfs:seeAlso <https://en.wikipedia.org/wiki/Laomedon> ;
+    owl:sameAs dbr:Laomedon,
+        wd:Q332324 .
+
+res:Latinus rdfs:seeAlso <https://en.wikipedia.org/wiki/Latinus> ;
+    owl:sameAs dbr:Latinus,
+        wd:Q779406 .
+
+res:Latinus_Q45189913 owl:sameAs wd:Q45189913 .
+
+res:Latona owl:sameAs wd:Q12958119 .
+
+res:Lavinia rdfs:seeAlso <https://en.wikipedia.org/wiki/Lavinia> ;
+    owl:sameAs dbr:Lavinia,
+        wd:Q1137364 .
+
+res:Learchus rdfs:seeAlso <https://en.wikipedia.org/wiki/Learchus> ;
+    owl:sameAs dbr:Learchus,
+        wd:Q1462644 .
+
+res:Leda rdfs:seeAlso <https://en.wikipedia.org/wiki/Leda_(mythology)> ;
+    owl:sameAs dbr:Leda_\(mythology\),
+        wd:Q182019 .
+
+res:Leodes rdfs:seeAlso <https://en.wikipedia.org/wiki/Leodes> ;
+    owl:sameAs dbr:Leodes,
+        wd:Q3830290 .
+
+res:LeonhardSchmitz rdfs:seeAlso <https://en.wikipedia.org/wiki/Leonhard_Schmitz> ;
+    owl:sameAs dbr:Leonhard_Schmitz,
+        wd:Q6526304 .
+
+res:Leontophron owl:sameAs wd:Q3830649 .
+
+res:Lesches rdfs:seeAlso <https://en.wikipedia.org/wiki/Lesches> ;
+    owl:sameAs dbr:Lesches,
+        wd:Q2486846 .
+
+res:Leto rdfs:seeAlso <https://en.wikipedia.org/wiki/Leto> ;
+    owl:sameAs dbr:Leto,
+        wd:Q103107 .
+
+res:Leucaria owl:sameAs wd:Q9021947 .
+
+res:LibraryOfCongressAuthorities rdfs:seeAlso <https://en.wikipedia.org/wiki/LCCN_(identifier)> ;
+    owl:sameAs dbr:LCCN_\(identifier\),
+        wd:Q13219454 .
+
+res:Libya rdfs:seeAlso <https://en.wikipedia.org/wiki/Libya_(daughter_of_Epaphus)> ;
+    owl:sameAs dbr:Libya_\(daughter_of_Epaphus\),
+        wd:Q1129914 .
+
+res:LifeOfTheseus owl:sameAs wd:Q87207955 .
+
+res:Ligeia owl:sameAs wd:Q1245648 .
+
+res:LinusOfThrace rdfs:seeAlso <https://en.wikipedia.org/wiki/Linus_of_Thrace> ;
+    owl:sameAs dbr:Linus_of_Thrace,
+        wd:Q3241660 .
+
+res:ListOfLatinKingsOfAlbaLonga rdfs:seeAlso <https://en.wikipedia.org/wiki/Kings_of_Alba_Longa> ;
+    owl:sameAs dbr:Kings_of_Alba_Longa,
+        wd:Q878519 .
+
+res:Litae rdfs:seeAlso <https://en.wikipedia.org/wiki/Litae> ;
+    owl:sameAs dbr:Litae,
+        wd:Q2705874 .
+
+res:LittleIliad rdfs:seeAlso <https://en.wikipedia.org/wiki/Little_Iliad> ;
+    owl:sameAs dbr:Little_Iliad,
+        wd:Q2087365 .
+
+res:LukeCastellan rdfs:seeAlso <https://en.wikipedia.org/wiki/Luke_Castellan> ;
+    owl:sameAs dbr:Luke_Castellan,
+        wd:Q3130217 .
+
+res:Lycaon_Q3268334 owl:sameAs wd:Q3268334 .
+
+res:Lycomedes rdfs:seeAlso <https://en.wikipedia.org/wiki/Lycomedes_of_Scyros> ;
+    owl:sameAs dbr:Lycomedes_of_Scyros,
+        wd:Q1330532 .
+
+res:Lycophron rdfs:seeAlso <https://en.wikipedia.org/wiki/Lycophron> ;
+    owl:sameAs dbr:Lycophron,
+        wd:Q432737 .
+
+res:Lycus_Q1393416 rdfs:seeAlso <https://en.wikipedia.org/wiki/Lycus_(son_of_Lycus)> ;
+    owl:sameAs dbr:Lycus_\(son_of_Lycus\),
+        wd:Q1393416 .
+
+res:Lydia rdfs:seeAlso <https://en.wikipedia.org/wiki/Lydia> ;
+    owl:sameAs dbr:Lydia,
+        wd:Q620765 .
+
+res:Lynceus_Q7877819 rdfs:seeAlso <https://en.wikipedia.org/wiki/Lynceus_(son_of_Aegyptus)> ;
+    owl:sameAs dbr:Lynceus_\(son_of_Aegyptus\),
+        wd:Q7877819 .
+
+res:MANTO owl:sameAs wd:Q107400883 .
+
+res:Macaria rdfs:seeAlso <https://en.wikipedia.org/wiki/Macaria_(daughter_of_Heracles)> ;
+    owl:sameAs dbr:Macaria_\(daughter_of_Heracles\),
+        wd:Q1550960 .
+
+res:MadnessOfOdysseus owl:sameAs wd:Q63144425 .
+
+res:Maia rdfs:seeAlso <https://en.wikipedia.org/wiki/Maia> ;
+    owl:sameAs dbr:Maia,
+        wd:Q205233 .
+
+res:Marica rdfs:seeAlso <https://en.wikipedia.org/wiki/Marica_(mythology)> ;
+    owl:sameAs dbr:Marica_\(mythology\),
+        wd:Q1546675 .
+
+res:Medea rdfs:seeAlso <https://en.wikipedia.org/wiki/Medea> ;
+    owl:sameAs dbr:Medea,
+        wd:Q174278 .
+
+res:Medea_Q286381 rdfs:seeAlso <https://en.wikipedia.org/wiki/Medea_(play)> ;
+    owl:sameAs dbr:Medea_\(play\),
+        wd:Q286381 .
+
+res:Medea_Q3332727 rdfs:seeAlso <https://en.wikipedia.org/wiki/Medea_(Seneca)> ;
+    owl:sameAs dbr:Medea_\(Seneca\),
+        wd:Q3332727 .
+
+res:Medebrontes owl:sameAs wd:Q6008518 .
+
+res:Medusa rdfs:seeAlso <https://en.wikipedia.org/wiki/Medusa> ;
+    owl:sameAs dbr:Medusa,
+        wd:Q160730 .
+
+res:Megara rdfs:seeAlso <https://en.wikipedia.org/wiki/Megara> ;
+    owl:sameAs dbr:Megara,
+        wd:Q184864 .
+
+res:Megara_Q929768 rdfs:seeAlso <https://en.wikipedia.org/wiki/Megara_(wife_of_Heracles)> ;
+    owl:sameAs dbr:Megara_\(wife_of_Heracles\),
+        wd:Q929768 .
+
+res:Melicertes rdfs:seeAlso <https://en.wikipedia.org/wiki/Melicertes> ;
+    owl:sameAs dbr:Melicertes,
+        wd:Q738007 .
+
+res:Memnon rdfs:seeAlso <https://en.wikipedia.org/wiki/Memnon> ;
+    owl:sameAs dbr:Memnon,
+        wd:Q506781 .
+
+res:Menae rdfs:seeAlso <https://en.wikipedia.org/wiki/Mene_(goddess)> ;
+    owl:sameAs dbr:Mene_\(goddess\),
+        wd:Q5369058 .
+
+res:Menelaus rdfs:seeAlso <https://en.wikipedia.org/wiki/Menelaus> ;
+    owl:sameAs dbr:Menelaus,
+        wd:Q171839 .
+
+res:Menelaus_Q45277714 owl:sameAs wd:Q45277714 .
+
+res:Merope rdfs:seeAlso <https://en.wikipedia.org/wiki/Merope_(Pleiad)> ;
+    owl:sameAs dbr:Merope_\(Pleiad\),
+        wd:Q735518 .
+
+res:Messenia rdfs:seeAlso <https://en.wikipedia.org/wiki/Messenia_(ancient_region)> ;
+    owl:sameAs dbr:Messenia_\(ancient_region\),
+        wd:Q1247159 .
+
+res:Metamorphoses rdfs:seeAlso <https://en.wikipedia.org/wiki/Metamorphoses> ;
+    owl:sameAs dbr:Metamorphoses,
+        wd:Q184742 .
+
+res:Methone_Q136207855 owl:sameAs wd:Q136207855 .
+
+res:Minos rdfs:seeAlso <https://en.wikipedia.org/wiki/Minos> ;
+    owl:sameAs dbr:Minos,
+        wd:Q23168 .
+
+res:Minotaur rdfs:seeAlso <https://en.wikipedia.org/wiki/Minotaur> ;
+    owl:sameAs dbr:Minotaur,
+        wd:Q129866 .
+
+res:Minyas rdfs:seeAlso <https://en.wikipedia.org/wiki/Minyas_(mythology)> ;
+    owl:sameAs dbr:Minyas_\(mythology\),
+        wd:Q1466343 .
+
+res:Mnemosyne rdfs:seeAlso <https://en.wikipedia.org/wiki/Mnemosyne> ;
+    owl:sameAs dbr:Mnemosyne,
+        wd:Q102884 .
+
+res:Moirai rdfs:seeAlso <https://en.wikipedia.org/wiki/Moirai> ;
+    owl:sameAs dbr:Moirai,
+        wd:Q180287 .
+
+res:Molpe owl:sameAs wd:Q12901072 .
+
+res:Monarch rdfs:seeAlso <https://en.wikipedia.org/wiki/Monarch> ;
+    owl:sameAs dbr:Monarch,
+        wd:Q116 .
+
+res:MountOthrys rdfs:seeAlso <https://en.wikipedia.org/wiki/Mount_Othrys> ;
+    owl:sameAs dbr:Mount_Othrys,
+        wd:Q775676 .
+
+res:Muse rdfs:seeAlso <https://en.wikipedia.org/wiki/Muses> ;
+    owl:sameAs dbr:Muses,
+        wd:Q66016 .
+
+res:Mycenae rdfs:seeAlso <https://en.wikipedia.org/wiki/Mycenae> ;
+    owl:sameAs dbr:Mycenae,
+        wd:Q132564 .
+
+res:Mynes owl:sameAs wd:Q3331425 .
+
+res:Myrmidons rdfs:seeAlso <https://en.wikipedia.org/wiki/Myrmidons> ;
+    owl:sameAs dbr:Myrmidons,
+        wd:Q466830 .
+
+res:Mysians owl:sameAs wd:Q97662146 .
+
+res:MythesDeLaGreceArchaique owl:sameAs wd:Q13479099 .
+
+res:MythologicalKingOfAethiopia owl:sameAs wd:Q27926250 .
+
+res:MythologicalKingOfArcadia owl:sameAs wd:Q27926256 .
+
+res:MythologicalKingOfEgypt owl:sameAs wd:Q27926883 .
+
+res:MythologicalKingOfLibya owl:sameAs wd:Q27928381 .
+
+res:MythologicalKingOfSparta owl:sameAs wd:Q27920423 .
+
+res:MythologicalKingOfThrace owl:sameAs wd:Q27927548 .
+
+res:Mythoskop owl:sameAs wd:Q120076891 .
+
+res:Naiad rdfs:seeAlso <https://en.wikipedia.org/wiki/Naiad> ;
+    owl:sameAs dbr:Naiad,
+        wd:Q182037 .
+
+res:Nauprestides owl:sameAs wd:Q28008183 .
+
+res:Nemea rdfs:seeAlso <https://en.wikipedia.org/wiki/Nemea> ;
+    owl:sameAs dbr:Nemea,
+        wd:Q748108 .
+
+res:NemeanLion rdfs:seeAlso <https://en.wikipedia.org/wiki/Nemean_lion> ;
+    owl:sameAs dbr:Nemean_lion,
+        wd:Q199438 .
+
+res:Nemesis rdfs:seeAlso <https://en.wikipedia.org/wiki/Nemesis> ;
+    owl:sameAs dbr:Nemesis,
+        wd:Q185747 .
+
+res:Neoptolemus rdfs:seeAlso <https://en.wikipedia.org/wiki/Neoptolemus> ;
+    owl:sameAs dbr:Neoptolemus,
+        wd:Q322639 .
+
+res:Nephele rdfs:seeAlso <https://en.wikipedia.org/wiki/Nephele> ;
+    owl:sameAs dbr:Nephele,
+        wd:Q624551 .
+
+res:Nereids rdfs:seeAlso <https://en.wikipedia.org/wiki/Nereids> ;
+    owl:sameAs dbr:Nereids,
+        wd:Q54230 .
+
+res:Nereus rdfs:seeAlso <https://en.wikipedia.org/wiki/Nereus> ;
+    owl:sameAs dbr:Nereus,
+        wd:Q189527 .
+
+res:NicholasAdelung owl:sameAs wd:Q4057471 .
+
+res:Night rdfs:seeAlso <https://en.wikipedia.org/wiki/Night> ;
+    owl:sameAs dbr:Night,
+        wd:Q575 .
+
+res:NikolayAdamov owl:sameAs wd:Q24009771 .
+
+res:NikolayPetrovichObnorsky owl:sameAs wd:Q15076182 .
+
+res:Nisos rdfs:seeAlso <https://en.wikipedia.org/wiki/Nisos> ;
+    owl:sameAs dbr:Nisos,
+        wd:Q1136201 .
+
+res:NonnusOfPanopolis rdfs:seeAlso <https://en.wikipedia.org/wiki/Nonnus> ;
+    owl:sameAs dbr:Nonnus,
+        wd:Q312916 .
+
+res:Nyx rdfs:seeAlso <https://en.wikipedia.org/wiki/Nyx> ;
+    owl:sameAs dbr:Nyx,
+        wd:Q131203 .
+
+res:Oceanids rdfs:seeAlso <https://en.wikipedia.org/wiki/Oceanids> ;
+    owl:sameAs dbr:Oceanids,
+        wd:Q182406 .
+
+res:Oceanids_Q20575671 owl:sameAs wd:Q20575671 .
+
+res:Oceanus rdfs:seeAlso <https://en.wikipedia.org/wiki/Oceanus> ;
+    owl:sameAs dbr:Oceanus,
+        wd:Q161419 .
+
+res:Odysseus rdfs:seeAlso <https://en.wikipedia.org/wiki/Odysseus> ;
+    owl:sameAs dbr:Odysseus,
+        wd:Q47231 .
+
+res:Odyssey rdfs:seeAlso <https://en.wikipedia.org/wiki/Odyssey> ;
+    owl:sameAs dbr:Odyssey,
+        wd:Q35160 .
+
+res:Oeagrus rdfs:seeAlso <https://en.wikipedia.org/wiki/Oeagrus> ;
+    owl:sameAs dbr:Oeagrus,
+        wd:Q1539620 .
+
+res:Oebalus rdfs:seeAlso <https://en.wikipedia.org/wiki/Oebalus> ;
+    owl:sameAs dbr:Oebalus,
+        wd:Q1162217 .
+
+res:Oechalia_Q107550037 owl:sameAs wd:Q107550037 .
+
+res:Oedipus rdfs:seeAlso <https://en.wikipedia.org/wiki/Oedipus> ;
+    owl:sameAs dbr:Oedipus,
+        wd:Q130890 .
+
+res:Oeneus rdfs:seeAlso <https://en.wikipedia.org/wiki/Oeneus> ;
+    owl:sameAs dbr:Oeneus,
+        wd:Q749966 .
+
+res:Oenomaus rdfs:seeAlso <https://en.wikipedia.org/wiki/Oenomaus> ;
+    owl:sameAs dbr:Oenomaus,
+        wd:Q847890 .
+
+res:Oenopion rdfs:seeAlso <https://en.wikipedia.org/wiki/Oenopion> ;
+    owl:sameAs dbr:Oenopion,
+        wd:Q937216 .
+
+res:Olympus owl:sameAs wd:Q70054479 .
+
+res:Omphale rdfs:seeAlso <https://en.wikipedia.org/wiki/Omphale> ;
+    owl:sameAs dbr:Omphale,
+        wd:Q486698 .
+
+res:Oneiroi rdfs:seeAlso <https://en.wikipedia.org/wiki/Oneiros> ;
+    owl:sameAs dbr:Oneiros,
+        wd:Q578584 .
+
+res:Ophion rdfs:seeAlso <https://en.wikipedia.org/wiki/Ophion_(god)> ;
+    owl:sameAs dbr:Ophion_\(god\),
+        wd:Q1053307 .
+
+res:Orchomenus_Q13574822 rdfs:seeAlso <https://en.wikipedia.org/wiki/Orchomenus_(Boeotia)> ;
+    owl:sameAs dbr:Orchomenus_\(Boeotia\),
+        wd:Q13574822 .
+
+res:Oread rdfs:seeAlso <https://en.wikipedia.org/wiki/Oread> ;
+    owl:sameAs dbr:Oread,
+        wd:Q242663 .
+
+res:Orestes rdfs:seeAlso <https://en.wikipedia.org/wiki/Orestes> ;
+    owl:sameAs dbr:Orestes,
+        wd:Q192407 .
+
+res:OrestesAndElectra rdfs:seeAlso <https://en.wikipedia.org/wiki/Orestes_and_Electra> ;
+    owl:sameAs dbr:Orestes_and_Electra,
+        wd:Q7101659 .
+
+res:Orthrus rdfs:seeAlso <https://en.wikipedia.org/wiki/Orthrus> ;
+    owl:sameAs dbr:Orthrus,
+        wd:Q336230 .
+
+res:Otrera rdfs:seeAlso <https://en.wikipedia.org/wiki/Otrera> ;
+    owl:sameAs dbr:Otrera,
+        wd:Q1419104 .
+
+res:Ovid rdfs:seeAlso <https://en.wikipedia.org/wiki/Ovid> ;
+    owl:sameAs dbr:Ovid,
+        wd:Q7198 .
+
+res:PalaceOfHelios owl:sameAs wd:Q122146471 .
+
+res:Palici rdfs:seeAlso <https://en.wikipedia.org/wiki/Palici> ;
+    owl:sameAs dbr:Palici,
+        wd:Q591622 .
+
+res:PandionI rdfs:seeAlso <https://en.wikipedia.org/wiki/Pandion_I> ;
+    owl:sameAs dbr:Pandion_I,
+        wd:Q865111 .
+
+res:PandionII rdfs:seeAlso <https://en.wikipedia.org/wiki/Pandion_II> ;
+    owl:sameAs dbr:Pandion_II,
+        wd:Q1076578 .
+
+res:Pandora rdfs:seeAlso <https://en.wikipedia.org/wiki/Pandora> ;
+    owl:sameAs dbr:Pandora,
+        wd:Q131346 .
+
+res:ParallelLives rdfs:seeAlso <https://en.wikipedia.org/wiki/Parallel_Lives> ;
+    owl:sameAs dbr:Parallel_Lives,
+        wd:Q842337 .
+
+res:Paris rdfs:seeAlso <https://en.wikipedia.org/wiki/Paris_(mythology)> ;
+    owl:sameAs dbr:Paris_\(mythology\),
+        wd:Q167646 .
+
+res:Parthenope rdfs:seeAlso <https://en.wikipedia.org/wiki/Parthenope_(siren)> ;
+    owl:sameAs dbr:Parthenope_\(siren\),
+        wd:Q179844 .
+
+res:Pasiphae rdfs:seeAlso <https://en.wikipedia.org/wiki/Pasipha%C3%AB> ;
+    owl:sameAs dbr:Pasipha%C3%AB,
+        wd:Q203236 .
+
+res:Pausanias rdfs:seeAlso <https://en.wikipedia.org/wiki/Pausanias_(geographer)> ;
+    owl:sameAs dbr:Pausanias_\(geographer\),
+        wd:Q192931 .
+
+res:Pegasus rdfs:seeAlso <https://en.wikipedia.org/wiki/Pegasus> ;
+    owl:sameAs dbr:Pegasus,
+        wd:Q162797 .
+
+res:Peleus rdfs:seeAlso <https://en.wikipedia.org/wiki/Peleus> ;
+    owl:sameAs dbr:Peleus,
+        wd:Q178641 .
+
+res:Pelops rdfs:seeAlso <https://en.wikipedia.org/wiki/Pelops> ;
+    owl:sameAs dbr:Pelops,
+        wd:Q192485 .
+
+res:Penelope rdfs:seeAlso <https://en.wikipedia.org/wiki/Penelope> ;
+    owl:sameAs dbr:Penelope,
+        wd:Q165769 .
+
+res:Perieres rdfs:seeAlso <https://en.wikipedia.org/wiki/Perieres_(king_of_Messenia)> ;
+    owl:sameAs dbr:Perieres_\(king_of_Messenia\),
+        wd:Q342343 .
+
+res:Periphetes rdfs:seeAlso <https://en.wikipedia.org/wiki/Periphetes_(son_of_Hephaestus)> ;
+    owl:sameAs dbr:Periphetes_\(son_of_Hephaestus\),
+        wd:Q28126889 .
+
+res:Perse rdfs:seeAlso <https://en.wikipedia.org/wiki/Perse_(mythology)> ;
+    owl:sameAs dbr:Perse_\(mythology\),
+        wd:Q1333108 .
+
+res:Perses rdfs:seeAlso <https://en.wikipedia.org/wiki/Perses_(son_of_Crius)> ;
+    owl:sameAs dbr:Perses_\(son_of_Crius\),
+        wd:Q660924 .
+
+res:Perses_Q2071913 rdfs:seeAlso <https://en.wikipedia.org/wiki/Perses_(brother_of_Aeetes)> ;
+    owl:sameAs dbr:Perses_\(brother_of_Aeetes\),
+        wd:Q2071913 .
+
+res:Perseus rdfs:seeAlso <https://en.wikipedia.org/wiki/Perseus> ;
+    owl:sameAs dbr:Perseus,
+        wd:Q130832 .
+
+res:Phaedra rdfs:seeAlso <https://en.wikipedia.org/wiki/Phaedra_(mythology)> ;
+    owl:sameAs dbr:Phaedra_\(mythology\),
+        wd:Q212818 .
+
+res:Phaetontides owl:sameAs wd:Q24936674 .
+
+res:Phoebe rdfs:seeAlso <https://en.wikipedia.org/wiki/Phoebe_(Titaness)> ;
+    owl:sameAs dbr:Phoebe_\(Titaness\),
+        wd:Q183281 .
+
+res:Phoebe_Q45258209 owl:sameAs wd:Q45258209 .
+
+res:Phoenix_Q1145956 rdfs:seeAlso <https://en.wikipedia.org/wiki/Phoenix_(son_of_Agenor)> ;
+    owl:sameAs dbr:Phoenix_\(son_of_Agenor\),
+        wd:Q1145956 .
+
+res:Phorcydes owl:sameAs wd:Q2634447 .
+
+res:Phorcys rdfs:seeAlso <https://en.wikipedia.org/wiki/Phorcys> ;
+    owl:sameAs dbr:Phorcys,
+        wd:Q200382 .
+
+res:PhotiosIOfConstantinople rdfs:seeAlso <https://en.wikipedia.org/wiki/Photios_I_of_Constantinople> ;
+    owl:sameAs dbr:Photios_I_of_Constantinople,
+        wd:Q243187 .
+
+res:Phrixus rdfs:seeAlso <https://en.wikipedia.org/wiki/Phrixus> ;
+    owl:sameAs dbr:Phrixus,
+        wd:Q743482 .
+
+res:PhrixusAndHelle owl:sameAs wd:Q12372389 .
+
+res:Phylas_Q3744926 owl:sameAs wd:Q3744926 .
+
+res:Phylonoe owl:sameAs wd:Q3180516 .
+
+res:PierreGrimal rdfs:seeAlso <https://en.wikipedia.org/wiki/Pierre_Grimal> ;
+    owl:sameAs dbr:Pierre_Grimal,
+        wd:Q518637 .
+
+res:PilgrimOfEternity rdfs:seeAlso <https://en.wikipedia.org/wiki/Pilgrim_of_Eternity> ;
+    owl:sameAs dbr:Pilgrim_of_Eternity,
+        wd:Q15131926 .
+
+res:Piren owl:sameAs wd:Q126899134 .
+
+res:Pisinoe owl:sameAs wd:Q536141 .
+
+res:Pittheus rdfs:seeAlso <https://en.wikipedia.org/wiki/Pittheus> ;
+    owl:sameAs dbr:Pittheus,
+        wd:Q750580 .
+
+res:Plataea rdfs:seeAlso <https://en.wikipedia.org/wiki/Plataea> ;
+    owl:sameAs dbr:Plataea,
+        wd:Q742538 .
+
+res:Pleiades rdfs:seeAlso <https://en.wikipedia.org/wiki/Pleiades_(Greek_mythology)> ;
+    owl:sameAs dbr:Pleiades_\(Greek_mythology\),
+        wd:Q922942 .
+
+res:Pleione rdfs:seeAlso <https://en.wikipedia.org/wiki/Pleione_(mythology)> ;
+    owl:sameAs dbr:Pleione_\(mythology\),
+        wd:Q463865 .
+
+res:Pleisthenes rdfs:seeAlso <https://en.wikipedia.org/wiki/Pleisthenes> ;
+    owl:sameAs dbr:Pleisthenes,
+        wd:Q1065234 .
+
+res:Plutarch rdfs:seeAlso <https://en.wikipedia.org/wiki/Plutarch> ;
+    owl:sameAs dbr:Plutarch,
+        wd:Q41523 .
+
+res:Plutus_Q45199227 owl:sameAs wd:Q45199227 .
+
+res:Polydorus_Q1061554 rdfs:seeAlso <https://en.wikipedia.org/wiki/Polydorus_(son_of_Cadmus)> ;
+    owl:sameAs dbr:Polydorus_\(son_of_Cadmus\),
+        wd:Q1061554 .
+
+res:Polydorus_Q29626641 owl:sameAs wd:Q29626641 .
+
+res:Polymede owl:sameAs wd:Q12883613 .
+
+res:Polynices rdfs:seeAlso <https://en.wikipedia.org/wiki/Polynices> ;
+    owl:sameAs dbr:Polynices,
+        wd:Q334817 .
+
+res:Polyxena_Q24487714 owl:sameAs wd:Q24487714 .
+
+res:Pontus rdfs:seeAlso <https://en.wikipedia.org/wiki/Pontus_(mythology)> ;
+    owl:sameAs dbr:Pontus_\(mythology\),
+        wd:Q190563 .
+
+res:Porphyrion rdfs:seeAlso <https://en.wikipedia.org/wiki/Porphyrion> ;
+    owl:sameAs dbr:Porphyrion,
+        wd:Q1421201 .
+
+res:Porthaon rdfs:seeAlso <https://en.wikipedia.org/wiki/Porthaon> ;
+    owl:sameAs dbr:Porthaon,
+        wd:Q1178970 .
+
+res:Poseidon rdfs:seeAlso <https://en.wikipedia.org/wiki/Poseidon> ;
+    owl:sameAs dbr:Poseidon,
+        wd:Q41127 .
+
+res:Posthomerica rdfs:seeAlso <https://en.wikipedia.org/wiki/Posthomerica> ;
+    owl:sameAs dbr:Posthomerica,
+        wd:Q1998710 .
+
+res:Potamoi rdfs:seeAlso <https://en.wikipedia.org/wiki/River_gods_(Greek_mythology)> ;
+    owl:sameAs dbr:River_gods_\(Greek_mythology\),
+        wd:Q3027575 .
+
+res:Praenestes owl:sameAs wd:Q2107379 .
+
+res:Priam rdfs:seeAlso <https://en.wikipedia.org/wiki/Priam> ;
+    owl:sameAs dbr:Priam,
+        wd:Q170473 .
+
+res:Procrustes rdfs:seeAlso <https://en.wikipedia.org/wiki/Procrustes> ;
+    owl:sameAs dbr:Procrustes,
+        wd:Q271949 .
+
+res:Prometheus rdfs:seeAlso <https://en.wikipedia.org/wiki/Prometheus> ;
+    owl:sameAs dbr:Prometheus,
+        wd:Q83160 .
+
+res:PrometheusBound rdfs:seeAlso <https://en.wikipedia.org/wiki/Prometheus_Bound> ;
+    owl:sameAs dbr:Prometheus_Bound,
+        wd:Q846870 .
+
+res:Protheon_Q109925513 owl:sameAs wd:Q109925513 .
+
+res:PseudoApollodorus rdfs:seeAlso <https://en.wikipedia.org/wiki/Pseudo-Apollodorus> ;
+    owl:sameAs dbr:Pseudo-Apollodorus,
+        wd:Q12506564 .
+
+res:PseudoEuripides owl:sameAs wd:Q110323368 .
+
+res:PseudoPlutarch rdfs:seeAlso <https://en.wikipedia.org/wiki/Pseudo-Plutarch> ;
+    owl:sameAs dbr:Pseudo-Plutarch,
+        wd:Q2657275 .
+
+res:PubliusPapiniusStatius rdfs:seeAlso <https://en.wikipedia.org/wiki/Statius> ;
+    owl:sameAs dbr:Statius,
+        wd:Q243203 .
+
+res:Pyrrha rdfs:seeAlso <https://en.wikipedia.org/wiki/Pyrrha> ;
+    owl:sameAs dbr:Pyrrha,
+        wd:Q622809 .
+
+res:Q100271004 owl:sameAs wd:Q100271004 .
+
+res:Q100271005 owl:sameAs wd:Q100271005 .
+
+res:Q101439357 owl:sameAs wd:Q101439357 .
+
+res:Q136627699 owl:sameAs wd:Q136627699 .
+
+res:Q136749834 owl:sameAs wd:Q136749834 .
+
+res:Q136750103 owl:sameAs wd:Q136750103 .
+
+res:Q17459 rdfs:seeAlso <https://en.wikipedia.org/wiki/Fandom_(website)> ;
+    owl:sameAs dbr:Fandom_\(website\),
+        wd:Q17459 .
+
+res:Q20502242 rdfs:seeAlso <https://en.wikipedia.org/wiki/Wonder_Woman_(2017_film)> ;
+    owl:sameAs dbr:Wonder_Woman_\(2017_film\),
+        wd:Q20502242 .
+
+res:Q21491028 owl:sameAs wd:Q21491028 .
+
+res:Q21491089 owl:sameAs wd:Q21491089 .
+
+res:Q21491564 owl:sameAs wd:Q21491564 .
+
+res:Q21492878 owl:sameAs wd:Q21492878 .
+
+res:Q21770419 owl:sameAs wd:Q21770419 .
+
+res:Q23048902 owl:sameAs wd:Q23048902 .
+
+res:Q23048904 owl:sameAs wd:Q23048904 .
+
+res:Q23928052 owl:sameAs wd:Q23928052 .
+
+res:Q24054271 owl:sameAs wd:Q24054271 .
+
+res:Q24327090 owl:sameAs wd:Q24327090 .
+
+res:Q24330238 owl:sameAs wd:Q24330238 .
+
+res:Q24330429 owl:sameAs wd:Q24330429 .
+
+res:Q24332996 owl:sameAs wd:Q24332996 .
+
+res:Q24333289 owl:sameAs wd:Q24333289 .
+
+res:Q24334312 owl:sameAs wd:Q24334312 .
+
+res:Q24335213 owl:sameAs wd:Q24335213 .
+
+res:Q24335314 owl:sameAs wd:Q24335314 .
+
+res:Q24335671 owl:sameAs wd:Q24335671 .
+
+res:Q24352230 owl:sameAs wd:Q24352230 .
+
+res:Q24377589 owl:sameAs wd:Q24377589 .
+
+res:Q24381829 owl:sameAs wd:Q24381829 .
+
+res:Q24392030 owl:sameAs wd:Q24392030 .
+
+res:Q24392767 owl:sameAs wd:Q24392767 .
+
+res:Q24395134 owl:sameAs wd:Q24395134 .
+
+res:Q24395526 owl:sameAs wd:Q24395526 .
+
+res:Q24400570 owl:sameAs wd:Q24400570 .
+
+res:Q24405038 owl:sameAs wd:Q24405038 .
+
+res:Q24412251 owl:sameAs wd:Q24412251 .
+
+res:Q24426875 owl:sameAs wd:Q24426875 .
+
+res:Q24428160 owl:sameAs wd:Q24428160 .
+
+res:Q24437616 owl:sameAs wd:Q24437616 .
+
+res:Q24437652 owl:sameAs wd:Q24437652 .
+
+res:Q24438139 owl:sameAs wd:Q24438139 .
+
+res:Q24439833 owl:sameAs wd:Q24439833 .
+
+res:Q24445386 owl:sameAs wd:Q24445386 .
+
+res:Q24446613 owl:sameAs wd:Q24446613 .
+
+res:Q24446622 owl:sameAs wd:Q24446622 .
+
+res:Q24458664 owl:sameAs wd:Q24458664 .
+
+res:Q24459221 owl:sameAs wd:Q24459221 .
+
+res:Q24462986 owl:sameAs wd:Q24462986 .
+
+res:Q24466116 owl:sameAs wd:Q24466116 .
+
+res:Q24466219 owl:sameAs wd:Q24466219 .
+
+res:Q24467875 owl:sameAs wd:Q24467875 .
+
+res:Q24468145 owl:sameAs wd:Q24468145 .
+
+res:Q24468307 owl:sameAs wd:Q24468307 .
+
+res:Q24469032 owl:sameAs wd:Q24469032 .
+
+res:Q24470105 owl:sameAs wd:Q24470105 .
+
+res:Q24472876 owl:sameAs wd:Q24472876 .
+
+res:Q24473195 owl:sameAs wd:Q24473195 .
+
+res:Q24474596 owl:sameAs wd:Q24474596 .
+
+res:Q24476912 owl:sameAs wd:Q24476912 .
+
+res:Q24476936 owl:sameAs wd:Q24476936 .
+
+res:Q24482730 owl:sameAs wd:Q24482730 .
+
+res:Q24487641 owl:sameAs wd:Q24487641 .
+
+res:Q24487981 owl:sameAs wd:Q24487981 .
+
+res:Q24488110 owl:sameAs wd:Q24488110 .
+
+res:Q24488216 owl:sameAs wd:Q24488216 .
+
+res:Q24488229 owl:sameAs wd:Q24488229 .
+
+res:Q24490755 owl:sameAs wd:Q24490755 .
+
+res:Q24490985 owl:sameAs wd:Q24490985 .
+
+res:Q24491561 owl:sameAs wd:Q24491561 .
+
+res:Q24492116 owl:sameAs wd:Q24492116 .
+
+res:Q24492206 owl:sameAs wd:Q24492206 .
+
+res:Q24492471 owl:sameAs wd:Q24492471 .
+
+res:Q24494671 owl:sameAs wd:Q24494671 .
+
+res:Q24495778 owl:sameAs wd:Q24495778 .
+
+res:Q24496026 owl:sameAs wd:Q24496026 .
+
+res:Q24496319 owl:sameAs wd:Q24496319 .
+
+res:Q24496998 owl:sameAs wd:Q24496998 .
+
+res:Q24499151 owl:sameAs wd:Q24499151 .
+
+res:Q24503557 owl:sameAs wd:Q24503557 .
+
+res:Q24503840 owl:sameAs wd:Q24503840 .
+
+res:Q24506219 owl:sameAs wd:Q24506219 .
+
+res:Q24508561 owl:sameAs wd:Q24508561 .
+
+res:Q24510078 owl:sameAs wd:Q24510078 .
+
+res:Q24513127 owl:sameAs wd:Q24513127 .
+
+res:Q24513278 owl:sameAs wd:Q24513278 .
+
+res:Q24513280 owl:sameAs wd:Q24513280 .
+
+res:Q24758909 owl:sameAs wd:Q24758909 .
+
+res:Q24762091 owl:sameAs wd:Q24762091 .
+
+res:Q28105366 owl:sameAs wd:Q28105366 .
+
+res:Q30092634 owl:sameAs wd:Q30092634 .
+
+res:Q35991328 owl:sameAs wd:Q35991328 .
+
+res:Q42117371 owl:sameAs wd:Q42117371 .
+
+res:Q43400787 owl:sameAs wd:Q43400787 .
+
+res:Q44714185 owl:sameAs wd:Q44714185 .
+
+res:Q44723422 owl:sameAs wd:Q44723422 .
+
+res:Q45097362 owl:sameAs wd:Q45097362 .
+
+res:Q45174410 owl:sameAs wd:Q45174410 .
+
+res:Q45175018 owl:sameAs wd:Q45175018 .
+
+res:Q45175482 owl:sameAs wd:Q45175482 .
+
+res:Q45176086 owl:sameAs wd:Q45176086 .
+
+res:Q45176384 owl:sameAs wd:Q45176384 .
+
+res:Q45177114 owl:sameAs wd:Q45177114 .
+
+res:Q45177262 owl:sameAs wd:Q45177262 .
+
+res:Q45179098 owl:sameAs wd:Q45179098 .
+
+res:Q45179126 owl:sameAs wd:Q45179126 .
+
+res:Q45179198 owl:sameAs wd:Q45179198 .
+
+res:Q45179542 owl:sameAs wd:Q45179542 .
+
+res:Q45180158 owl:sameAs wd:Q45180158 .
+
+res:Q45180298 owl:sameAs wd:Q45180298 .
+
+res:Q45180705 owl:sameAs wd:Q45180705 .
+
+res:Q45181189 owl:sameAs wd:Q45181189 .
+
+res:Q45181819 owl:sameAs wd:Q45181819 .
+
+res:Q45182627 owl:sameAs wd:Q45182627 .
+
+res:Q45183393 owl:sameAs wd:Q45183393 .
+
+res:Q45185781 owl:sameAs wd:Q45185781 .
+
+res:Q45185864 owl:sameAs wd:Q45185864 .
+
+res:Q45185990 owl:sameAs wd:Q45185990 .
+
+res:Q45186022 owl:sameAs wd:Q45186022 .
+
+res:Q45186070 owl:sameAs wd:Q45186070 .
+
+res:Q45186120 owl:sameAs wd:Q45186120 .
+
+res:Q45186320 owl:sameAs wd:Q45186320 .
+
+res:Q45186919 owl:sameAs wd:Q45186919 .
+
+res:Q45187343 owl:sameAs wd:Q45187343 .
+
+res:Q45187662 owl:sameAs wd:Q45187662 .
+
+res:Q45187708 owl:sameAs wd:Q45187708 .
+
+res:Q45187820 owl:sameAs wd:Q45187820 .
+
+res:Q45188702 owl:sameAs wd:Q45188702 .
+
+res:Q45188946 owl:sameAs wd:Q45188946 .
+
+res:Q45189140 owl:sameAs wd:Q45189140 .
+
+res:Q45190781 owl:sameAs wd:Q45190781 .
+
+res:Q45191454 owl:sameAs wd:Q45191454 .
+
+res:Q45191530 owl:sameAs wd:Q45191530 .
+
+res:Q45192083 owl:sameAs wd:Q45192083 .
+
+res:Q45192252 owl:sameAs wd:Q45192252 .
+
+res:Q45198873 owl:sameAs wd:Q45198873 .
+
+res:Q45199277 owl:sameAs wd:Q45199277 .
+
+res:Q45201055 owl:sameAs wd:Q45201055 .
+
+res:Q45201138 owl:sameAs wd:Q45201138 .
+
+res:Q45202142 owl:sameAs wd:Q45202142 .
+
+res:Q45202189 owl:sameAs wd:Q45202189 .
+
+res:Q45202250 owl:sameAs wd:Q45202250 .
+
+res:Q45202305 owl:sameAs wd:Q45202305 .
+
+res:Q45202630 owl:sameAs wd:Q45202630 .
+
+res:Q45203593 owl:sameAs wd:Q45203593 .
+
+res:Q45205347 owl:sameAs wd:Q45205347 .
+
+res:Q45205696 owl:sameAs wd:Q45205696 .
+
+res:Q45206108 owl:sameAs wd:Q45206108 .
+
+res:Q45251963 owl:sameAs wd:Q45251963 .
+
+res:Q45253002 owl:sameAs wd:Q45253002 .
+
+res:Q45253556 owl:sameAs wd:Q45253556 .
+
+res:Q45254092 owl:sameAs wd:Q45254092 .
+
+res:Q45254292 owl:sameAs wd:Q45254292 .
+
+res:Q45254474 owl:sameAs wd:Q45254474 .
+
+res:Q45254525 owl:sameAs wd:Q45254525 .
+
+res:Q45259227 owl:sameAs wd:Q45259227 .
+
+res:Q45259822 owl:sameAs wd:Q45259822 .
+
+res:Q45260726 owl:sameAs wd:Q45260726 .
+
+res:Q45260967 owl:sameAs wd:Q45260967 .
+
+res:Q45263117 owl:sameAs wd:Q45263117 .
+
+res:Q45263189 owl:sameAs wd:Q45263189 .
+
+res:Q45267388 owl:sameAs wd:Q45267388 .
+
+res:Q45267459 owl:sameAs wd:Q45267459 .
+
+res:Q45267618 owl:sameAs wd:Q45267618 .
+
+res:Q45267819 owl:sameAs wd:Q45267819 .
+
+res:Q45267823 owl:sameAs wd:Q45267823 .
+
+res:Q45267827 owl:sameAs wd:Q45267827 .
+
+res:Q45268083 owl:sameAs wd:Q45268083 .
+
+res:Q45269297 owl:sameAs wd:Q45269297 .
+
+res:Q45269580 owl:sameAs wd:Q45269580 .
+
+res:Q45269617 owl:sameAs wd:Q45269617 .
+
+res:Q45269972 owl:sameAs wd:Q45269972 .
+
+res:Q45269991 owl:sameAs wd:Q45269991 .
+
+res:Q45270216 owl:sameAs wd:Q45270216 .
+
+res:Q45270307 owl:sameAs wd:Q45270307 .
+
+res:Q45270328 owl:sameAs wd:Q45270328 .
+
+res:Q45270659 owl:sameAs wd:Q45270659 .
+
+res:Q45270719 owl:sameAs wd:Q45270719 .
+
+res:Q45270781 owl:sameAs wd:Q45270781 .
+
+res:Q45271087 owl:sameAs wd:Q45271087 .
+
+res:Q45271255 owl:sameAs wd:Q45271255 .
+
+res:Q45271360 owl:sameAs wd:Q45271360 .
+
+res:Q45271388 owl:sameAs wd:Q45271388 .
+
+res:Q45271522 owl:sameAs wd:Q45271522 .
+
+res:Q45271609 owl:sameAs wd:Q45271609 .
+
+res:Q45271785 owl:sameAs wd:Q45271785 .
+
+res:Q45271935 owl:sameAs wd:Q45271935 .
+
+res:Q45272289 owl:sameAs wd:Q45272289 .
+
+res:Q45272955 owl:sameAs wd:Q45272955 .
+
+res:Q45273530 owl:sameAs wd:Q45273530 .
+
+res:Q45273540 owl:sameAs wd:Q45273540 .
+
+res:Q45273926 owl:sameAs wd:Q45273926 .
+
+res:Q45274034 owl:sameAs wd:Q45274034 .
+
+res:Q45274321 owl:sameAs wd:Q45274321 .
+
+res:Q45274655 owl:sameAs wd:Q45274655 .
+
+res:Q45274699 owl:sameAs wd:Q45274699 .
+
+res:Q45274823 owl:sameAs wd:Q45274823 .
+
+res:Q45274989 owl:sameAs wd:Q45274989 .
+
+res:Q45275115 owl:sameAs wd:Q45275115 .
+
+res:Q45275149 owl:sameAs wd:Q45275149 .
+
+res:Q45275618 owl:sameAs wd:Q45275618 .
+
+res:Q45275634 owl:sameAs wd:Q45275634 .
+
+res:Q45275834 owl:sameAs wd:Q45275834 .
+
+res:Q45275865 owl:sameAs wd:Q45275865 .
+
+res:Q45276038 owl:sameAs wd:Q45276038 .
+
+res:Q45276533 owl:sameAs wd:Q45276533 .
+
+res:Q45276599 owl:sameAs wd:Q45276599 .
+
+res:Q45276809 owl:sameAs wd:Q45276809 .
+
+res:Q4529168 owl:sameAs wd:Q4529168 .
+
+res:Q48542015 owl:sameAs wd:Q48542015 .
+
+res:Q50821015 owl:sameAs wd:Q50821015 .
+
+res:Q5805551 owl:sameAs wd:Q5805551 .
+
+res:Q59756366 rdfs:seeAlso <https://en.wikipedia.org/wiki/Hades_(video_game)> ;
+    owl:sameAs dbr:Hades_\(video_game\),
+        wd:Q59756366 .
+
+res:Q64150489 owl:sameAs wd:Q64150489 .
+
+res:Q72160576 owl:sameAs wd:Q72160576 .
+
+res:Q72170449 owl:sameAs wd:Q72170449 .
+
+res:Q77289304 owl:sameAs wd:Q77289304 .
+
+res:Q87326118 owl:sameAs wd:Q87326118 .
+
+res:Q87326839 owl:sameAs wd:Q87326839 .
+
+res:Q87327275 owl:sameAs wd:Q87327275 .
+
+res:QueenOfAmazons owl:sameAs wd:Q20853453 .
+
+res:QuintusSmyrnaeus rdfs:seeAlso <https://en.wikipedia.org/wiki/Quintus_Smyrnaeus> ;
+    owl:sameAs dbr:Quintus_Smyrnaeus,
+        wd:Q352702 .
+
+res:RCKDSaturn owl:sameAs wd:Q45189454 .
+
+res:RSKD owl:sameAs wd:Q45273751 .
+
+res:RSKDAeolus owl:sameAs wd:Q45270738 .
+
+res:RSKDGalatea owl:sameAs wd:Q45272204 .
+
+res:RSKD_Q45277156 owl:sameAs wd:Q45277156 .
+
+res:Rhadamanthus rdfs:seeAlso <https://en.wikipedia.org/wiki/Rhadamanthus> ;
+    owl:sameAs dbr:Rhadamanthus,
+        wd:Q193609 .
+
+res:Rhea rdfs:seeAlso <https://en.wikipedia.org/wiki/Rhea_(mythology)> ;
+    owl:sameAs dbr:Rhea_\(mythology\),
+        wd:Q108419 .
+
+res:Rhesus rdfs:seeAlso <https://en.wikipedia.org/wiki/Rhesus_(play)> ;
+    owl:sameAs dbr:Rhesus_\(play\),
+        wd:Q667750 .
+
+res:RichardWagner owl:sameAs wd:Q2150844 .
+
+res:Rigmus owl:sameAs wd:Q3935751 .
+
+res:RobertGeorgLoeper owl:sameAs wd:Q24026036 .
+
+res:RomanMythology rdfs:seeAlso <https://en.wikipedia.org/wiki/Roman_mythology> ;
+    owl:sameAs dbr:Roman_mythology,
+        wd:Q122173 .
+
+res:Salmoneus rdfs:seeAlso <https://en.wikipedia.org/wiki/Salmoneus> ;
+    owl:sameAs dbr:Salmoneus,
+        wd:Q1131643 .
+
+res:SanctuaryOfPythianApolloAtDelphi owl:sameAs wd:Q125925203 .
+
+res:Sciron rdfs:seeAlso <https://en.wikipedia.org/wiki/Sciron> ;
+    owl:sameAs dbr:Sciron,
+        wd:Q1469237 .
+
+res:Selene rdfs:seeAlso <https://en.wikipedia.org/wiki/Selene> ;
+    owl:sameAs dbr:Selene,
+        wd:Q131585 .
+
+res:Semele rdfs:seeAlso <https://en.wikipedia.org/wiki/Semele> ;
+    owl:sameAs dbr:Semele,
+        wd:Q776139 .
+
+res:Seneca rdfs:seeAlso <https://en.wikipedia.org/wiki/Seneca_the_Younger> ;
+    owl:sameAs dbr:Seneca_the_Younger,
+        wd:Q2054 .
+
+res:SergeiSemenovichAbramovichBaranovsky owl:sameAs wd:Q4054981 .
+
+res:SevenAgainstThebes rdfs:seeAlso <https://en.wikipedia.org/wiki/Seven_Against_Thebes_(play)> ;
+    owl:sameAs dbr:Seven_Against_Thebes_\(play\),
+        wd:Q506546 .
+
+res:Silvius rdfs:seeAlso <https://en.wikipedia.org/wiki/Silvius_(mythology)> ;
+    owl:sameAs dbr:Silvius_\(mythology\),
+        wd:Q209398 .
+
+res:Sinis rdfs:seeAlso <https://en.wikipedia.org/wiki/Sinis_(mythology)> ;
+    owl:sameAs dbr:Sinis_\(mythology\),
+        wd:Q843335 .
+
+res:Sisyphus rdfs:seeAlso <https://en.wikipedia.org/wiki/Sisyphus> ;
+    owl:sameAs dbr:Sisyphus,
+        wd:Q102561 .
+
+res:Sky rdfs:seeAlso <https://en.wikipedia.org/wiki/Sky> ;
+    owl:sameAs dbr:Sky,
+        wd:Q527 .
+
+res:SmallMoralWorks rdfs:seeAlso <https://en.wikipedia.org/wiki/Small_Moral_Works> ;
+    owl:sameAs dbr:Small_Moral_Works,
+        wd:Q3884099 .
+
+res:SonsOfAegyptus rdfs:seeAlso <https://en.wikipedia.org/wiki/Sons_of_Aegyptus> ;
+    owl:sameAs dbr:Sons_of_Aegyptus,
+        wd:Q4173622 .
+
+res:Sophocles rdfs:seeAlso <https://en.wikipedia.org/wiki/Sophocles> ;
+    owl:sameAs dbr:Sophocles,
+        wd:Q7235 .
+
+res:Sparta rdfs:seeAlso <https://en.wikipedia.org/wiki/Sparta> ;
+    owl:sameAs dbr:Sparta,
+        wd:Q5690 .
+
+res:Sphinx rdfs:seeAlso <https://en.wikipedia.org/wiki/Sphinx> ;
+    owl:sameAs dbr:Sphinx,
+        wd:Q151480 .
+
+res:StephanusOfByzantium rdfs:seeAlso <https://en.wikipedia.org/wiki/Stephanus_of_Byzantium> ;
+    owl:sameAs dbr:Stephanus_of_Byzantium,
+        wd:Q380881 .
+
+res:Sterope rdfs:seeAlso <https://en.wikipedia.org/wiki/Sterope_(Pleiad)> ;
+    owl:sameAs dbr:Sterope_\(Pleiad\),
+        wd:Q748963 .
+
+res:Sthenelus rdfs:seeAlso <https://en.wikipedia.org/wiki/Sthenelus_(son_of_Perseus)> ;
+    owl:sameAs dbr:Sthenelus_\(son_of_Perseus\),
+        wd:Q1062299 .
+
+res:Styx rdfs:seeAlso <https://en.wikipedia.org/wiki/Styx> ;
+    owl:sameAs dbr:Styx,
+        wd:Q542758 .
+
+res:Suicide rdfs:seeAlso <https://en.wikipedia.org/wiki/Suicide> ;
+    owl:sameAs dbr:Suicide,
+        wd:Q10737 .
+
+res:Syceus rdfs:seeAlso <https://en.wikipedia.org/wiki/Syceus> ;
+    owl:sameAs dbr:Syceus,
+        wd:Q10686799 .
+
+res:Tantalus rdfs:seeAlso <https://en.wikipedia.org/wiki/Tantalus> ;
+    owl:sameAs dbr:Tantalus,
+        wd:Q182101 .
+
+res:TantalusInMythology owl:sameAs wd:Q21491055 .
+
+res:Tantalus_Q45261634 owl:sameAs wd:Q45261634 .
+
+res:Tarchon rdfs:seeAlso <https://en.wikipedia.org/wiki/Tarchon> ;
+    owl:sameAs dbr:Tarchon,
+        wd:Q1194399 .
+
+res:Tarquitus owl:sameAs wd:Q3981176 .
+
+res:Tartarus rdfs:seeAlso <https://en.wikipedia.org/wiki/Tartarus> ;
+    owl:sameAs dbr:Tartarus,
+        wd:Q101322 .
+
+res:Tauria rdfs:seeAlso <https://en.wikipedia.org/wiki/Taurica> ;
+    owl:sameAs dbr:Taurica,
+        wd:Q1761310 .
+
+res:Telchines rdfs:seeAlso <https://en.wikipedia.org/wiki/Telchines> ;
+    owl:sameAs dbr:Telchines,
+        wd:Q1134605 .
+
+res:Telegonus rdfs:seeAlso <https://en.wikipedia.org/wiki/Telegonus_(son_of_Odysseus)> ;
+    owl:sameAs dbr:Telegonus_\(son_of_Odysseus\),
+        wd:Q1333887 .
+
+res:Telemachus rdfs:seeAlso <https://en.wikipedia.org/wiki/Telemachus> ;
+    owl:sameAs dbr:Telemachus,
+        wd:Q192482 .
+
+res:Telephassa rdfs:seeAlso <https://en.wikipedia.org/wiki/Telephassa> ;
+    owl:sameAs dbr:Telephassa,
+        wd:Q853437 .
+
+res:Telephus rdfs:seeAlso <https://en.wikipedia.org/wiki/Telephus> ;
+    owl:sameAs dbr:Telephus,
+        wd:Q916442 .
+
+res:Telephus_Q97664084 owl:sameAs wd:Q97664084 .
+
+res:Terra rdfs:seeAlso <https://en.wikipedia.org/wiki/Terra_(mythology)> ;
+    owl:sameAs dbr:Terra_\(mythology\),
+        wd:Q270867 .
+
+res:Tethys rdfs:seeAlso <https://en.wikipedia.org/wiki/Tethys_(mythology)> ;
+    owl:sameAs dbr:Tethys_\(mythology\),
+        wd:Q184216 .
+
+res:TheBacchae rdfs:seeAlso <https://en.wikipedia.org/wiki/The_Bacchae> ;
+    owl:sameAs dbr:The_Bacchae,
+        wd:Q934597 .
+
+res:TheDinnerParty rdfs:seeAlso <https://en.wikipedia.org/wiki/The_Dinner_Party> ;
+    owl:sameAs dbr:The_Dinner_Party,
+        wd:Q2915473 .
+
+res:TheDivineComedy rdfs:seeAlso <https://en.wikipedia.org/wiki/Divine_Comedy> ;
+    owl:sameAs dbr:Divine_Comedy,
+        wd:Q40185 .
+
+res:TheLibationBearers rdfs:seeAlso <https://en.wikipedia.org/wiki/Choephori> ;
+    owl:sameAs dbr:Choephori,
+        wd:Q11688406 .
+
+res:TheMythOfSisyphus rdfs:seeAlso <https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus> ;
+    owl:sameAs dbr:The_Myth_of_Sisyphus,
+        wd:Q1125903 .
+
+res:TheOxfordCompanionToWorldMythology owl:sameAs wd:Q56115163 .
+
+res:ThePhoenicianWomen rdfs:seeAlso <https://en.wikipedia.org/wiki/The_Phoenician_Women> ;
+    owl:sameAs dbr:The_Phoenician_Women,
+        wd:Q1233660 .
+
+res:TheSuppliants rdfs:seeAlso <https://en.wikipedia.org/wiki/The_Suppliants_(Euripides)> ;
+    owl:sameAs dbr:The_Suppliants_\(Euripides\),
+        wd:Q672319 .
+
+res:TheSwordIsForged rdfs:seeAlso <https://en.wikipedia.org/wiki/The_Sword_Is_Forged> ;
+    owl:sameAs dbr:The_Sword_Is_Forged,
+        wd:Q23307343 .
+
+res:TheTrojanWomen rdfs:seeAlso <https://en.wikipedia.org/wiki/The_Trojan_Women> ;
+    owl:sameAs dbr:The_Trojan_Women,
+        wd:Q1216943 .
+
+res:Thebaid rdfs:seeAlso <https://en.wikipedia.org/wiki/Thebaid_(Statius)> ;
+    owl:sameAs dbr:Thebaid_\(Statius\),
+        wd:Q2708117 .
+
+res:Thebe_Q3982385 owl:sameAs wd:Q3982385 .
+
+res:Thebes_Q11225429 owl:sameAs wd:Q11225429 .
+
+res:Theia rdfs:seeAlso <https://en.wikipedia.org/wiki/Theia> ;
+    owl:sameAs dbr:Theia,
+        wd:Q184232 .
+
+res:Thelxiepea owl:sameAs wd:Q1245697 .
+
+res:Themides owl:sameAs wd:Q10385917 .
+
+res:Themis rdfs:seeAlso <https://en.wikipedia.org/wiki/Themis> ;
+    owl:sameAs dbr:Themis,
+        wd:Q159168 .
+
+res:Themisto rdfs:seeAlso <https://en.wikipedia.org/wiki/Themisto> ;
+    owl:sameAs dbr:Themisto,
+        wd:Q1458587 .
+
+res:Theogony rdfs:seeAlso <https://en.wikipedia.org/wiki/Theogony> ;
+    owl:sameAs dbr:Theogony,
+        wd:Q156498 .
+
+res:TheoiProject rdfs:seeAlso <https://en.wikipedia.org/wiki/Theoi_Project> ;
+    owl:sameAs dbr:Theoi_Project,
+        wd:Q22909388 .
+
+res:Theseus rdfs:seeAlso <https://en.wikipedia.org/wiki/Theseus> ;
+    owl:sameAs dbr:Theseus,
+        wd:Q1320718 .
+
+res:Thespiadae owl:sameAs wd:Q135966461 .
+
+res:Thestius rdfs:seeAlso <https://en.wikipedia.org/wiki/Thestius> ;
+    owl:sameAs dbr:Thestius,
+        wd:Q768822 .
+
+res:Thetis rdfs:seeAlso <https://en.wikipedia.org/wiki/Thetis> ;
+    owl:sameAs dbr:Thetis,
+        wd:Q184437 .
+
+res:Thronia rdfs:seeAlso <https://en.wikipedia.org/wiki/Thronia> ;
+    owl:sameAs dbr:Thronia,
+        wd:Q14904528 .
+
+res:Timalcus rdfs:seeAlso <https://en.wikipedia.org/wiki/Timalcus> ;
+    owl:sameAs dbr:Timalcus,
+        wd:Q12163200 .
+
+res:TimothyGantz rdfs:seeAlso <https://en.wikipedia.org/wiki/Timothy_Gantz> ;
+    owl:sameAs dbr:Timothy_Gantz,
+        wd:Q7807209 .
+
+res:Tiryns rdfs:seeAlso <https://en.wikipedia.org/wiki/Tiryns> ;
+    owl:sameAs dbr:Tiryns,
+        wd:Q217379 .
+
+res:Tisamenus rdfs:seeAlso <https://en.wikipedia.org/wiki/Tisamenus_(son_of_Orestes)> ;
+    owl:sameAs dbr:Tisamenus_\(son_of_Orestes\),
+        wd:Q2803572 .
+
+res:Tisander rdfs:seeAlso <https://en.wikipedia.org/wiki/Tisander> ;
+    owl:sameAs dbr:Tisander,
+        wd:Q27963635 .
+
+res:Titan rdfs:seeAlso <https://en.wikipedia.org/wiki/Titans> ;
+    owl:sameAs dbr:Titans,
+        wd:Q45713 .
+
+res:Titanomachy rdfs:seeAlso <https://en.wikipedia.org/wiki/Titanomachy> ;
+    owl:sameAs dbr:Titanomachy,
+        wd:Q220878 .
+
+res:Tithonus rdfs:seeAlso <https://en.wikipedia.org/wiki/Tithonus> ;
+    owl:sameAs dbr:Tithonus,
+        wd:Q737306 .
+
+res:Troilus rdfs:seeAlso <https://en.wikipedia.org/wiki/Troilus> ;
+    owl:sameAs dbr:Troilus,
+        wd:Q867342 .
+
+res:Tros rdfs:seeAlso <https://en.wikipedia.org/wiki/Tros_(mythology)> ;
+    owl:sameAs dbr:Tros_\(mythology\),
+        wd:Q599482 .
+
+res:Trous owl:sameAs wd:Q3999694 .
+
+res:Troy rdfs:seeAlso <https://en.wikipedia.org/wiki/Troy> ;
+    owl:sameAs dbr:Troy,
+        wd:Q22647 .
+
+res:Tryphon owl:sameAs wd:Q20102086 .
+
+res:TwelveOlympians rdfs:seeAlso <https://en.wikipedia.org/wiki/Twelve_Olympians> ;
+    owl:sameAs dbr:Twelve_Olympians,
+        wd:Q101609 .
+
+res:Tyndareus rdfs:seeAlso <https://en.wikipedia.org/wiki/Tyndareus> ;
+    owl:sameAs dbr:Tyndareus,
+        wd:Q192946 .
+
+res:Typhoeus owl:sameAs wd:Q45267724 .
+
+res:Typhon rdfs:seeAlso <https://en.wikipedia.org/wiki/Typhon> ;
+    owl:sameAs dbr:Typhon,
+        wd:Q180237 .
+
+res:Tyre rdfs:seeAlso <https://en.wikipedia.org/wiki/Tyre,_Lebanon> ;
+    owl:sameAs <http://dbpedia.org/resource/Tyre,_Lebanon>,
+        wd:Q82070 .
+
+res:Tyro rdfs:seeAlso <https://en.wikipedia.org/wiki/Tyro> ;
+    owl:sameAs dbr:Tyro,
+        wd:Q1126715 .
+
+res:Uranids owl:sameAs wd:Q12882383 .
+
+res:Uranus rdfs:seeAlso <https://en.wikipedia.org/wiki/Uranus_(mythology)> ;
+    owl:sameAs dbr:Uranus_\(mythology\),
+        wd:Q79999 .
+
+res:ValerianAgafonov owl:sameAs wd:Q4056733 .
+
+res:ViktorGebhard owl:sameAs wd:Q29640331 .
+
+res:Virgil rdfs:seeAlso <https://en.wikipedia.org/wiki/Virgil> ;
+    owl:sameAs dbr:Virgil,
+        wd:Q1398 .
+
+res:WhoMournsForAdonais rdfs:seeAlso <https://en.wikipedia.org/wiki/Who_Mourns_for_Adonais%3F> ;
+    owl:sameAs dbr:Who_Mourns_for_Adonais%3F,
+        wd:Q3487403 .
+
+res:WilhelmKroll rdfs:seeAlso <https://en.wikipedia.org/wiki/Wilhelm_Kroll> ;
+    owl:sameAs dbr:Wilhelm_Kroll,
+        wd:Q73314 .
+
+res:WiltAdenSchroder owl:sameAs wd:Q1742339 .
+
+res:Xanthus_Q21560612 owl:sameAs wd:Q21560612 .
+
+res:Zeus rdfs:seeAlso <https://en.wikipedia.org/wiki/Zeus> ;
+    owl:sameAs dbr:Zeus,
+        wd:Q34201 .
+
+res:Zeuxippe_Q46845955 owl:sameAs wd:Q46845955 .
+

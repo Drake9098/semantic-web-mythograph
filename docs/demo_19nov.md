@@ -1,5 +1,7 @@
 # Presentazione del 19/11 — scaletta e domande probabili
 
+> Versione del 19/11, prima della revisione: i dati ora vengono da Wikidata (vedi `docs/pipeline.md`).
+
 ## Prima di entrare
 ```bash
 cd mythograph

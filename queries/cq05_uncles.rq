@@ -1,10 +1,8 @@
 # CQ5 - Chi sono gli zii e le zie di un personaggio? (default: Eracle)
-# Catena hasParent + hasSibling, poi il genere distingue zio e zia.
+# Catena di proprietà hasParent + hasSibling, poi le regole SWRL usano il genere.
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX myth: <https://example.org/mythograph/ontology#>
 PREFIX res:  <https://example.org/mythograph/resource/>
 PREFIX g:    <https://example.org/mythograph/graph/>

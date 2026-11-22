@@ -1,0 +1,10 @@
+# Passo 4: le altre entità citate (luoghi, gruppi, titoli, opere, autori):
+# classe, coordinate, giurisdizione di un titolo (P1001), autore (P50), nascita (P569).
+SELECT ?item ?class ?coord ?jurisdiction ?author ?born WHERE {
+  VALUES ?item { {{ITEMS}} }
+  OPTIONAL { ?item wdt:P31 ?class . }
+  OPTIONAL { ?item wdt:P625 ?coord . }
+  OPTIONAL { ?item wdt:P1001 ?jurisdiction . }
+  OPTIONAL { ?item wdt:P50 ?author . }
+  OPTIONAL { ?item wdt:P569 ?born . }
+}

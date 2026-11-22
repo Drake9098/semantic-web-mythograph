@@ -1,0 +1,29 @@
+# graph: shared
+# Luoghi, gruppi, titoli, opere citati dai personaggi: nome e, per i luoghi, coordinate.
+# Il tipo (Place, Group, Title...) non lo scrivo: lo deduce il range della proprietà.
+CONSTRUCT {
+  ?e rdfs:label ?label ;
+     geo:lat ?lat ;
+     geo:long ?long .
+}
+WHERE {
+  ?item map:inScope true ;
+        ?p ?st .
+  ?wdprop map:toProperty ?property ;
+          wikibase:claim ?p ;
+          wikibase:statementProperty ?ps .
+  FILTER NOT EXISTS { ?wdprop map:kinship true }
+  ?st ?ps ?value .
+  FILTER NOT EXISTS { ?value map:extracted true }
+  FILTER NOT EXISTS { ?value map:ignore true }
+  ?value map:key ?key .
+  BIND(IRI(CONCAT(STR(res:), ?key)) AS ?e)
+  OPTIONAL { ?value rdfs:label ?label . FILTER(LANG(?label) IN ("it", "en")) }
+  OPTIONAL {
+    ?value wdt:P625 ?wkt .
+    # WKT: "Point(longitudine latitudine)"
+    BIND(STRBEFORE(STRAFTER(STR(?wkt), "Point("), ")") AS ?pt)
+    BIND(xsd:decimal(STRBEFORE(?pt, " ")) AS ?long)
+    BIND(xsd:decimal(STRAFTER(?pt, " ")) AS ?lat)
+  }
+}

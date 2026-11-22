@@ -1,0 +1,8 @@
+# Generato da `python -m mythograph.mapping` (affermazioni del grafo g:homer). Non modificare a mano.
+@prefix myth: <https://example.org/mythograph/ontology#> .
+@prefix res: <https://example.org/mythograph/resource/> .
+
+res:Doris myth:hasChild res:Thetis .
+
+res:Eos myth:residesIn res:Aeaea .
+

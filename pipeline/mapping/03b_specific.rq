@@ -1,0 +1,13 @@
+# graph: work
+# Per ogni classe di Wikidata, la classe della tabella più vicina sopra di lei.
+# "semidio della mitologia greca" sta sotto "semidio", "divinità" e "creatura
+# leggendaria": la più specifica è "semidio", e diventerà solo myth:Demigod.
+CONSTRUCT { ?wdclass map:specific ?anchor . }
+WHERE {
+  ?wdclass map:under ?anchor .
+  FILTER NOT EXISTS {
+    ?wdclass map:under ?closer .
+    ?closer map:under ?anchor .
+    FILTER(?closer != ?anchor)
+  }
+}

@@ -1,0 +1,6 @@
+# Generato da `python -m mythograph.mapping` (affermazioni del grafo g:herodotus). Non modificare a mano.
+@prefix myth: <https://example.org/mythograph/ontology#> .
+@prefix res: <https://example.org/mythograph/resource/> .
+
+res:Amphitryon myth:hasChild res:Heracles .
+

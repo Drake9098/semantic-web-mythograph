@@ -1,0 +1,29 @@
+# Le fonti antiche: ogni autore diventa un named graph.
+# Le affermazioni di Wikidata che citano (P248 "stated in") un'opera di questi
+# autori finiscono nel grafo dell'autore. Tutte le affermazioni, citate o no,
+# finiscono in g:wikidata.
+
+@prefix map:  <https://example.org/mythograph/pipeline#> .
+@prefix g:    <https://example.org/mythograph/graph/> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+wd:Q44233    map:graph g:hesiod      ; rdfs:label "Hesiod" .
+wd:Q6691     map:graph g:homer       ; rdfs:label "Homer" .
+wd:Q12506564 map:graph g:apollodorus ; rdfs:label "Pseudo-Apollodorus" .
+wd:Q192931   map:graph g:pausanias   ; rdfs:label "Pausanias" .
+wd:Q171241   map:graph g:diodorus    ; rdfs:label "Diodorus Siculus" .
+wd:Q26825    map:graph g:herodotus   ; rdfs:label "Herodotus" .
+wd:Q298376   map:graph g:hyginus     ; rdfs:label "Gaius Julius Hyginus" .
+wd:Q1231590  map:graph g:hyginus     ; rdfs:label "Hyginus Mythographus" .
+wd:Q192638   map:graph g:apollonius  ; rdfs:label "Apollonius of Rhodes" .
+
+g:hesiod      rdfs:label "Esiodo"@it, "Hesiod"@en .
+g:homer       rdfs:label "Omero"@it, "Homer"@en .
+g:apollodorus rdfs:label "Apollodoro"@it, "Apollodorus"@en .
+g:pausanias   rdfs:label "Pausania"@it, "Pausanias"@en .
+g:diodorus    rdfs:label "Diodoro Siculo"@it, "Diodorus Siculus"@en .
+g:herodotus   rdfs:label "Erodoto"@it, "Herodotus"@en .
+g:hyginus     rdfs:label "Igino"@it, "Hyginus"@en .
+g:apollonius  rdfs:label "Apollonio Rodio"@it, "Apollonius of Rhodes"@en .
+g:wikidata    rdfs:label "Wikidata (tutte le versioni)"@it, "Wikidata (all versions)"@en .
