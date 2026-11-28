@@ -113,7 +113,7 @@ parte le affermazioni coinvolte (grafo `conflicts/…`) e le segnala. Esempi ver
 - **Apollodoro** dà a Tindaro due padri, Ebalo e Periere;
 - **Esiodo** dà a Urano due madri, Gea ed Emera.
 
-**Perché solo 200 personaggi?** La selezione parte da dieci cicli mitici
+**Perché solo 200 personaggi?** La selezione parte da nove cicli mitici
 (`pipeline/tables/cycles.ttl`), scelti per le deduzioni che portano, e prende da
 Wikidata famiglie e genealogie complete. Conta la qualità del modello, non la quantità
 di triple: ogni personaggio presente serve a una competency question o a una deduzione.

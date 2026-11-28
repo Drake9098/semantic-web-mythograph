@@ -1,7 +1,7 @@
 # MythoGraph
 
 Ontologia OWL delle genealogie della mitologia greca, costruita **interamente da Wikidata**.
-Contiene circa 200 personaggi, scelti partendo da dieci cicli mitici (Tebe, Atridi, Eracle,
+Contiene circa 200 personaggi, scelti partendo da nove cicli mitici (Tebe, Atridi, Eracle,
 Teseo, Troia, Odissea, Argonauti...) per le deduzioni che permettono: parricidi, nozze tra
 consanguinei, semidei, eroi.
 Le fonti antiche non sono d'accordo tra loro: ogni fonte (Esiodo, Omero, Apollodoro,

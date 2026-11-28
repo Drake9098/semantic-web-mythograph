@@ -99,7 +99,7 @@ finché non aggiungono niente (punto fisso), come le regole del ragionamento.
 
 Wikidata ha migliaia di personaggi della mitologia greca, ma pochi partecipano alle
 deduzioni interessanti. La selezione parte da `pipeline/tables/cycles.ttl`: quattordici
-protagonisti di dieci cicli (Tebe, Atridi, Argo, Eracle, Atene, Troia, Odissea,
+protagonisti di nove cicli (Tebe, Atridi, Argo, Eracle, Atene, Troia, Odissea,
 Argonauti, Corinto), ognuno scelto per le deduzioni che porta (Edipo per il parricidio,
 Cassifone per le nozze con il fratellastro, Achille per il semidio...). Da lì:
 

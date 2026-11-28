@@ -1,6 +1,7 @@
 # Query federata: coordinate e pagina Wikipedia da Wikidata (SERVICE),
 # collegate alle nostre risorse tramite owl:sameAs.
-# {{WIKIDATA_IRIS}} viene sostituito da enrich.py; stare dentro il SERVICE evita una richiesta per risorsa.
+# Esempio di federazione (non usato dalla pipeline): al posto di {{WIKIDATA_IRIS}} vanno gli IRI
+# di Wikidata, per esempio wd:Q34201. Il VALUES sta dentro il SERVICE: una sola richiesta.
 PREFIX owl:    <http://www.w3.org/2002/07/owl#>
 PREFIX wdt:    <http://www.wikidata.org/prop/direct/>
 PREFIX schema: <http://schema.org/>
