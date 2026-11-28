@@ -6,7 +6,7 @@ Guida per aprire l'ontologia in Protégé e mostrare cosa sa fare.
 
 | File | Cosa contiene | Quando usarlo |
 |---|---|---|
-| **`exports/mythograph-wikidata.ttl`** | schema + regole + i 303 personaggi dei cicli mitici, con tutte le versioni | **il file principale**: HermiT classifica in circa 6 secondi, ci sono tutte le deduzioni |
+| **`exports/mythograph-wikidata.ttl`** | schema + regole + i 202 personaggi dei cicli mitici, con tutte le versioni | **il file principale**: HermiT classifica in pochi secondi, ci sono tutte le deduzioni |
 | `ontology/mythograph.ttl` | solo lo schema (modulo core) | per far vedere classi, proprietà e assiomi |
 | `ontology/rules.ttl` | le regole SWRL; importa il core | per la scheda SWRL |
 | `ontology/constraints.ttl` | i vincoli per singola fonte; importa il core | per spiegare i grafi per fonte |

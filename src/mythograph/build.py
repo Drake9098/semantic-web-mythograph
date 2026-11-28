@@ -18,9 +18,9 @@ from rdflib.namespace import OWL, RDF, RDFS, XSD
 
 from .namespaces import (ALIGNMENTS_FILE, CONSTRAINTS_FILE, EXPORTS_DIR, GRAPH, LINKS_FILE, MYTH,
                          ONTOLOGY_FILE, OUTPUT_FILE, PREFIXES, RES, SHARED_FILE, SOURCES_DIR, SWRL_FILE)
-from .reasoning import apply_hermit, apply_owlrl, apply_rules, reason
+from .reasoning import apply_owlrl, apply_rules, reason
 
-LEVELS = ("rules", "owlrl", "hermit")
+LEVELS = ("rules", "owlrl")
 LABELS = {"hesiod": "Esiodo", "homer": "Omero", "apollodorus": "Apollodoro", "pausanias": "Pausania",
           "diodorus": "Diodoro Siculo", "herodotus": "Erodoto", "hyginus": "Igino",
           "apollonius": "Apollonio Rodio", "wikidata": "Wikidata (tutte le versioni)"}
@@ -150,9 +150,6 @@ def build(verbose: bool = True) -> Dataset:
             meta.add((gid, MYTH.consistentOWLRL, Literal(r.owlrl.consistent)))
         for e in r.owlrl.errors[:20]:
             meta.add((gid, MYTH.owlrlError, Literal(e)))
-        if r.hermit.available:
-            meta.add((gid, MYTH.consistentHermiT, Literal(bool(r.hermit.consistent))))
-        meta.add((gid, MYTH.reasonerNote, Literal(r.hermit.message, lang="it")))
 
     # le fonti antiche prima, g:wikidata per ultimo (è il più grande)
     order = sorted(sources, key=lambda n: (n == ALL_VERSIONS, n))
@@ -190,13 +187,12 @@ def build(verbose: bool = True) -> Dataset:
                     f"{local(x)} {local(p)} {local(a)} / {local(b)}" for x, p, a, b in rows))
             src = src - quarantine
 
-        # se resta incoerente: isolo le affermazioni sui personaggi citati negli errori.
-        # HermiT controlla la coerenza in un attimo; owlrl serve a trovare i colpevoli.
+        # se resta incoerente: isolo le affermazioni sui personaggi citati negli errori di owlrl
         for _attempt in range(5):
             common, base = make_base(src)
-            if apply_hermit(base, infer=False).consistent is not False:
+            errors = apply_owlrl(base + apply_rules(base)).errors
+            if not errors:
                 break
-            errors = apply_owlrl(base).errors
             bad = {URIRef(m) for e in errors for m in re.findall(rf"{re.escape(str(RES))}[^\s,]+", e)}
             moved = Graph()
             for t in src:
@@ -216,22 +212,20 @@ def build(verbose: bool = True) -> Dataset:
         cleaned[name] = src
         export_protege(name, LABELS.get(name, name), base)
         view = common + src
-        for level, g in zip(LEVELS, (r.rules, r.owlrl.inferred, r.hermit.inferred)):
+        for level, g in zip(LEVELS, (r.rules, r.owlrl.inferred)):
             put(f"inferred/{name}/{level}", g)
             meta.add((GRAPH[name], MYTH[f"inferredBy_{level}"], Literal(len(g), datatype=XSD.integer)))
             meta.add((GRAPH[f"inferred/{name}/{level}"], MYTH.inferredFor, GRAPH[name]))
             meta.add((GRAPH[f"inferred/{name}/{level}"], MYTH.level, Literal(level)))
             view += g
         put(f"view/{name}", view)
-        if len(r.hermit.tbox):              # sottoclassi dedotte da HermiT (Parricide ⊑ Kinslayer)
-            put(f"inferred/{name}/tbox", r.hermit.tbox)
         meta.add((GRAPH[f"view/{name}"], MYTH.viewOf, GRAPH[name]))
         meta.add((GRAPH[name], RDF.type, MYTH.SourceGraph))
         meta.add((GRAPH[name], MYTH.assertedTriples, Literal(len(src), datatype=XSD.integer)))
         meta.add((GRAPH[name], MYTH.constrained, Literal(name != ALL_VERSIONS)))
         record(name, r, LABELS.get(name, name))
         log(f"[{name}] asserite {len(src)} | rules +{len(r.rules)} | owlrl +{len(r.owlrl.inferred)} "
-            f"(consistente={r.owlrl.consistent}) | {r.hermit.message} +{len(r.hermit.inferred)}  "
+            f"(consistente={r.owlrl.consistent})  "
             f"[{time.time() - t0:.0f}s]")
 
     # fusione ingenua: le fonti antiche insieme, con i vincoli di una fonte sola
@@ -245,7 +239,7 @@ def build(verbose: bool = True) -> Dataset:
     r = reason(merged)
     meta.add((GRAPH["merged-naive"], RDF.type, MYTH.NaiveMerge))
     record("merged-naive", r, "Fusione ingenua delle fonti antiche")
-    log(f"[merged-naive] owlrl consistente={r.owlrl.consistent} errori={len(r.owlrl.errors)} | {r.hermit.message}")
+    log(f"[merged-naive] owlrl consistente={r.owlrl.consistent} errori={len(r.owlrl.errors)}")
     for e in r.owlrl.errors[:5]:
         log("   -", e)
 

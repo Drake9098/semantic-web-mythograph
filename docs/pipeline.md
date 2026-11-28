@@ -104,12 +104,12 @@ Argonauti, Corinto), ognuno scelto per le deduzioni che porta (Edipo per il parr
 Cassifone per le nozze con il fratellastro, Achille per il semidio...). Da lì:
 
 1. `02_scope.rq` prende i protagonisti, i loro genitori, coniugi, chi hanno ucciso e
-   chi li ha uccisi, e i figli **noti** (almeno 20 voci di Wikipedia: Eracle ha decine
+   chi li ha uccisi, e i figli **noti** (almeno 40 voci di Wikipedia: Eracle ha decine
    di figli minori);
 2. `02b_ancestors.rq` aggiunge i genitori noti di chi è già dentro, e si ripete finché
    non trova nessuno di nuovo: così le genealogie risalgono intere fino a Caos e Gea.
 
-Risultato: circa 300 personaggi, contro i 4.386 scaricati. Basta cambiare la tabella
+Risultato: circa 200 personaggi, contro i 4.386 scaricati. Basta cambiare la tabella
 per cambiare la selezione: i fatti restano tutti quelli di Wikidata.
 
 ### Le tabelle di corrispondenza (`pipeline/tables/`)
@@ -154,19 +154,24 @@ Ogni grafo si ragiona **da solo**, insieme all'ontologia e alle entità comuni:
 | fonti antiche | core + regole SWRL + allineamenti + **vincoli per fonte** + `owl:AllDifferent` |
 | `g:wikidata` | core + regole SWRL + allineamenti (senza vincoli: contiene più versioni) |
 
-Tre livelli, ognuno scrive solo le triple nuove nel suo grafo (`inferred/<fonte>/<livello>`),
+Due livelli, ognuno scrive solo le triple nuove nel suo grafo (`inferred/<fonte>/<livello>`),
 così si sa sempre chi ha dedotto cosa:
 1. **regole CONSTRUCT** (`ontology/rules/*.rq`) più le **regole SWRL** dell'ontologia,
    tradotte in automatico in CONSTRUCT (`swrl_to_sparql`), applicate finché non
    producono niente di nuovo;
-2. **OWL 2 RL** con `owlrl`;
-3. **OWL 2 DL** con **HermiT** (via owlready2): classi definite, ragionamento per casi.
+2. **OWL 2 RL** con `owlrl`, che lavora sopra rdflib: classi definite (Demigod, Hero,
+   Parricide...), proprietà inverse, simmetriche, transitive, catene, coerenza.
+
+Il terzo livello, **OWL 2 DL**, è **HermiT dentro Protégé** sui file di `exports/`: ragionamento
+per casi, classificazione della TBox (Parricide sotto Kinslayer), spiegazioni. La pipeline
+non lo duplica: genera e controlla i dati, Protégé ragiona.
 
 ### Il controllo di qualità
 Prima di ragionare, la build controlla che ogni grafo sia **coerente**:
 - se una fonte dà **due padri o due madri** allo stesso personaggio, si contraddice da sola
   (Esiodo: Urano è figlio di Gea, ma anche di Emera);
-- se HermiT trova il grafo incoerente, `owlrl` dice quali personaggi sono coinvolti.
+- se `owlrl` trova il grafo incoerente (per esempio un personaggio dio e mortale insieme),
+  dice anche quali personaggi sono coinvolti.
 
 Le affermazioni coinvolte vanno nel grafo `conflicts/<fonte>`: **non si cancellano**,
 si mettono da parte e si segnalano (CQ12, scheda Fonti). Il resto della fonte resta

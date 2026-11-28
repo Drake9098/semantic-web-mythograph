@@ -91,6 +91,18 @@ myth:Gorgon a owl:Class ;
     skos:definition "One of the Gorgons (Medusa, Stheno, Euryale)."@en,
         "Una delle Gorgoni (Medusa, Steno, Euriale)."@it .
 
+myth:Hero a owl:Class ;
+    rdfs:label "Hero"@en,
+        "ἥρως"@grc,
+        "Eroe"@it ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( myth:Mortal [ a owl:Restriction ;
+                        owl:onProperty myth:killed ;
+                        owl:someValuesFrom myth:Monster ] ) ] ;
+    skos:definition "A mortal who killed a monster."@en,
+        "Mortale che ha ucciso un mostro."@it ;
+    skos:example "Perseo, che uccise Medusa."@it .
+
 myth:HomericCharacter a owl:Class ;
     rdfs:label "Homeric character"@en,
         "Personaggio omerico"@it ;
@@ -261,17 +273,17 @@ geo1:lat a owl:DatatypeProperty ;
 foaf:Person a owl:Class ;
     rdfs:label "FOAF Person"@en .
 
-myth:Hero a owl:Class ;
-    rdfs:label "Hero"@en,
-        "ἥρως"@grc,
-        "Eroe"@it ;
+myth:Demigod a owl:Class ;
+    rdfs:label "Demigod"@en,
+        "ἡμίθεος"@grc,
+        "Semidio"@it ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( myth:Mortal [ a owl:Restriction ;
-                        owl:onProperty myth:killed ;
-                        owl:someValuesFrom myth:Monster ] ) ] ;
-    skos:definition "A mortal who killed a monster."@en,
-        "Mortale che ha ucciso un mostro."@it ;
-    skos:example "Perseo, che uccise Medusa."@it .
+                        owl:onProperty myth:hasParent ;
+                        owl:someValuesFrom myth:Deity ] ) ] ;
+    skos:definition "A mortal with at least one divine parent."@en,
+        "Mortale con almeno un genitore divino."@it ;
+    skos:example "Eracle, figlio di Zeus e della mortale Alcmena."@it .
 
 myth:MythicalPlace a owl:Class ;
     rdfs:label "Mythical place"@en,
@@ -438,14 +450,13 @@ res:Eos a myth:Character,
 res:Gorgon a owl:NamedIndividual,
         myth:Group .
 
-res:Hecate a myth:Character,
-        myth:Deity,
-        myth:Female ;
-    rdfs:label "Εκάτη"@el,
-        "Hecate"@en,
-        "Ecate"@it,
-        "Hecate"@la ;
-    myth:hasMother res:Asteria .
+res:Hippocoon a myth:Character,
+        myth:Male ;
+    rdfs:label "Ιπποκόων"@el,
+        "Hippocoon"@en,
+        "Ἱπποκόων"@grc,
+        "Ippocoonte"@it ;
+    myth:killedBy res:Heracles .
 
 res:Iliad a owl:NamedIndividual,
         myth:LiteraryWork .
@@ -456,15 +467,6 @@ res:Iphitos a myth:Character,
         "Iphitos"@en,
         "Ifito"@it ;
     myth:killedBy res:Heracles .
-
-res:LinusOfThrace a myth:Character,
-        myth:Male ;
-    rdfs:label "Λίνος"@el,
-        "Linus of Thrace"@en,
-        "Λίνος"@grc,
-        "Lino"@it,
-        "Linus"@la ;
-    myth:hasFather res:Oeagrus .
 
 res:Muse a owl:NamedIndividual,
         myth:Group .
@@ -518,18 +520,6 @@ myth:Author a owl:Class ;
         foaf:Person ;
     skos:definition "The author of a literary work."@en,
         "Autore di un'opera letteraria."@it .
-
-myth:Demigod a owl:Class ;
-    rdfs:label "Demigod"@en,
-        "ἡμίθεος"@grc,
-        "Semidio"@it ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( myth:Mortal [ a owl:Restriction ;
-                        owl:onProperty myth:hasParent ;
-                        owl:someValuesFrom myth:Deity ] ) ] ;
-    skos:definition "A mortal with at least one divine parent."@en,
-        "Mortale con almeno un genitore divino."@it ;
-    skos:example "Eracle, figlio di Zeus e della mortale Alcmena."@it .
 
 myth:Immortal a owl:Class ;
     rdfs:label "Immortal"@en,
@@ -617,23 +607,6 @@ res:Alcimenes a myth:Character,
     myth:hasSibling res:Tisander ;
     myth:killedBy res:Medea .
 
-res:Asteria a myth:Character,
-        myth:Female,
-        myth:Titan ;
-    rdfs:label "Αστερία"@el,
-        "Asteria"@en,
-        "Ἀστερία"@grc,
-        "Asteria"@it,
-        "Asteria"@la .
-
-res:Hippocoon a myth:Character,
-        myth:Male ;
-    rdfs:label "Ιπποκόων"@el,
-        "Hippocoon"@en,
-        "Ἱπποκόων"@grc,
-        "Ippocoonte"@it ;
-    myth:killedBy res:Heracles .
-
 res:Nyx a myth:Character,
         myth:Deity,
         myth:Female,
@@ -653,34 +626,6 @@ res:Oceanus a myth:Character,
         "Ωκεανός"@grc,
         "Oceano"@it,
         "Oceanus"@la .
-
-res:Oeagrus a myth:Character,
-        myth:Male ;
-    rdfs:label "Οίαγρος"@el,
-        "Oeagrus"@en,
-        "Eagro"@it,
-        "Oeagrus"@la .
-
-res:Oebalus a myth:Character,
-        myth:Male ;
-    rdfs:label "Οίβαλος"@el,
-        "Oebalus"@en,
-        "Οἴβαλος"@grc,
-        "Ebalo"@it,
-        "Oebalus"@la ;
-    myth:hasChild res:Hippocoon ;
-    myth:hasFather res:Perieres .
-
-res:Perseus a myth:Character,
-        myth:Demigod,
-        myth:Hero,
-        myth:Male ;
-    rdfs:label "Perseus",
-        "Περσέας"@el,
-        "Perseus"@en,
-        "Περσεύς , Perseus"@grc,
-        "Perseo"@it,
-        "Perseus"@la .
 
 res:Pontus a myth:Character,
         myth:Creature,
@@ -721,15 +666,6 @@ res:Tisander a myth:Character,
     myth:hasMother res:Medea ;
     myth:hasSibling res:Alcimenes ;
     myth:killedBy res:Medea .
-
-res:Tyndareus a myth:Character,
-        myth:Male ;
-    rdfs:label "Τυνδάρεως"@el,
-        "Tyndareus"@en,
-        "Τυνδάρεος"@grc,
-        "Tindaro"@it,
-        "Tyndareus"@la ;
-    myth:hasMother res:Gorgophone .
 
 res:Uranus a myth:Character,
         myth:Deity,
@@ -772,16 +708,6 @@ res:Gaia a myth:Character,
         "Gea"@it,
         "Gaea"@la .
 
-res:Gorgophone a myth:Character,
-        myth:Female ;
-    rdfs:label "Γοργοφόνη"@el,
-        "Gorgophone"@en,
-        "Γοργοφόνη"@grc,
-        "Gorgofone"@it ;
-    myth:hasChild res:Tyndareus ;
-    myth:hasFather res:Perseus ;
-    myth:hasSpouse res:Perieres .
-
 res:Jason a myth:Character,
         myth:Male ;
     rdfs:label "Jason",
@@ -790,16 +716,6 @@ res:Jason a myth:Character,
         "Ἰάσων , Iāsōn"@grc,
         "Giasone"@it,
         "Iason"@la .
-
-res:Perieres a myth:Character,
-        myth:Male ;
-    rdfs:label "Περιήρης"@el,
-        "Perieres"@en,
-        "Περιήρης"@grc,
-        "Periere"@it,
-        "Perieres"@la ;
-    myth:hasChild res:Oebalus ;
-    myth:hasSpouse res:Gorgophone .
 
 <urn:swrl:var#a> a swrl:Variable .
 
@@ -811,6 +727,14 @@ myth:Primordial a owl:Class ;
     rdfs:subClassOf myth:Deity ;
     skos:definition "The first beings born at the origin of the cosmos (Chaos, Gaia, Uranus...)."@en,
         "Le prime entità nate all'origine del cosmo (Caos, Gea, Urano...)."@it .
+
+myth:Titan a owl:Class ;
+    rdfs:label "Titan"@en,
+        "Τιτάν"@grc,
+        "Titano"@it ;
+    rdfs:subClassOf myth:Deity ;
+    skos:definition "Children of Uranus and Gaia, the divine generation before the Olympians."@en,
+        "Figli di Urano e Gea, la generazione divina prima degli Olimpi."@it .
 
 myth:Title a owl:Class ;
     rdfs:label "Title"@en,
@@ -867,14 +791,6 @@ myth:LiteraryWork a owl:Class ;
         crm:E33_Linguistic_Object ;
     skos:definition "An ancient work telling the myths."@en,
         "Opera antica che racconta i miti."@it .
-
-myth:Titan a owl:Class ;
-    rdfs:label "Titan"@en,
-        "Τιτάν"@grc,
-        "Titano"@it ;
-    rdfs:subClassOf myth:Deity ;
-    skos:definition "Children of Uranus and Gaia, the divine generation before the Olympians."@en,
-        "Figli di Urano e Gea, la generazione divina prima degli Olimpi."@it .
 
 myth:killedRelative a owl:ObjectProperty ;
     rdfs:label "killed a relative"@en,
@@ -950,14 +866,6 @@ myth:hasParent a owl:AsymmetricProperty,
     skos:definition "Father or mother."@en,
         "Padre o madre."@it .
 
-myth:Deity a owl:Class ;
-    rdfs:label "Deity"@en,
-        "θεός"@grc,
-        "Divinità"@it ;
-    rdfs:subClassOf myth:Immortal ;
-    skos:definition "A divine, immortal being."@en,
-        "Essere divino e immortale."@it .
-
 myth:Female a owl:Class ;
     rdfs:label "Female"@en,
         "Femminile"@it ;
@@ -965,7 +873,13 @@ myth:Female a owl:Class ;
     skos:definition "A female character."@en,
         "Personaggio di genere femminile."@it .
 
-<urn:swrl:var#y> a swrl:Variable .
+myth:Deity a owl:Class ;
+    rdfs:label "Deity"@en,
+        "θεός"@grc,
+        "Divinità"@it ;
+    rdfs:subClassOf myth:Immortal ;
+    skos:definition "A divine, immortal being."@en,
+        "Essere divino e immortale."@it .
 
 myth:Male a owl:Class ;
     rdfs:label "Male"@en,
@@ -975,22 +889,42 @@ myth:Male a owl:Class ;
     skos:definition "A male character."@en,
         "Personaggio di genere maschile."@it .
 
+<urn:swrl:var#y> a swrl:Variable .
+
 <urn:swrl:var#x> a swrl:Variable .
 
 myth:Character a owl:Class ;
     rdfs:label "Character"@en,
         "Personaggio"@it ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:unionOf ( myth:Immortal myth:Mortal ) ],
-        [ a owl:Restriction ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality "2"^^xsd:nonNegativeInteger ;
             owl:onProperty myth:hasParent ],
+        [ a owl:Class ;
+            owl:unionOf ( myth:Immortal myth:Mortal ) ],
         crm:E28_Conceptual_Object ;
     skos:definition "Any figure acting in myth: gods, mortals, creatures."@en,
         "Qualunque figura che agisce nel mito: divinità, mortali, creature."@it .
 
 [] a owl:AllDifferent ;
-    owl:distinctMembers ( res:Aegeus res:Alcimenes res:Amphitryon res:Asteria res:Dione res:Doris res:Eos res:Gaia res:Gorgophone res:Hecate res:Heracles res:Hippocoon res:Iphitos res:Jason res:LinusOfThrace res:Medea res:Nemesis res:Nereus res:Nyx res:Oceanus res:Oeagrus res:Oebalus res:Perieres res:Perseus res:Phylas_Q3744926 res:Pontus res:Tethys res:Thetis res:Tisander res:Tyndareus res:Uranus ) .
+    owl:distinctMembers ( res:Aegeus res:Alcimenes res:Amphitryon res:Dione res:Doris res:Eos res:Gaia res:Heracles res:Hippocoon res:Iphitos res:Jason res:Medea res:Nemesis res:Nereus res:Nyx res:Oceanus res:Phylas_Q3744926 res:Pontus res:Tethys res:Thetis res:Tisander res:Uranus ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf myth:Mortal ;
+    owl:intersectionOf ( [ a owl:Restriction ;
+                owl:onProperty myth:hasFather ;
+                owl:someValuesFrom myth:Mortal ] [ a owl:Restriction ;
+                owl:onProperty myth:hasMother ;
+                owl:someValuesFrom myth:Mortal ] ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf myth:Monster ;
+    owl:intersectionOf ( myth:Creature [ a owl:Restriction ;
+                owl:onProperty myth:hasParent ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:oneOf ( res:Typhon res:Echidna ) ] ] ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( myth:Character myth:Group myth:Place myth:Title myth:MannerOfDeath myth:LiteraryWork myth:Author ) .
 
 [] a swrl:Imp ;
     rdfs:label "padre"@it ;
@@ -1176,22 +1110,4 @@ myth:Character a owl:Class ;
                 swrl:argument2 <urn:swrl:var#p> ;
                 swrl:propertyPredicate myth:hasMother ] ) ;
     myth:swrlText "hasParent(?x,?p) ^ Female(?p) -> hasMother(?x,?p)" .
-
-[] a owl:Class ;
-    rdfs:subClassOf myth:Mortal ;
-    owl:intersectionOf ( [ a owl:Restriction ;
-                owl:onProperty myth:hasFather ;
-                owl:someValuesFrom myth:Mortal ] [ a owl:Restriction ;
-                owl:onProperty myth:hasMother ;
-                owl:someValuesFrom myth:Mortal ] ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf myth:Monster ;
-    owl:intersectionOf ( myth:Creature [ a owl:Restriction ;
-                owl:onProperty myth:hasParent ;
-                owl:someValuesFrom [ a owl:Class ;
-                        owl:oneOf ( res:Typhon res:Echidna ) ] ] ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( myth:Character myth:Group myth:Place myth:Title myth:MannerOfDeath myth:LiteraryWork myth:Author ) .
 

@@ -103,7 +103,7 @@ select, input[type=search], input[type=text], textarea {
 .lvl { font-size: 10.5px; padding: 1px 6px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em;
        border: 1px solid currentColor; white-space: nowrap; }
 .lvl-asserted { color: #555; } .lvl-shared { color: #777; }
-.lvl-rules { color: #8a5a00; } .lvl-owlrl { color: #00695c; } .lvl-hermit { color: #6a1b9a; }
+.lvl-rules { color: #8a5a00; } .lvl-owlrl { color: #00695c; }
 .src-badge { font-size: 11px; font-weight: 600; color: #fff; padding: 1px 7px; border-radius: 4px; }
 .src-hesiod { background: var(--hesiod); } .src-homer { background: var(--homer); }
 .src-apollodorus { background: var(--apollodorus); } .src-ovid { background: var(--ovid); }

@@ -409,15 +409,6 @@ res:Echidna a owl:NamedIndividual,
 res:Gorgon a owl:NamedIndividual,
         myth:Group .
 
-res:Hecate a myth:Character,
-        myth:Deity,
-        myth:Female ;
-    rdfs:label "Εκάτη"@el,
-        "Hecate"@en,
-        "Ecate"@it,
-        "Hecate"@la ;
-    myth:hasMother res:Asteria .
-
 res:Iliad a owl:NamedIndividual,
         myth:LiteraryWork .
 
@@ -533,15 +524,6 @@ myth:marriedAncestor a owl:ObjectProperty ;
     rdfs:subPropertyOf myth:marriedRelative ;
     owl:inverseOf myth:marriedDescendant .
 
-res:Asteria a myth:Character,
-        myth:Female,
-        myth:Titan ;
-    rdfs:label "Αστερία"@el,
-        "Asteria"@en,
-        "Ἀστερία"@grc,
-        "Asteria"@it,
-        "Asteria"@la .
-
 res:Gaia a myth:Character,
         myth:Deity,
         myth:Female,
@@ -615,6 +597,14 @@ myth:Primordial a owl:Class ;
     skos:definition "The first beings born at the origin of the cosmos (Chaos, Gaia, Uranus...)."@en,
         "Le prime entità nate all'origine del cosmo (Caos, Gea, Urano...)."@it .
 
+myth:Titan a owl:Class ;
+    rdfs:label "Titan"@en,
+        "Τιτάν"@grc,
+        "Titano"@it ;
+    rdfs:subClassOf myth:Deity ;
+    skos:definition "Children of Uranus and Gaia, the divine generation before the Olympians."@en,
+        "Figli di Urano e Gea, la generazione divina prima degli Olimpi."@it .
+
 myth:hasDescendant a owl:ObjectProperty,
         owl:TransitiveProperty ;
     rdfs:label "has descendant"@en,
@@ -625,14 +615,6 @@ myth:hasDescendant a owl:ObjectProperty,
 <urn:swrl:var#a> a swrl:Variable .
 
 <urn:swrl:var#u> a swrl:Variable .
-
-myth:Titan a owl:Class ;
-    rdfs:label "Titan"@en,
-        "Τιτάν"@grc,
-        "Titano"@it ;
-    rdfs:subClassOf myth:Deity ;
-    skos:definition "Children of Uranus and Gaia, the divine generation before the Olympians."@en,
-        "Figli di Urano e Gea, la generazione divina prima degli Olimpi."@it .
 
 myth:Title a owl:Class ;
     rdfs:label "Title"@en,
@@ -741,6 +723,13 @@ myth:Place a owl:Class ;
     skos:definition "A place where a character is born, lives, dies or rules."@en,
         "Luogo in cui un personaggio nasce, vive, muore o regna."@it .
 
+myth:Female a owl:Class ;
+    rdfs:label "Female"@en,
+        "Femminile"@it ;
+    rdfs:subClassOf myth:Character ;
+    skos:definition "A female character."@en,
+        "Personaggio di genere femminile."@it .
+
 myth:hasParent a owl:AsymmetricProperty,
         owl:IrreflexiveProperty,
         owl:ObjectProperty ;
@@ -752,13 +741,6 @@ myth:hasParent a owl:AsymmetricProperty,
     owl:inverseOf myth:hasChild ;
     skos:definition "Father or mother."@en,
         "Padre o madre."@it .
-
-myth:Female a owl:Class ;
-    rdfs:label "Female"@en,
-        "Femminile"@it ;
-    rdfs:subClassOf myth:Character ;
-    skos:definition "A female character."@en,
-        "Personaggio di genere femminile."@it .
 
 myth:Deity a owl:Class ;
     rdfs:label "Deity"@en,
@@ -775,17 +757,35 @@ myth:Deity a owl:Class ;
 myth:Character a owl:Class ;
     rdfs:label "Character"@en,
         "Personaggio"@it ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:unionOf ( myth:Immortal myth:Mortal ) ],
-        [ a owl:Restriction ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality "2"^^xsd:nonNegativeInteger ;
             owl:onProperty myth:hasParent ],
+        [ a owl:Class ;
+            owl:unionOf ( myth:Immortal myth:Mortal ) ],
         crm:E28_Conceptual_Object ;
     skos:definition "Any figure acting in myth: gods, mortals, creatures."@en,
         "Qualunque figura che agisce nel mito: divinità, mortali, creature."@it .
 
 [] a owl:AllDifferent ;
-    owl:distinctMembers ( res:Asteria res:Dione res:Gaia res:Hecate res:Nemesis res:Nereus res:Nyx res:Oceanus res:Pontus res:Tethys ) .
+    owl:distinctMembers ( res:Dione res:Gaia res:Nemesis res:Nereus res:Nyx res:Oceanus res:Pontus res:Tethys ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf myth:Mortal ;
+    owl:intersectionOf ( [ a owl:Restriction ;
+                owl:onProperty myth:hasFather ;
+                owl:someValuesFrom myth:Mortal ] [ a owl:Restriction ;
+                owl:onProperty myth:hasMother ;
+                owl:someValuesFrom myth:Mortal ] ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf myth:Monster ;
+    owl:intersectionOf ( myth:Creature [ a owl:Restriction ;
+                owl:onProperty myth:hasParent ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:oneOf ( res:Typhon res:Echidna ) ] ] ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( myth:Character myth:Group myth:Place myth:Title myth:MannerOfDeath myth:LiteraryWork myth:Author ) .
 
 [] a swrl:Imp ;
     rdfs:label "padre"@it ;
@@ -971,22 +971,4 @@ myth:Character a owl:Class ;
                 swrl:argument2 <urn:swrl:var#p> ;
                 swrl:propertyPredicate myth:hasMother ] ) ;
     myth:swrlText "hasParent(?x,?p) ^ Female(?p) -> hasMother(?x,?p)" .
-
-[] a owl:Class ;
-    rdfs:subClassOf myth:Mortal ;
-    owl:intersectionOf ( [ a owl:Restriction ;
-                owl:onProperty myth:hasFather ;
-                owl:someValuesFrom myth:Mortal ] [ a owl:Restriction ;
-                owl:onProperty myth:hasMother ;
-                owl:someValuesFrom myth:Mortal ] ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf myth:Monster ;
-    owl:intersectionOf ( myth:Creature [ a owl:Restriction ;
-                owl:onProperty myth:hasParent ;
-                owl:someValuesFrom [ a owl:Class ;
-                        owl:oneOf ( res:Typhon res:Echidna ) ] ] ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( myth:Character myth:Group myth:Place myth:Title myth:MannerOfDeath myth:LiteraryWork myth:Author ) .
 

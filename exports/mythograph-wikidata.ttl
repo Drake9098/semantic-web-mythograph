@@ -246,30 +246,29 @@ res:Briseus a myth:Character,
     myth:appearsIn res:Iliad ;
     myth:killedBy res:Achilles .
 
-res:Cephalus a myth:Character,
+res:Coon a myth:Character,
         myth:Male ;
-    rdfs:label "Κέφαλος"@el,
-        "Cephalus"@en,
-        "Κέφαλος , Cephalus"@grc,
-        "Cefalo"@it,
-        "Cephalus"@la ;
-    myth:hasChild res:Alcimede ;
-    myth:memberOf res:CephalusAndProcris .
+    rdfs:label "Κόωνας"@el,
+        "Coön"@en,
+        "Κόων"@grc,
+        "Coone"@it ;
+    myth:killedBy res:Agamemnon .
+
+res:Demoleon a myth:Character,
+        myth:Male ;
+    rdfs:label "Δημολέοντας"@el,
+        "Demoleon"@en,
+        "Δημολέων"@grc,
+        "Demoleonte"@it ;
+    myth:appearsIn res:Iliad ;
+    myth:killedBy res:Achilles ;
+    myth:mannerOfDeath res:DeathInBattle .
 
 res:DescriptionOfGreece a myth:LiteraryWork ;
     rdfs:label "Description of Greece"@en,
         "Periegesi della Grecia"@it ;
     myth:inSourceGraph g:pausanias ;
     myth:writtenBy res:Pausanias .
-
-res:Dryope a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Δρυόπη"@el,
-        "Dryope"@en,
-        "Δρυόπη"@grc,
-        "Driope"@it ;
-    myth:hasChild res:Tarquitus .
 
 res:Echeclus a myth:Character,
         myth:Male ;
@@ -288,6 +287,15 @@ res:Eurydice_Q1378429 a myth:Character,
         "Euridice"@it ;
     myth:hasSpouse res:Aeneas .
 
+res:Hippocoon a myth:Character,
+        myth:Male ;
+    rdfs:label "Ιπποκόων"@el,
+        "Hippocoon"@en,
+        "Ἱπποκόων"@grc,
+        "Ippocoonte"@it ;
+    myth:holdsTitle res:MythologicalKingOfSparta ;
+    myth:killedBy res:Heracles .
+
 res:Histories a myth:LiteraryWork ;
     rdfs:label "Histories"@en,
         "Storie"@it ;
@@ -298,6 +306,15 @@ res:Iliade a myth:LiteraryWork ;
     rdfs:label "Iliade"@en ;
     myth:inSourceGraph g:homer ;
     myth:writtenBy res:Homer .
+
+res:Iphidamas a myth:Character,
+        myth:Male ;
+    rdfs:label "Ιφιδάμας"@el,
+        "Iphidamas"@en,
+        "Ἰφιδάμας , Īphidamās"@grc,
+        "Ifidamante"@it ;
+    myth:killedBy res:Agamemnon ;
+    myth:mannerOfDeath res:DeathInBattle .
 
 res:Iphition a myth:Character,
         myth:Male ;
@@ -327,6 +344,15 @@ res:Leodes a myth:Character,
     myth:holdsTitle res:Augur ;
     myth:killedBy res:Odysseus .
 
+res:Lycus_Q1393416 a myth:Character,
+        myth:Male ;
+    rdfs:label "Λύκος"@el,
+        "Lycus"@en,
+        "Lico"@it,
+        "Lycus"@la ;
+    myth:holdsTitle res:KingOfThebe ;
+    myth:killedBy res:Heracles .
+
 res:Mynes a myth:Character,
         myth:Male ;
     rdfs:label "Μύνης"@el,
@@ -347,10 +373,6 @@ res:Phylas_Q3744926 a myth:Character,
     myth:killedBy res:Heracles ;
     myth:mannerOfDeath res:DeathInBattle .
 
-res:Q64150489 a myth:LiteraryWork ;
-    myth:inSourceGraph g:apollodorus ;
-    myth:writtenBy res:PseudoApollodorus .
-
 res:Rigmus a myth:Character,
         myth:Male ;
     rdfs:label "Ρίγμος"@el,
@@ -361,6 +383,14 @@ res:Rigmus a myth:Character,
     myth:bornIn res:Troy ;
     myth:killedBy res:Achilles ;
     myth:mannerOfDeath res:DeathInBattle .
+
+res:Tarquitus a myth:Character,
+        myth:Male ;
+    rdfs:label "Tarquitus"@en,
+        "Tarquito"@it,
+        "Tarquitus"@la ;
+    myth:appearsIn res:Aeneid ;
+    myth:killedBy res:Aeneas .
 
 res:Timalcus a myth:Character,
         myth:Male ;
@@ -518,28 +548,68 @@ myth:titleOver a owl:ObjectProperty ;
 res:AchaeaPhthiotis rdfs:label "Achaea Phthiotis"@en,
         "Ftiotide"@it .
 
+res:Acrisius a myth:Character,
+        myth:Male ;
+    rdfs:label "Ακρίσιος"@el,
+        "Acrisius"@en,
+        "Ἀκρίσιος"@grc,
+        "Acrisio"@it,
+        "Acrisius"@la ;
+    myth:hasChild res:Danae ;
+    myth:holdsTitle res:KingOfArgos .
+
+res:Aegina_Q321298 a myth:Character,
+        myth:Female,
+        myth:Nymph ;
+    rdfs:label "Αίγινα"@el,
+        "Aegina"@en,
+        "Αἴγινα"@grc,
+        "Egina"@it,
+        "Aegina"@la ;
+    myth:hasChild res:Aeacus ;
+    myth:memberOf res:Naiad .
+
 res:Aethiopis rdfs:label "Aethiopis"@en,
         "Etiopide"@it .
+
+res:Aethra a myth:Character,
+        myth:Female ;
+    rdfs:label "Αίθρα"@el,
+        "Aethra"@en,
+        "Αἴθρα , Aithrā"@grc,
+        "Etra"@it,
+        "Aethra"@la ;
+    myth:appearsIn res:TheSuppliants ;
+    myth:hasChild res:Theseus .
 
 res:Alceste rdfs:label "Alceste"@en,
         "Alceste"@it .
 
-res:Aleus a myth:Character,
-        myth:Human,
-        myth:Male ;
-    rdfs:label "Άλεος"@el,
-        "Aleus"@en,
-        "Ἄλεος , Aleos"@grc,
-        "Aleo"@it,
-        "Aleus"@la ;
-    myth:hasChild res:Auge ;
-    myth:holdsTitle res:MythologicalKingOfArcadia .
+res:Alcimedusa a myth:Character,
+        myth:Female ;
+    rdfs:label "Αλκιμέδουσα"@el,
+        "Alcimedusa"@en,
+        "Ἀλκιμέδουσα"@grc,
+        "Alcimedusa"@la ;
+    myth:hasSpouse res:Bellerophon .
 
 res:Alexandra rdfs:label "Alexandra"@en,
         "Alessandra"@it .
 
 res:Amazons rdfs:label "Amazons"@en,
         "Amazzoni"@it .
+
+res:Amphitryon a myth:Character,
+        myth:Male ;
+    rdfs:label "Αμφιτρύωνας"@el,
+        "Amphitryon"@en,
+        "Ἀμφιτρύων , Amphitryōn"@grc,
+        "Anfitrione"@it,
+        "Amphitruo"@la ;
+    myth:hasChild res:Heracles ;
+    myth:hasSpouse res:Alkmene ;
+    myth:holdsTitle res:KingOfMycenae ;
+    myth:residesIn res:Thebes_Q11225429 .
 
 res:Anchises a myth:Character,
         myth:Male ;
@@ -553,9 +623,6 @@ res:Anchises a myth:Character,
 
 res:AncientCorinth rdfs:label "Ancient Corinth"@en,
         "Corinto"@it .
-
-res:AncientLibya rdfs:label "Ancient Libya"@en,
-        "Libia"@it .
 
 res:AncientRome rdfs:label "Ancient Rome"@en,
         "antica Roma"@it .
@@ -574,14 +641,12 @@ res:ArcadiaRegionalUnit rdfs:label "Arcadia Regional Unit"@en,
     geo1:lat 37.4936 ;
     geo1:long 22.3559 .
 
-res:Arcadia_Q168786 rdfs:label "Arcadia"@en,
-        "Arcadia"@it .
-
-res:Argolis rdfs:label "Argolis"@en,
-        "Argolide"@it .
-
-res:Asterope_Q29655160 rdfs:label "Asterope"@en,
-        "Asterope"@it .
+res:Astymedusa a myth:Character,
+        myth:Female ;
+    rdfs:label "Αστυμέδουσα"@el,
+        "Astymedusa"@en,
+        "Astimedusa"@it ;
+    myth:hasSpouse res:Oedipus .
 
 res:Athens_Q13534153 rdfs:label "Athens"@en,
         "regno di Atene"@it .
@@ -595,11 +660,13 @@ res:Aulis rdfs:label "Aulis"@en,
     geo1:lat 38.43333333 ;
     geo1:long 23.5925 .
 
-res:Calydon rdfs:label "Calydon"@en,
-        "Calidone"@it .
-
-res:CephalusAndProcris rdfs:label "Cephalus and Procris"@en,
-        "Cefalo e Procri"@it .
+res:Cassiopeia a myth:Character,
+        myth:Female ;
+    rdfs:label "Κασσιόπη"@el,
+        "Cassiopeia"@en,
+        "Κασσιόπεια , Kassiopeia"@grc,
+        "Cassiopea"@it ;
+    myth:hasChild res:Andromeda .
 
 res:Chimera a myth:Character,
         myth:Creature ;
@@ -612,27 +679,10 @@ res:Chimera a myth:Character,
     myth:hasFather res:Typhon ;
     myth:killedBy res:Bellerophon .
 
-res:Coon a myth:Character,
-        myth:Male ;
-    rdfs:label "Κόωνας"@el,
-        "Coön"@en,
-        "Κόων"@grc,
-        "Coone"@it ;
-    myth:hasFather res:Antenor ;
-    myth:killedBy res:Agamemnon .
-
 res:Corinth rdfs:label "Corinth"@en,
         "Corinto"@it ;
     geo1:lat 37.938611111 ;
     geo1:long 22.927222222 .
-
-res:Creon_Q786573 a myth:Character,
-        myth:Male ;
-    rdfs:label "Κρέοντας της Κορίνθου"@el,
-        "Creon"@en,
-        "Creonte"@it ;
-    myth:hasChild res:Glauce ;
-    myth:holdsTitle res:KingOfCorinth .
 
 res:Cycnus a myth:Character,
         myth:Male ;
@@ -643,16 +693,6 @@ res:Cycnus a myth:Character,
     myth:hasFather res:Ares ;
     myth:killedBy res:Heracles ;
     myth:mannerOfDeath res:DeathInBattle .
-
-res:Cynortas a myth:Character,
-        myth:Male ;
-    rdfs:label "Κυνόρτας"@el,
-        "Cynortas"@en,
-        "Κυνόρτας , Cynortas"@grc,
-        "Cinorta"@it,
-        "Cynortas"@la ;
-    myth:hasChild res:Oebalus ;
-    myth:holdsTitle res:MythologicalKingOfSparta .
 
 res:Cynthus rdfs:label "Cynthus"@en,
         "Monte Cinto"@it ;
@@ -671,9 +711,6 @@ res:Cyzicus a myth:Character,
     myth:killedBy res:Heracles,
         res:Jason ;
     myth:mannerOfDeath res:DeathInBattle .
-
-res:DaughtersOfDanaus rdfs:label "Daughters of Danaus"@en,
-        "Danaidi"@it .
 
 res:Deiopites a myth:Character,
         myth:Male ;
@@ -699,17 +736,6 @@ res:Democoon a myth:Character,
     myth:appearsIn res:Iliad ;
     myth:hasFather res:Priam ;
     myth:killedBy res:Odysseus .
-
-res:Demoleon a myth:Character,
-        myth:Male ;
-    rdfs:label "Δημολέοντας"@el,
-        "Demoleon"@en,
-        "Δημολέων"@grc,
-        "Demoleonte"@it ;
-    myth:appearsIn res:Iliad ;
-    myth:hasFather res:Antenor ;
-    myth:killedBy res:Achilles ;
-    myth:mannerOfDeath res:DeathInBattle .
 
 res:DiiConsentes rdfs:label "Dii Consentes"@en,
         "Dèi Consenti"@it .
@@ -746,21 +772,21 @@ res:Elektra rdfs:label "Elektra"@en,
 res:Elektra_Q3721900 rdfs:label "Elektra"@en,
         "Elettra"@it .
 
+res:Emathion a myth:Character,
+        myth:Male ;
+    rdfs:label "Ημαθίων"@el,
+        "Emathion"@en,
+        "Ἠμαθίων"@grc,
+        "Emazio"@it ;
+    myth:hasMother res:Eos ;
+    myth:holdsTitle res:MythologicalKingOfAethiopia ;
+    myth:killedBy res:Heracles ;
+    myth:mannerOfDeath res:Homicide .
+
 res:Ethiopia rdfs:label "Ethiopia"@en,
         "Etiopia"@it ;
     geo1:lat 9.0 ;
     geo1:long 40.0 .
-
-res:Fabulae a myth:LiteraryWork ;
-    rdfs:label "Fabulae"@en,
-        "Favole"@it ;
-    myth:inSourceGraph g:hyginus ;
-    myth:writtenBy res:GaiusJuliusHyginus,
-        res:HyginusMythographus .
-
-res:GaiusJuliusHyginus a myth:Author ;
-    rdfs:label "Gaius Julius Hyginus"@en,
-        "Gaio Giulio Igino"@it .
 
 res:Ganges rdfs:label "Ganges"@en,
         "Gange"@it ;
@@ -793,10 +819,6 @@ res:Hesiod a myth:Author ;
 
 res:HowTheCossacksBecameOlympians rdfs:label "How the Cossacks Became Olympians"@en .
 
-res:HyginusMythographus a myth:Author ;
-    rdfs:label "Hyginus Mythographus"@en,
-        "Igino"@it .
-
 res:Hypsipyle a myth:Character,
         myth:Female ;
     rdfs:label "Υψιπύλη"@el,
@@ -808,19 +830,6 @@ res:Hypsipyle a myth:Character,
 
 res:Idomeneo rdfs:label "Idomeneo"@en,
         "Idomeneo"@it .
-
-res:Iolcos rdfs:label "Iolcos"@en,
-        "Iolco"@it .
-
-res:Iphidamas a myth:Character,
-        myth:Male ;
-    rdfs:label "Ιφιδάμας"@el,
-        "Iphidamas"@en,
-        "Ἰφιδάμας , Īphidamās"@grc,
-        "Ifidamante"@it ;
-    myth:hasFather res:Antenor ;
-    myth:killedBy res:Agamemnon ;
-    myth:mannerOfDeath res:DeathInBattle .
 
 res:Isus a myth:Character,
         myth:Male ;
@@ -837,37 +846,13 @@ res:JudgementOfParis rdfs:label "Judgement of Paris"@en,
 
 res:Kerne rdfs:label "Kerne"@en .
 
-res:King a myth:RoyalTitle ;
-    rdfs:label "king"@en,
-        "re"@it .
+res:KingOfAchaea a myth:RoyalTitle ;
+    rdfs:label "king of Achaea"@en,
+        "re di Acaia"@it .
 
-res:KingOfArgolis a myth:RoyalTitle ;
-    rdfs:label "king of Argolis"@en,
-        "re di Argolide"@it ;
-    myth:titleOver res:Argolis .
-
-res:KingOfAtlantis a myth:RoyalTitle ;
-    rdfs:label "king of Atlantis"@en,
-        "re di Atlantide"@it .
-
-res:KingOfElis a myth:RoyalTitle ;
-    rdfs:label "king of Elis"@en,
-        "re di Elide"@it .
-
-res:KingOfIolcus a myth:RoyalTitle ;
-    rdfs:label "king of Iolcus"@en,
-        "re di Iolco"@it ;
-    myth:titleOver res:Iolcos .
-
-res:KingOfMegara a myth:RoyalTitle ;
-    rdfs:label "king of Megara"@en,
-        "re di Megara"@it ;
-    myth:titleOver res:Megara .
-
-res:KingOfMessenia a myth:RoyalTitle ;
-    rdfs:label "king of Messenia"@en,
-        "re di Messenia"@it ;
-    myth:titleOver res:Messenia .
+res:KingOfCrete a myth:RoyalTitle ;
+    rdfs:label "king of Crete"@en,
+        "re di Creta"@it .
 
 res:KingOfPhoenicia a myth:RoyalTitle ;
     rdfs:label "king of Phoenicia"@en,
@@ -877,24 +862,35 @@ res:KingOfPhrygia a myth:RoyalTitle ;
     rdfs:label "king of Phrygia"@en,
         "re di Frigia"@it .
 
-res:KingOfPlataea a myth:RoyalTitle ;
-    rdfs:label "king of Plataea"@en,
-        "re di Platea"@it ;
-    myth:titleOver res:Plataea .
-
-res:KingOfSicyon a myth:RoyalTitle ;
-    rdfs:label "king of Sicyon"@en,
-        "re di Sicione"@it .
-
 res:KingOfTauris a myth:RoyalTitle ;
     rdfs:label "king of Tauris"@en,
         "re di Tauride"@it ;
     myth:titleOver res:Tauria .
 
+res:KingOfTiryns a myth:RoyalTitle ;
+    rdfs:label "king of Tiryns"@en,
+        "re di Tirinto"@it ;
+    myth:titleOver res:Tiryns .
+
+res:KingOfTyre a myth:RoyalTitle ;
+    rdfs:label "king of Tyre"@en,
+        "Re di Tiro"@it ;
+    myth:titleOver res:Tyre .
+
 res:LabyrinthOfKnossos rdfs:label "Labyrinth of Knossos"@en,
         "Labirinto di Cnosso"@it ;
     geo1:lat 35.298055555 ;
     geo1:long 25.163055555 .
+
+res:Laomedon a myth:Character,
+        myth:Male ;
+    rdfs:label "Λαομέδων"@el,
+        "Laomedon"@en,
+        "Λαομέδων"@grc,
+        "Laomedonte"@it,
+        "Laomedon"@la ;
+    myth:hasChild res:Priam ;
+    myth:holdsTitle res:KingOfTroy .
 
 res:Leontophron a myth:Character,
         myth:Male ;
@@ -905,26 +901,12 @@ res:Leontophron a myth:Character,
     myth:killedBy res:Odysseus,
         res:Telemachus .
 
-res:ListOfLatinKingsOfAlbaLonga a myth:RoyalTitle ;
-    rdfs:label "list of latin kings of Alba Longa"@en,
-        "re latini"@it .
-
 res:Lycaon_Q3268334 a myth:Character,
         myth:Male ;
     rdfs:label "Λυκάων"@el,
         "Lycaon"@en,
         "Licaone"@it ;
     myth:hasFather res:Ares ;
-    myth:killedBy res:Heracles .
-
-res:Lycus_Q1393416 a myth:Character,
-        myth:Male ;
-    rdfs:label "Λύκος"@el,
-        "Lycus"@en,
-        "Lico"@it,
-        "Lycus"@la ;
-    myth:hasMother res:Dirce ;
-    myth:holdsTitle res:KingOfThebe ;
     myth:killedBy res:Heracles .
 
 res:Lydia rdfs:label "Lydia"@en,
@@ -936,11 +918,19 @@ res:Medea_Q286381 rdfs:label "Medea"@en,
 res:Medea_Q3332727 rdfs:label "Medea"@en,
         "Medea"@it .
 
-res:Megara rdfs:label "Megara"@en,
-        "Megara"@it .
-
-res:Messenia rdfs:label "Messenia"@en,
-        "Messenia"@it .
+res:Memnon a myth:Character,
+        myth:Male ;
+    rdfs:label "Μέμνων (μυθολογία)"@el,
+        "Memnon"@en,
+        "Μέμνων , Memnōn"@grc,
+        "Memnone"@it,
+        "Memnon"@la ;
+    myth:appearsIn res:Aethiopis,
+        res:Metamorphoses,
+        res:Posthomerica ;
+    myth:hasMother res:Eos ;
+    myth:holdsTitle res:MythologicalKingOfAethiopia ;
+    myth:killedBy res:Achilles .
 
 res:Minotaur a myth:Character,
         myth:Male,
@@ -965,22 +955,6 @@ res:Mycenae rdfs:label "Mycenae"@en,
 res:Myrmidons rdfs:label "Myrmidons"@en,
         "Mirmidoni"@it .
 
-res:Mysians rdfs:label "Mysians"@en .
-
-res:MythologicalKingOfArcadia a myth:RoyalTitle ;
-    rdfs:label "mythological king of Arcadia"@en,
-        "mitico re di Arcadia"@it ;
-    myth:titleOver res:Arcadia_Q168786 .
-
-res:MythologicalKingOfLibya a myth:RoyalTitle ;
-    rdfs:label "mythological king of Libya"@en,
-        "mitico re di Libia"@it ;
-    myth:titleOver res:AncientLibya .
-
-res:MythologicalKingOfThrace a myth:RoyalTitle ;
-    rdfs:label "mythological king of Thrace"@en,
-        "mitico re di Tracia"@it .
-
 res:Naiad rdfs:label "naiad"@en,
         "Naiadi"@it .
 
@@ -988,9 +962,6 @@ res:Nemea rdfs:label "Nemea"@en,
         "Nemea"@it ;
     geo1:lat 37.808962 ;
     geo1:long 22.710279 .
-
-res:Oceanids rdfs:label "Oceanids"@en,
-        "Oceanine"@it .
 
 res:Oechalia_Q107550037 rdfs:label "Oechalia"@en .
 
@@ -1024,10 +995,14 @@ res:Pausanias a myth:Author ;
     rdfs:label "Pausanias"@en,
         "Pausania il Periegeta"@it .
 
-res:PilgrimOfEternity rdfs:label "Pilgrim of Eternity"@en .
+res:Phylonoe a myth:Character,
+        myth:Female ;
+    rdfs:label "Φιλονόη"@el,
+        "Phylonoe"@en,
+        "Filonoe"@it ;
+    myth:hasSpouse res:Bellerophon .
 
-res:Plataea rdfs:label "Plataea"@en,
-        "Platea"@it .
+res:PilgrimOfEternity rdfs:label "Pilgrim of Eternity"@en .
 
 res:Polydorus_Q29626641 a myth:Character,
         myth:Male ;
@@ -1039,16 +1014,12 @@ res:Polydorus_Q29626641 a myth:Character,
     myth:hasFather res:Priam ;
     myth:killedBy res:Achilles .
 
-res:Porthaon a myth:Character,
-        myth:Male ;
-    rdfs:label "Πορθάονας"@el,
-        "Porthaon"@en,
-        "Portaone"@it ;
-    myth:hasChild res:Oeneus ;
-    myth:holdsTitle res:KingOfCalydon .
-
 res:Posthomerica rdfs:label "Posthomerica"@en,
         "Posthomerica"@it .
+
+res:PseudoApollodorus a myth:Author ;
+    rdfs:label "Pseudo-Apollodorus"@en,
+        "Pseudo-Apollodoro"@it .
 
 res:Rhesus rdfs:label "Rhesus"@en,
         "Reso"@it .
@@ -1063,12 +1034,6 @@ res:SevenAgainstThebes rdfs:label "Seven against Thebes"@en,
 res:Sky rdfs:label "sky"@en,
         "cielo"@it .
 
-res:SmallMoralWorks rdfs:label "Small Moral Works"@en,
-        "Operette morali"@it .
-
-res:SonsOfAegyptus rdfs:label "Sons of Aegyptus"@en,
-        "Egittidi"@it .
-
 res:Sparta rdfs:label "Sparta"@en,
         "Sparta"@it ;
     geo1:lat 37.073678,
@@ -1076,19 +1041,8 @@ res:Sparta rdfs:label "Sparta"@en,
     geo1:long 22.423611111,
         22.430937 .
 
-res:Tarquitus a myth:Character,
-        myth:Male ;
-    rdfs:label "Tarquitus"@en,
-        "Tarquito"@it,
-        "Tarquitus"@la ;
-    myth:appearsIn res:Aeneid ;
-    myth:killedBy res:Aeneas .
-
 res:Tauria rdfs:label "Tauria"@en,
         "Tauride"@it .
-
-res:Telephus_Q97664084 rdfs:label "Telephus"@en,
-        "Telefo"@it .
 
 res:TheBacchae rdfs:label "The Bacchae"@en,
         "Le Baccanti"@it .
@@ -1113,14 +1067,11 @@ res:Themisto a myth:Character,
         "Themisto"@la ;
     myth:hasSpouse res:Athamas .
 
-res:Tros a myth:Character,
-        myth:Male ;
-    rdfs:label "Τρως"@el,
-        "Tros"@en,
-        "Τρώς"@grc,
-        "Troo"@it ;
-    myth:hasChild res:Ilus ;
-    myth:holdsTitle res:KingOfTroy .
+res:Theogony a myth:LiteraryWork ;
+    rdfs:label "Theogony"@en,
+        "Teogonia"@it ;
+    myth:inSourceGraph g:hesiod ;
+    myth:writtenBy res:Hesiod .
 
 res:WhoMournsForAdonais rdfs:label "Who Mourns for Adonais?"@en,
         "Dominati da Apollo"@it .
@@ -1131,6 +1082,14 @@ res:Zeuxippe_Q46845955 a myth:Character,
         "Zeuxippe"@en,
         "Zeussippe"@it ;
     myth:hasChild res:Athamas .
+
+myth:Human a owl:Class ;
+    rdfs:label "Human"@en,
+        "ἄνθρωπος"@grc,
+        "Essere umano"@it ;
+    rdfs:subClassOf myth:Mortal ;
+    skos:definition "A human character."@en,
+        "Personaggio umano."@it .
 
 myth:Immortal a owl:Class ;
     rdfs:label "Immortal"@en,
@@ -1180,59 +1139,35 @@ myth:marriedAncestor a owl:ObjectProperty ;
     rdfs:subPropertyOf myth:marriedRelative ;
     owl:inverseOf myth:marriedDescendant .
 
-res:AcamasAndDemophon rdfs:label "Acamas and Demophon"@en,
-        "Acamante e Demofonte"@it .
-
-res:Acrisius a myth:Character,
-        myth:Male ;
-    rdfs:label "Ακρίσιος"@el,
-        "Acrisius"@en,
-        "Ἀκρίσιος"@grc,
-        "Acrisio"@it,
-        "Acrisius"@la ;
-    myth:hasChild res:Danae ;
-    myth:hasFather res:Abas ;
-    myth:holdsTitle res:KingOfArgos .
-
 res:Aeaea rdfs:label "Aeaea"@en,
         "Eea"@it .
+
+res:Aegeus a myth:Character,
+        myth:Male ;
+    rdfs:label "Αιγέας"@el,
+        "Aegeus"@en,
+        "Αἰγεύς , Aigeus"@grc,
+        "Egeo"@it,
+        "Aegeus"@la ;
+    myth:hasChild res:Theseus ;
+    myth:hasSpouse res:Medea ;
+    myth:holdsTitle res:KingOfAthens ;
+    myth:mannerOfDeath res:Suicide .
 
 res:Aegina rdfs:label "Aegina"@en,
         "Egina"@it ;
     geo1:lat 37.73 ;
     geo1:long 23.49 .
 
-res:Aegina_Q321298 a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Αίγινα"@el,
-        "Aegina"@en,
-        "Αἴγινα"@grc,
-        "Egina"@it,
-        "Aegina"@la ;
-    myth:hasChild res:Aeacus ;
-    myth:hasFather res:Asopus ;
-    myth:memberOf res:Naiad .
-
-res:Aethra a myth:Character,
+res:Alcimede a myth:Character,
         myth:Female ;
-    rdfs:label "Αίθρα"@el,
-        "Aethra"@en,
-        "Αἴθρα , Aithrā"@grc,
-        "Etra"@it,
-        "Aethra"@la ;
-    myth:appearsIn res:TheSuppliants ;
-    myth:hasChild res:Theseus ;
-    myth:hasFather res:Pittheus .
-
-res:Alcimedusa a myth:Character,
-        myth:Female ;
-    rdfs:label "Αλκιμέδουσα"@el,
-        "Alcimedusa"@en,
-        "Ἀλκιμέδουσα"@grc,
-        "Alcimedusa"@la ;
-    myth:hasFather res:Iobates ;
-    myth:hasSpouse res:Bellerophon .
+    rdfs:label "Αλκιμέδη"@el,
+        "Alcimede"@en,
+        "Ἀλκιμέδη"@grc,
+        "Alcimede"@it,
+        "Alcimede"@la ;
+    myth:hasChild res:Jason ;
+    myth:hasSpouse res:Aeson .
 
 res:Alcimenes_Q21548251 a myth:Character,
         myth:Male ;
@@ -1258,6 +1193,16 @@ res:Alcyoneus a myth:Character,
     myth:hasMother res:Gaia ;
     myth:killedBy res:Heracles .
 
+res:Alkmene a myth:Character,
+        myth:Female ;
+    rdfs:label "Αλκμήνη"@el,
+        "Alkmene"@en,
+        "Ἀλκμήνη"@grc,
+        "Alcmena"@it,
+        "Alcmene"@la ;
+    myth:hasChild res:Heracles ;
+    myth:hasSpouse res:Amphitryon .
+
 res:Amphinome_Q21548505 a myth:Character,
         myth:Female ;
     rdfs:label "Αμφινόμη"@el,
@@ -1267,19 +1212,6 @@ res:Amphinome_Q21548505 a myth:Character,
         "Amphinome"@la ;
     myth:hasChild res:Jason ;
     myth:hasSpouse res:Aeson .
-
-res:Amphitryon a myth:Character,
-        myth:Male ;
-    rdfs:label "Αμφιτρύωνας"@el,
-        "Amphitryon"@en,
-        "Ἀμφιτρύων , Amphitryōn"@grc,
-        "Anfitrione"@it,
-        "Amphitruo"@la ;
-    myth:hasChild res:Heracles ;
-    myth:hasFather res:Alcaeus ;
-    myth:hasSpouse res:Alkmene ;
-    myth:holdsTitle res:KingOfMycenae ;
-    myth:residesIn res:Thebes_Q11225429 .
 
 res:Ananke a myth:Character,
         myth:Female,
@@ -1291,6 +1223,17 @@ res:Ananke a myth:Character,
     myth:hasChild res:Chaos ;
     myth:hasFather res:Chronos ;
     myth:hasSpouse res:Chronos .
+
+res:Andromeda a myth:Character,
+        myth:Female ;
+    rdfs:label "Ανδρομέδα"@el,
+        "Andromeda"@en,
+        "Ἀνδρομέδα"@grc,
+        "Andromeda"@it,
+        "Andromeda"@la ;
+    myth:appearsIn res:Metamorphoses ;
+    myth:hasMother res:Cassiopeia ;
+    myth:hasSpouse res:Perseus .
 
 res:Anius_Q135479720 a myth:Character,
         myth:Male ;
@@ -1308,64 +1251,6 @@ res:Antiphus a myth:Character,
     myth:hasFather res:Priam ;
     myth:hasMother res:Hecuba ;
     myth:killedBy res:Agamemnon .
-
-res:Ascanius a myth:Character,
-        myth:Male ;
-    rdfs:label "Ίουλος"@el,
-        "Ascanius"@en,
-        "Ἀσκάνιος"@grc,
-        "Ascanio"@it,
-        "Ascanius"@la ;
-    myth:hasFather res:Aeneas ;
-    myth:hasMother res:Creusa ;
-    myth:holdsTitle res:King .
-
-res:Astymedusa a myth:Character,
-        myth:Female ;
-    rdfs:label "Αστυμέδουσα"@el,
-        "Astymedusa"@en,
-        "Astimedusa"@it ;
-    myth:hasFather res:Sthenelus ;
-    myth:hasSpouse res:Oedipus .
-
-res:Auge a myth:Character,
-        myth:Female ;
-    rdfs:label "Αύγη"@el,
-        "Auge"@en,
-        "Αὔγη"@grc,
-        "Auge"@it ;
-    myth:hasChild res:Telephus ;
-    myth:hasFather res:Aleus .
-
-res:Callirhoe a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Female,
-        myth:Oceanid ;
-    rdfs:label "Καλλιρρόη (Ωκεανίδα)"@el,
-        "Callirhoe"@en,
-        "Calliroe"@it ;
-    myth:hasFather res:Oceanus ;
-    myth:hasMother res:Tethys .
-
-res:Cassiopeia a myth:Character,
-        myth:Female ;
-    rdfs:label "Κασσιόπη"@el,
-        "Cassiopeia"@en,
-        "Κασσιόπεια , Kassiopeia"@grc,
-        "Cassiopea"@it ;
-    myth:hasChild res:Andromeda ;
-    myth:hasSpouse res:CepheusKingOfAethiopia .
-
-res:CecropsII a myth:Character,
-        myth:Male ;
-    rdfs:label "Κέκροπας Β΄"@el,
-        "Cecrops II"@en,
-        "Cecrope II"@it,
-        "Cecrops II"@la ;
-    myth:hasChild res:PandionII ;
-    myth:hasFather res:Erechtheus ;
-    myth:holdsTitle res:KingOfAthens .
 
 res:Chrysaor a myth:Character,
         myth:Male ;
@@ -1405,6 +1290,15 @@ res:Danae a myth:Character,
     myth:hasChild res:Perseus ;
     myth:hasFather res:Acrisius .
 
+res:Deianira a myth:Character,
+        myth:Female ;
+    rdfs:label "Δηιάνειρα"@el,
+        "Deianira"@en,
+        "Deianira"@it,
+        "Deianira"@la ;
+    myth:hasSpouse res:Heracles ;
+    myth:mannerOfDeath res:Suicide .
+
 res:Democoon_Q21548783 a myth:Character,
         myth:Male ;
     rdfs:label "Democoon"@en,
@@ -1412,55 +1306,6 @@ res:Democoon_Q21548783 a myth:Character,
     myth:hasFather res:Heracles ;
     myth:hasMother res:Megara_Q929768 ;
     myth:killedBy res:Heracles .
-
-res:DemophonOfAthens a myth:Character,
-        myth:Male ;
-    rdfs:label "Δημοφών ο Θησέως"@el,
-        "Demophon of Athens"@en,
-        "Δημοφῶν/Δημοφόων"@grc,
-        "Demofonte"@it,
-        "Demophoon"@la ;
-    myth:hasFather res:Theseus ;
-    myth:hasSibling res:Acamas ;
-    myth:holdsTitle res:KingOfAthens ;
-    myth:memberOf res:AcamasAndDemophon .
-
-res:DeucalionAndPyrrha rdfs:label "Deucalion and Pyrrha"@en,
-        "Deucalione e Pirra"@it .
-
-res:Dirce a myth:Character,
-        myth:Female ;
-    rdfs:label "Δίρκη"@el,
-        "Dirce"@en,
-        "Δίρκη"@grc,
-        "Dirce"@it,
-        "Dirce"@la ;
-    myth:hasChild res:Lycus_Q1393416 ;
-    myth:hasFather res:Achelous,
-        res:Helios .
-
-res:Electra_Q858663 a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Ηλέκτρα"@el,
-        "Electra"@en,
-        "Elettra"@it,
-        "Electra"@la ;
-    myth:hasChild res:Harmonia ;
-    myth:hasFather res:Atlas ;
-    myth:hasMother res:Pleione .
-
-res:Emathion a myth:Character,
-        myth:Male ;
-    rdfs:label "Ημαθίων"@el,
-        "Emathion"@en,
-        "Ἠμαθίων"@grc,
-        "Emazio"@it ;
-    myth:hasFather res:Tithonus ;
-    myth:hasMother res:Eos ;
-    myth:holdsTitle res:MythologicalKingOfAethiopia ;
-    myth:killedBy res:Heracles ;
-    myth:mannerOfDeath res:Homicide .
 
 res:Enyo a myth:Character,
         myth:Deity,
@@ -1470,8 +1315,7 @@ res:Enyo a myth:Character,
         "Ἐνυώ"@grc,
         "Enio"@it ;
     myth:appearsIn res:Theogony ;
-    myth:hasChild res:Harmonia,
-        res:Oenomaus ;
+    myth:hasChild res:Harmonia ;
     myth:hasFather res:Zeus ;
     myth:hasMother res:Hera ;
     myth:residesIn res:Olympus .
@@ -1490,28 +1334,6 @@ res:Ephialtes a myth:Character,
     myth:killedBy res:Apollo,
         res:Heracles .
 
-res:Erechtheus a myth:Character,
-        myth:Male ;
-    rdfs:label "Ερεχθέας"@el,
-        "Erechtheus"@en,
-        "Ἐρεχθεύς , Erechtheus"@grc,
-        "Eretteo"@it,
-        "Erechtheus"@la ;
-    myth:hasChild res:CecropsII ;
-    myth:hasFather res:PandionI ;
-    myth:holdsTitle res:KingOfAthens .
-
-res:Erichthonius a myth:Character,
-        myth:Male ;
-    rdfs:label "Εριχθόνιος"@el,
-        "Erichthonius"@en,
-        "Ἐριχθόνιος , Erichthonios"@grc,
-        "Erittonio"@it,
-        "Erichthonius"@la ;
-    myth:hasChild res:PandionI ;
-    myth:hasFather res:Hephaestus ;
-    myth:holdsTitle res:KingOfAthens .
-
 res:Euryganeia a myth:Character,
         myth:Female ;
     rdfs:label "Ευρυγάνεια"@el,
@@ -1520,9 +1342,7 @@ res:Euryganeia a myth:Character,
         "Eurigania"@it,
         "Eurygania"@la ;
     myth:hasChild res:Antigone_Q131351,
-        res:Eteocles,
-        res:Ismene,
-        res:Polynices ;
+        res:Ismene ;
     myth:hasSibling res:Jocasta ;
     myth:hasSpouse res:Oedipus .
 
@@ -1533,6 +1353,14 @@ res:Eurylyte a myth:Character,
         "Eurilite"@it ;
     myth:hasChild res:Medea ;
     myth:hasSpouse res:Aeetes .
+
+res:Eurynome_Q956831 a myth:Character,
+        myth:Female ;
+    rdfs:label "Ευρυνόμη"@el,
+        "Eurynome"@en,
+        "Eurimede"@it ;
+    myth:hasChild res:Bellerophon ;
+    myth:hasSpouse res:Glaucus_Q1232714 .
 
 res:Eurytos a myth:Character,
         myth:Deity,
@@ -1546,66 +1374,27 @@ res:Eurytos a myth:Character,
     myth:killedBy res:Dionysus,
         res:Heracles .
 
+res:Glauce a myth:Character,
+        myth:Female ;
+    rdfs:label "Γλαύκη"@el,
+        "Glauce"@en,
+        "Glauce"@it,
+        "Glauce"@la ;
+    myth:hasSpouse res:Jason .
+
 res:Gorgon a owl:NamedIndividual,
         myth:Group ;
     rdfs:label "gorgon"@en,
         "Gorgoni"@it .
 
-res:Hippocoon a myth:Character,
-        myth:Male ;
-    rdfs:label "Ιπποκόων"@el,
-        "Hippocoon"@en,
-        "Ἱπποκόων"@grc,
-        "Ippocoonte"@it ;
-    myth:hasFather res:Oebalus ;
-    myth:holdsTitle res:MythologicalKingOfSparta ;
-    myth:killedBy res:Heracles .
-
-res:Ilus a myth:Character,
-        myth:Male ;
-    rdfs:label "Ίλος του Τρώα"@el,
-        "Ilus"@en,
-        "Ilo"@it,
-        "Ilus"@la ;
-    myth:hasChild res:Laomedon ;
-    myth:hasFather res:Tros ;
-    myth:holdsTitle res:KingOfTroy .
-
-res:Io a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Ιώ"@el,
-        "Io"@en,
-        "Ἰώ"@grc,
-        "Io"@it,
-        "Io (mythologia)"@la ;
-    myth:appearsIn res:PrometheusBound ;
-    myth:hasChild res:Epaphus ;
-    myth:hasFather res:Inachus .
-
-res:Iobates a myth:Character,
-        myth:Male ;
-    rdfs:label "Ιοβάτης"@el,
-        "Iobates"@en,
-        "Ἰοβάτης , Iobatēs"@grc,
-        "Iobate"@it,
-        "Iobates"@la ;
-    myth:hasChild res:Alcimedusa,
-        res:Phylonoe ;
-    myth:holdsTitle res:Monarch .
-
-res:KingOfAchaea a myth:RoyalTitle ;
-    rdfs:label "king of Achaea"@en,
-        "re di Acaia"@it .
-
-res:KingOfCalydon a myth:RoyalTitle ;
-    rdfs:label "king of Calydon"@en,
-        "re di Calidone"@it ;
-    myth:titleOver res:Calydon .
-
 res:KingOfColchis a myth:RoyalTitle ;
     rdfs:label "king of Colchis"@en,
         "re di Colchide"@it .
+
+res:KingOfCorinth a myth:RoyalTitle ;
+    rdfs:label "king of Corinth"@en,
+        "re di Corinto"@it ;
+    myth:titleOver res:AncientCorinth .
 
 res:KingOfLydia a myth:RoyalTitle ;
     rdfs:label "king of Lydia"@en,
@@ -1622,27 +1411,6 @@ res:KingOfPhtiotis a myth:RoyalTitle ;
         "re di Ftiotide"@it ;
     myth:titleOver res:AchaeaPhthiotis .
 
-res:KingOfTiryns a myth:RoyalTitle ;
-    rdfs:label "king of Tiryns"@en,
-        "re di Tirinto"@it ;
-    myth:titleOver res:Tiryns .
-
-res:KingOfTyre a myth:RoyalTitle ;
-    rdfs:label "king of Tyre"@en,
-        "Re di Tiro"@it ;
-    myth:titleOver res:Tyre .
-
-res:Labdacus a myth:Character,
-        myth:Male ;
-    rdfs:label "Λάβδακος"@el,
-        "Labdacus"@en,
-        "Λάβδακος"@grc,
-        "Labdaco"@it,
-        "Labdacus"@la ;
-    myth:hasChild res:Laius ;
-    myth:hasFather res:Polydorus_Q1061554 ;
-    myth:holdsTitle res:KingOfThebe .
-
 res:Laertes a myth:Character,
         myth:Male ;
     rdfs:label "Λαέρτης"@el,
@@ -1654,6 +1422,28 @@ res:Laertes a myth:Character,
     myth:hasSpouse res:Anticlea ;
     myth:holdsTitle res:KingInGreekMythology .
 
+res:Laius a myth:Character,
+        myth:Male ;
+    rdfs:label "Λάιος ο Λαμβακίδης"@el,
+        "Laius"@en,
+        "Λάϊος , Lāïos"@grc,
+        "Laio"@it,
+        "Laius"@la ;
+    myth:hasChild res:Oedipus ;
+    myth:hasSpouse res:Jocasta ;
+    myth:holdsTitle res:KingOfThebe ;
+    myth:killedBy res:Oedipus .
+
+res:Learchus a myth:Character,
+        myth:Male ;
+    rdfs:label "Λέαρχος της Ινούς"@el,
+        "Learchus"@en,
+        "Learco"@it,
+        "Learchus"@la ;
+    myth:hasFather res:Athamas ;
+    myth:hasMother res:Ino ;
+    myth:killedBy res:Athamas .
+
 res:LinusOfThrace a myth:Character,
         myth:Male ;
     rdfs:label "Λίνος"@el,
@@ -1661,8 +1451,7 @@ res:LinusOfThrace a myth:Character,
         "Λίνος"@grc,
         "Lino"@it,
         "Linus"@la ;
-    myth:hasFather res:Apollo,
-        res:Oeagrus ;
+    myth:hasFather res:Apollo ;
     myth:hasMother res:Calliope,
         res:Clio ;
     myth:killedBy res:Heracles .
@@ -1685,21 +1474,6 @@ res:Medebrontes a myth:Character,
     myth:hasMother res:Megara_Q929768 ;
     myth:killedBy res:Heracles .
 
-res:Memnon a myth:Character,
-        myth:Male ;
-    rdfs:label "Μέμνων (μυθολογία)"@el,
-        "Memnon"@en,
-        "Μέμνων , Memnōn"@grc,
-        "Memnone"@it,
-        "Memnon"@la ;
-    myth:appearsIn res:Aethiopis,
-        res:Metamorphoses,
-        res:Posthomerica ;
-    myth:hasFather res:Tithonus ;
-    myth:hasMother res:Eos ;
-    myth:holdsTitle res:MythologicalKingOfAethiopia ;
-    myth:killedBy res:Achilles .
-
 res:Minyas a myth:Character,
         myth:Male ;
     rdfs:label "Μινύας"@el,
@@ -1710,59 +1484,40 @@ res:Minyas a myth:Character,
     myth:hasFather res:Poseidon ;
     myth:holdsTitle res:KingOfOrcomenus .
 
-res:Monarch a myth:RoyalTitle ;
-    rdfs:label "monarch"@en,
-        "monarca"@it .
-
 res:MythologicalKingOfAethiopia a myth:RoyalTitle ;
     rdfs:label "mythological king of Aethiopia"@en,
         "mitico re di Etiopia"@it .
 
-res:Oeagrus a myth:Character,
-        myth:Male ;
-    rdfs:label "Οίαγρος"@el,
-        "Oeagrus"@en,
-        "Eagro"@it,
-        "Oeagrus"@la ;
-    myth:hasFather res:Ares ;
-    myth:hasSpouse res:Calliope ;
-    myth:holdsTitle res:MythologicalKingOfThrace .
+res:Nephele a myth:Character,
+        myth:Female,
+        myth:Nymph ;
+    rdfs:label "Νεφέλη"@el,
+        "Nephele"@en,
+        "Νεφέλη"@grc,
+        "Nefele"@it ;
+    myth:hasFather res:Oceanus ;
+    myth:hasSpouse res:Athamas .
 
-res:Ophion a myth:Character,
-        myth:Deity,
-        myth:Male,
-        myth:Monster ;
-    rdfs:label "Οφίων"@el,
-        "Ophion"@en,
-        "Ὀφίων"@grc,
-        "Ofione"@it,
-        "Ophion"@la ;
-    myth:hasChild res:Uranus ;
-    myth:hasSpouse res:Eurynome .
+res:Nereids a owl:NamedIndividual,
+        myth:Group ;
+    rdfs:label "Nereids"@en,
+        "Nereidi"@it .
 
 res:OrestesAndElectra rdfs:label "Orestes and Electra"@en,
         "Oreste ed Elettra"@it .
 
-res:PandionI a myth:Character,
-        myth:Male ;
-    rdfs:label "Πανδίων Α΄"@el,
-        "Pandion I"@en,
-        "Pandione"@it,
-        "Pandion I"@la ;
-    myth:hasChild res:Erechtheus ;
-    myth:hasFather res:Erichthonius ;
-    myth:holdsTitle res:KingOfAthens .
-
-res:Pandora a myth:Character,
-        myth:Female,
-        myth:Human ;
-    rdfs:label "Πανδώρα"@el,
-        "Pandora"@en,
-        "Πανδώρα , Pandōrā"@grc,
-        "Pandora"@it,
-        "Pandora"@la ;
-    myth:hasChild res:Pyrrha ;
-    myth:hasSpouse res:Epimetheus .
+res:Penelope a myth:Character,
+        myth:Female ;
+    rdfs:label "Πηνελόπη"@el,
+        "Penelope"@en,
+        "Πηνελόπη , Pēnelopē"@grc,
+        "Penelope"@it,
+        "Penelope"@la ;
+    myth:appearsIn res:Heroides,
+        res:MadnessOfOdysseus,
+        res:Odyssey ;
+    myth:hasChild res:Telemachus ;
+    myth:hasSpouse res:Odysseus .
 
 res:Periphetes a myth:Character,
         myth:Male ;
@@ -1772,29 +1527,6 @@ res:Periphetes a myth:Character,
     myth:hasFather res:Hephaestus,
         res:Poseidon ;
     myth:killedBy res:Theseus .
-
-res:PhrixusAndHelle rdfs:label "Phrixus and Helle"@en,
-        "Frisso ed Elle"@it .
-
-res:Phylonoe a myth:Character,
-        myth:Female ;
-    rdfs:label "Φιλονόη"@el,
-        "Phylonoe"@en,
-        "Filonoe"@it ;
-    myth:hasFather res:Iobates ;
-    myth:hasSpouse res:Bellerophon .
-
-res:Pleisthenes a myth:Character,
-        myth:Male ;
-    rdfs:label "Πλεισθένης"@el,
-        "Pleisthenes"@en,
-        "Plistene"@it ;
-    myth:hasChild res:Agamemnon,
-        res:Menelaus ;
-    myth:hasFather res:Atreus,
-        res:Pelops ;
-    myth:hasMother res:Aerope,
-        res:Hippodamia .
 
 res:Porphyrion a myth:Character,
         myth:Deity,
@@ -1819,9 +1551,13 @@ res:Procrustes a myth:Character,
     myth:hasChild res:Sinis ;
     myth:hasFather res:Poseidon .
 
-res:PseudoApollodorus a myth:Author ;
-    rdfs:label "Pseudo-Apollodorus"@en,
-        "Pseudo-Apollodoro"@it .
+res:PrometheusBound rdfs:label "Prometheus Bound"@en,
+        "Prometeo incatenato"@it .
+
+res:QueenOfAmazons a myth:RoyalTitle ;
+    rdfs:label "queen of Amazons"@en,
+        "regina delle Amazzoni"@it ;
+    myth:titleOver res:Amazons .
 
 res:Sciron a myth:Character,
         myth:Male ;
@@ -1871,27 +1607,8 @@ res:Tantalus a myth:Character,
     myth:holdsTitle res:KingOfLydia,
         res:KingOfPhrygia .
 
-res:Telephus a myth:Character,
-        myth:Male ;
-    rdfs:label "Τήλεφος"@el,
-        "Telephus"@en,
-        "Τήλεφος , Tēlephos"@grc,
-        "Telefo"@it,
-        "Telephus"@la ;
-    myth:appearsIn res:Mysians,
-        res:Telephus_Q97664084 ;
-    myth:hasFather res:Heracles ;
-    myth:hasMother res:Auge ;
-    myth:holdsTitle res:KingInGreekMythology .
-
 res:TheSuppliants rdfs:label "The Suppliants"@en,
         "Le supplici"@it .
-
-res:Theogony a myth:LiteraryWork ;
-    rdfs:label "Theogony"@en,
-        "Teogonia"@it ;
-    myth:inSourceGraph g:hesiod ;
-    myth:writtenBy res:Hesiod .
 
 res:Tiryns rdfs:label "Tiryns"@en,
         "Tirinto"@it ;
@@ -1900,19 +1617,16 @@ res:Tiryns rdfs:label "Tiryns"@en,
     geo1:long 22.799722222,
         22.799814 .
 
-res:Tisamenus a myth:Character,
+res:Tyndareus a myth:Character,
         myth:Male ;
-    rdfs:label "Τισαμενός ο Λακεδαιμόνιος"@el,
-        "Tisamenus"@en,
-        "Τῑσᾰμενός"@grc,
-        "Tisameno"@it,
-        "Tisamenus"@la ;
-    myth:hasFather res:Orestes ;
-    myth:hasMother res:Hermione ;
-    myth:holdsTitle res:KingOfAchaea,
-        res:KingOfArgos,
-        res:KingOfMycenae,
-        res:MythologicalKingOfSparta .
+    rdfs:label "Τυνδάρεως"@el,
+        "Tyndareus"@en,
+        "Τυνδάρεος"@grc,
+        "Tindaro"@it,
+        "Tyndareus"@la ;
+    myth:hasChild res:Clytemnestra ;
+    myth:hasSpouse res:Leda ;
+    myth:holdsTitle res:MythologicalKingOfSparta .
 
 res:Tyre rdfs:label "Tyre"@en,
         "Tiro"@it ;
@@ -1944,31 +1658,6 @@ myth:hasDescendant a owl:ObjectProperty,
     skos:definition "Child, child's child, and so on."@en,
         "Figlio, figlio del figlio, e così via."@it .
 
-res:Abas a myth:Character,
-        myth:Male ;
-    rdfs:label "Άβας ο Αργείος"@el,
-        "Abas"@en,
-        "Ἄβας"@grc,
-        "Abante"@it,
-        "Abas (Argos)"@la ;
-    myth:hasChild res:Acrisius ;
-    myth:hasFather res:Lynceus_Q7877819 ;
-    myth:hasMother res:Hypermnestra ;
-    myth:holdsTitle res:KingOfArgos .
-
-res:Acamas a myth:Character,
-        myth:Male ;
-    rdfs:label "Ακάμας"@el,
-        "Acamas"@en,
-        "Acamante"@it,
-        "Acamas"@la ;
-    myth:appearsIn res:Iliad ;
-    myth:hasFather res:Theseus ;
-    myth:hasMother res:Phaedra ;
-    myth:hasSibling res:DemophonOfAthens ;
-    myth:holdsTitle res:KingInGreekMythology ;
-    myth:memberOf res:AcamasAndDemophon .
-
 res:Aeacus a myth:Character,
         myth:Male ;
     rdfs:label "Αιακός"@el,
@@ -1982,27 +1671,38 @@ res:Aeacus a myth:Character,
     myth:hasMother res:Aegina_Q321298 ;
     myth:holdsTitle res:KingOfMyrmidons .
 
-res:Aegyptus a myth:Character,
-        myth:Male ;
-    rdfs:label "Αίγυπτος"@el,
-        "Aegyptus"@en,
-        "Αἴγυπτος"@grc,
-        "Egitto"@it,
-        "Aegyptus"@la ;
-    myth:hasChild res:Lynceus_Q7877819 ;
-    myth:hasFather res:Belus ;
-    myth:hasSibling res:Danaus ;
-    myth:holdsTitle res:MythologicalKingOfEgypt .
-
-res:Alcimede a myth:Character,
+res:Aerope a myth:Character,
         myth:Female ;
-    rdfs:label "Αλκιμέδη"@el,
-        "Alcimede"@en,
-        "Ἀλκιμέδη"@grc,
-        "Alcimede"@it,
-        "Alcimede"@la ;
-    myth:hasChild res:Jason ;
-    myth:hasSpouse res:Aeson .
+    rdfs:label "Αερόπη"@el,
+        "Aerope"@en,
+        "Ἀερόπη"@grc,
+        "Erope"@it,
+        "Aerope"@la ;
+    myth:hasChild res:Agamemnon,
+        res:Menelaus ;
+    myth:hasSpouse res:Atreus .
+
+res:Agenor a myth:Character,
+        myth:Male ;
+    rdfs:label "Αγήνορας του Ποσειδώνα"@el,
+        "Agenor"@en,
+        "Ἀγήνωρ"@grc,
+        "Agenore"@it,
+        "Agenor"@la ;
+    myth:hasChild res:Cadmus,
+        res:Europa ;
+    myth:hasFather res:Poseidon ;
+    myth:holdsTitle res:KingOfPhoenicia,
+        res:KingOfTyre .
+
+res:Aiolos a myth:Character,
+        myth:Male ;
+    rdfs:label "Αίολος ο Θεσσαλός"@el,
+        "Aiolos"@en,
+        "Eolo"@it ;
+    myth:hasChild res:Athamas,
+        res:Sisyphus ;
+    myth:hasSpouse res:Enarete .
 
 res:Alcimenes a myth:Character,
         myth:Male ;
@@ -2016,33 +1716,36 @@ res:Alcimenes a myth:Character,
     myth:hasSibling res:Tisander ;
     myth:killedBy res:Medea .
 
-res:Antenor a myth:Character,
-        myth:Male ;
-    rdfs:label "Αντήνορας"@el,
-        "Antenor"@en,
-        "Ἀντήνωρ , Antēnōr"@grc,
-        "Antenore"@it,
-        "Antenor"@la ;
-    myth:hasChild res:Coon,
-        res:Demoleon,
-        res:Iphidamas .
+res:Anticlea a myth:Character,
+        myth:Female ;
+    rdfs:label "Αντίκλεια"@el,
+        "Anticlea"@en,
+        "Anticlea"@it,
+        "Anticlea"@la ;
+    myth:hasChild res:Odysseus ;
+    myth:hasSibling res:Polymede ;
+    myth:hasSpouse res:Laertes .
+
+res:Antiope_Q580862 a myth:Character,
+        myth:Female ;
+    rdfs:label "Αντιόπη (Αμαζόνα)"@el,
+        "Antiope"@en,
+        "Ἀντιόπη"@grc,
+        "Antiope"@it,
+        "Antiope (Amazon)"@la ;
+    myth:appearsIn res:Q20502242,
+        res:TheDinnerParty,
+        res:TheSwordIsForged ;
+    myth:hasFather res:Ares ;
+    myth:hasSibling res:Hippolyta ;
+    myth:hasSpouse res:Theseus ;
+    myth:holdsTitle res:QueenOfAmazons .
 
 res:Argonautica a myth:LiteraryWork ;
     rdfs:label "Argonautica"@en,
         "Le Argonautiche"@it ;
     myth:inSourceGraph g:apollonius ;
     myth:writtenBy res:ApolloniusOfRhodes .
-
-res:Autolycus a myth:Character,
-        myth:Male ;
-    rdfs:label "Αυτόλυκος"@el,
-        "Autolycus"@en,
-        "Αὐτόλυκος"@grc,
-        "Autolico"@it,
-        "Autolycus (Mercurii filius)"@la ;
-    myth:hasChild res:Anticlea,
-        res:Polymede ;
-    myth:hasFather res:Hermes .
 
 res:Chronos a myth:Character,
         myth:Deity,
@@ -2057,18 +1760,15 @@ res:Chronos a myth:Character,
         res:Chaos,
         res:Erebos .
 
-res:Danaus a myth:Character,
-        myth:Male ;
-    rdfs:label "Δαναός"@el,
-        "Danaus"@en,
-        "Δαναός , Danaos"@grc,
-        "Danao"@it,
-        "Danaus"@la ;
-    myth:hasChild res:Hypermnestra ;
-    myth:hasFather res:Belus ;
-    myth:hasSibling res:Aegyptus ;
-    myth:holdsTitle res:KingOfArgos,
-        res:MythologicalKingOfLibya .
+res:Creusa a myth:Character,
+        myth:Female ;
+    rdfs:label "Κρέουσα της Τροίας"@el,
+        "Creusa"@en,
+        "Creusa"@it,
+        "Creüsa"@la ;
+    myth:hasFather res:Priam ;
+    myth:hasMother res:Hecuba ;
+    myth:hasSpouse res:Aeneas .
 
 res:Deidamia a myth:Character,
         myth:Female ;
@@ -2084,46 +1784,28 @@ res:Deidamia a myth:Character,
 res:Electra_Q540161 rdfs:label "Electra"@en,
         "Elettra"@it .
 
-res:Epaphus a myth:Character,
-        myth:Male ;
-    rdfs:label "Έπαφος"@el,
-        "Epaphus"@en,
-        "Ἔπαφος"@grc,
-        "Epafo"@it,
-        "Epaphus"@la ;
-    myth:hasChild res:Libya ;
-    myth:hasFather res:Zeus ;
-    myth:hasMother res:Io ;
-    myth:holdsTitle res:MythologicalKingOfEgypt .
-
-res:Euros a myth:Character,
-        myth:Deity,
-        myth:Male ;
-    rdfs:label "Εύρος"@el,
-        "Euros"@en,
-        "Euro"@it,
-        "Eurus"@la ;
-    myth:hasChild res:Otrera ;
-    myth:hasFather res:Astraeus ;
-    myth:hasMother res:Eos .
-
-res:Eurynome_Q956831 a myth:Character,
+res:Enarete a myth:Character,
         myth:Female ;
-    rdfs:label "Ευρυνόμη"@el,
-        "Eurynome"@en,
-        "Eurimede"@it ;
-    myth:hasChild res:Bellerophon ;
-    myth:hasFather res:Nisos ;
-    myth:hasSpouse res:Glaucus_Q1232714 .
+    rdfs:label "Εναρέτη"@el,
+        "Enarete"@en,
+        "Ἐνάρετη"@grc,
+        "Enarete"@it ;
+    myth:hasChild res:Athamas,
+        res:Sisyphus ;
+    myth:hasSpouse res:Aiolos .
 
-res:Glauce a myth:Character,
-        myth:Female ;
-    rdfs:label "Γλαύκη"@el,
-        "Glauce"@en,
-        "Glauce"@it,
-        "Glauce"@la ;
-    myth:hasFather res:Creon_Q786573 ;
-    myth:hasSpouse res:Jason .
+res:Europa a myth:Character,
+        myth:Female,
+        myth:Human ;
+    rdfs:label "Ευρώπη"@el,
+        "Europa"@en,
+        "Εὐρώπη"@grc,
+        "Europa"@it,
+        "Europa"@la ;
+    myth:bornIn res:Tyre ;
+    myth:hasChild res:Minos ;
+    myth:hasFather res:Agenor ;
+    myth:hasSibling res:Cadmus .
 
 res:Hebe a myth:Character,
         myth:Deity,
@@ -2138,101 +1820,39 @@ res:Hebe a myth:Character,
     myth:hasMother res:Hera ;
     myth:hasSpouse res:Heracles .
 
-res:Helle a myth:Character,
-        myth:Creature,
-        myth:Deity,
+res:Hippolyta a myth:Character,
         myth:Female ;
-    rdfs:label "Έλλη"@el,
-        "Helle"@en,
-        "Ἕλλη"@grc,
-        "Elle"@it ;
-    myth:hasFather res:Athamas ;
-    myth:hasMother res:Nephele ;
-    myth:hasSibling res:Phrixus ;
-    myth:memberOf res:PhrixusAndHelle .
-
-res:Hermes a myth:Character,
-        myth:Male,
-        myth:Olympian ;
-    rdfs:label "Ερμής"@el,
-        "Hermes"@en,
-        "Ἑρμῆς"@grc,
-        "Ermes"@it,
-        "Hermes"@la ;
-    myth:appearsIn res:Iliad,
-        res:Odyssey,
-        res:PrometheusBound,
-        res:Q59756366 ;
-    myth:hasChild res:Autolycus ;
-    myth:hasFather res:Zeus ;
-    myth:hasMother res:Maia ;
-    myth:memberOf res:TwelveOlympians .
-
-res:Hippolytus a myth:Character,
-        myth:Male ;
-    rdfs:label "Ιππόλυτος"@el,
-        "Hippolytus"@en,
-        "Ἱππόλυτος"@grc,
-        "Ippolito"@it,
-        "Hippolytus (heros)"@la ;
-    myth:hasFather res:Theseus ;
-    myth:hasMother res:Antiope_Q580862,
-        res:Hippolyta .
+    rdfs:label "Ιππολύτη"@el,
+        "Hippolyta"@en,
+        "Ἱππολύτη"@grc,
+        "Ippolita"@it,
+        "Hippolyta"@la ;
+    myth:hasFather res:Ares ;
+    myth:hasSibling res:Antiope_Q580862 ;
+    myth:hasSpouse res:Theseus ;
+    myth:holdsTitle res:QueenOfAmazons .
 
 res:Homer a myth:Author ;
     rdfs:label "Homer"@en,
         "Omero"@it .
 
-res:Hyllus a myth:Character,
-        myth:Male ;
-    rdfs:label "Ύλλος"@el,
-        "Hyllus"@en,
-        "Ὕλλος"@grc,
-        "Illo"@it,
-        "Hyllus"@la ;
-    myth:hasFather res:Heracles ;
-    myth:hasMother res:Deianira ;
-    myth:hasSibling res:Macaria .
+res:KingOfArgos a myth:RoyalTitle ;
+    rdfs:label "king of Argos"@en,
+        "re di Argo"@it .
 
-res:Hypermnestra a myth:Character,
-        myth:Female ;
-    rdfs:label "Υπερμνήστρα"@el,
-        "Hypermnestra"@en,
-        "Ὑπερμνήστρα"@grc,
-        "Ipermestra"@it,
-        "Hypermestra"@la ;
-    myth:hasChild res:Abas ;
-    myth:hasFather res:Danaus ;
-    myth:hasSpouse res:Lynceus_Q7877819 ;
-    myth:memberOf res:DaughtersOfDanaus .
-
-res:Inachus a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Male ;
-    rdfs:label "Ίναχος"@el,
-        "Inachus"@en,
-        "Ἴναχος , Īnachos"@grc,
-        "Inaco"@it,
-        "Inachus"@la ;
-    myth:hasChild res:Io ;
-    myth:hasFather res:Oceanus ;
-    myth:hasMother res:Tethys ;
-    myth:holdsTitle res:KingOfArgos .
-
-res:KingOfCorinth a myth:RoyalTitle ;
-    rdfs:label "king of Corinth"@en,
-        "re di Corinto"@it ;
-    myth:titleOver res:AncientCorinth .
-
-res:KingOfCrete a myth:RoyalTitle ;
-    rdfs:label "king of Crete"@en,
-        "re di Creta"@it .
+res:KingOfAthens a myth:RoyalTitle ;
+    rdfs:label "King of Athens"@en,
+        "re di Atene"@it ;
+    myth:titleOver res:Athens_Q13534153 .
 
 res:KingOfMyrmidons a myth:RoyalTitle ;
     rdfs:label "king of Myrmidons"@en,
         "re dei Mirmidoni"@it ;
     myth:titleOver res:Myrmidons .
+
+res:KingOfTroy a myth:RoyalTitle ;
+    rdfs:label "king of Troy"@en,
+        "re di Troia"@it .
 
 res:Ladon a myth:Character,
         myth:Monster ;
@@ -2246,87 +1866,31 @@ res:Ladon a myth:Character,
     myth:hasMother res:Ceto ;
     myth:killedBy res:Heracles .
 
-res:Laius a myth:Character,
-        myth:Male ;
-    rdfs:label "Λάιος ο Λαμβακίδης"@el,
-        "Laius"@en,
-        "Λάϊος , Lāïos"@grc,
-        "Laio"@it,
-        "Laius"@la ;
-    myth:hasChild res:Oedipus ;
-    myth:hasFather res:Labdacus ;
-    myth:hasSpouse res:Jocasta ;
-    myth:holdsTitle res:KingOfThebe ;
-    myth:killedBy res:Oedipus .
-
-res:Laomedon a myth:Character,
-        myth:Male ;
-    rdfs:label "Λαομέδων"@el,
-        "Laomedon"@en,
-        "Λαομέδων"@grc,
-        "Laomedonte"@it,
-        "Laomedon"@la ;
-    myth:hasChild res:Priam,
-        res:Tithonus ;
-    myth:hasFather res:Ilus ;
-    myth:holdsTitle res:KingOfTroy .
-
-res:Learchus a myth:Character,
-        myth:Male ;
-    rdfs:label "Λέαρχος της Ινούς"@el,
-        "Learchus"@en,
-        "Learco"@it,
-        "Learchus"@la ;
-    myth:hasFather res:Athamas ;
-    myth:hasMother res:Ino ;
-    myth:hasSibling res:Melicertes ;
-    myth:killedBy res:Athamas .
-
-res:Libya a myth:Character,
+res:Leda a myth:Character,
         myth:Female ;
-    rdfs:label "Λιβύη"@el,
-        "Libya"@en,
-        "Λιβύη , Libyē"@grc,
-        "Libia"@it ;
-    myth:hasChild res:Agenor,
-        res:Belus ;
-    myth:hasFather res:Epaphus .
+    rdfs:label "Λήδα"@el,
+        "Leda"@en,
+        "Λήδα , Lēdā"@grc,
+        "Leda"@it,
+        "Leda"@la ;
+    myth:hasChild res:Clytemnestra,
+        res:HelenOfTroy ;
+    myth:hasSpouse res:Tyndareus .
 
-res:Lynceus_Q7877819 a myth:Character,
-        myth:Male ;
-    rdfs:label "Λυγκέας"@el,
-        "Lynceus"@en,
-        "Linceo"@it,
-        "Lynceus"@la ;
-    myth:hasChild res:Abas ;
-    myth:hasFather res:Aegyptus ;
-    myth:hasSpouse res:Hypermnestra ;
-    myth:holdsTitle res:KingOfArgos ;
-    myth:memberOf res:SonsOfAegyptus .
-
-res:Macaria a myth:Character,
-        myth:Female ;
-    rdfs:label "Μακαρία του Ηρακλή"@el,
-        "Macaria"@en,
-        "Macaria"@it,
-        "Macaria"@la ;
-    myth:hasFather res:Heracles ;
-    myth:hasMother res:Deianira ;
-    myth:hasSibling res:Hyllus .
+res:Leto a myth:Character,
+        myth:Female,
+        myth:Titan ;
+    rdfs:label "Λητώ"@el,
+        "Leto"@en,
+        "Λητώ"@grc,
+        "Latona"@it,
+        "Latona"@la ;
+    myth:appearsIn res:Iliad ;
+    myth:hasChild res:Apollo ;
+    myth:hasFather res:Coeus ;
+    myth:hasMother res:Phoebe .
 
 res:MadnessOfOdysseus rdfs:label "Madness of Odysseus"@en .
-
-res:Maia a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Μαία"@el,
-        "Maia"@en,
-        "Μαῖα"@grc,
-        "Maia"@it,
-        "Maia"@la ;
-    myth:hasChild res:Hermes ;
-    myth:hasFather res:Atlas ;
-    myth:hasMother res:Pleione .
 
 res:Medusa a myth:Character,
         myth:Female ;
@@ -2341,91 +1905,12 @@ res:Medusa a myth:Character,
     myth:killedBy res:Perseus ;
     myth:memberOf res:Gorgon .
 
-res:Melicertes a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Male ;
-    rdfs:label "Παλαίμονας"@el,
-        "Melicertes"@en,
-        "Μελικέρτης"@grc,
-        "Melicerte"@it,
-        "Melicertes"@la ;
-    myth:hasFather res:Athamas ;
-    myth:hasMother res:Ino ;
-    myth:hasSibling res:Learchus .
-
 res:Muse a owl:NamedIndividual,
         myth:Group ;
     rdfs:label "Muse"@en,
         "Muse"@it .
 
-res:MythologicalKingOfEgypt a myth:RoyalTitle ;
-    rdfs:label "mythological king of Egypt"@en,
-        "mitico re di Egitto"@it .
-
-res:Nereids a owl:NamedIndividual,
-        myth:Group ;
-    rdfs:label "Nereids"@en,
-        "Nereidi"@it .
-
-res:Nisos a myth:Character,
-        myth:Male ;
-    rdfs:label "Νίσος (Πανδίονος)"@el,
-        "Nisos"@en,
-        "Niso"@it,
-        "Nisus"@la ;
-    myth:hasChild res:Eurynome_Q956831 ;
-    myth:hasFather res:PandionII ;
-    myth:hasSibling res:Aegeus ;
-    myth:holdsTitle res:KingOfAthens,
-        res:KingOfMegara .
-
-res:Oeneus a myth:Character,
-        myth:Male ;
-    rdfs:label "Οινέας"@el,
-        "Oeneus"@en,
-        "Οἰνεύς , Oineus"@grc,
-        "Oineo"@it,
-        "Oeneus"@la ;
-    myth:hasChild res:Deianira ;
-    myth:hasFather res:Porthaon ;
-    myth:hasSpouse res:Althaea ;
-    myth:holdsTitle res:KingOfCalydon .
-
-res:Oenopion a myth:Character,
-        myth:Male ;
-    rdfs:label "Οινοπίων"@el,
-        "Oenopion"@en,
-        "Enopione"@it,
-        "Oenopion"@la ;
-    myth:hasFather res:Dionysus,
-        res:Rhadamanthus,
-        res:Theseus ;
-    myth:hasMother res:Ariadne ;
-    myth:holdsTitle res:KingInGreekMythology .
-
 res:Olympus rdfs:label "Olympus"@en .
-
-res:Otrera a myth:Character,
-        myth:Female ;
-    rdfs:label "Οτρήρη"@el,
-        "Otrera"@en,
-        "Ὀτρηρή"@grc,
-        "Otrera"@it ;
-    myth:hasChild res:Antiope_Q580862,
-        res:Hippolyta ;
-    myth:hasFather res:Euros ;
-    myth:holdsTitle res:QueenOfAmazons .
-
-res:PandionII a myth:Character,
-        myth:Male ;
-    rdfs:label "Πανδίων Β΄"@el,
-        "Pandion II"@en,
-        "Pandione II"@it ;
-    myth:hasChild res:Aegeus,
-        res:Nisos ;
-    myth:hasFather res:CecropsII ;
-    myth:holdsTitle res:KingOfAthens .
 
 res:Peleus a myth:Character,
         myth:Male ;
@@ -2441,30 +1926,17 @@ res:Peleus a myth:Character,
     myth:holdsTitle res:KingOfMyrmidons,
         res:KingOfPhtiotis .
 
-res:Penelope a myth:Character,
-        myth:Female ;
-    rdfs:label "Πηνελόπη"@el,
-        "Penelope"@en,
-        "Πηνελόπη , Pēnelopē"@grc,
-        "Penelope"@it,
-        "Penelope"@la ;
-    myth:appearsIn res:Heroides,
-        res:MadnessOfOdysseus,
-        res:Odyssey ;
-    myth:hasChild res:Telemachus ;
-    myth:hasSpouse res:Odysseus .
-
-res:Phrixus a myth:Character,
+res:Pelops a myth:Character,
         myth:Male ;
-    rdfs:label "Φρίξος"@el,
-        "Phrixus"@en,
-        "Φρίξος"@grc,
-        "Frisso"@it,
-        "Phrixus"@la ;
-    myth:hasFather res:Athamas ;
-    myth:hasMother res:Nephele ;
-    myth:hasSibling res:Helle ;
-    myth:memberOf res:PhrixusAndHelle .
+    rdfs:label "Πέλοπας"@el,
+        "Pelops"@en,
+        "Πέλοψ , Pelops"@grc,
+        "Pelope"@it,
+        "Pelops"@la ;
+    myth:hasChild res:Atreus,
+        res:Sciron ;
+    myth:hasFather res:Tantalus ;
+    myth:holdsTitle res:KingOfAchaea .
 
 res:Piren a myth:Character,
         myth:Male ;
@@ -2474,47 +1946,14 @@ res:Piren a myth:Character,
     myth:hasSibling res:Bellerophon ;
     myth:killedBy res:Bellerophon .
 
-res:Pittheus a myth:Character,
-        myth:Male ;
-    rdfs:label "Πιτθέας"@el,
-        "Pittheus"@en,
-        "Πιτθεύς"@grc,
-        "Pitteo"@it,
-        "Pittheus"@la ;
-    myth:hasChild res:Aethra ;
-    myth:hasFather res:Pelops ;
-    myth:hasMother res:Hippodamia ;
-    myth:holdsTitle res:KingOfArgolis .
-
-res:QueenOfAmazons a myth:RoyalTitle ;
-    rdfs:label "queen of Amazons"@en,
-        "regina delle Amazzoni"@it ;
-    myth:titleOver res:Amazons .
-
-res:Salmoneus a myth:Character,
-        myth:Male ;
-    rdfs:label "Σαλμωνέας"@el,
-        "Salmoneus"@en,
-        "Σαλμωνεύς"@grc,
-        "Salmoneo"@it,
-        "Salmoneus"@la ;
-    myth:hasChild res:Tyro ;
-    myth:hasFather res:Aiolos ;
-    myth:hasMother res:Enarete ;
-    myth:holdsTitle res:KingOfElis .
-
-res:Sterope a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Στερόπη"@el,
-        "Sterope"@en,
-        "Στερόπη"@grc,
-        "Sterope"@it,
-        "Sterope"@la ;
-    myth:hasChild res:Oenomaus ;
-    myth:hasFather res:Atlas ;
-    myth:hasMother res:Pleione ;
-    myth:memberOf res:Asterope_Q29655160 .
+res:Polymede a myth:Character,
+        myth:Female ;
+    rdfs:label "Πολυμήδη"@el,
+        "Polymede"@en,
+        "Polimede"@it ;
+    myth:hasChild res:Jason ;
+    myth:hasSibling res:Anticlea ;
+    myth:hasSpouse res:Aeson .
 
 res:Suicide rdfs:label "suicide"@en,
         "suicidio"@it .
@@ -2528,18 +1967,6 @@ res:Thebes_Q11225429 rdfs:label "Thebes"@en,
         38.32388889 ;
     geo1:long 23.31722222,
         23.317355 .
-
-res:Thestius a myth:Character,
-        myth:Male ;
-    rdfs:label "Θέστιος"@el,
-        "Thestius"@en,
-        "Θέστιος"@grc,
-        "Testio"@it,
-        "Thestius"@la ;
-    myth:hasChild res:Althaea,
-        res:Leda ;
-    myth:hasFather res:Ares ;
-    myth:hasMother res:Aphrodite .
 
 res:Tisander a myth:Character,
         myth:Male ;
@@ -2567,13 +1994,22 @@ res:Troilus a myth:Character,
 
 <urn:swrl:var#u> a swrl:Variable .
 
-myth:Human a owl:Class ;
-    rdfs:label "Human"@en,
-        "ἄνθρωπος"@grc,
-        "Essere umano"@it ;
-    rdfs:subClassOf myth:Mortal ;
-    skos:definition "A human character."@en,
-        "Personaggio umano."@it .
+myth:Nymph a owl:Class ;
+    rdfs:label "Nymph"@en,
+        "νύμφη"@grc,
+        "Ninfa"@it ;
+    rdfs:subClassOf myth:Female,
+        myth:MinorDeity ;
+    skos:definition "Minor female nature deity (waters, woods, mountains)."@en,
+        "Divinità femminile minore della natura (acque, boschi, monti)."@it .
+
+myth:Oceanid a owl:Class ;
+    rdfs:label "Oceanid"@en,
+        "Ὠκεανίς"@grc,
+        "Oceanina"@it ;
+    rdfs:subClassOf myth:Nymph ;
+    skos:definition "A nymph, daughter of Oceanus and Tethys."@en,
+        "Ninfa figlia di Oceano e Teti."@it .
 
 myth:Title a owl:Class ;
     rdfs:label "Title"@en,
@@ -2623,78 +2059,67 @@ myth:memberOf a owl:ObjectProperty ;
     rdfs:domain myth:Character ;
     rdfs:range myth:Group .
 
-res:Achelous a myth:Character,
-        myth:Creature,
-        myth:Deity,
+res:Aeson a myth:Character,
         myth:Male ;
-    rdfs:label "Αχελώος"@el,
-        "Achelous"@en,
-        "Ἀχέλῷος , Achelōos"@grc,
-        "Acheloo"@it,
-        "Achelous (mythologia)"@la ;
-    myth:hasSpouse res:Calliope .
+    rdfs:label "Αίσονας"@el,
+        "Aeson"@en,
+        "Αἴσων"@grc,
+        "Esone"@it,
+        "Aeson"@la ;
+    myth:hasChild res:Jason ;
+    myth:hasSpouse res:Alcimede,
+        res:Amphinome_Q21548505,
+        res:Polymede ;
+    myth:holdsTitle res:KingOfPhtiotis .
 
-res:Aegeus a myth:Character,
+res:Antigone_Q131351 a myth:Character,
+        myth:Female ;
+    rdfs:label "Αντιγόνη"@el,
+        "Antigone"@en,
+        "Ἀντιγόνη"@grc,
+        "Antigone"@it,
+        "Antigone"@la ;
+    myth:hasFather res:Oedipus ;
+    myth:hasMother res:Jocasta ;
+    myth:hasSibling res:Ismene .
+
+res:Atreus a myth:Character,
         myth:Male ;
-    rdfs:label "Αιγέας"@el,
-        "Aegeus"@en,
-        "Αἰγεύς , Aigeus"@grc,
-        "Egeo"@it,
-        "Aegeus"@la ;
-    myth:hasChild res:Theseus ;
-    myth:hasFather res:PandionII ;
-    myth:hasSibling res:Nisos ;
-    myth:hasSpouse res:Medea ;
-    myth:holdsTitle res:KingOfAthens ;
-    myth:mannerOfDeath res:Suicide .
+    rdfs:label "Ατρέας"@el,
+        "Atreus"@en,
+        "Ἀτρεύς"@grc,
+        "Atreo"@it,
+        "Atreus"@la ;
+    myth:hasChild res:Agamemnon,
+        res:Menelaus ;
+    myth:hasFather res:Pelops ;
+    myth:hasSpouse res:Aerope ;
+    myth:holdsTitle res:KingOfMycenae .
 
-res:Alkmene a myth:Character,
+res:Calliope a myth:Character,
         myth:Female ;
-    rdfs:label "Αλκμήνη"@el,
-        "Alkmene"@en,
-        "Ἀλκμήνη"@grc,
-        "Alcmena"@it,
-        "Alcmene"@la ;
-    myth:hasChild res:Heracles ;
-    myth:hasFather res:Electryon ;
-    myth:hasSpouse res:Amphitryon,
-        res:Rhadamanthus .
+    rdfs:label "Καλλιόπη"@el,
+        "Calliope"@en,
+        "Καλλιόπη , Kalliopē"@grc,
+        "Calliope"@it,
+        "Calliope"@la ;
+    myth:hasChild res:LinusOfThrace ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Mnemosyne ;
+    myth:hasSibling res:Clio ;
+    myth:memberOf res:Muse .
 
-res:Althaea a myth:Character,
+res:Cassiphone a myth:Character,
         myth:Female ;
-    rdfs:label "Αλθαία"@el,
-        "Althaea"@en,
-        "Ἀλθαία , Althaiā"@grc,
-        "Altea"@it,
-        "Althaea"@la ;
-    myth:hasChild res:Deianira ;
-    myth:hasFather res:Thestius ;
-    myth:hasSibling res:Leda ;
-    myth:hasSpouse res:Oeneus .
-
-res:Anticlea a myth:Character,
-        myth:Female ;
-    rdfs:label "Αντίκλεια"@el,
-        "Anticlea"@en,
-        "Anticlea"@it,
-        "Anticlea"@la ;
-    myth:hasChild res:Odysseus ;
-    myth:hasFather res:Autolycus ;
-    myth:hasSibling res:Polymede ;
-    myth:hasSpouse res:Laertes .
-
-res:Asia a myth:Character,
-        myth:Female,
-        myth:Oceanid ;
-    rdfs:label "Ασία"@el,
-        "Asia"@en,
-        "Ἀσία"@grc,
-        "Asia"@it,
-        "Asia (Nereis)"@la ;
-    myth:hasChild res:Atlas,
-        res:Prometheus ;
-    myth:hasFather res:Oceanus ;
-    myth:hasMother res:Tethys .
+    rdfs:label "Cassiphone",
+        "Κασσιφόνη"@el,
+        "Cassiphone"@en,
+        "Κασσιφόνη"@grc,
+        "Cassifone"@it,
+        "Cassiphone"@la ;
+    myth:appearsIn res:Alexandra ;
+    myth:hasFather res:Odysseus ;
+    myth:hasMother res:Circe .
 
 res:Clio a myth:Character,
         myth:Female ;
@@ -2708,43 +2133,34 @@ res:Clio a myth:Character,
     myth:hasSibling res:Calliope ;
     myth:memberOf res:Muse .
 
-res:Cretheus a myth:Character,
-        myth:Male ;
-    rdfs:label "Κρηθέας"@el,
-        "Cretheus"@en,
-        "Κρηθεύς"@grc,
-        "Creteo"@it,
-        "Cretheus"@la ;
-    myth:hasChild res:Aeson ;
-    myth:hasFather res:Aiolos ;
-    myth:hasMother res:Enarete ;
-    myth:hasSpouse res:Tyro ;
-    myth:holdsTitle res:KingOfIolcus .
+res:Coeus a myth:Character,
+        myth:Male,
+        myth:Titan ;
+    rdfs:label "Κόιος"@el,
+        "Coeus"@en,
+        "Κοῖος , Koios"@grc,
+        "Ceo"@it ;
+    myth:hasChild res:Leto ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSpouse res:Phoebe ;
+    myth:memberOf res:Uranids .
 
-res:Creusa a myth:Character,
-        myth:Female ;
-    rdfs:label "Κρέουσα της Τροίας"@el,
-        "Creusa"@en,
-        "Creusa"@it,
-        "Creüsa"@la ;
-    myth:hasChild res:Ascanius ;
-    myth:hasFather res:Priam ;
-    myth:hasMother res:Hecuba ;
-    myth:hasSpouse res:Aeneas .
-
-res:Deucalion a myth:Character,
-        myth:Male ;
-    rdfs:label "Δευκαλίων"@el,
-        "Deucalion"@en,
-        "Δευκαλίων"@grc,
-        "Deucalione"@it,
-        "Deucalion"@la ;
-    myth:hasChild res:Hellen ;
-    myth:hasFather res:Prometheus ;
-    myth:hasMother res:Klymene ;
-    myth:hasSibling res:Phaedra ;
-    myth:hasSpouse res:Pyrrha ;
-    myth:memberOf res:DeucalionAndPyrrha .
+res:Doris a myth:Character,
+        myth:Creature,
+        myth:Deity,
+        myth:Female,
+        myth:Oceanid ;
+    rdfs:label "Δωρίς"@el,
+        "Doris"@en,
+        "Δωρίς"@grc,
+        "Doride"@it,
+        "Doris"@la ;
+    myth:hasChild res:Glauce,
+        res:Thetis ;
+    myth:hasFather res:Oceanus ;
+    myth:hasMother res:Tethys ;
+    myth:hasSpouse res:Nereus .
 
 res:Eidyia a myth:Character,
         myth:Creature,
@@ -2779,20 +2195,6 @@ res:Electra a myth:Character,
         res:Orestes ;
     myth:memberOf res:OrestesAndElectra .
 
-res:Eurynome a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Female,
-        myth:Oceanid ;
-    rdfs:label "Ευρυνόμη (Ωκεανίδα)"@el,
-        "Eurynome"@en,
-        "Εὐρυνόμη"@grc,
-        "Eurinome"@it ;
-    myth:hasChild res:Asopus ;
-    myth:hasFather res:Oceanus ;
-    myth:hasMother res:Tethys ;
-    myth:hasSpouse res:Ophion .
-
 res:Hector a myth:Character,
         myth:Male ;
     rdfs:label "Έκτορας"@el,
@@ -2808,19 +2210,48 @@ res:Hector a myth:Character,
         res:Paris ;
     myth:killedBy res:Achilles .
 
-res:Leto a myth:Character,
-        myth:Female,
-        myth:Titan ;
-    rdfs:label "Λητώ"@el,
-        "Leto"@en,
-        "Λητώ"@grc,
-        "Latona"@it,
-        "Latona"@la ;
-    myth:appearsIn res:Iliad ;
-    myth:hasChild res:Apollo ;
-    myth:hasFather res:Coeus ;
-    myth:hasMother res:Phoebe ;
-    myth:hasSibling res:Asteria .
+res:Hephaestus a myth:Character,
+        myth:Deity,
+        myth:Male ;
+    rdfs:label "Ήφαιστος"@el,
+        "Hephaestus"@en,
+        "ΗΦΑΙΣΤΟΣ , Ἥφαιστος, Hēphaistos"@grc,
+        "Efesto"@it,
+        "Hephaestus"@la ;
+    myth:appearsIn res:Iliad,
+        res:PrometheusBound ;
+    myth:hasChild res:Periphetes ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Hera ;
+    myth:hasSibling res:Ares ;
+    myth:hasSpouse res:Aphrodite ;
+    myth:memberOf res:TwelveOlympians .
+
+res:Hermione a myth:Character,
+        myth:Female ;
+    rdfs:label "Ερμιόνη"@el,
+        "Hermione"@en,
+        "Ἑρμιόνη"@grc,
+        "Ermione"@it,
+        "Hermione (mythologia)"@la ;
+    myth:hasFather res:Menelaus ;
+    myth:hasMother res:HelenOfTroy ;
+    myth:hasSpouse res:Neoptolemus,
+        res:Orestes ;
+    myth:residesIn res:Sparta .
+
+res:Ismene a myth:Character,
+        myth:Female ;
+    rdfs:label "Ισμήνη"@el,
+        "Ismene"@en,
+        "Ἰσμήνη"@grc,
+        "Ismene"@it,
+        "Ismene"@la ;
+    myth:appearsIn res:Antigone,
+        res:SevenAgainstThebes ;
+    myth:hasFather res:Oedipus ;
+    myth:hasMother res:Jocasta ;
+    myth:hasSibling res:Antigone_Q131351 .
 
 res:Megara_Q929768 a myth:Character,
         myth:Female ;
@@ -2834,20 +2265,12 @@ res:Megara_Q929768 a myth:Character,
     myth:hasFather res:Creon ;
     myth:hasSpouse res:Heracles .
 
-res:Merope a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Μερόπη"@el,
-        "Merope"@en,
-        "Merope"@it,
-        "Merope"@la ;
-    myth:hasChild res:Glaucus_Q1232714 ;
-    myth:hasFather res:Atlas ;
-    myth:hasMother res:Pleione ;
-    myth:hasSpouse res:Sisyphus .
-
 res:Metamorphoses rdfs:label "Metamorphoses"@en,
         "Le metamorfosi"@it .
+
+res:MythologicalKingOfSparta a myth:RoyalTitle ;
+    rdfs:label "mythological king of Sparta"@en,
+        "mitico re di Sparta"@it .
 
 res:NemeanLion a myth:Character,
         myth:Creature ;
@@ -2889,67 +2312,33 @@ res:Neoptolemus a myth:Character,
     myth:hasSpouse res:Hermione ;
     myth:killedBy res:Orestes .
 
-res:Nephele a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Νεφέλη"@el,
-        "Nephele"@en,
-        "Νεφέλη"@grc,
-        "Nefele"@it ;
-    myth:hasChild res:Helle,
-        res:Phrixus ;
-    myth:hasFather res:Oceanus ;
-    myth:hasSpouse res:Athamas .
-
-res:Oenomaus a myth:Character,
-        myth:Male ;
-    rdfs:label "Οινόμαος"@el,
-        "Oenomaus"@en,
-        "Οἰνόμαος , Oinomaos"@grc,
-        "Enomao"@it,
-        "Oenomaus"@la ;
-    myth:hasChild res:Hippodamia ;
-    myth:hasFather res:Ares ;
-    myth:hasMother res:Sterope ;
-    myth:holdsTitle res:KingInGreekMythology .
-
-res:Perse a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Female,
-        myth:Oceanid ;
-    rdfs:label "Πέρση"@el,
-        "Perse"@en,
-        "Πέρσηΐς"@grc,
-        "Perseide"@it,
-        "Perse"@la ;
-    myth:hasChild res:Aeetes,
-        res:Circe,
-        res:Pasiphae,
-        res:Perses_Q2071913 ;
-    myth:hasFather res:Oceanus .
-
-res:Polymede a myth:Character,
+res:Phaedra a myth:Character,
         myth:Female ;
-    rdfs:label "Πολυμήδη"@el,
-        "Polymede"@en,
-        "Polimede"@it ;
-    myth:hasChild res:Jason ;
-    myth:hasFather res:Autolycus ;
-    myth:hasSibling res:Anticlea ;
-    myth:hasSpouse res:Aeson .
+    rdfs:label "Φαίδρα"@el,
+        "Phaedra"@en,
+        "Φαίδρα"@grc,
+        "Fedra"@it,
+        "Phaedra"@la ;
+    myth:hasFather res:Minos ;
+    myth:hasMother res:Pasiphae ;
+    myth:hasSibling res:Ariadne ;
+    myth:hasSpouse res:Theseus ;
+    myth:holdsTitle res:KingOfAthens ;
+    myth:mannerOfDeath res:Suicide .
 
-res:Pyrrha a myth:Character,
-        myth:Female ;
-    rdfs:label "Πύρρα"@el,
-        "Pyrrha"@en,
-        "Pirra"@it,
-        "Pyrrha"@la ;
-    myth:hasChild res:Hellen ;
-    myth:hasFather res:Epimetheus ;
-    myth:hasMother res:Pandora ;
-    myth:hasSpouse res:Deucalion ;
-    myth:memberOf res:DeucalionAndPyrrha .
+res:Phoebe a myth:Character,
+        myth:Female,
+        myth:Titan ;
+    rdfs:label "Φοίβη"@el,
+        "Phoebe"@en,
+        "Φοίβη"@grc,
+        "Febe"@it,
+        "Phoebe"@la ;
+    myth:hasChild res:Leto ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSpouse res:Coeus ;
+    myth:memberOf res:Uranids .
 
 res:Selene a myth:Character,
         myth:Deity,
@@ -2965,6 +2354,33 @@ res:Selene a myth:Character,
     myth:hasSibling res:Eos,
         res:Helios .
 
+res:Semele a myth:Character,
+        myth:Female ;
+    rdfs:label "Σεμέλη"@el,
+        "Semele"@en,
+        "Σεμέλη"@grc,
+        "Semele"@it,
+        "Semele"@la ;
+    myth:hasChild res:Dionysus ;
+    myth:hasFather res:Cadmus ;
+    myth:hasMother res:Harmonia ;
+    myth:hasSibling res:Ino .
+
+res:Sisyphus a myth:Character,
+        myth:Male ;
+    rdfs:label "Σίσυφος"@el,
+        "Sisyphus"@en,
+        "Σίσυφος"@grc,
+        "Sisifo"@it,
+        "Sisyphus"@la ;
+    myth:appearsIn res:HowTheCossacksBecameOlympians,
+        res:Q59756366,
+        res:TheMythOfSisyphus ;
+    myth:hasChild res:Glaucus_Q1232714 ;
+    myth:hasFather res:Aiolos ;
+    myth:hasMother res:Enarete ;
+    myth:holdsTitle res:KingOfCorinth .
+
 res:Tartarus a myth:Character,
         myth:Male,
         myth:Primordial ;
@@ -2977,17 +2393,21 @@ res:Tartarus a myth:Character,
     myth:hasSibling res:Nyx ;
     myth:hasSpouse res:Gaia .
 
-res:Telephassa a myth:Character,
-        myth:Female ;
-    rdfs:label "Τηλέφασσα"@el,
-        "Telephassa"@en,
-        "Τηλέφασσα"@grc,
-        "Telefassa"@it ;
-    myth:hasChild res:Cadmus,
-        res:Europa,
-        res:Phoenix_Q1145956 ;
-    myth:hasSpouse res:Agenor ;
-    myth:holdsTitle res:KingInGreekMythology .
+res:Telemachus a myth:Character,
+        myth:Male ;
+    rdfs:label "Τηλέμαχος"@el,
+        "Telemachus"@en,
+        "Τηλέμαχος , Tēlemachos"@grc,
+        "Telemaco"@it,
+        "Telemachus"@la ;
+    myth:appearsIn res:MadnessOfOdysseus,
+        res:Odyssey ;
+    myth:hasFather res:Odysseus ;
+    myth:hasMother res:Penelope ;
+    myth:hasSpouse res:Cassiphone,
+        res:Circe ;
+    myth:killedBy res:Cassiphone ;
+    myth:mannerOfDeath res:Homicide .
 
 res:Thetis a myth:Character,
         myth:Female ;
@@ -3018,94 +2438,44 @@ myth:Giant a owl:Class ;
     skos:definition "A son of Gaia who fought the gods."@en,
         "Figlio di Gea che combatté contro gli dei."@it .
 
+myth:Monster a owl:Class ;
+    rdfs:label "Monster"@en,
+        "τέρας"@grc,
+        "Mostro"@it ;
+    rdfs:subClassOf myth:Creature ;
+    skos:definition "A monstrous creature (dragons, gorgons, serpents...)."@en,
+        "Creatura mostruosa (draghi, gorgoni, serpenti...)."@it .
+
 myth:killedRelative a owl:ObjectProperty ;
     rdfs:label "killed a relative"@en,
         "uccise un consanguineo"@it ;
     rdfs:subPropertyOf myth:killed .
 
-res:Aerope a myth:Character,
+res:Ariadne a myth:Character,
         myth:Female ;
-    rdfs:label "Αερόπη"@el,
-        "Aerope"@en,
-        "Ἀερόπη"@grc,
-        "Erope"@it,
-        "Aerope"@la ;
-    myth:hasChild res:Agamemnon,
-        res:Menelaus ;
-    myth:hasFather res:Catreus ;
-    myth:hasSpouse res:Atreus .
-
-res:Antiope_Q580862 a myth:Character,
-        myth:Female ;
-    rdfs:label "Αντιόπη (Αμαζόνα)"@el,
-        "Antiope"@en,
-        "Ἀντιόπη"@grc,
-        "Antiope"@it,
-        "Antiope (Amazon)"@la ;
-    myth:appearsIn res:Q20502242,
-        res:TheDinnerParty,
-        res:TheSwordIsForged ;
-    myth:hasChild res:Hippolytus ;
-    myth:hasFather res:Ares ;
-    myth:hasMother res:Otrera ;
-    myth:hasSibling res:Hippolyta ;
-    myth:hasSpouse res:Theseus ;
-    myth:holdsTitle res:QueenOfAmazons .
-
-res:Asteria a myth:Character,
-        myth:Female,
-        myth:Titan ;
-    rdfs:label "Αστερία"@el,
-        "Asteria"@en,
-        "Ἀστερία"@grc,
-        "Asteria"@it,
-        "Asteria"@la ;
-    myth:hasChild res:Hecate ;
-    myth:hasFather res:Coeus ;
-    myth:hasMother res:Phoebe ;
-    myth:hasSibling res:Leto ;
-    myth:hasSpouse res:Perses .
-
-res:Astraeus a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Αστραίος"@el,
-        "Astraeus"@en,
-        "Ἀστραῖος , Astraios"@grc,
-        "Astreo"@it ;
-    myth:hasChild res:Euros ;
-    myth:hasFather res:Kreios ;
-    myth:hasMother res:Eurybia ;
-    myth:hasSibling res:Perses ;
-    myth:hasSpouse res:Eos .
-
-res:Catreus a myth:Character,
-        myth:Male ;
-    rdfs:label "Κατρέας"@el,
-        "Catreus"@en,
-        "Κατρεύς"@grc,
-        "Catreo"@it,
-        "Catreus"@la ;
-    myth:hasChild res:Aerope ;
+    rdfs:label "Αριάδνη"@el,
+        "Ariadne"@en,
+        "Ἀριάδνη"@grc,
+        "Arianna"@it,
+        "Ariadne"@la ;
     myth:hasFather res:Minos ;
     myth:hasMother res:Pasiphae ;
-    myth:hasSibling res:Ariadne,
-        res:Phaedra ;
-    myth:holdsTitle res:KingOfCrete .
+    myth:hasSibling res:Phaedra ;
+    myth:hasSpouse res:Dionysus .
 
-res:CepheusKingOfAethiopia a myth:Character,
+res:Cadmus a myth:Character,
         myth:Male ;
-    rdfs:label "Κηφέας"@el,
-        "Cepheus, King of Aethiopia"@en,
-        "Κηφεύς"@grc,
-        "Cefeo"@it,
-        "Cepheus"@la ;
-    myth:hasChild res:Andromeda ;
-    myth:hasFather res:Agenor,
-        res:Belus,
-        res:Phoenix_Q1145956 ;
-    myth:hasSpouse res:Cassiopeia ;
-    myth:holdsTitle res:KingInGreekMythology .
+    rdfs:label "Κάδμος"@el,
+        "Cadmus"@en,
+        "Κάδμος , Kadmos"@grc,
+        "Cadmo"@it,
+        "Cadmus"@la ;
+    myth:hasChild res:Ino,
+        res:Semele ;
+    myth:hasFather res:Agenor ;
+    myth:hasSibling res:Europa ;
+    myth:hasSpouse res:Harmonia ;
+    myth:holdsTitle res:KingOfThebe .
 
 res:Ceto a myth:Character,
         myth:Creature,
@@ -3121,20 +2491,6 @@ res:Ceto a myth:Character,
     myth:hasFather res:Pontus ;
     myth:hasMother res:Gaia ;
     myth:hasSpouse res:Phorcys .
-
-res:Coeus a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Κόιος"@el,
-        "Coeus"@en,
-        "Κοῖος , Koios"@grc,
-        "Ceo"@it ;
-    myth:hasChild res:Asteria,
-        res:Leto ;
-    myth:hasFather res:Uranus ;
-    myth:hasMother res:Gaia ;
-    myth:hasSpouse res:Phoebe ;
-    myth:memberOf res:Uranids .
 
 res:Deiphobus a myth:Character,
         myth:Male ;
@@ -3155,94 +2511,74 @@ res:Deiphobus a myth:Character,
         res:Odysseus ;
     myth:mannerOfDeath res:Homicide .
 
-res:Doris a myth:Character,
+res:Dionysus a myth:Character,
+        myth:Deity,
+        myth:Male ;
+    rdfs:label "Διόνυσος"@el,
+        "Dionysus"@en,
+        "Διόνυσος"@grc,
+        "Dioniso"@it ;
+    myth:appearsIn res:Dionysiaca,
+        res:Q59756366,
+        res:TheBacchae ;
+    myth:hasChild res:Deianira ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Demeter,
+        res:Semele ;
+    myth:hasSpouse res:Ariadne ;
+    myth:memberOf res:TwelveOlympians .
+
+res:Glaucus_Q1232714 a myth:Character,
+        myth:Male ;
+    rdfs:label "Γλαύκος του Σισύφου"@el,
+        "Glaucus"@en,
+        "Glauco"@it,
+        "Glaucus"@la ;
+    myth:hasChild res:Alcimenes_Q21548251,
+        res:Bellerophon,
+        res:Piren ;
+    myth:hasFather res:Sisyphus ;
+    myth:hasSpouse res:Eurynome_Q956831 ;
+    myth:holdsTitle res:KingOfCorinth .
+
+res:Ino a myth:Character,
         myth:Creature,
         myth:Deity,
-        myth:Female,
-        myth:Oceanid ;
-    rdfs:label "Δωρίς"@el,
-        "Doris"@en,
-        "Δωρίς"@grc,
-        "Doride"@it,
-        "Doris"@la ;
-    myth:hasChild res:Calypso,
-        res:Glauce,
-        res:Thetis ;
-    myth:hasFather res:Oceanus ;
-    myth:hasMother res:Tethys ;
-    myth:hasSpouse res:Nereus .
-
-res:Eurybia a myth:Character,
-        myth:Creature,
-        myth:Deity,
         myth:Female ;
-    rdfs:label "Ευρυβία"@el,
-        "Eurybia"@en,
-        "Εὐρυβία"@grc,
-        "Euribia"@it ;
-    myth:hasChild res:Astraeus,
-        res:Perses ;
-    myth:hasFather res:Pontus ;
-    myth:hasMother res:Gaia ;
-    myth:hasSpouse res:Kreios .
+    rdfs:label "Ινώ"@el,
+        "Ino"@en,
+        "Ἰνώ"@grc,
+        "Ino"@it,
+        "Ino"@la ;
+    myth:hasChild res:Learchus ;
+    myth:hasFather res:Cadmus ;
+    myth:hasMother res:Harmonia ;
+    myth:hasSibling res:Semele ;
+    myth:hasSpouse res:Athamas .
 
-res:Hermione a myth:Character,
-        myth:Female ;
-    rdfs:label "Ερμιόνη"@el,
-        "Hermione"@en,
-        "Ἑρμιόνη"@grc,
-        "Ermione"@it,
-        "Hermione (mythologia)"@la ;
-    myth:hasChild res:Tisamenus ;
-    myth:hasFather res:Menelaus ;
-    myth:hasMother res:HelenOfTroy ;
-    myth:hasSpouse res:Neoptolemus,
-        res:Orestes ;
-    myth:residesIn res:Sparta .
+res:KingOfMycenae a myth:RoyalTitle ;
+    rdfs:label "king of Mycenae"@en,
+        "re di Micene"@it ;
+    myth:titleOver res:Mycenae .
 
-res:Hippodamia a myth:Character,
-        myth:Female ;
-    rdfs:label "Ιπποδάμεια του Οινομάου"@el,
-        "Hippodamia"@en,
-        "Ἱπποδάμεια"@grc,
-        "Ippodamia"@it,
-        "Hippodamia"@la ;
-    myth:hasChild res:Atreus,
-        res:Pittheus,
-        res:Pleisthenes ;
-    myth:hasFather res:Oenomaus ;
-    myth:hasSpouse res:Pelops .
+res:KingOfThebe a myth:RoyalTitle ;
+    rdfs:label "king of Thebe (Troade)"@en,
+        "re di Tebe"@it .
 
-res:Hippolyta a myth:Character,
-        myth:Female ;
-    rdfs:label "Ιππολύτη"@el,
-        "Hippolyta"@en,
-        "Ἱππολύτη"@grc,
-        "Ippolita"@it,
-        "Hippolyta"@la ;
-    myth:hasChild res:Hippolytus ;
-    myth:hasFather res:Ares ;
-    myth:hasMother res:Otrera ;
-    myth:hasSibling res:Antiope_Q580862 ;
-    myth:hasSpouse res:Theseus ;
-    myth:holdsTitle res:QueenOfAmazons .
-
-res:KingOfTroy a myth:RoyalTitle ;
-    rdfs:label "king of Troy"@en,
-        "re di Troia"@it .
-
-res:Leda a myth:Character,
-        myth:Female ;
-    rdfs:label "Λήδα"@el,
-        "Leda"@en,
-        "Λήδα , Lēdā"@grc,
-        "Leda"@it,
-        "Leda"@la ;
-    myth:hasChild res:Clytemnestra,
-        res:HelenOfTroy ;
-    myth:hasFather res:Thestius ;
-    myth:hasSibling res:Althaea ;
-    myth:hasSpouse res:Tyndareus .
+res:Minos a myth:Character,
+        myth:Male ;
+    rdfs:label "Μίνωας"@el,
+        "Minos"@en,
+        "Μίνως"@grc,
+        "Minosse"@it,
+        "Minos"@la ;
+    myth:appearsIn res:TheDivineComedy ;
+    myth:hasChild res:Ariadne,
+        res:Phaedra ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Europa ;
+    myth:hasSpouse res:Pasiphae ;
+    myth:holdsTitle res:KingOfCrete .
 
 res:Mnemosyne a myth:Character,
         myth:Female,
@@ -3259,61 +2595,52 @@ res:Mnemosyne a myth:Character,
     myth:hasMother res:Gaia ;
     myth:memberOf res:Uranids .
 
-res:Oebalus a myth:Character,
+res:Nereus a myth:Character,
+        myth:Creature,
+        myth:Deity,
         myth:Male ;
-    rdfs:label "Οίβαλος"@el,
-        "Oebalus"@en,
-        "Οἴβαλος"@grc,
-        "Ebalo"@it,
-        "Oebalus"@la ;
-    myth:hasChild res:Hippocoon,
-        res:Tyndareus ;
-    myth:hasFather res:Cynortas,
-        res:Perieres ;
-    myth:hasSpouse res:Gorgophone ;
-    myth:holdsTitle res:MythologicalKingOfSparta .
+    rdfs:label "Νηρέας"@el,
+        "Nereus"@en,
+        "Νηρεύς , Nēreus"@grc,
+        "Nereo"@it,
+        "Nereus"@la ;
+    myth:hasChild res:Thetis ;
+    myth:hasFather res:Pontus ;
+    myth:hasMother res:Gaia,
+        res:Tethys ;
+    myth:hasSpouse res:Doris .
 
-res:Perses a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Perses"@en,
-        "Πέρσης , Persēs"@grc,
+res:Perses_Q2071913 a myth:Character,
+        myth:Male ;
+    rdfs:label "Πέρσης της Κολχίδας"@el,
+        "Perses"@en,
         "Perse"@it ;
     myth:hasChild res:Hecate ;
-    myth:hasFather res:Kreios ;
-    myth:hasMother res:Eurybia ;
-    myth:hasSibling res:Astraeus,
+    myth:hasFather res:Helios ;
+    myth:hasSibling res:Aeetes,
         res:Circe,
         res:Pasiphae ;
-    myth:hasSpouse res:Asteria .
+    myth:holdsTitle res:KingOfColchis,
+        res:KingOfTauris ;
+    myth:killedBy res:Medea .
 
-res:Phoebe a myth:Character,
-        myth:Female,
-        myth:Titan ;
-    rdfs:label "Φοίβη"@el,
-        "Phoebe"@en,
-        "Φοίβη"@grc,
-        "Febe"@it,
-        "Phoebe"@la ;
-    myth:hasChild res:Asteria,
-        res:Leto ;
-    myth:hasFather res:Uranus ;
-    myth:hasMother res:Gaia ;
-    myth:hasSpouse res:Coeus ;
-    myth:memberOf res:Uranids .
-
-res:Phoenix_Q1145956 a myth:Character,
+res:Perseus a myth:Character,
+        myth:Demigod,
+        myth:Hero,
         myth:Male ;
-    rdfs:label "Φοίνιξ"@el,
-        "Phoenix"@en,
-        "Fenice"@it,
-        "Phoenix (filius Agenoris)"@la ;
-    myth:hasChild res:CepheusKingOfAethiopia ;
-    myth:hasFather res:Agenor ;
-    myth:hasMother res:Telephassa ;
-    myth:hasSibling res:Cadmus,
-        res:Europa ;
-    myth:holdsTitle res:KingOfTyre .
+    rdfs:label "Perseus",
+        "Περσέας"@el,
+        "Perseus"@en,
+        "Περσεύς , Perseus"@grc,
+        "Perseo"@it,
+        "Perseus"@la ;
+    myth:appearsIn res:Metamorphoses ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Danae ;
+    myth:hasSpouse res:Andromeda ;
+    myth:holdsTitle res:KingOfArgos,
+        res:KingOfMycenae,
+        res:KingOfTiryns .
 
 res:Phorcys a myth:Character,
         myth:Creature,
@@ -3330,106 +2657,21 @@ res:Phorcys a myth:Character,
     myth:hasMother res:Gaia ;
     myth:hasSpouse res:Ceto .
 
-res:Polydorus_Q1061554 a myth:Character,
-        myth:Male ;
-    rdfs:label "Πολύδωρος"@el,
-        "Polydorus"@en,
-        "Πολύδωρος"@grc,
-        "Polidoro"@it,
-        "Polydorus"@la ;
-    myth:hasChild res:Labdacus ;
-    myth:hasFather res:Cadmus ;
-    myth:hasMother res:Harmonia ;
-    myth:hasSibling res:Ino,
-        res:Semele ;
-    myth:holdsTitle res:KingOfThebe .
-
-res:PrometheusBound rdfs:label "Prometheus Bound"@en,
-        "Prometeo incatenato"@it .
-
-res:Semele a myth:Character,
-        myth:Female ;
-    rdfs:label "Σεμέλη"@el,
-        "Semele"@en,
-        "Σεμέλη"@grc,
-        "Semele"@it,
-        "Semele"@la ;
-    myth:hasChild res:Dionysus ;
-    myth:hasFather res:Cadmus ;
-    myth:hasMother res:Harmonia ;
-    myth:hasSibling res:Ino,
-        res:Polydorus_Q1061554 .
-
-res:Telegonus a myth:Character,
-        myth:Male ;
-    rdfs:label "Τηλέγονος"@el,
-        "Telegonus"@en,
-        "Τηλέγονος , Tēlegonos"@grc,
-        "Telegono"@it,
-        "Telegonus"@la ;
-    myth:appearsIn res:Fabulae ;
-    myth:hasFather res:Odysseus ;
-    myth:hasMother res:Circe ;
-    myth:hasSibling res:Cassiphone,
-        res:Latinus ;
-    myth:hasSpouse res:Penelope .
-
-res:Telemachus a myth:Character,
-        myth:Male ;
-    rdfs:label "Τηλέμαχος"@el,
-        "Telemachus"@en,
-        "Τηλέμαχος , Tēlemachos"@grc,
-        "Telemaco"@it,
-        "Telemachus"@la ;
-    myth:appearsIn res:MadnessOfOdysseus,
-        res:Odyssey ;
-    myth:hasChild res:Latinus ;
-    myth:hasFather res:Odysseus ;
-    myth:hasMother res:Penelope ;
-    myth:hasSpouse res:Cassiphone,
-        res:Circe ;
-    myth:killedBy res:Cassiphone ;
-    myth:mannerOfDeath res:Homicide .
-
-res:Tithonus a myth:Character,
-        myth:Male ;
-    rdfs:label "Τιθωνός"@el,
-        "Tithonus"@en,
-        "Τιθωνός"@grc,
-        "Titone"@it,
-        "Tithonus"@la ;
-    myth:hasChild res:Emathion,
-        res:Memnon ;
-    myth:hasFather res:Laomedon ;
-    myth:hasSibling res:Priam ;
-    myth:hasSpouse res:Eos .
-
-res:Tyndareus a myth:Character,
-        myth:Male ;
-    rdfs:label "Τυνδάρεως"@el,
-        "Tyndareus"@en,
-        "Τυνδάρεος"@grc,
-        "Tindaro"@it,
-        "Tyndareus"@la ;
-    myth:hasChild res:Clytemnestra ;
-    myth:hasFather res:Oebalus,
-        res:Perieres ;
-    myth:hasMother res:Gorgophone ;
-    myth:hasSpouse res:Leda ;
-    myth:holdsTitle res:MythologicalKingOfSparta .
-
-res:Tyro a myth:Character,
-        myth:Female ;
-    rdfs:label "Τυρώ"@el,
-        "Tyro"@en,
-        "Τυρώ"@grc,
-        "Tiro"@it,
-        "Tyro"@la ;
-    myth:hasChild res:Aeson ;
-    myth:hasFather res:Salmoneus ;
-    myth:hasSpouse res:Cretheus,
-        res:Poseidon,
-        res:Sisyphus .
+res:Pontus a myth:Character,
+        myth:Creature,
+        myth:Deity,
+        myth:Male,
+        myth:Primordial ;
+    rdfs:label "Πόντος"@el,
+        "Pontus"@en,
+        "Πόντος , Pontos"@grc,
+        "Ponto"@it,
+        "Pontus"@la ;
+    myth:hasChild res:Ceto,
+        res:Nereus,
+        res:Phorcys ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Uranus .
 
 myth:Group a owl:Class ;
     rdfs:label "Group"@en,
@@ -3438,14 +2680,6 @@ myth:Group a owl:Class ;
     skos:definition "A named collective of characters (the Twelve Olympians, the Muses, the Nereids...)."@en,
         "Insieme di personaggi con un nome collettivo (i Dodici dell'Olimpo, le Muse, le Nereidi...)."@it .
 
-myth:Monster a owl:Class ;
-    rdfs:label "Monster"@en,
-        "τέρας"@grc,
-        "Mostro"@it ;
-    rdfs:subClassOf myth:Creature ;
-    skos:definition "A monstrous creature (dragons, gorgons, serpents...)."@en,
-        "Creatura mostruosa (draghi, gorgoni, serpenti...)."@it .
-
 myth:killed a owl:ObjectProperty ;
     rdfs:label "killed"@en,
         "uccise"@it ;
@@ -3453,51 +2687,27 @@ myth:killed a owl:ObjectProperty ;
     rdfs:range myth:Character ;
     owl:inverseOf myth:killedBy .
 
+res:Aeneas a myth:Character,
+        myth:Human,
+        myth:Male ;
+    rdfs:label "Aeneas",
+        "Αινείας"@el,
+        "Aeneas"@en,
+        "Αἰνείας"@grc,
+        "Enea"@it,
+        "Aeneas"@la ;
+    myth:appearsIn res:Aeneid,
+        res:Iliad,
+        res:Rhesus,
+        res:TheDivineComedy ;
+    myth:hasChild res:Anius_Q135479720 ;
+    myth:hasFather res:Anchises ;
+    myth:hasMother res:Aphrodite ;
+    myth:hasSpouse res:Anius_Q135479720,
+        res:Creusa .
+
 res:Aeneid rdfs:label "Aeneid"@en,
         "Eneide"@it .
-
-res:Aeson a myth:Character,
-        myth:Male ;
-    rdfs:label "Αίσονας"@el,
-        "Aeson"@en,
-        "Αἴσων"@grc,
-        "Esone"@it,
-        "Aeson"@la ;
-    myth:hasChild res:Jason ;
-    myth:hasFather res:Cretheus ;
-    myth:hasMother res:Tyro ;
-    myth:hasSpouse res:Alcimede,
-        res:Amphinome_Q21548505,
-        res:Polymede ;
-    myth:holdsTitle res:KingOfPhtiotis .
-
-res:Alcaeus a myth:Character,
-        myth:Male ;
-    rdfs:label "Αλκαίος"@el,
-        "Alcaeus"@en,
-        "Ἀλκαῖος"@grc,
-        "Alceo"@it,
-        "Alcaeus"@la ;
-    myth:hasChild res:Amphitryon ;
-    myth:hasFather res:Perseus ;
-    myth:hasMother res:Andromeda ;
-    myth:hasSibling res:Electryon,
-        res:Gorgophone,
-        res:Sthenelus ;
-    myth:holdsTitle res:KingInGreekMythology .
-
-res:Antigone_Q131351 a myth:Character,
-        myth:Female ;
-    rdfs:label "Αντιγόνη"@el,
-        "Antigone"@en,
-        "Ἀντιγόνη"@grc,
-        "Antigone"@it,
-        "Antigone"@la ;
-    myth:hasFather res:Oedipus ;
-    myth:hasMother res:Jocasta ;
-    myth:hasSibling res:Eteocles,
-        res:Ismene,
-        res:Polynices .
 
 res:Apollo a myth:Character,
         myth:Deity,
@@ -3523,100 +2733,6 @@ res:Apollo a myth:Character,
         res:TwelveOlympians ;
     myth:residesIn res:Olympus .
 
-res:Asopus a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Male ;
-    rdfs:label "Ασωπός"@el,
-        "Asopus"@en,
-        "Ἀσωπός"@grc,
-        "Asopo"@it,
-        "Asopus (deus)"@la ;
-    myth:hasChild res:Aegina_Q321298 ;
-    myth:hasFather res:Oceanus,
-        res:Poseidon,
-        res:Zeus ;
-    myth:hasMother res:Eurynome,
-        res:Tethys ;
-    myth:holdsTitle res:KingOfPlataea .
-
-res:Atreus a myth:Character,
-        myth:Male ;
-    rdfs:label "Ατρέας"@el,
-        "Atreus"@en,
-        "Ἀτρεύς"@grc,
-        "Atreo"@it,
-        "Atreus"@la ;
-    myth:hasChild res:Agamemnon,
-        res:Menelaus ;
-    myth:hasFather res:Pelops ;
-    myth:hasMother res:Hippodamia ;
-    myth:hasSpouse res:Aerope ;
-    myth:holdsTitle res:KingOfMycenae .
-
-res:Belus a myth:Character,
-        myth:Male ;
-    rdfs:label "Βήλος"@el,
-        "Belus"@en,
-        "Βεμοσ"@grc,
-        "Belo"@it,
-        "Belus"@la ;
-    myth:hasChild res:Aegyptus,
-        res:CepheusKingOfAethiopia,
-        res:Danaus ;
-    myth:hasFather res:Poseidon ;
-    myth:hasMother res:Libya ;
-    myth:hasSibling res:Agenor ;
-    myth:holdsTitle res:MythologicalKingOfEgypt .
-
-res:Calliope a myth:Character,
-        myth:Female ;
-    rdfs:label "Καλλιόπη"@el,
-        "Calliope"@en,
-        "Καλλιόπη , Kalliopē"@grc,
-        "Calliope"@it,
-        "Calliope"@la ;
-    myth:hasChild res:LinusOfThrace ;
-    myth:hasFather res:Zeus ;
-    myth:hasMother res:Mnemosyne ;
-    myth:hasSibling res:Clio ;
-    myth:hasSpouse res:Achelous,
-        res:Oeagrus ;
-    myth:memberOf res:Muse .
-
-res:Calypso a myth:Character,
-        myth:Female,
-        myth:Nymph,
-        myth:Oceanid ;
-    rdfs:label "Καλυψώ"@el,
-        "Calypso"@en,
-        "Καλυψώ"@grc,
-        "Calipso"@it,
-        "Calypso"@la ;
-    myth:appearsIn res:Odyssey ;
-    myth:hasChild res:Latinus,
-        res:Telegonus ;
-    myth:hasFather res:Atlas,
-        res:Nereus ;
-    myth:hasMother res:Doris,
-        res:Pleione,
-        res:Tethys ;
-    myth:memberOf res:Nereids .
-
-res:Cassiphone a myth:Character,
-        myth:Female ;
-    rdfs:label "Cassiphone",
-        "Κασσιφόνη"@el,
-        "Cassiphone"@en,
-        "Κασσιφόνη"@grc,
-        "Cassifone"@it,
-        "Cassiphone"@la ;
-    myth:appearsIn res:Alexandra ;
-    myth:hasFather res:Odysseus ;
-    myth:hasMother res:Circe ;
-    myth:hasSibling res:Latinus,
-        res:Telegonus .
-
 res:Chaos a myth:Character,
         myth:Male,
         myth:Primordial ;
@@ -3634,123 +2750,40 @@ res:Chaos a myth:Character,
     myth:hasFather res:Chronos ;
     myth:hasMother res:Ananke .
 
-res:Deianira a myth:Character,
-        myth:Female ;
-    rdfs:label "Δηιάνειρα"@el,
-        "Deianira"@en,
-        "Deianira"@it,
-        "Deianira"@la ;
-    myth:hasChild res:Hyllus,
-        res:Macaria ;
-    myth:hasFather res:Oeneus ;
-    myth:hasMother res:Althaea ;
-    myth:hasSpouse res:Heracles ;
-    myth:mannerOfDeath res:Suicide .
-
-res:Dionysus a myth:Character,
+res:Eos a myth:Character,
         myth:Deity,
-        myth:Male ;
-    rdfs:label "Διόνυσος"@el,
-        "Dionysus"@en,
-        "Διόνυσος"@grc,
-        "Dioniso"@it ;
-    myth:appearsIn res:Dionysiaca,
-        res:Q59756366,
-        res:TheBacchae ;
-    myth:hasChild res:Deianira,
-        res:Oenopion ;
-    myth:hasFather res:Zeus ;
-    myth:hasMother res:Demeter,
-        res:Semele ;
-    myth:hasSpouse res:Ariadne ;
-    myth:memberOf res:TwelveOlympians .
-
-res:Electryon a myth:Character,
-        myth:Male ;
-    rdfs:label "Ηλεκτρύωνας"@el,
-        "Electryon"@en,
-        "Ἠλεκτρύων"@grc,
-        "Elettrione"@it,
-        "Electryon"@la ;
-    myth:hasChild res:Alkmene ;
-    myth:hasFather res:Perseus ;
-    myth:hasMother res:Andromeda ;
-    myth:hasSibling res:Alcaeus,
-        res:Gorgophone,
-        res:Sthenelus ;
-    myth:holdsTitle res:KingOfMycenae .
-
-res:Enarete a myth:Character,
-        myth:Female ;
-    rdfs:label "Εναρέτη"@el,
-        "Enarete"@en,
-        "Ἐνάρετη"@grc,
-        "Enarete"@it ;
-    myth:hasChild res:Athamas,
-        res:Cretheus,
-        res:Perieres,
-        res:Salmoneus,
-        res:Sisyphus ;
-    myth:hasSpouse res:Aiolos .
-
-res:Eteocles a myth:Character,
-        myth:Male ;
-    rdfs:label "Ετεοκλής"@el,
-        "Eteocles"@en,
-        "Ἐτεοκλῆς , Eteoklēs"@grc,
-        "Eteocle"@it,
-        "Eteocles"@la ;
-    myth:hasFather res:Oedipus ;
-    myth:hasMother res:Jocasta ;
-    myth:hasSibling res:Antigone_Q131351,
-        res:Ismene,
-        res:Polynices ;
-    myth:holdsTitle res:Monarch ;
-    myth:mannerOfDeath res:DeathInBattle .
-
-res:Europa a myth:Character,
         myth:Female,
-        myth:Human ;
-    rdfs:label "Ευρώπη"@el,
-        "Europa"@en,
-        "Εὐρώπη"@grc,
-        "Europa"@it,
-        "Europa"@la ;
-    myth:bornIn res:Tyre ;
-    myth:hasChild res:Minos,
-        res:Rhadamanthus ;
-    myth:hasFather res:Agenor ;
-    myth:hasMother res:Telephassa ;
-    myth:hasSibling res:Cadmus,
-        res:Phoenix_Q1145956 .
+        myth:Titan ;
+    rdfs:label "Ηώς"@el,
+        "Eos"@en,
+        "Ἠώς"@grc,
+        "Eos"@it,
+        "Eos"@la ;
+    myth:appearsIn res:Iliad,
+        res:Odyssey ;
+    myth:hasChild res:Emathion,
+        res:Memnon ;
+    myth:hasFather res:Hyperion ;
+    myth:hasMother res:Theia ;
+    myth:hasSibling res:Helios,
+        res:Selene ;
+    myth:residesIn res:Aeaea,
+        res:Kerne,
+        res:Sky .
 
-res:Glaucus_Q1232714 a myth:Character,
-        myth:Male ;
-    rdfs:label "Γλαύκος του Σισύφου"@el,
-        "Glaucus"@en,
-        "Glauco"@it,
-        "Glaucus"@la ;
-    myth:hasChild res:Alcimenes_Q21548251,
-        res:Bellerophon,
-        res:Piren ;
-    myth:hasFather res:Sisyphus ;
-    myth:hasMother res:Merope ;
-    myth:hasSpouse res:Eurynome_Q956831 ;
-    myth:holdsTitle res:KingOfCorinth .
-
-res:Hellen a myth:Character,
-        myth:Male ;
-    rdfs:label "Έλλην"@el,
-        "Hellen"@en,
-        "Ἕλλην"@grc,
-        "Elleno"@it,
-        "Hellen"@la ;
-    myth:hasChild res:Aiolos ;
-    myth:hasFather res:Deucalion,
-        res:Prometheus,
+res:Hecate a myth:Character,
+        myth:Deity,
+        myth:Female ;
+    rdfs:label "Εκάτη"@el,
+        "Hecate"@en,
+        "Ecate"@it,
+        "Hecate"@la ;
+    myth:hasChild res:Circe,
+        res:Medea ;
+    myth:hasFather res:Perses_Q2071913,
         res:Zeus ;
-    myth:hasMother res:Klymene,
-        res:Pyrrha .
+    myth:hasMother res:Demeter,
+        res:Hera .
 
 res:Hemera a myth:Character,
         myth:Deity,
@@ -3765,25 +2798,6 @@ res:Hemera a myth:Character,
     myth:hasMother res:Nyx ;
     myth:hasSibling res:Aether ;
     myth:hasSpouse res:Aether .
-
-res:Hephaestus a myth:Character,
-        myth:Deity,
-        myth:Male ;
-    rdfs:label "Ήφαιστος"@el,
-        "Hephaestus"@en,
-        "ΗΦΑΙΣΤΟΣ , Ἥφαιστος, Hēphaistos"@grc,
-        "Efesto"@it,
-        "Hephaestus"@la ;
-    myth:appearsIn res:Iliad,
-        res:PrometheusBound ;
-    myth:hasChild res:Erichthonius,
-        res:Periphetes,
-        res:Rhadamanthus ;
-    myth:hasFather res:Zeus ;
-    myth:hasMother res:Hera ;
-    myth:hasSibling res:Ares ;
-    myth:hasSpouse res:Aphrodite ;
-    myth:memberOf res:TwelveOlympians .
 
 res:Iphigenia a myth:Character,
         myth:Female ;
@@ -3801,66 +2815,55 @@ res:Iphigenia a myth:Character,
         res:Orestes ;
     myth:killedBy res:Agamemnon .
 
-res:Ismene a myth:Character,
+res:Jocasta a myth:Character,
         myth:Female ;
-    rdfs:label "Ισμήνη"@el,
-        "Ismene"@en,
-        "Ἰσμήνη"@grc,
-        "Ismene"@it,
-        "Ismene"@la ;
-    myth:appearsIn res:Antigone,
-        res:SevenAgainstThebes ;
-    myth:hasFather res:Oedipus ;
-    myth:hasMother res:Jocasta ;
-    myth:hasSibling res:Antigone_Q131351,
-        res:Eteocles,
-        res:Polynices .
+    rdfs:label "Ιοκάστη"@el,
+        "Jocasta"@en,
+        "Ἰοκάστη"@grc,
+        "Giocasta"@it,
+        "Iocasta"@la ;
+    myth:hasChild res:Antigone_Q131351,
+        res:Ismene,
+        res:Oedipus ;
+    myth:hasSibling res:Creon,
+        res:Euryganeia ;
+    myth:hasSpouse res:Laius,
+        res:Oedipus .
 
-res:Kreios a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Κρείος"@el,
-        "Kreios"@en,
-        "Κρίος"@grc,
-        "Crio"@it ;
-    myth:hasChild res:Astraeus,
-        res:Perses ;
-    myth:hasFather res:Uranus ;
-    myth:hasMother res:Gaia ;
-    myth:hasSpouse res:Eurybia ;
-    myth:memberOf res:Uranids .
-
-res:Latinus a myth:Character,
+res:Menelaus a myth:Character,
         myth:Male ;
-    rdfs:label "Λατίνος"@el,
-        "Latinus"@en,
-        "Λατῖνος"@grc,
-        "Latino"@it,
-        "Latinus"@la ;
-    myth:appearsIn res:TheDivineComedy,
-        res:Theogony ;
-    myth:hasFather res:Odysseus,
-        res:Telemachus ;
-    myth:hasMother res:Circe ;
-    myth:hasSibling res:Cassiphone,
-        res:Telegonus ;
-    myth:holdsTitle res:ListOfLatinKingsOfAlbaLonga .
+    rdfs:label "Μενέλαος"@el,
+        "Menelaus"@en,
+        "Μενέλᾱος"@grc,
+        "Menelao"@it,
+        "Menelaus"@la ;
+    myth:appearsIn res:Iliad ;
+    myth:hasChild res:Hermione ;
+    myth:hasFather res:Atreus ;
+    myth:hasMother res:Aerope ;
+    myth:hasSibling res:Agamemnon ;
+    myth:hasSpouse res:HelenOfTroy ;
+    myth:holdsTitle res:MythologicalKingOfSparta .
 
-res:Nereus a myth:Character,
-        myth:Creature,
-        myth:Deity,
+res:Orestes a myth:Character,
         myth:Male ;
-    rdfs:label "Νηρέας"@el,
-        "Nereus"@en,
-        "Νηρεύς , Nēreus"@grc,
-        "Nereo"@it,
-        "Nereus"@la ;
-    myth:hasChild res:Calypso,
-        res:Thetis ;
-    myth:hasFather res:Pontus ;
-    myth:hasMother res:Gaia,
-        res:Tethys ;
-    myth:hasSpouse res:Doris .
+    rdfs:label "Orestes",
+        "Ορέστης"@el,
+        "Orestes"@en,
+        "Ὀρέστης"@grc,
+        "Oreste"@it,
+        "Orestes"@la ;
+    myth:appearsIn res:Electra_Q540161,
+        res:TheLibationBearers ;
+    myth:hasFather res:Agamemnon ;
+    myth:hasMother res:Clytemnestra ;
+    myth:hasSibling res:Electra,
+        res:Iphigenia ;
+    myth:hasSpouse res:Hermione ;
+    myth:holdsTitle res:KingOfArgos,
+        res:KingOfMycenae,
+        res:MythologicalKingOfSparta ;
+    myth:memberOf res:OrestesAndElectra .
 
 res:Paris a myth:Character,
         myth:Male ;
@@ -3877,175 +2880,6 @@ res:Paris a myth:Character,
     myth:hasSibling res:Deiphobus,
         res:Hector ;
     myth:hasSpouse res:HelenOfTroy .
-
-res:Pelops a myth:Character,
-        myth:Male ;
-    rdfs:label "Πέλοπας"@el,
-        "Pelops"@en,
-        "Πέλοψ , Pelops"@grc,
-        "Pelope"@it,
-        "Pelops"@la ;
-    myth:hasChild res:Atreus,
-        res:Pittheus,
-        res:Pleisthenes,
-        res:Sciron ;
-    myth:hasFather res:Tantalus ;
-    myth:hasSpouse res:Hippodamia ;
-    myth:holdsTitle res:KingOfAchaea .
-
-res:Perieres a myth:Character,
-        myth:Male ;
-    rdfs:label "Περιήρης"@el,
-        "Perieres"@en,
-        "Περιήρης"@grc,
-        "Periere"@it,
-        "Perieres"@la ;
-    myth:hasChild res:Oebalus,
-        res:Tyndareus ;
-    myth:hasFather res:Aiolos ;
-    myth:hasMother res:Enarete ;
-    myth:hasSibling res:Sisyphus ;
-    myth:hasSpouse res:Gorgophone ;
-    myth:holdsTitle res:KingOfMessenia .
-
-res:Perses_Q2071913 a myth:Character,
-        myth:Male ;
-    rdfs:label "Πέρσης της Κολχίδας"@el,
-        "Perses"@en,
-        "Perse"@it ;
-    myth:hasChild res:Hecate ;
-    myth:hasFather res:Helios ;
-    myth:hasMother res:Perse ;
-    myth:hasSibling res:Aeetes,
-        res:Circe,
-        res:Pasiphae ;
-    myth:holdsTitle res:KingOfColchis,
-        res:KingOfTauris ;
-    myth:killedBy res:Medea .
-
-res:Polynices a myth:Character,
-        myth:Male ;
-    rdfs:label "Πολυνείκης"@el,
-        "Polynices"@en,
-        "Πολυνείκης"@grc,
-        "Polinice"@it,
-        "Polynices"@la ;
-    myth:hasFather res:Oedipus ;
-    myth:hasMother res:Jocasta ;
-    myth:hasSibling res:Antigone_Q131351,
-        res:Eteocles,
-        res:Ismene ;
-    myth:holdsTitle res:KingOfThebe ;
-    myth:mannerOfDeath res:DeathInBattle .
-
-res:Pontus a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Male,
-        myth:Primordial ;
-    rdfs:label "Πόντος"@el,
-        "Pontus"@en,
-        "Πόντος , Pontos"@grc,
-        "Ponto"@it,
-        "Pontus"@la ;
-    myth:hasChild res:Ceto,
-        res:Eurybia,
-        res:Nereus,
-        res:Phorcys ;
-    myth:hasMother res:Gaia ;
-    myth:hasSibling res:Uranus .
-
-res:Rhadamanthus a myth:Character,
-        myth:Male ;
-    rdfs:label "Ραδάμανθυς"@el,
-        "Rhadamanthus"@en,
-        "Ῥαδάμανθυς"@grc,
-        "Radamanto"@it,
-        "Rhadamanthys"@la ;
-    myth:hasChild res:Oenopion ;
-    myth:hasFather res:Hephaestus,
-        res:Zeus ;
-    myth:hasMother res:Europa ;
-    myth:hasSibling res:Minos ;
-    myth:hasSpouse res:Alkmene ;
-    myth:holdsTitle res:KingOfCrete .
-
-res:Sthenelus a myth:Character,
-        myth:Male ;
-    rdfs:label "Σθένελος του Περσέως"@el,
-        "Sthenelus"@en,
-        "Stenelo"@it,
-        "Sthenelus"@la ;
-    myth:hasChild res:Astymedusa ;
-    myth:hasFather res:Perseus ;
-    myth:hasMother res:Andromeda ;
-    myth:hasSibling res:Alcaeus,
-        res:Electryon,
-        res:Gorgophone ;
-    myth:holdsTitle res:KingOfTiryns .
-
-res:Aeneas a myth:Character,
-        myth:Human,
-        myth:Male ;
-    rdfs:label "Aeneas",
-        "Αινείας"@el,
-        "Aeneas"@en,
-        "Αἰνείας"@grc,
-        "Enea"@it,
-        "Aeneas"@la ;
-    myth:appearsIn res:Aeneid,
-        res:Iliad,
-        res:Rhesus,
-        res:TheDivineComedy ;
-    myth:hasChild res:Anius_Q135479720,
-        res:Ascanius ;
-    myth:hasFather res:Anchises ;
-    myth:hasMother res:Aphrodite ;
-    myth:hasSpouse res:Anius_Q135479720,
-        res:Creusa .
-
-res:Aiolos a myth:Character,
-        myth:Male ;
-    rdfs:label "Αίολος ο Θεσσαλός"@el,
-        "Aiolos"@en,
-        "Eolo"@it ;
-    myth:hasChild res:Athamas,
-        res:Cretheus,
-        res:Perieres,
-        res:Salmoneus,
-        res:Sisyphus ;
-    myth:hasFather res:Hellen ;
-    myth:hasSpouse res:Enarete .
-
-res:Andromeda a myth:Character,
-        myth:Female ;
-    rdfs:label "Ανδρομέδα"@el,
-        "Andromeda"@en,
-        "Ἀνδρομέδα"@grc,
-        "Andromeda"@it,
-        "Andromeda"@la ;
-    myth:appearsIn res:Metamorphoses ;
-    myth:hasChild res:Alcaeus,
-        res:Electryon,
-        res:Gorgophone,
-        res:Sthenelus ;
-    myth:hasFather res:CepheusKingOfAethiopia ;
-    myth:hasMother res:Cassiopeia ;
-    myth:hasSpouse res:Perseus .
-
-res:Ariadne a myth:Character,
-        myth:Female ;
-    rdfs:label "Αριάδνη"@el,
-        "Ariadne"@en,
-        "Ἀριάδνη"@grc,
-        "Arianna"@it,
-        "Ariadne"@la ;
-    myth:hasChild res:Oenopion ;
-    myth:hasFather res:Minos ;
-    myth:hasMother res:Pasiphae ;
-    myth:hasSibling res:Catreus,
-        res:Phaedra ;
-    myth:hasSpouse res:Dionysus .
 
 res:Clytemnestra a myth:Character,
         myth:Female ;
@@ -4100,23 +2934,6 @@ res:Dione a myth:Character,
     myth:hasMother res:Gaia,
         res:Tethys .
 
-res:Epimetheus a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Επιμηθέας"@el,
-        "Epimetheus"@en,
-        "Ἐπιμηθεύς"@grc,
-        "Epimeteo"@it,
-        "Epimetheus"@la ;
-    myth:hasChild res:Pyrrha ;
-    myth:hasFather res:Iapetos ;
-    myth:hasMother res:Klymene,
-        res:Themis ;
-    myth:hasSibling res:Atlas,
-        res:Prometheus ;
-    myth:hasSpouse res:Pandora ;
-    myth:holdsTitle res:KingOfSicyon .
-
 res:Erebos a myth:Character,
         myth:Male,
         myth:Primordial ;
@@ -4131,6 +2948,20 @@ res:Erebos a myth:Character,
     myth:hasFather res:Chaos ;
     myth:hasSibling res:Nyx ;
     myth:hasSpouse res:Nyx .
+
+res:Harmonia a myth:Character,
+        myth:Deity,
+        myth:Female ;
+    rdfs:label "Αρμονία"@el,
+        "Harmonia"@en,
+        "Ἁρμονία , Harmoniā"@grc,
+        "Armonia"@it,
+        "Harmonia"@la ;
+    myth:hasChild res:Ino,
+        res:Semele ;
+    myth:hasFather res:Ares ;
+    myth:hasMother res:Aphrodite ;
+    myth:hasSpouse res:Cadmus .
 
 res:Hecuba a myth:Character,
         myth:Female ;
@@ -4151,118 +2982,8 @@ res:Hecuba a myth:Character,
         res:Troilus ;
     myth:hasSpouse res:Priam .
 
-res:Ino a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Female ;
-    rdfs:label "Ινώ"@el,
-        "Ino"@en,
-        "Ἰνώ"@grc,
-        "Ino"@it,
-        "Ino"@la ;
-    myth:hasChild res:Learchus,
-        res:Melicertes ;
-    myth:hasFather res:Cadmus ;
-    myth:hasMother res:Harmonia ;
-    myth:hasSibling res:Polydorus_Q1061554,
-        res:Semele ;
-    myth:hasSpouse res:Athamas .
-
-res:KingOfMycenae a myth:RoyalTitle ;
-    rdfs:label "king of Mycenae"@en,
-        "re di Micene"@it ;
-    myth:titleOver res:Mycenae .
-
-res:Menelaus a myth:Character,
-        myth:Male ;
-    rdfs:label "Μενέλαος"@el,
-        "Menelaus"@en,
-        "Μενέλᾱος"@grc,
-        "Menelao"@it,
-        "Menelaus"@la ;
-    myth:appearsIn res:Iliad ;
-    myth:hasChild res:Hermione ;
-    myth:hasFather res:Atreus ;
-    myth:hasMother res:Aerope ;
-    myth:hasSibling res:Agamemnon ;
-    myth:hasSpouse res:HelenOfTroy ;
-    myth:holdsTitle res:MythologicalKingOfSparta .
-
-res:Minos a myth:Character,
-        myth:Male ;
-    rdfs:label "Μίνωας"@el,
-        "Minos"@en,
-        "Μίνως"@grc,
-        "Minosse"@it,
-        "Minos"@la ;
-    myth:appearsIn res:TheDivineComedy ;
-    myth:hasChild res:Ariadne,
-        res:Catreus,
-        res:Phaedra ;
-    myth:hasFather res:Zeus ;
-    myth:hasMother res:Europa ;
-    myth:hasSibling res:Rhadamanthus ;
-    myth:hasSpouse res:Pasiphae ;
-    myth:holdsTitle res:KingOfCrete .
-
-res:MythologicalKingOfSparta a myth:RoyalTitle ;
-    rdfs:label "mythological king of Sparta"@en,
-        "mitico re di Sparta"@it .
-
-res:Orestes a myth:Character,
-        myth:Male ;
-    rdfs:label "Orestes",
-        "Ορέστης"@el,
-        "Orestes"@en,
-        "Ὀρέστης"@grc,
-        "Oreste"@it,
-        "Orestes"@la ;
-    myth:appearsIn res:Electra_Q540161,
-        res:TheLibationBearers ;
-    myth:hasChild res:Tisamenus ;
-    myth:hasFather res:Agamemnon ;
-    myth:hasMother res:Clytemnestra ;
-    myth:hasSibling res:Electra,
-        res:Iphigenia ;
-    myth:hasSpouse res:Hermione ;
-    myth:holdsTitle res:KingOfArgos,
-        res:KingOfMycenae,
-        res:MythologicalKingOfSparta ;
-    myth:memberOf res:OrestesAndElectra .
-
-res:Phaedra a myth:Character,
-        myth:Female ;
-    rdfs:label "Φαίδρα"@el,
-        "Phaedra"@en,
-        "Φαίδρα"@grc,
-        "Fedra"@it,
-        "Phaedra"@la ;
-    myth:hasChild res:Acamas ;
-    myth:hasFather res:Minos ;
-    myth:hasMother res:Pasiphae ;
-    myth:hasSibling res:Ariadne,
-        res:Catreus ;
-    myth:hasSpouse res:Theseus ;
-    myth:holdsTitle res:KingOfAthens ;
-    myth:mannerOfDeath res:Suicide .
-
-res:Sisyphus a myth:Character,
-        myth:Male ;
-    rdfs:label "Σίσυφος"@el,
-        "Sisyphus"@en,
-        "Σίσυφος"@grc,
-        "Sisifo"@it,
-        "Sisyphus"@la ;
-    myth:appearsIn res:HowTheCossacksBecameOlympians,
-        res:Q59756366,
-        res:TheMythOfSisyphus ;
-    myth:hasChild res:Glaucus_Q1232714 ;
-    myth:hasFather res:Aiolos ;
-    myth:hasMother res:Enarete ;
-    myth:hasSibling res:Perieres ;
-    myth:hasSpouse res:Merope,
-        res:Tyro ;
-    myth:holdsTitle res:KingOfCorinth .
+res:TheDivineComedy rdfs:label "The Divine Comedy"@en,
+        "Divina Commedia"@it .
 
 res:Typhon a owl:NamedIndividual,
         myth:Character,
@@ -4281,6 +3002,16 @@ res:Typhon a owl:NamedIndividual,
     myth:hasFather res:Tartarus ;
     myth:hasMother res:Gaia .
 
+myth:Olympian a owl:Class ;
+    rdfs:label "Olympian"@en,
+        "Olimpico"@it ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( myth:Deity [ a owl:Restriction ;
+                        owl:hasValue res:TwelveOlympians ;
+                        owl:onProperty myth:memberOf ] ) ] ;
+    skos:definition "A deity belonging to the Twelve Olympians."@en,
+        "Divinità che fa parte dei Dodici dell'Olimpo."@it .
+
 res:Aether a myth:Character,
         myth:Male,
         myth:Primordial ;
@@ -4296,168 +3027,6 @@ res:Aether a myth:Character,
     myth:hasMother res:Nyx ;
     myth:hasSibling res:Hemera ;
     myth:hasSpouse res:Hemera .
-
-res:Agenor a myth:Character,
-        myth:Male ;
-    rdfs:label "Αγήνορας του Ποσειδώνα"@el,
-        "Agenor"@en,
-        "Ἀγήνωρ"@grc,
-        "Agenore"@it,
-        "Agenor"@la ;
-    myth:hasChild res:Cadmus,
-        res:CepheusKingOfAethiopia,
-        res:Europa,
-        res:Phoenix_Q1145956 ;
-    myth:hasFather res:Poseidon ;
-    myth:hasMother res:Libya ;
-    myth:hasSibling res:Belus ;
-    myth:hasSpouse res:Telephassa ;
-    myth:holdsTitle res:KingOfPhoenicia,
-        res:KingOfTyre .
-
-res:Cadmus a myth:Character,
-        myth:Male ;
-    rdfs:label "Κάδμος"@el,
-        "Cadmus"@en,
-        "Κάδμος , Kadmos"@grc,
-        "Cadmo"@it,
-        "Cadmus"@la ;
-    myth:hasChild res:Ino,
-        res:Polydorus_Q1061554,
-        res:Semele ;
-    myth:hasFather res:Agenor ;
-    myth:hasMother res:Telephassa ;
-    myth:hasSibling res:Europa,
-        res:Phoenix_Q1145956 ;
-    myth:hasSpouse res:Harmonia ;
-    myth:holdsTitle res:KingOfThebe .
-
-res:Gorgophone a myth:Character,
-        myth:Female ;
-    rdfs:label "Γοργοφόνη"@el,
-        "Gorgophone"@en,
-        "Γοργοφόνη"@grc,
-        "Gorgofone"@it ;
-    myth:hasChild res:Hippocoon,
-        res:Tyndareus ;
-    myth:hasFather res:Perseus ;
-    myth:hasMother res:Andromeda ;
-    myth:hasSibling res:Alcaeus,
-        res:Electryon,
-        res:Sthenelus ;
-    myth:hasSpouse res:Oebalus,
-        res:Perieres .
-
-res:Hecate a myth:Character,
-        myth:Deity,
-        myth:Female ;
-    rdfs:label "Εκάτη"@el,
-        "Hecate"@en,
-        "Ecate"@it,
-        "Hecate"@la ;
-    myth:hasChild res:Circe,
-        res:Medea ;
-    myth:hasFather res:Perses,
-        res:Perses_Q2071913,
-        res:Zeus ;
-    myth:hasMother res:Asteria,
-        res:Demeter,
-        res:Hera .
-
-res:Homicide rdfs:label "homicide"@en,
-        "omicidio"@it .
-
-res:Jocasta a myth:Character,
-        myth:Female ;
-    rdfs:label "Ιοκάστη"@el,
-        "Jocasta"@en,
-        "Ἰοκάστη"@grc,
-        "Giocasta"@it,
-        "Iocasta"@la ;
-    myth:hasChild res:Antigone_Q131351,
-        res:Eteocles,
-        res:Ismene,
-        res:Oedipus,
-        res:Polynices ;
-    myth:hasSibling res:Creon,
-        res:Euryganeia ;
-    myth:hasSpouse res:Laius,
-        res:Oedipus .
-
-res:KingOfArgos a myth:RoyalTitle ;
-    rdfs:label "king of Argos"@en,
-        "re di Argo"@it .
-
-res:KingOfThebe a myth:RoyalTitle ;
-    rdfs:label "king of Thebe (Troade)"@en,
-        "re di Tebe"@it .
-
-res:Nyx a myth:Character,
-        myth:Deity,
-        myth:Female,
-        myth:Primordial ;
-    rdfs:label "Νυξ"@el,
-        "Nyx"@en,
-        "Νύξ , Nýx"@grc,
-        "Notte"@it ;
-    myth:appearsIn res:Q59756366 ;
-    myth:hasChild res:Aether,
-        res:Hemera,
-        res:Nemesis ;
-    myth:hasFather res:Chaos ;
-    myth:hasSibling res:Erebos,
-        res:Gaia,
-        res:Tartarus ;
-    myth:hasSpouse res:Erebos .
-
-res:Pleione a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Female,
-        myth:Oceanid ;
-    rdfs:label "Πλειόνη"@el,
-        "Pleione"@en,
-        "Πληϊόνη"@grc,
-        "Pleione"@it,
-        "Pleione"@la ;
-    myth:hasChild res:Calypso,
-        res:Electra_Q858663,
-        res:Maia,
-        res:Merope,
-        res:Sterope ;
-    myth:hasFather res:Oceanus ;
-    myth:hasMother res:Tethys ;
-    myth:hasSpouse res:Atlas .
-
-res:TheDivineComedy rdfs:label "The Divine Comedy"@en,
-        "Divina Commedia"@it .
-
-<urn:swrl:var#p> a swrl:Variable .
-
-myth:Mortal a owl:Class ;
-    rdfs:label "Mortal"@en,
-        "θνητός"@grc,
-        "Mortale"@it ;
-    rdfs:subClassOf myth:Character ;
-    skos:definition "A character who is bound to die."@en,
-        "Personaggio destinato a morire."@it .
-
-myth:Olympian a owl:Class ;
-    rdfs:label "Olympian"@en,
-        "Olimpico"@it ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( myth:Deity [ a owl:Restriction ;
-                        owl:hasValue res:TwelveOlympians ;
-                        owl:onProperty myth:memberOf ] ) ] ;
-    skos:definition "A deity belonging to the Twelve Olympians."@en,
-        "Divinità che fa parte dei Dodici dell'Olimpo."@it .
-
-myth:Place a owl:Class ;
-    rdfs:label "Place"@en,
-        "Luogo"@it ;
-    rdfs:subClassOf crm:E53_Place ;
-    skos:definition "A place where a character is born, lives, dies or rules."@en,
-        "Luogo in cui un personaggio nasce, vive, muore o regna."@it .
 
 res:Aphrodite a myth:Character,
         myth:Deity,
@@ -4479,44 +3048,49 @@ res:Aphrodite a myth:Character,
     myth:memberOf res:TwelveOlympians ;
     myth:residesIn res:Olympus .
 
-res:Eos a myth:Character,
+res:Ares a myth:Character,
         myth:Deity,
-        myth:Female,
-        myth:Titan ;
-    rdfs:label "Ηώς"@el,
-        "Eos"@en,
-        "Ἠώς"@grc,
-        "Eos"@it,
-        "Eos"@la ;
+        myth:Male,
+        myth:Olympian ;
+    rdfs:label "Άρης"@el,
+        "Ares"@en,
+        "Ἀρης"@grc,
+        "Ares"@it,
+        "Ares"@la ;
     myth:appearsIn res:Iliad,
-        res:Odyssey ;
-    myth:hasChild res:Emathion,
-        res:Euros,
-        res:Memnon ;
-    myth:hasFather res:Hyperion ;
-    myth:hasMother res:Theia ;
-    myth:hasSibling res:Helios,
-        res:Selene ;
-    myth:hasSpouse res:Astraeus,
-        res:Tithonus ;
-    myth:residesIn res:Aeaea,
-        res:Kerne,
-        res:Sky .
+        res:Q59756366 ;
+    myth:hasChild res:Antiope_Q580862,
+        res:Cycnus,
+        res:Harmonia,
+        res:Hippolyta,
+        res:Lycaon_Q3268334 ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Hera ;
+    myth:hasSpouse res:Aphrodite ;
+    myth:memberOf res:TwelveOlympians .
 
-res:Harmonia a myth:Character,
+res:Circe a myth:Character,
         myth:Deity,
         myth:Female ;
-    rdfs:label "Αρμονία"@el,
-        "Harmonia"@en,
-        "Ἁρμονία , Harmoniā"@grc,
-        "Armonia"@it,
-        "Harmonia"@la ;
-    myth:hasChild res:Ino,
-        res:Polydorus_Q1061554,
-        res:Semele ;
-    myth:hasFather res:Ares ;
-    myth:hasMother res:Aphrodite ;
-    myth:hasSpouse res:Cadmus .
+    rdfs:label "Κίρκη"@el,
+        "Circe"@en,
+        "Κίρκη"@grc,
+        "Circe"@it,
+        "Circe"@la ;
+    myth:appearsIn res:AndreaeAlciatiEmblematumLibellus,
+        res:Odyssey ;
+    myth:hasChild res:Cassiphone ;
+    myth:hasFather res:Aeetes,
+        res:Helios ;
+    myth:hasMother res:Hecate ;
+    myth:hasSibling res:Aeetes,
+        res:Pasiphae,
+        res:Perses_Q2071913 ;
+    myth:hasSpouse res:Telemachus ;
+    myth:residesIn res:Aeaea .
+
+res:DeathInBattle rdfs:label "death in battle"@en,
+        "morte in combattimento"@it .
 
 res:Helios a myth:Character,
         myth:Deity,
@@ -4528,7 +3102,6 @@ res:Helios a myth:Character,
         "Helius"@la ;
     myth:hasChild res:Aeetes,
         res:Circe,
-        res:Dirce,
         res:Pasiphae,
         res:Perses_Q2071913 ;
     myth:hasFather res:Hyperion ;
@@ -4537,79 +3110,84 @@ res:Helios a myth:Character,
         res:Selene ;
     myth:residesIn res:PalaceOfHelios .
 
-res:Klymene a myth:Character,
+res:Homicide rdfs:label "homicide"@en,
+        "omicidio"@it .
+
+res:Nyx a myth:Character,
+        myth:Deity,
         myth:Female,
-        myth:Nymph ;
-    rdfs:label "Κλυμένη"@el,
-        "Klymene"@en,
-        "Climene"@it ;
-    myth:hasChild res:Atlas,
-        res:Deucalion,
-        res:Epimetheus,
-        res:Hellen,
-        res:Prometheus ;
-    myth:hasFather res:Oceanus ;
-    myth:hasMother res:Tethys ;
-    myth:hasSpouse res:Iapetos,
-        res:Prometheus ;
-    myth:memberOf res:Oceanids .
+        myth:Primordial ;
+    rdfs:label "Νυξ"@el,
+        "Nyx"@en,
+        "Νύξ , Nýx"@grc,
+        "Notte"@it ;
+    myth:appearsIn res:Q59756366 ;
+    myth:hasChild res:Aether,
+        res:Hemera,
+        res:Nemesis ;
+    myth:hasFather res:Chaos ;
+    myth:hasSibling res:Erebos,
+        res:Gaia,
+        res:Tartarus ;
+    myth:hasSpouse res:Erebos .
 
-res:Perseus a myth:Character,
-        myth:Demigod,
-        myth:Hero,
+res:Oedipus a myth:Character,
         myth:Male ;
-    rdfs:label "Perseus",
-        "Περσέας"@el,
-        "Perseus"@en,
-        "Περσεύς , Perseus"@grc,
-        "Perseo"@it,
-        "Perseus"@la ;
-    myth:appearsIn res:Metamorphoses ;
-    myth:hasChild res:Alcaeus,
-        res:Electryon,
-        res:Gorgophone,
-        res:Sthenelus ;
-    myth:hasFather res:Zeus ;
-    myth:hasMother res:Danae ;
-    myth:hasSpouse res:Andromeda ;
-    myth:holdsTitle res:KingOfArgos,
-        res:KingOfMycenae,
-        res:KingOfTiryns .
+    rdfs:label "Oedipus",
+        "Οιδίποδας"@el,
+        "Oedipus"@en,
+        "Οἰδίπους , Oidipūs"@grc,
+        "Edipo"@it,
+        "Oedipus"@la ;
+    myth:hasChild res:Antigone_Q131351,
+        res:Ismene ;
+    myth:hasFather res:Laius ;
+    myth:hasMother res:Jocasta ;
+    myth:hasSpouse res:Astymedusa,
+        res:Euryganeia,
+        res:Jocasta ;
+    myth:holdsTitle res:KingOfThebe .
 
-res:Prometheus a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Προμηθέας"@el,
-        "Prometheus"@en,
-        "Προμηθεύς"@grc,
-        "Prometeo"@it,
-        "Prometheus"@la ;
-    myth:appearsIn res:PrometheusBound,
-        res:SmallMoralWorks ;
-    myth:hasChild res:Deucalion,
-        res:Hellen ;
-    myth:hasFather res:Iapetos ;
-    myth:hasMother res:Asia,
-        res:Klymene,
-        res:Themis ;
-    myth:hasSibling res:Atlas,
-        res:Epimetheus ;
-    myth:hasSpouse res:Klymene .
+res:Pasiphae a myth:Character,
+        myth:Female ;
+    rdfs:label "Πασιφάη"@el,
+        "Pasiphaë"@en,
+        "Πασιφάη , Pāsiphaë"@grc,
+        "Pasifae"@it,
+        "Pasiphaë"@la ;
+    myth:hasChild res:Ariadne,
+        res:Minotaur,
+        res:Phaedra ;
+    myth:hasFather res:Helios ;
+    myth:hasSibling res:Aeetes,
+        res:Circe,
+        res:Perses_Q2071913 ;
+    myth:hasSpouse res:Minos .
 
-myth:Oceanid a owl:Class ;
-    rdfs:label "Oceanid"@en,
-        "Ὠκεανίς"@grc,
-        "Oceanina"@it ;
-    rdfs:subClassOf myth:Nymph ;
-    skos:definition "A nymph, daughter of Oceanus and Tethys."@en,
-        "Ninfa figlia di Oceano e Teti."@it .
+<urn:swrl:var#p> a swrl:Variable .
 
-myth:Primordial a owl:Class ;
-    rdfs:label "Primordial deity"@en,
-        "Divinità primordiale"@it ;
-    rdfs:subClassOf myth:Deity ;
-    skos:definition "The first beings born at the origin of the cosmos (Chaos, Gaia, Uranus...)."@en,
-        "Le prime entità nate all'origine del cosmo (Caos, Gea, Urano...)."@it .
+myth:Author a owl:Class ;
+    rdfs:label "Ancient author"@en,
+        "Autore antico"@it ;
+    rdfs:subClassOf crm:E21_Person,
+        foaf:Person ;
+    skos:definition "The author of a literary work."@en,
+        "Autore di un'opera letteraria."@it .
+
+myth:Mortal a owl:Class ;
+    rdfs:label "Mortal"@en,
+        "θνητός"@grc,
+        "Mortale"@it ;
+    rdfs:subClassOf myth:Character ;
+    skos:definition "A character who is bound to die."@en,
+        "Personaggio destinato a morire."@it .
+
+myth:Place a owl:Class ;
+    rdfs:label "Place"@en,
+        "Luogo"@it ;
+    rdfs:subClassOf crm:E53_Place ;
+    skos:definition "A place where a character is born, lives, dies or rules."@en,
+        "Luogo in cui un personaggio nasce, vive, muore o regna."@it .
 
 res:Aeetes a myth:Character,
         myth:Male ;
@@ -4621,7 +3199,6 @@ res:Aeetes a myth:Character,
     myth:hasChild res:Circe,
         res:Medea ;
     myth:hasFather res:Helios ;
-    myth:hasMother res:Perse ;
     myth:hasSibling res:Circe,
         res:Pasiphae,
         res:Perses_Q2071913 ;
@@ -4629,6 +3206,34 @@ res:Aeetes a myth:Character,
         res:Eidyia,
         res:Eurylyte ;
     myth:holdsTitle res:KingOfColchis .
+
+res:Uranids rdfs:label "Uranids"@en .
+
+myth:Primordial a owl:Class ;
+    rdfs:label "Primordial deity"@en,
+        "Divinità primordiale"@it ;
+    rdfs:subClassOf myth:Deity ;
+    skos:definition "The first beings born at the origin of the cosmos (Chaos, Gaia, Uranus...)."@en,
+        "Le prime entità nate all'origine del cosmo (Caos, Gea, Urano...)."@it .
+
+res:Athamas a myth:Character,
+        myth:Male ;
+    rdfs:label "Athamas",
+        "Αθάμας"@el,
+        "Athamas"@en,
+        "Ἀθάμας"@grc,
+        "Atamante"@it,
+        "Athamas"@la ;
+    myth:hasChild res:Learchus ;
+    myth:hasFather res:Aiolos,
+        res:Minyas ;
+    myth:hasMother res:Enarete,
+        res:Zeuxippe_Q46845955 ;
+    myth:hasSpouse res:Gorgopis,
+        res:Ino,
+        res:Nephele,
+        res:Themisto ;
+    myth:holdsTitle res:KingOfOrcomenus .
 
 res:Bellerophon a myth:Character,
         myth:Male ;
@@ -4645,9 +3250,6 @@ res:Bellerophon a myth:Character,
         res:Piren ;
     myth:hasSpouse res:Alcimedusa,
         res:Phylonoe .
-
-res:DeathInBattle rdfs:label "death in battle"@en,
-        "morte in combattimento"@it .
 
 res:Jason a myth:Character,
         myth:Male ;
@@ -4668,37 +3270,21 @@ res:Jason a myth:Character,
         res:Hypsipyle,
         res:Medea .
 
-res:KingOfAthens a myth:RoyalTitle ;
-    rdfs:label "King of Athens"@en,
-        "re di Atene"@it ;
-    myth:titleOver res:Athens_Q13534153 .
+res:KingInGreekMythology a myth:RoyalTitle ;
+    rdfs:label "king in Greek mythology"@en,
+        "re della mitologia greca"@it .
 
-res:Oedipus a myth:Character,
-        myth:Male ;
-    rdfs:label "Oedipus",
-        "Οιδίποδας"@el,
-        "Oedipus"@en,
-        "Οἰδίπους , Oidipūs"@grc,
-        "Edipo"@it,
-        "Oedipus"@la ;
-    myth:hasChild res:Antigone_Q131351,
-        res:Eteocles,
-        res:Ismene,
-        res:Polynices ;
-    myth:hasFather res:Laius ;
-    myth:hasMother res:Jocasta ;
-    myth:hasSpouse res:Astymedusa,
-        res:Euryganeia,
-        res:Jocasta ;
-    myth:holdsTitle res:KingOfThebe .
+res:Odyssey a owl:NamedIndividual,
+        myth:LiteraryWork ;
+    rdfs:label "Odyssey"@en,
+        "Odissea"@it ;
+    myth:inSourceGraph g:homer ;
+    myth:writtenBy res:Homer .
 
-myth:Author a owl:Class ;
-    rdfs:label "Ancient author"@en,
-        "Autore antico"@it ;
-    rdfs:subClassOf crm:E21_Person,
-        foaf:Person ;
-    skos:definition "The author of a literary work."@en,
-        "Autore di un'opera letteraria."@it .
+res:TwelveOlympians a owl:NamedIndividual,
+        myth:Group ;
+    rdfs:label "Twelve Olympians"@en,
+        "Olimpi"@it .
 
 myth:hasParent a owl:AsymmetricProperty,
         owl:IrreflexiveProperty,
@@ -4711,50 +3297,6 @@ myth:hasParent a owl:AsymmetricProperty,
     owl:inverseOf myth:hasChild ;
     skos:definition "Father or mother."@en,
         "Padre o madre."@it .
-
-res:Ares a myth:Character,
-        myth:Deity,
-        myth:Male,
-        myth:Olympian ;
-    rdfs:label "Άρης"@el,
-        "Ares"@en,
-        "Ἀρης"@grc,
-        "Ares"@it,
-        "Ares"@la ;
-    myth:appearsIn res:Iliad,
-        res:Q59756366 ;
-    myth:hasChild res:Antiope_Q580862,
-        res:Cycnus,
-        res:Harmonia,
-        res:Hippolyta,
-        res:Lycaon_Q3268334,
-        res:Oenomaus,
-        res:Thestius ;
-    myth:hasFather res:Zeus ;
-    myth:hasMother res:Hera ;
-    myth:hasSpouse res:Aphrodite ;
-    myth:memberOf res:TwelveOlympians .
-
-res:Atlas a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Άτλας (μυθολογία)"@el,
-        "Atlas"@en,
-        "Ἄτλας , Atlās"@grc,
-        "Atlante"@it,
-        "Atlas"@la ;
-    myth:hasChild res:Calypso,
-        res:Electra_Q858663,
-        res:Maia,
-        res:Merope,
-        res:Sterope ;
-    myth:hasFather res:Iapetos ;
-    myth:hasMother res:Asia,
-        res:Klymene ;
-    myth:hasSibling res:Epimetheus,
-        res:Prometheus ;
-    myth:hasSpouse res:Pleione ;
-    myth:holdsTitle res:KingOfAtlantis .
 
 res:Hera a myth:Character,
         myth:Deity,
@@ -4779,60 +3321,124 @@ res:Hera a myth:Character,
     myth:hasSpouse res:Zeus ;
     myth:memberOf res:TwelveOlympians .
 
-res:Pasiphae a myth:Character,
-        myth:Female ;
-    rdfs:label "Πασιφάη"@el,
-        "Pasiphaë"@en,
-        "Πασιφάη , Pāsiphaë"@grc,
-        "Pasifae"@it,
-        "Pasiphaë"@la ;
-    myth:hasChild res:Ariadne,
-        res:Catreus,
-        res:Minotaur,
-        res:Phaedra ;
-    myth:hasFather res:Helios ;
-    myth:hasMother res:Perse ;
-    myth:hasSibling res:Aeetes,
-        res:Circe,
-        res:Perses_Q2071913 ;
-    myth:hasSpouse res:Minos .
+res:Hyperion a myth:Character,
+        myth:Male,
+        myth:Titan ;
+    rdfs:label "Υπερίων"@el,
+        "Hyperion"@en,
+        "Ὑπερίων"@grc,
+        "Iperione"@it,
+        "Hyperion"@la ;
+    myth:hasChild res:Eos,
+        res:Helios,
+        res:Selene ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Cronus,
+        res:Oceanus,
+        res:Rhea,
+        res:Tethys,
+        res:Theia ;
+    myth:hasSpouse res:Theia ;
+    myth:memberOf res:Uranids .
 
-res:TwelveOlympians a owl:NamedIndividual,
-        myth:Group ;
-    rdfs:label "Twelve Olympians"@en,
-        "Olimpi"@it .
-
-myth:Nymph a owl:Class ;
-    rdfs:label "Nymph"@en,
-        "νύμφη"@grc,
-        "Ninfa"@it ;
-    rdfs:subClassOf myth:Female,
-        myth:MinorDeity ;
-    skos:definition "Minor female nature deity (waters, woods, mountains)."@en,
-        "Divinità femminile minore della natura (acque, boschi, monti)."@it .
-
-res:Circe a myth:Character,
-        myth:Deity,
-        myth:Female ;
-    rdfs:label "Κίρκη"@el,
-        "Circe"@en,
-        "Κίρκη"@grc,
-        "Circe"@it,
-        "Circe"@la ;
-    myth:appearsIn res:AndreaeAlciatiEmblematumLibellus,
+res:Odysseus a myth:Character,
+        myth:Male ;
+    rdfs:label "Odysseus",
+        "Οδυσσέας"@el,
+        "Odysseus"@en,
+        "Odisseo"@it,
+        "Ulixes"@la ;
+    myth:appearsIn res:Iliad,
+        res:MadnessOfOdysseus,
         res:Odyssey ;
     myth:hasChild res:Cassiphone,
-        res:Latinus,
-        res:Telegonus ;
-    myth:hasFather res:Aeetes,
-        res:Helios ;
-    myth:hasMother res:Hecate,
-        res:Perse ;
-    myth:hasSibling res:Aeetes,
-        res:Pasiphae,
-        res:Perses_Q2071913 ;
-    myth:hasSpouse res:Telemachus ;
-    myth:residesIn res:Aeaea .
+        res:Leontophron,
+        res:Telemachus ;
+    myth:hasFather res:Laertes,
+        res:Sisyphus ;
+    myth:hasMother res:Anticlea ;
+    myth:hasSpouse res:Penelope ;
+    myth:holdsTitle res:KingInGreekMythology .
+
+res:Q59756366 rdfs:label "Hades"@it .
+
+res:Theia a myth:Character,
+        myth:Female,
+        myth:Titan ;
+    rdfs:label "Ευρυφάεσσα"@el,
+        "Theia"@en,
+        "Θεία"@grc,
+        "Teia"@it ;
+    myth:hasChild res:Eos,
+        res:Helios,
+        res:Selene ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Cronus,
+        res:Hyperion,
+        res:Oceanus,
+        res:Rhea,
+        res:Tethys ;
+    myth:hasSpouse res:Hyperion ;
+    myth:memberOf res:Uranids .
+
+myth:LiteraryWork a owl:Class ;
+    rdfs:label "Literary work"@en,
+        "Opera letteraria"@it ;
+    rdfs:subClassOf fabio:Work,
+        crm:E33_Linguistic_Object ;
+    skos:definition "An ancient work telling the myths."@en,
+        "Opera antica che racconta i miti."@it .
+
+myth:Titan a owl:Class ;
+    rdfs:label "Titan"@en,
+        "Τιτάν"@grc,
+        "Titano"@it ;
+    rdfs:subClassOf myth:Deity ;
+    skos:definition "Children of Uranus and Gaia, the divine generation before the Olympians."@en,
+        "Figli di Urano e Gea, la generazione divina prima degli Olimpi."@it .
+
+res:Agamemnon a myth:Character,
+        myth:Male ;
+    rdfs:label "Agamemnon",
+        "Αγαμέμνονας"@el,
+        "Agamemnon"@en,
+        "Ἀγαμέμνων"@grc,
+        "Agamennone"@it,
+        "Agamemnon"@la ;
+    myth:appearsIn res:Iliad ;
+    myth:hasChild res:Electra,
+        res:Iphigenia,
+        res:Orestes ;
+    myth:hasFather res:Atreus ;
+    myth:hasMother res:Aerope ;
+    myth:hasSibling res:Menelaus ;
+    myth:hasSpouse res:Clytemnestra ;
+    myth:holdsTitle res:KingOfMycenae .
+
+res:Cronus a myth:Character,
+        myth:Male,
+        myth:Titan ;
+    rdfs:label "Κρόνος"@el,
+        "Cronus"@en,
+        "Κρόνος"@grc,
+        "Crono"@it,
+        "Cronus"@la ;
+    myth:hasChild res:Demeter,
+        res:Hera,
+        res:Poseidon,
+        res:Zeus ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Hyperion,
+        res:Oceanus,
+        res:Rhea,
+        res:Tethys,
+        res:Theia ;
+    myth:hasSpouse res:Rhea ;
+    myth:memberOf res:Uranids ;
+    myth:residesIn res:MountOthrys .
 
 res:HelenOfTroy a myth:Character,
         myth:Female ;
@@ -4877,201 +3483,28 @@ res:Medea a myth:Character,
     myth:hasSpouse res:Aegeus,
         res:Jason .
 
-res:Odyssey a owl:NamedIndividual,
-        myth:LiteraryWork ;
-    rdfs:label "Odyssey"@en,
-        "Odissea"@it ;
-    myth:inSourceGraph g:homer ;
-    myth:writtenBy res:Homer .
-
-res:Q59756366 rdfs:label "Hades"@it .
-
-res:Themis a myth:Character,
+res:Rhea a myth:Character,
+        myth:Deity,
         myth:Female,
         myth:Titan ;
-    rdfs:label "Θέμις"@el,
-        "Themis"@en,
-        "Θέμις , Themis"@grc,
-        "Temi"@it,
-        "Themis"@la ;
-    myth:hasChild res:Epimetheus,
-        res:Prometheus ;
-    myth:hasFather res:Uranus ;
-    myth:hasMother res:Gaia ;
-    myth:hasSibling res:Cronus,
-        res:Hyperion,
-        res:Iapetos,
-        res:Oceanus,
-        res:Rhea,
-        res:Tethys,
-        res:Theia ;
-    myth:hasSpouse res:Zeus ;
-    myth:memberOf res:Uranids .
-
-res:Uranids rdfs:label "Uranids"@en .
-
-res:Agamemnon a myth:Character,
-        myth:Male ;
-    rdfs:label "Agamemnon",
-        "Αγαμέμνονας"@el,
-        "Agamemnon"@en,
-        "Ἀγαμέμνων"@grc,
-        "Agamennone"@it,
-        "Agamemnon"@la ;
-    myth:appearsIn res:Iliad ;
-    myth:hasChild res:Electra,
-        res:Iphigenia,
-        res:Orestes ;
-    myth:hasFather res:Atreus ;
-    myth:hasMother res:Aerope ;
-    myth:hasSibling res:Menelaus ;
-    myth:hasSpouse res:Clytemnestra ;
-    myth:holdsTitle res:KingOfMycenae .
-
-res:Athamas a myth:Character,
-        myth:Male ;
-    rdfs:label "Athamas",
-        "Αθάμας"@el,
-        "Athamas"@en,
-        "Ἀθάμας"@grc,
-        "Atamante"@it,
-        "Athamas"@la ;
-    myth:hasChild res:Helle,
-        res:Learchus,
-        res:Melicertes,
-        res:Phrixus ;
-    myth:hasFather res:Aiolos,
-        res:Minyas ;
-    myth:hasMother res:Enarete,
-        res:Zeuxippe_Q46845955 ;
-    myth:hasSpouse res:Gorgopis,
-        res:Ino,
-        res:Nephele,
-        res:Themisto ;
-    myth:holdsTitle res:KingOfOrcomenus .
-
-res:Hyperion a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Υπερίων"@el,
-        "Hyperion"@en,
-        "Ὑπερίων"@grc,
-        "Iperione"@it,
-        "Hyperion"@la ;
-    myth:hasChild res:Eos,
-        res:Helios,
-        res:Selene ;
-    myth:hasFather res:Uranus ;
-    myth:hasMother res:Gaia ;
-    myth:hasSibling res:Cronus,
-        res:Iapetos,
-        res:Oceanus,
-        res:Rhea,
-        res:Tethys,
-        res:Theia,
-        res:Themis ;
-    myth:hasSpouse res:Theia ;
-    myth:memberOf res:Uranids .
-
-res:Iapetos a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Ιαπετός"@el,
-        "Iapetos"@en,
-        "Ἰαπετός"@grc,
-        "Giapeto"@it,
-        "Iapetus"@la ;
-    myth:hasChild res:Atlas,
-        res:Epimetheus,
-        res:Prometheus ;
-    myth:hasFather res:Uranus ;
-    myth:hasMother res:Gaia ;
-    myth:hasSibling res:Cronus,
-        res:Hyperion,
-        res:Oceanus,
-        res:Rhea,
-        res:Tethys,
-        res:Theia,
-        res:Themis ;
-    myth:hasSpouse res:Klymene ;
-    myth:memberOf res:Uranids .
-
-res:Odysseus a myth:Character,
-        myth:Male ;
-    rdfs:label "Odysseus",
-        "Οδυσσέας"@el,
-        "Odysseus"@en,
-        "Odisseo"@it,
-        "Ulixes"@la ;
-    myth:appearsIn res:Iliad,
-        res:MadnessOfOdysseus,
-        res:Odyssey ;
-    myth:hasChild res:Cassiphone,
-        res:Latinus,
-        res:Leontophron,
-        res:Telegonus,
-        res:Telemachus ;
-    myth:hasFather res:Laertes,
-        res:Sisyphus ;
-    myth:hasMother res:Anticlea ;
-    myth:hasSpouse res:Penelope ;
-    myth:holdsTitle res:KingInGreekMythology .
-
-res:Theia a myth:Character,
-        myth:Female,
-        myth:Titan ;
-    rdfs:label "Ευρυφάεσσα"@el,
-        "Theia"@en,
-        "Θεία"@grc,
-        "Teia"@it ;
-    myth:hasChild res:Eos,
-        res:Helios,
-        res:Selene ;
-    myth:hasFather res:Uranus ;
-    myth:hasMother res:Gaia ;
-    myth:hasSibling res:Cronus,
-        res:Hyperion,
-        res:Iapetos,
-        res:Oceanus,
-        res:Rhea,
-        res:Tethys,
-        res:Themis ;
-    myth:hasSpouse res:Hyperion ;
-    myth:memberOf res:Uranids .
-
-myth:LiteraryWork a owl:Class ;
-    rdfs:label "Literary work"@en,
-        "Opera letteraria"@it ;
-    rdfs:subClassOf fabio:Work,
-        crm:E33_Linguistic_Object ;
-    skos:definition "An ancient work telling the myths."@en,
-        "Opera antica che racconta i miti."@it .
-
-res:Cronus a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Κρόνος"@el,
-        "Cronus"@en,
-        "Κρόνος"@grc,
-        "Crono"@it,
-        "Cronus"@la ;
+    rdfs:label "Ρέα"@el,
+        "Rhea"@en,
+        "Ῥέα , Rheā"@grc,
+        "Rea"@it,
+        "Rhea"@la ;
     myth:hasChild res:Demeter,
         res:Hera,
-        res:Kreios,
         res:Poseidon,
         res:Zeus ;
     myth:hasFather res:Uranus ;
     myth:hasMother res:Gaia ;
-    myth:hasSibling res:Hyperion,
-        res:Iapetos,
+    myth:hasSibling res:Cronus,
+        res:Hyperion,
         res:Oceanus,
-        res:Rhea,
         res:Tethys,
-        res:Theia,
-        res:Themis ;
-    myth:hasSpouse res:Rhea ;
-    myth:memberOf res:Uranids ;
-    myth:residesIn res:MountOthrys .
+        res:Theia ;
+    myth:hasSpouse res:Cronus ;
+    myth:memberOf res:Uranids .
 
 res:Priam a myth:Character,
         myth:Male ;
@@ -5095,40 +3528,10 @@ res:Priam a myth:Character,
         res:Polydorus_Q29626641,
         res:Troilus ;
     myth:hasFather res:Laomedon ;
-    myth:hasSibling res:Tithonus ;
     myth:hasSpouse res:Hecuba ;
     myth:holdsTitle res:KingOfTroy ;
     myth:killedBy res:Neoptolemus ;
     myth:mannerOfDeath res:Homicide .
-
-res:Rhea a myth:Character,
-        myth:Deity,
-        myth:Female,
-        myth:Titan ;
-    rdfs:label "Ρέα"@el,
-        "Rhea"@en,
-        "Ῥέα , Rheā"@grc,
-        "Rea"@it,
-        "Rhea"@la ;
-    myth:hasChild res:Demeter,
-        res:Hera,
-        res:Poseidon,
-        res:Zeus ;
-    myth:hasFather res:Uranus ;
-    myth:hasMother res:Gaia ;
-    myth:hasSibling res:Cronus,
-        res:Hyperion,
-        res:Iapetos,
-        res:Oceanus,
-        res:Tethys,
-        res:Theia,
-        res:Themis ;
-    myth:hasSpouse res:Cronus ;
-    myth:memberOf res:Uranids .
-
-res:KingInGreekMythology a myth:RoyalTitle ;
-    rdfs:label "king in Greek mythology"@en,
-        "re della mitologia greca"@it .
 
 res:Theseus a myth:Character,
         myth:Male ;
@@ -5140,10 +3543,7 @@ res:Theseus a myth:Character,
         "Theseus"@la ;
     myth:appearsIn res:Q59756366,
         res:TheSuppliants ;
-    myth:hasChild res:Acamas,
-        res:DemophonOfAthens,
-        res:Hippolytus,
-        res:Iphigenia ;
+    myth:hasChild res:Iphigenia ;
     myth:hasFather res:Aegeus,
         res:Poseidon ;
     myth:hasMother res:Aethra ;
@@ -5155,6 +3555,89 @@ res:Theseus a myth:Character,
     myth:holdsTitle res:KingOfAthens ;
     myth:killedBy res:Lycomedes ;
     myth:mannerOfDeath res:Homicide .
+
+res:Oceanus a myth:Character,
+        myth:Creature,
+        myth:Deity,
+        myth:Male,
+        myth:Titan ;
+    rdfs:label "Ωκεανός"@el,
+        "Oceanus"@en,
+        "Ωκεανός"@grc,
+        "Oceano"@it,
+        "Oceanus"@la ;
+    myth:appearsIn res:PrometheusBound ;
+    myth:hasChild res:Dione,
+        res:Doris,
+        res:Eidyia,
+        res:Nemesis,
+        res:Nephele,
+        res:Styx ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Cronus,
+        res:Hyperion,
+        res:Rhea,
+        res:Tethys,
+        res:Theia ;
+    myth:hasSpouse res:Tethys ;
+    myth:memberOf res:Uranids ;
+    myth:residesIn res:ArcadiaRegionalUnit .
+
+res:Tethys a myth:Character,
+        myth:Creature,
+        myth:Deity,
+        myth:Female,
+        myth:Titan ;
+    rdfs:label "Τηθύς"@el,
+        "Tethys"@en,
+        "Τηθύς , Tēthȳs"@grc,
+        "Teti"@it,
+        "Tethys"@la ;
+    myth:hasChild res:Dione,
+        res:Doris,
+        res:Eidyia,
+        res:Nemesis,
+        res:Nereus,
+        res:Styx ;
+    myth:hasFather res:Uranus ;
+    myth:hasMother res:Gaia ;
+    myth:hasSibling res:Cronus,
+        res:Hyperion,
+        res:Oceanus,
+        res:Rhea,
+        res:Theia ;
+    myth:hasSpouse res:Oceanus ;
+    myth:memberOf res:Uranids .
+
+res:Poseidon a myth:Character,
+        myth:Creature,
+        myth:Deity,
+        myth:Male,
+        myth:Olympian ;
+    rdfs:label "Ποσειδώνας"@el,
+        "Poseidon"@en,
+        "Ποσειδών"@grc,
+        "Poseidone"@it,
+        "Posidon"@la ;
+    myth:appearsIn res:Iliad,
+        res:Odyssey,
+        res:Q59756366 ;
+    myth:hasChild res:Agenor,
+        res:Bellerophon,
+        res:Chrysaor,
+        res:Minyas,
+        res:Periphetes,
+        res:Procrustes,
+        res:Sciron,
+        res:Sinis,
+        res:Theseus ;
+    myth:hasFather res:Cronus ;
+    myth:hasMother res:Rhea ;
+    myth:hasSibling res:Demeter,
+        res:Hera,
+        res:Zeus ;
+    myth:memberOf res:TwelveOlympians .
 
 res:Achilles a myth:Character,
         myth:Male ;
@@ -5175,123 +3658,12 @@ res:Achilles a myth:Character,
     myth:holdsTitle res:KingOfMyrmidons ;
     myth:killedBy res:Paris .
 
-res:Poseidon a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Male,
-        myth:Olympian ;
-    rdfs:label "Ποσειδώνας"@el,
-        "Poseidon"@en,
-        "Ποσειδών"@grc,
-        "Poseidone"@it,
-        "Posidon"@la ;
-    myth:appearsIn res:Iliad,
-        res:Odyssey,
-        res:Q59756366 ;
-    myth:hasChild res:Agenor,
-        res:Asopus,
-        res:Bellerophon,
-        res:Belus,
-        res:Chrysaor,
-        res:Minyas,
-        res:Periphetes,
-        res:Procrustes,
-        res:Sciron,
-        res:Sinis,
-        res:Theseus ;
-    myth:hasFather res:Cronus ;
-    myth:hasMother res:Rhea ;
-    myth:hasSibling res:Demeter,
-        res:Hera,
-        res:Zeus ;
-    myth:hasSpouse res:Tyro ;
-    myth:memberOf res:TwelveOlympians .
-
-myth:Titan a owl:Class ;
-    rdfs:label "Titan"@en,
-        "Τιτάν"@grc,
-        "Titano"@it ;
-    rdfs:subClassOf myth:Deity ;
-    skos:definition "Children of Uranus and Gaia, the divine generation before the Olympians."@en,
-        "Figli di Urano e Gea, la generazione divina prima degli Olimpi."@it .
-
-<urn:swrl:var#y> a swrl:Variable .
-
-res:Oceanus a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Ωκεανός"@el,
-        "Oceanus"@en,
-        "Ωκεανός"@grc,
-        "Oceano"@it,
-        "Oceanus"@la ;
-    myth:appearsIn res:PrometheusBound ;
-    myth:hasChild res:Achelous,
-        res:Asia,
-        res:Asopus,
-        res:Callirhoe,
-        res:Calypso,
-        res:Dione,
-        res:Doris,
-        res:Eidyia,
-        res:Eurynome,
-        res:Inachus,
-        res:Klymene,
-        res:Nemesis,
-        res:Nephele,
-        res:Pleione,
-        res:Styx ;
-    myth:hasFather res:Uranus ;
-    myth:hasMother res:Gaia ;
-    myth:hasSibling res:Cronus,
-        res:Hyperion,
-        res:Iapetos,
-        res:Rhea,
-        res:Tethys,
-        res:Theia,
-        res:Themis ;
-    myth:hasSpouse res:Tethys ;
-    myth:memberOf res:Uranids ;
-    myth:residesIn res:ArcadiaRegionalUnit .
-
-res:Tethys a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Female,
-        myth:Titan ;
-    rdfs:label "Τηθύς"@el,
-        "Tethys"@en,
-        "Τηθύς , Tēthȳs"@grc,
-        "Teti"@it,
-        "Tethys"@la ;
-    myth:hasChild res:Achelous,
-        res:Asia,
-        res:Asopus,
-        res:Callirhoe,
-        res:Calypso,
-        res:Dione,
-        res:Doris,
-        res:Eidyia,
-        res:Eurynome,
-        res:Inachus,
-        res:Klymene,
-        res:Nemesis,
-        res:Nereus,
-        res:Pleione,
-        res:Styx ;
-    myth:hasFather res:Uranus ;
-    myth:hasMother res:Gaia ;
-    myth:hasSibling res:Cronus,
-        res:Hyperion,
-        res:Iapetos,
-        res:Oceanus,
-        res:Rhea,
-        res:Theia,
-        res:Themis ;
-    myth:hasSpouse res:Oceanus ;
-    myth:memberOf res:Uranids .
+myth:Creature a owl:Class ;
+    rdfs:label "Creature"@en,
+        "Creatura"@it ;
+    rdfs:subClassOf myth:Character ;
+    skos:definition "A mythical being, neither human nor godlike in form."@en,
+        "Essere mitico non umano e non divino nell'aspetto."@it .
 
 res:Uranus a myth:Character,
         myth:Deity,
@@ -5310,54 +3682,28 @@ res:Uranus a myth:Character,
         res:Ephialtes,
         res:Eurytos,
         res:Hyperion,
-        res:Iapetos,
-        res:Kreios,
         res:Mnemosyne,
         res:Oceanus,
         res:Phoebe,
         res:Porphyrion,
         res:Rhea,
         res:Tethys,
-        res:Theia,
-        res:Themis ;
+        res:Theia ;
     myth:hasFather res:Aether,
-        res:Chaos,
-        res:Ophion ;
+        res:Chaos ;
     myth:hasMother res:Gaia,
         res:Hemera ;
     myth:hasSibling res:Pontus ;
     myth:hasSpouse res:Gaia .
 
-<urn:swrl:var#x> a swrl:Variable .
+<urn:swrl:var#y> a swrl:Variable .
 
-myth:Creature a owl:Class ;
-    rdfs:label "Creature"@en,
-        "Creatura"@it ;
-    rdfs:subClassOf myth:Character ;
-    skos:definition "A mythical being, neither human nor godlike in form."@en,
-        "Essere mitico non umano e non divino nell'aspetto."@it .
-
-res:Heracles a myth:Character,
-        myth:Demigod,
-        myth:Male ;
-    rdfs:label "Heracles",
-        "Ηρακλής"@el,
-        "Heracles"@en,
-        "Ηρακλής , Hēraklēs"@grc,
-        "Eracle"@it,
-        "Hercules"@la ;
-    myth:bornIn res:Thebes_Q11225429 ;
-    myth:hasChild res:Democoon_Q21548783,
-        res:Hyllus,
-        res:Macaria,
-        res:Medebrontes,
-        res:Telephus ;
-    myth:hasFather res:Zeus ;
-    myth:hasMother res:Alkmene ;
-    myth:hasSpouse res:Deianira,
-        res:Hebe,
-        res:Megara_Q929768,
-        res:Omphale .
+myth:RoyalTitle a owl:Class ;
+    rdfs:label "Royal title"@en,
+        "Titolo regale"@it ;
+    rdfs:subClassOf myth:Title ;
+    skos:definition "The title of king or queen of a place."@en,
+        "Titolo di re o regina di un luogo."@it .
 
 res:Zeus a myth:Character,
         myth:Deity,
@@ -5375,32 +3721,26 @@ res:Zeus a myth:Character,
         res:Aphrodite,
         res:Apollo,
         res:Ares,
-        res:Asopus,
         res:Calliope,
         res:Clio,
         res:Dionysus,
         res:Enyo,
-        res:Epaphus,
         res:Harmonia,
         res:Hebe,
         res:Hecate,
         res:HelenOfTroy,
-        res:Hellen,
         res:Hephaestus,
         res:Heracles,
-        res:Hermes,
         res:Minos,
         res:Mnemosyne,
         res:Perseus,
-        res:Rhadamanthus,
         res:Tantalus ;
     myth:hasFather res:Cronus ;
     myth:hasMother res:Rhea ;
     myth:hasSibling res:Demeter,
         res:Hera,
         res:Poseidon ;
-    myth:hasSpouse res:Hera,
-        res:Themis ;
+    myth:hasSpouse res:Hera ;
     myth:memberOf res:TwelveOlympians .
 
 res:Gaia a myth:Character,
@@ -5419,11 +3759,8 @@ res:Gaia a myth:Character,
         res:Cronus,
         res:Dione,
         res:Ephialtes,
-        res:Eurybia,
         res:Eurytos,
         res:Hyperion,
-        res:Iapetos,
-        res:Kreios,
         res:Mnemosyne,
         res:Nereus,
         res:Oceanus,
@@ -5434,7 +3771,6 @@ res:Gaia a myth:Character,
         res:Rhea,
         res:Tethys,
         res:Theia,
-        res:Themis,
         res:Typhon,
         res:Uranus ;
     myth:hasFather res:Aether,
@@ -5444,12 +3780,26 @@ res:Gaia a myth:Character,
     myth:hasSpouse res:Tartarus,
         res:Uranus .
 
-myth:RoyalTitle a owl:Class ;
-    rdfs:label "Royal title"@en,
-        "Titolo regale"@it ;
-    rdfs:subClassOf myth:Title ;
-    skos:definition "The title of king or queen of a place."@en,
-        "Titolo di re o regina di un luogo."@it .
+res:Heracles a myth:Character,
+        myth:Demigod,
+        myth:Male ;
+    rdfs:label "Heracles",
+        "Ηρακλής"@el,
+        "Heracles"@en,
+        "Ηρακλής , Hēraklēs"@grc,
+        "Eracle"@it,
+        "Hercules"@la ;
+    myth:bornIn res:Thebes_Q11225429 ;
+    myth:hasChild res:Democoon_Q21548783,
+        res:Medebrontes ;
+    myth:hasFather res:Zeus ;
+    myth:hasMother res:Alkmene ;
+    myth:hasSpouse res:Deianira,
+        res:Hebe,
+        res:Megara_Q929768,
+        res:Omphale .
+
+<urn:swrl:var#x> a swrl:Variable .
 
 res:Iliad a owl:NamedIndividual,
         myth:LiteraryWork ;
@@ -5489,6 +3839,24 @@ myth:Character a owl:Class ;
         crm:E28_Conceptual_Object ;
     skos:definition "Any figure acting in myth: gods, mortals, creatures."@en,
         "Qualunque figura che agisce nel mito: divinità, mortali, creature."@it .
+
+[] a owl:Class ;
+    rdfs:subClassOf myth:Mortal ;
+    owl:intersectionOf ( [ a owl:Restriction ;
+                owl:onProperty myth:hasFather ;
+                owl:someValuesFrom myth:Mortal ] [ a owl:Restriction ;
+                owl:onProperty myth:hasMother ;
+                owl:someValuesFrom myth:Mortal ] ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf myth:Monster ;
+    owl:intersectionOf ( myth:Creature [ a owl:Restriction ;
+                owl:onProperty myth:hasParent ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:oneOf ( res:Typhon res:Echidna ) ] ] ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( myth:Character myth:Group myth:Place myth:Title myth:MannerOfDeath myth:LiteraryWork myth:Author ) .
 
 [] a swrl:Imp ;
     rdfs:label "padre"@it ;
@@ -5674,22 +4042,4 @@ myth:Character a owl:Class ;
                 swrl:argument2 <urn:swrl:var#p> ;
                 swrl:propertyPredicate myth:hasMother ] ) ;
     myth:swrlText "hasParent(?x,?p) ^ Female(?p) -> hasMother(?x,?p)" .
-
-[] a owl:Class ;
-    rdfs:subClassOf myth:Mortal ;
-    owl:intersectionOf ( [ a owl:Restriction ;
-                owl:onProperty myth:hasFather ;
-                owl:someValuesFrom myth:Mortal ] [ a owl:Restriction ;
-                owl:onProperty myth:hasMother ;
-                owl:someValuesFrom myth:Mortal ] ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf myth:Monster ;
-    owl:intersectionOf ( myth:Creature [ a owl:Restriction ;
-                owl:onProperty myth:hasParent ;
-                owl:someValuesFrom [ a owl:Class ;
-                        owl:oneOf ( res:Typhon res:Echidna ) ] ] ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( myth:Character myth:Group myth:Place myth:Title myth:MannerOfDeath myth:LiteraryWork myth:Author ) .
 

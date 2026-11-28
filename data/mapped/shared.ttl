@@ -6,34 +6,6 @@
 @prefix res: <https://example.org/mythograph/resource/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-res:Abas a myth:Character,
-        myth:Male ;
-    rdfs:label "Άβας ο Αργείος"@el,
-        "Abas"@en,
-        "Ἄβας"@grc,
-        "Abante"@it,
-        "Abas (Argos)"@la .
-
-res:Acamas a myth:Character,
-        myth:Male ;
-    rdfs:label "Ακάμας"@el,
-        "Acamas"@en,
-        "Acamante"@it,
-        "Acamas"@la .
-
-res:AcamasAndDemophon rdfs:label "Acamas and Demophon"@en,
-        "Acamante e Demofonte"@it .
-
-res:Achelous a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Male ;
-    rdfs:label "Αχελώος"@el,
-        "Achelous"@en,
-        "Ἀχέλῷος , Achelōos"@grc,
-        "Acheloo"@it,
-        "Achelous (mythologia)"@la .
-
 res:Achilles a myth:Character,
         myth:Male ;
     rdfs:label "Achilles",
@@ -90,14 +62,6 @@ res:Aegina_Q321298 a myth:Character,
         "Αἴγινα"@grc,
         "Egina"@it,
         "Aegina"@la .
-
-res:Aegyptus a myth:Character,
-        myth:Male ;
-    rdfs:label "Αίγυπτος"@el,
-        "Aegyptus"@en,
-        "Αἴγυπτος"@grc,
-        "Egitto"@it,
-        "Aegyptus"@la .
 
 res:Aeneas a myth:Character,
         myth:Human,
@@ -171,14 +135,6 @@ res:Aiolos a myth:Character,
         "Aiolos"@en,
         "Eolo"@it .
 
-res:Alcaeus a myth:Character,
-        myth:Male ;
-    rdfs:label "Αλκαίος"@el,
-        "Alcaeus"@en,
-        "Ἀλκαῖος"@grc,
-        "Alceo"@it,
-        "Alcaeus"@la .
-
 res:Alceste rdfs:label "Alceste"@en,
         "Alceste"@it .
 
@@ -221,15 +177,6 @@ res:Alcyoneus a myth:Character,
         "Alcyoneus"@en,
         "Alcioneo"@it .
 
-res:Aleus a myth:Character,
-        myth:Human,
-        myth:Male ;
-    rdfs:label "Άλεος"@el,
-        "Aleus"@en,
-        "Ἄλεος , Aleos"@grc,
-        "Aleo"@it,
-        "Aleus"@la .
-
 res:Alexandra rdfs:label "Alexandra"@en,
         "Alessandra"@it .
 
@@ -240,14 +187,6 @@ res:Alkmene a myth:Character,
         "Ἀλκμήνη"@grc,
         "Alcmena"@it,
         "Alcmene"@la .
-
-res:Althaea a myth:Character,
-        myth:Female ;
-    rdfs:label "Αλθαία"@el,
-        "Althaea"@en,
-        "Ἀλθαία , Althaiā"@grc,
-        "Altea"@it,
-        "Althaea"@la .
 
 res:Amphinome_Q21548505 a myth:Character,
         myth:Female ;
@@ -295,14 +234,6 @@ res:Anius_Q135479720 a myth:Character,
         myth:Male ;
     rdfs:label "Anius"@en,
         "Anius"@la .
-
-res:Antenor a myth:Character,
-        myth:Male ;
-    rdfs:label "Αντήνορας"@el,
-        "Antenor"@en,
-        "Ἀντήνωρ , Antēnōr"@grc,
-        "Antenore"@it,
-        "Antenor"@la .
 
 res:Anticlea a myth:Character,
         myth:Female ;
@@ -386,59 +317,12 @@ res:Ariadne a myth:Character,
         "Arianna"@it,
         "Ariadne"@la .
 
-res:Ascanius a myth:Character,
-        myth:Male ;
-    rdfs:label "Ίουλος"@el,
-        "Ascanius"@en,
-        "Ἀσκάνιος"@grc,
-        "Ascanio"@it,
-        "Ascanius"@la .
-
-res:Asia a myth:Character,
-        myth:Female,
-        myth:Oceanid ;
-    rdfs:label "Ασία"@el,
-        "Asia"@en,
-        "Ἀσία"@grc,
-        "Asia"@it,
-        "Asia (Nereis)"@la .
-
-res:Asopus a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Male ;
-    rdfs:label "Ασωπός"@el,
-        "Asopus"@en,
-        "Ἀσωπός"@grc,
-        "Asopo"@it,
-        "Asopus (deus)"@la .
-
-res:Asteria a myth:Character,
-        myth:Female,
-        myth:Titan ;
-    rdfs:label "Αστερία"@el,
-        "Asteria"@en,
-        "Ἀστερία"@grc,
-        "Asteria"@it,
-        "Asteria"@la .
-
 res:Asteropaios a myth:Character,
         myth:Male ;
     rdfs:label "Αστεροπαίος"@el,
         "Asteropaios"@en,
         "Ἀστεροπαῖος , Asteropaios"@grc,
         "Asteropeo"@it .
-
-res:Asterope_Q29655160 rdfs:label "Asterope"@en,
-        "Asterope"@it .
-
-res:Astraeus a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Αστραίος"@el,
-        "Astraeus"@en,
-        "Ἀστραῖος , Astraios"@grc,
-        "Astreo"@it .
 
 res:Astymedusa a myth:Character,
         myth:Female ;
@@ -461,15 +345,6 @@ res:Athis a myth:Character,
     rdfs:label "Athis"@en,
         "Ati"@it .
 
-res:Atlas a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Άτλας (μυθολογία)"@el,
-        "Atlas"@en,
-        "Ἄτλας , Atlās"@grc,
-        "Atlante"@it,
-        "Atlas"@la .
-
 res:Atreus a myth:Character,
         myth:Male ;
     rdfs:label "Ατρέας"@el,
@@ -477,13 +352,6 @@ res:Atreus a myth:Character,
         "Ἀτρεύς"@grc,
         "Atreo"@it,
         "Atreus"@la .
-
-res:Auge a myth:Character,
-        myth:Female ;
-    rdfs:label "Αύγη"@el,
-        "Auge"@en,
-        "Αὔγη"@grc,
-        "Auge"@it .
 
 res:Augur rdfs:label "augur"@en,
         "augure"@it ;
@@ -494,14 +362,6 @@ res:Aulis rdfs:label "Aulis"@en,
     geo1:lat 38.43333333 ;
     geo1:long 23.5925 .
 
-res:Autolycus a myth:Character,
-        myth:Male ;
-    rdfs:label "Αυτόλυκος"@el,
-        "Autolycus"@en,
-        "Αὐτόλυκος"@grc,
-        "Autolico"@it,
-        "Autolycus (Mercurii filius)"@la .
-
 res:Bellerophon a myth:Character,
         myth:Male ;
     rdfs:label "Bellerophon",
@@ -510,14 +370,6 @@ res:Bellerophon a myth:Character,
         "Βελλεροφῶν"@grc,
         "Bellerofonte"@it,
         "Bellerophon"@la .
-
-res:Belus a myth:Character,
-        myth:Male ;
-    rdfs:label "Βήλος"@el,
-        "Belus"@en,
-        "Βεμοσ"@grc,
-        "Belo"@it,
-        "Belus"@la .
 
 res:Bibliotheca a myth:LiteraryWork ;
     rdfs:label "Bibliotheca"@en,
@@ -554,25 +406,6 @@ res:Calliope a myth:Character,
         "Calliope"@it,
         "Calliope"@la .
 
-res:Callirhoe a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Female,
-        myth:Oceanid ;
-    rdfs:label "Καλλιρρόη (Ωκεανίδα)"@el,
-        "Callirhoe"@en,
-        "Calliroe"@it .
-
-res:Calypso a myth:Character,
-        myth:Female,
-        myth:Nymph,
-        myth:Oceanid ;
-    rdfs:label "Καλυψώ"@el,
-        "Calypso"@en,
-        "Καλυψώ"@grc,
-        "Calipso"@it,
-        "Calypso"@la .
-
 res:Cassiopeia a myth:Character,
         myth:Female ;
     rdfs:label "Κασσιόπη"@el,
@@ -588,40 +421,6 @@ res:Cassiphone a myth:Character,
         "Κασσιφόνη"@grc,
         "Cassifone"@it,
         "Cassiphone"@la .
-
-res:Catreus a myth:Character,
-        myth:Male ;
-    rdfs:label "Κατρέας"@el,
-        "Catreus"@en,
-        "Κατρεύς"@grc,
-        "Catreo"@it,
-        "Catreus"@la .
-
-res:CecropsII a myth:Character,
-        myth:Male ;
-    rdfs:label "Κέκροπας Β΄"@el,
-        "Cecrops II"@en,
-        "Cecrope II"@it,
-        "Cecrops II"@la .
-
-res:Cephalus a myth:Character,
-        myth:Male ;
-    rdfs:label "Κέφαλος"@el,
-        "Cephalus"@en,
-        "Κέφαλος , Cephalus"@grc,
-        "Cefalo"@it,
-        "Cephalus"@la .
-
-res:CephalusAndProcris rdfs:label "Cephalus and Procris"@en,
-        "Cefalo e Procri"@it .
-
-res:CepheusKingOfAethiopia a myth:Character,
-        myth:Male ;
-    rdfs:label "Κηφέας"@el,
-        "Cepheus, King of Aethiopia"@en,
-        "Κηφεύς"@grc,
-        "Cefeo"@it,
-        "Cepheus"@la .
 
 res:Ceto a myth:Character,
         myth:Creature,
@@ -725,20 +524,6 @@ res:Creon a myth:Character,
         "Creonte"@it,
         "Creon"@la .
 
-res:Creon_Q786573 a myth:Character,
-        myth:Male ;
-    rdfs:label "Κρέοντας της Κορίνθου"@el,
-        "Creon"@en,
-        "Creonte"@it .
-
-res:Cretheus a myth:Character,
-        myth:Male ;
-    rdfs:label "Κρηθέας"@el,
-        "Cretheus"@en,
-        "Κρηθεύς"@grc,
-        "Creteo"@it,
-        "Cretheus"@la .
-
 res:Creusa a myth:Character,
         myth:Female ;
     rdfs:label "Κρέουσα της Τροίας"@el,
@@ -762,14 +547,6 @@ res:Cycnus a myth:Character,
         "Cicno"@it,
         "Cycnos (heros)"@la .
 
-res:Cynortas a myth:Character,
-        myth:Male ;
-    rdfs:label "Κυνόρτας"@el,
-        "Cynortas"@en,
-        "Κυνόρτας , Cynortas"@grc,
-        "Cinorta"@it,
-        "Cynortas"@la .
-
 res:Cynthus rdfs:label "Cynthus"@en,
         "Monte Cinto"@it ;
     geo1:lat 37.395 ;
@@ -788,17 +565,6 @@ res:Danae a myth:Character,
         "Danaë"@en,
         "Danae"@it,
         "Danaë"@la .
-
-res:Danaus a myth:Character,
-        myth:Male ;
-    rdfs:label "Δαναός"@el,
-        "Danaus"@en,
-        "Δαναός , Danaos"@grc,
-        "Danao"@it,
-        "Danaus"@la .
-
-res:DaughtersOfDanaus rdfs:label "Daughters of Danaus"@en,
-        "Danaidi"@it .
 
 res:DeathInBattle rdfs:label "death in battle"@en,
         "morte in combattimento"@it .
@@ -867,30 +633,11 @@ res:Demoleon a myth:Character,
         "Δημολέων"@grc,
         "Demoleonte"@it .
 
-res:DemophonOfAthens a myth:Character,
-        myth:Male ;
-    rdfs:label "Δημοφών ο Θησέως"@el,
-        "Demophon of Athens"@en,
-        "Δημοφῶν/Δημοφόων"@grc,
-        "Demofonte"@it,
-        "Demophoon"@la .
-
 res:DescriptionOfGreece a myth:LiteraryWork ;
     rdfs:label "Description of Greece"@en,
         "Periegesi della Grecia"@it ;
     myth:inSourceGraph g:pausanias ;
     myth:writtenBy res:Pausanias .
-
-res:Deucalion a myth:Character,
-        myth:Male ;
-    rdfs:label "Δευκαλίων"@el,
-        "Deucalion"@en,
-        "Δευκαλίων"@grc,
-        "Deucalione"@it,
-        "Deucalion"@la .
-
-res:DeucalionAndPyrrha rdfs:label "Deucalion and Pyrrha"@en,
-        "Deucalione e Pirra"@it .
 
 res:DiiConsentes rdfs:label "Dii Consentes"@en,
         "Dèi Consenti"@it .
@@ -916,14 +663,6 @@ res:Dionysus a myth:Character,
         "Διόνυσος"@grc,
         "Dioniso"@it .
 
-res:Dirce a myth:Character,
-        myth:Female ;
-    rdfs:label "Δίρκη"@el,
-        "Dirce"@en,
-        "Δίρκη"@grc,
-        "Dirce"@it,
-        "Dirce"@la .
-
 res:Doris a myth:Character,
         myth:Creature,
         myth:Deity,
@@ -934,14 +673,6 @@ res:Doris a myth:Character,
         "Δωρίς"@grc,
         "Doride"@it,
         "Doris"@la .
-
-res:Dryope a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Δρυόπη"@el,
-        "Dryope"@en,
-        "Δρυόπη"@grc,
-        "Driope"@it .
 
 res:Dryops_Q3715373 a myth:Character,
         myth:Male ;
@@ -986,22 +717,6 @@ res:Electra a myth:Character,
 res:Electra_Q540161 rdfs:label "Electra"@en,
         "Elettra"@it .
 
-res:Electra_Q858663 a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Ηλέκτρα"@el,
-        "Electra"@en,
-        "Elettra"@it,
-        "Electra"@la .
-
-res:Electryon a myth:Character,
-        myth:Male ;
-    rdfs:label "Ηλεκτρύωνας"@el,
-        "Electryon"@en,
-        "Ἠλεκτρύων"@grc,
-        "Elettrione"@it,
-        "Electryon"@la .
-
 res:Elektra rdfs:label "Elektra"@en,
         "Elettra"@it .
 
@@ -1040,14 +755,6 @@ res:Eos a myth:Character,
         "Eos"@it,
         "Eos"@la .
 
-res:Epaphus a myth:Character,
-        myth:Male ;
-    rdfs:label "Έπαφος"@el,
-        "Epaphus"@en,
-        "Ἔπαφος"@grc,
-        "Epafo"@it,
-        "Epaphus"@la .
-
 res:Ephialtes a myth:Character,
         myth:Deity,
         myth:Giant,
@@ -1058,15 +765,6 @@ res:Ephialtes a myth:Character,
         "Efialte"@it,
         "Ephialtes"@la .
 
-res:Epimetheus a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Επιμηθέας"@el,
-        "Epimetheus"@en,
-        "Ἐπιμηθεύς"@grc,
-        "Epimeteo"@it,
-        "Epimetheus"@la .
-
 res:Erebos a myth:Character,
         myth:Male,
         myth:Primordial ;
@@ -1075,30 +773,6 @@ res:Erebos a myth:Character,
         "Ἔρεβος , Erebos"@grc,
         "Erebo"@it,
         "Erebus"@la .
-
-res:Erechtheus a myth:Character,
-        myth:Male ;
-    rdfs:label "Ερεχθέας"@el,
-        "Erechtheus"@en,
-        "Ἐρεχθεύς , Erechtheus"@grc,
-        "Eretteo"@it,
-        "Erechtheus"@la .
-
-res:Erichthonius a myth:Character,
-        myth:Male ;
-    rdfs:label "Εριχθόνιος"@el,
-        "Erichthonius"@en,
-        "Ἐριχθόνιος , Erichthonios"@grc,
-        "Erittonio"@it,
-        "Erichthonius"@la .
-
-res:Eteocles a myth:Character,
-        myth:Male ;
-    rdfs:label "Ετεοκλής"@el,
-        "Eteocles"@en,
-        "Ἐτεοκλῆς , Eteoklēs"@grc,
-        "Eteocle"@it,
-        "Eteocles"@la .
 
 res:Ethiopia rdfs:label "Ethiopia"@en,
         "Etiopia"@it ;
@@ -1113,23 +787,6 @@ res:Europa a myth:Character,
         "Εὐρώπη"@grc,
         "Europa"@it,
         "Europa"@la .
-
-res:Euros a myth:Character,
-        myth:Deity,
-        myth:Male ;
-    rdfs:label "Εύρος"@el,
-        "Euros"@en,
-        "Euro"@it,
-        "Eurus"@la .
-
-res:Eurybia a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Female ;
-    rdfs:label "Ευρυβία"@el,
-        "Eurybia"@en,
-        "Εὐρυβία"@grc,
-        "Euribia"@it .
 
 res:Eurydice_Q1378429 a myth:Character,
         myth:Female ;
@@ -1151,16 +808,6 @@ res:Eurylyte a myth:Character,
         "Eurylyte"@en,
         "Eurilite"@it .
 
-res:Eurynome a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Female,
-        myth:Oceanid ;
-    rdfs:label "Ευρυνόμη (Ωκεανίδα)"@el,
-        "Eurynome"@en,
-        "Εὐρυνόμη"@grc,
-        "Eurinome"@it .
-
 res:Eurynome_Q956831 a myth:Character,
         myth:Female ;
     rdfs:label "Ευρυνόμη"@el,
@@ -1174,13 +821,6 @@ res:Eurytos a myth:Character,
     rdfs:label "Εύρυτος"@el,
         "Eurytos"@en,
         "Eurito"@it .
-
-res:Fabulae a myth:LiteraryWork ;
-    rdfs:label "Fabulae"@en,
-        "Favole"@it ;
-    myth:inSourceGraph g:hyginus ;
-    myth:writtenBy res:GaiusJuliusHyginus,
-        res:HyginusMythographus .
 
 res:Gaia a myth:Character,
         myth:Deity,
@@ -1215,13 +855,6 @@ res:Glaucus_Q1232714 a myth:Character,
 
 res:Gorgon rdfs:label "gorgon"@en,
         "Gorgoni"@it .
-
-res:Gorgophone a myth:Character,
-        myth:Female ;
-    rdfs:label "Γοργοφόνη"@el,
-        "Gorgophone"@en,
-        "Γοργοφόνη"@grc,
-        "Gorgofone"@it .
 
 res:Gorgopis a myth:Character,
         myth:Female ;
@@ -1288,23 +921,6 @@ res:Helios a myth:Character,
         "Helios"@it,
         "Helius"@la .
 
-res:Helle a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Female ;
-    rdfs:label "Έλλη"@el,
-        "Helle"@en,
-        "Ἕλλη"@grc,
-        "Elle"@it .
-
-res:Hellen a myth:Character,
-        myth:Male ;
-    rdfs:label "Έλλην"@el,
-        "Hellen"@en,
-        "Ἕλλην"@grc,
-        "Elleno"@it,
-        "Hellen"@la .
-
 res:Hemera a myth:Character,
         myth:Deity,
         myth:Female ;
@@ -1345,15 +961,6 @@ res:Heracles a myth:Character,
 res:HeraclesAndTheNemeanLion rdfs:label "Heracles and the Nemean Lion"@en,
         "Ercole e il leone di Nemea"@it .
 
-res:Hermes a myth:Character,
-        myth:Male,
-        myth:Olympian ;
-    rdfs:label "Ερμής"@el,
-        "Hermes"@en,
-        "Ἑρμῆς"@grc,
-        "Ermes"@it,
-        "Hermes"@la .
-
 res:Hermione a myth:Character,
         myth:Female ;
     rdfs:label "Ερμιόνη"@el,
@@ -1372,14 +979,6 @@ res:Hippocoon a myth:Character,
         "Ἱπποκόων"@grc,
         "Ippocoonte"@it .
 
-res:Hippodamia a myth:Character,
-        myth:Female ;
-    rdfs:label "Ιπποδάμεια του Οινομάου"@el,
-        "Hippodamia"@en,
-        "Ἱπποδάμεια"@grc,
-        "Ippodamia"@it,
-        "Hippodamia"@la .
-
 res:Hippolyta a myth:Character,
         myth:Female ;
     rdfs:label "Ιππολύτη"@el,
@@ -1387,14 +986,6 @@ res:Hippolyta a myth:Character,
         "Ἱππολύτη"@grc,
         "Ippolita"@it,
         "Hippolyta"@la .
-
-res:Hippolytus a myth:Character,
-        myth:Male ;
-    rdfs:label "Ιππόλυτος"@el,
-        "Hippolytus"@en,
-        "Ἱππόλυτος"@grc,
-        "Ippolito"@it,
-        "Hippolytus (heros)"@la .
 
 res:Histories a myth:LiteraryWork ;
     rdfs:label "Histories"@en,
@@ -1407,14 +998,6 @@ res:Homicide rdfs:label "homicide"@en,
 
 res:HowTheCossacksBecameOlympians rdfs:label "How the Cossacks Became Olympians"@en .
 
-res:Hyllus a myth:Character,
-        myth:Male ;
-    rdfs:label "Ύλλος"@el,
-        "Hyllus"@en,
-        "Ὕλλος"@grc,
-        "Illo"@it,
-        "Hyllus"@la .
-
 res:Hyperion a myth:Character,
         myth:Male,
         myth:Titan ;
@@ -1424,14 +1007,6 @@ res:Hyperion a myth:Character,
         "Iperione"@it,
         "Hyperion"@la .
 
-res:Hypermnestra a myth:Character,
-        myth:Female ;
-    rdfs:label "Υπερμνήστρα"@el,
-        "Hypermnestra"@en,
-        "Ὑπερμνήστρα"@grc,
-        "Ipermestra"@it,
-        "Hypermestra"@la .
-
 res:Hypsipyle a myth:Character,
         myth:Female ;
     rdfs:label "Υψιπύλη"@el,
@@ -1439,15 +1014,6 @@ res:Hypsipyle a myth:Character,
         "Ὑψιπύλη"@grc,
         "Ipsipile"@it,
         "Hypsipyle"@la .
-
-res:Iapetos a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Ιαπετός"@el,
-        "Iapetos"@en,
-        "Ἰαπετός"@grc,
-        "Giapeto"@it,
-        "Iapetus"@la .
 
 res:Idomeneo rdfs:label "Idomeneo"@en,
         "Idomeneo"@it .
@@ -1463,23 +1029,6 @@ res:Iliade a myth:LiteraryWork ;
     myth:inSourceGraph g:homer ;
     myth:writtenBy res:Homer .
 
-res:Ilus a myth:Character,
-        myth:Male ;
-    rdfs:label "Ίλος του Τρώα"@el,
-        "Ilus"@en,
-        "Ilo"@it,
-        "Ilus"@la .
-
-res:Inachus a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Male ;
-    rdfs:label "Ίναχος"@el,
-        "Inachus"@en,
-        "Ἴναχος , Īnachos"@grc,
-        "Inaco"@it,
-        "Inachus"@la .
-
 res:Ino a myth:Character,
         myth:Creature,
         myth:Deity,
@@ -1489,23 +1038,6 @@ res:Ino a myth:Character,
         "Ἰνώ"@grc,
         "Ino"@it,
         "Ino"@la .
-
-res:Io a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Ιώ"@el,
-        "Io"@en,
-        "Ἰώ"@grc,
-        "Io"@it,
-        "Io (mythologia)"@la .
-
-res:Iobates a myth:Character,
-        myth:Male ;
-    rdfs:label "Ιοβάτης"@el,
-        "Iobates"@en,
-        "Ἰοβάτης , Iobatēs"@grc,
-        "Iobate"@it,
-        "Iobates"@la .
 
 res:Iphidamas a myth:Character,
         myth:Male ;
@@ -1571,10 +1103,6 @@ res:JudgementOfParis rdfs:label "Judgement of Paris"@en,
 
 res:Kerne rdfs:label "Kerne"@en .
 
-res:King a myth:RoyalTitle ;
-    rdfs:label "king"@en,
-        "re"@it .
-
 res:KingInGreekMythology a myth:RoyalTitle ;
     rdfs:label "king in Greek mythology"@en,
         "re della mitologia greca"@it .
@@ -1582,11 +1110,6 @@ res:KingInGreekMythology a myth:RoyalTitle ;
 res:KingOfAchaea a myth:RoyalTitle ;
     rdfs:label "king of Achaea"@en,
         "re di Acaia"@it .
-
-res:KingOfArgolis a myth:RoyalTitle ;
-    rdfs:label "king of Argolis"@en,
-        "re di Argolide"@it ;
-    myth:titleOver res:Argolis .
 
 res:KingOfArgos a myth:RoyalTitle ;
     rdfs:label "king of Argos"@en,
@@ -1596,15 +1119,6 @@ res:KingOfAthens a myth:RoyalTitle ;
     rdfs:label "King of Athens"@en,
         "re di Atene"@it ;
     myth:titleOver res:Athens_Q13534153 .
-
-res:KingOfAtlantis a myth:RoyalTitle ;
-    rdfs:label "king of Atlantis"@en,
-        "re di Atlantide"@it .
-
-res:KingOfCalydon a myth:RoyalTitle ;
-    rdfs:label "king of Calydon"@en,
-        "re di Calidone"@it ;
-    myth:titleOver res:Calydon .
 
 res:KingOfColchis a myth:RoyalTitle ;
     rdfs:label "king of Colchis"@en,
@@ -1619,29 +1133,10 @@ res:KingOfCrete a myth:RoyalTitle ;
     rdfs:label "king of Crete"@en,
         "re di Creta"@it .
 
-res:KingOfElis a myth:RoyalTitle ;
-    rdfs:label "king of Elis"@en,
-        "re di Elide"@it .
-
-res:KingOfIolcus a myth:RoyalTitle ;
-    rdfs:label "king of Iolcus"@en,
-        "re di Iolco"@it ;
-    myth:titleOver res:Iolcos .
-
 res:KingOfLydia a myth:RoyalTitle ;
     rdfs:label "king of Lydia"@en,
         "re di Lidia"@it ;
     myth:titleOver res:Lydia .
-
-res:KingOfMegara a myth:RoyalTitle ;
-    rdfs:label "king of Megara"@en,
-        "re di Megara"@it ;
-    myth:titleOver res:Megara .
-
-res:KingOfMessenia a myth:RoyalTitle ;
-    rdfs:label "king of Messenia"@en,
-        "re di Messenia"@it ;
-    myth:titleOver res:Messenia .
 
 res:KingOfMycenae a myth:RoyalTitle ;
     rdfs:label "king of Mycenae"@en,
@@ -1671,15 +1166,6 @@ res:KingOfPhtiotis a myth:RoyalTitle ;
         "re di Ftiotide"@it ;
     myth:titleOver res:AchaeaPhthiotis .
 
-res:KingOfPlataea a myth:RoyalTitle ;
-    rdfs:label "king of Plataea"@en,
-        "re di Platea"@it ;
-    myth:titleOver res:Plataea .
-
-res:KingOfSicyon a myth:RoyalTitle ;
-    rdfs:label "king of Sicyon"@en,
-        "re di Sicione"@it .
-
 res:KingOfTauris a myth:RoyalTitle ;
     rdfs:label "king of Tauris"@en,
         "re di Tauride"@it ;
@@ -1702,29 +1188,6 @@ res:KingOfTyre a myth:RoyalTitle ;
     rdfs:label "king of Tyre"@en,
         "Re di Tiro"@it ;
     myth:titleOver res:Tyre .
-
-res:Klymene a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Κλυμένη"@el,
-        "Klymene"@en,
-        "Climene"@it .
-
-res:Kreios a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Κρείος"@el,
-        "Kreios"@en,
-        "Κρίος"@grc,
-        "Crio"@it .
-
-res:Labdacus a myth:Character,
-        myth:Male ;
-    rdfs:label "Λάβδακος"@el,
-        "Labdacus"@en,
-        "Λάβδακος"@grc,
-        "Labdaco"@it,
-        "Labdacus"@la .
 
 res:LabyrinthOfKnossos rdfs:label "Labyrinth of Knossos"@en,
         "Labirinto di Cnosso"@it ;
@@ -1763,14 +1226,6 @@ res:Laomedon a myth:Character,
         "Laomedonte"@it,
         "Laomedon"@la .
 
-res:Latinus a myth:Character,
-        myth:Male ;
-    rdfs:label "Λατίνος"@el,
-        "Latinus"@en,
-        "Λατῖνος"@grc,
-        "Latino"@it,
-        "Latinus"@la .
-
 res:Learchus a myth:Character,
         myth:Male ;
     rdfs:label "Λέαρχος της Ινούς"@el,
@@ -1807,13 +1262,6 @@ res:Leto a myth:Character,
         "Latona"@it,
         "Latona"@la .
 
-res:Libya a myth:Character,
-        myth:Female ;
-    rdfs:label "Λιβύη"@el,
-        "Libya"@en,
-        "Λιβύη , Libyē"@grc,
-        "Libia"@it .
-
 res:LinusOfThrace a myth:Character,
         myth:Male ;
     rdfs:label "Λίνος"@el,
@@ -1821,10 +1269,6 @@ res:LinusOfThrace a myth:Character,
         "Λίνος"@grc,
         "Lino"@it,
         "Linus"@la .
-
-res:ListOfLatinKingsOfAlbaLonga a myth:RoyalTitle ;
-    rdfs:label "list of latin kings of Alba Longa"@en,
-        "re latini"@it .
 
 res:Lycaon_Q3268334 a myth:Character,
         myth:Male ;
@@ -1847,30 +1291,7 @@ res:Lycus_Q1393416 a myth:Character,
         "Lico"@it,
         "Lycus"@la .
 
-res:Lynceus_Q7877819 a myth:Character,
-        myth:Male ;
-    rdfs:label "Λυγκέας"@el,
-        "Lynceus"@en,
-        "Linceo"@it,
-        "Lynceus"@la .
-
-res:Macaria a myth:Character,
-        myth:Female ;
-    rdfs:label "Μακαρία του Ηρακλή"@el,
-        "Macaria"@en,
-        "Macaria"@it,
-        "Macaria"@la .
-
 res:MadnessOfOdysseus rdfs:label "Madness of Odysseus"@en .
-
-res:Maia a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Μαία"@el,
-        "Maia"@en,
-        "Μαῖα"@grc,
-        "Maia"@it,
-        "Maia"@la .
 
 res:Medea a myth:Character,
         myth:Female ;
@@ -1908,16 +1329,6 @@ res:Megara_Q929768 a myth:Character,
         "Megara"@it,
         "Megara"@la .
 
-res:Melicertes a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Male ;
-    rdfs:label "Παλαίμονας"@el,
-        "Melicertes"@en,
-        "Μελικέρτης"@grc,
-        "Melicerte"@it,
-        "Melicertes"@la .
-
 res:Memnon a myth:Character,
         myth:Male ;
     rdfs:label "Μέμνων (μυθολογία)"@el,
@@ -1933,14 +1344,6 @@ res:Menelaus a myth:Character,
         "Μενέλᾱος"@grc,
         "Menelao"@it,
         "Menelaus"@la .
-
-res:Merope a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Μερόπη"@el,
-        "Merope"@en,
-        "Merope"@it,
-        "Merope"@la .
 
 res:Metamorphoses rdfs:label "Metamorphoses"@en,
         "Le metamorfosi"@it .
@@ -1978,10 +1381,6 @@ res:Mnemosyne a myth:Character,
         "Mnemosine"@it,
         "Mnemosyne"@la .
 
-res:Monarch a myth:RoyalTitle ;
-    rdfs:label "monarch"@en,
-        "monarca"@it .
-
 res:MountOthrys rdfs:label "Mount Othrys"@en,
         "Otri"@it ;
     geo1:lat 39.016944444 ;
@@ -1996,33 +1395,13 @@ res:Mynes a myth:Character,
         "Mynes"@en,
         "Minete"@it .
 
-res:Mysians rdfs:label "Mysians"@en .
-
 res:MythologicalKingOfAethiopia a myth:RoyalTitle ;
     rdfs:label "mythological king of Aethiopia"@en,
         "mitico re di Etiopia"@it .
 
-res:MythologicalKingOfArcadia a myth:RoyalTitle ;
-    rdfs:label "mythological king of Arcadia"@en,
-        "mitico re di Arcadia"@it ;
-    myth:titleOver res:Arcadia_Q168786 .
-
-res:MythologicalKingOfEgypt a myth:RoyalTitle ;
-    rdfs:label "mythological king of Egypt"@en,
-        "mitico re di Egitto"@it .
-
-res:MythologicalKingOfLibya a myth:RoyalTitle ;
-    rdfs:label "mythological king of Libya"@en,
-        "mitico re di Libia"@it ;
-    myth:titleOver res:AncientLibya .
-
 res:MythologicalKingOfSparta a myth:RoyalTitle ;
     rdfs:label "mythological king of Sparta"@en,
         "mitico re di Sparta"@it .
-
-res:MythologicalKingOfThrace a myth:RoyalTitle ;
-    rdfs:label "mythological king of Thrace"@en,
-        "mitico re di Tracia"@it .
 
 res:Naiad rdfs:label "naiad"@en,
         "Naiadi"@it .
@@ -2082,13 +1461,6 @@ res:Nereus a myth:Character,
 res:Night rdfs:label "night"@en,
         "notte"@it .
 
-res:Nisos a myth:Character,
-        myth:Male ;
-    rdfs:label "Νίσος (Πανδίονος)"@el,
-        "Nisos"@en,
-        "Niso"@it,
-        "Nisus"@la .
-
 res:Nyx a myth:Character,
         myth:Deity,
         myth:Female,
@@ -2097,9 +1469,6 @@ res:Nyx a myth:Character,
         "Nyx"@en,
         "Νύξ , Nýx"@grc,
         "Notte"@it .
-
-res:Oceanids rdfs:label "Oceanids"@en,
-        "Oceanine"@it .
 
 res:Oceanus a myth:Character,
         myth:Creature,
@@ -2126,21 +1495,6 @@ res:Odyssey a myth:LiteraryWork ;
     myth:inSourceGraph g:homer ;
     myth:writtenBy res:Homer .
 
-res:Oeagrus a myth:Character,
-        myth:Male ;
-    rdfs:label "Οίαγρος"@el,
-        "Oeagrus"@en,
-        "Eagro"@it,
-        "Oeagrus"@la .
-
-res:Oebalus a myth:Character,
-        myth:Male ;
-    rdfs:label "Οίβαλος"@el,
-        "Oebalus"@en,
-        "Οἴβαλος"@grc,
-        "Ebalo"@it,
-        "Oebalus"@la .
-
 res:Oechalia_Q107550037 rdfs:label "Oechalia"@en .
 
 res:Oedipus a myth:Character,
@@ -2152,29 +1506,6 @@ res:Oedipus a myth:Character,
         "Edipo"@it,
         "Oedipus"@la .
 
-res:Oeneus a myth:Character,
-        myth:Male ;
-    rdfs:label "Οινέας"@el,
-        "Oeneus"@en,
-        "Οἰνεύς , Oineus"@grc,
-        "Oineo"@it,
-        "Oeneus"@la .
-
-res:Oenomaus a myth:Character,
-        myth:Male ;
-    rdfs:label "Οινόμαος"@el,
-        "Oenomaus"@en,
-        "Οἰνόμαος , Oinomaos"@grc,
-        "Enomao"@it,
-        "Oenomaus"@la .
-
-res:Oenopion a myth:Character,
-        myth:Male ;
-    rdfs:label "Οινοπίων"@el,
-        "Oenopion"@en,
-        "Enopione"@it,
-        "Oenopion"@la .
-
 res:Olympus rdfs:label "Olympus"@en .
 
 res:Omphale a myth:Character,
@@ -2184,16 +1515,6 @@ res:Omphale a myth:Character,
         "Ὀμφάλη"@grc,
         "Onfale"@it,
         "Omphale"@la .
-
-res:Ophion a myth:Character,
-        myth:Deity,
-        myth:Male,
-        myth:Monster ;
-    rdfs:label "Οφίων"@el,
-        "Ophion"@en,
-        "Ὀφίων"@grc,
-        "Ofione"@it,
-        "Ophion"@la .
 
 res:Orestes a myth:Character,
         myth:Male ;
@@ -2215,36 +1536,7 @@ res:Orthrus a myth:Character,
         "Ortro"@it,
         "Orthrus"@la .
 
-res:Otrera a myth:Character,
-        myth:Female ;
-    rdfs:label "Οτρήρη"@el,
-        "Otrera"@en,
-        "Ὀτρηρή"@grc,
-        "Otrera"@it .
-
 res:PalaceOfHelios rdfs:label "palace of Helios"@en .
-
-res:PandionI a myth:Character,
-        myth:Male ;
-    rdfs:label "Πανδίων Α΄"@el,
-        "Pandion I"@en,
-        "Pandione"@it,
-        "Pandion I"@la .
-
-res:PandionII a myth:Character,
-        myth:Male ;
-    rdfs:label "Πανδίων Β΄"@el,
-        "Pandion II"@en,
-        "Pandione II"@it .
-
-res:Pandora a myth:Character,
-        myth:Female,
-        myth:Human ;
-    rdfs:label "Πανδώρα"@el,
-        "Pandora"@en,
-        "Πανδώρα , Pandōrā"@grc,
-        "Pandora"@it,
-        "Pandora"@la .
 
 res:Paris a myth:Character,
         myth:Male ;
@@ -2286,37 +1578,11 @@ res:Penelope a myth:Character,
         "Penelope"@it,
         "Penelope"@la .
 
-res:Perieres a myth:Character,
-        myth:Male ;
-    rdfs:label "Περιήρης"@el,
-        "Perieres"@en,
-        "Περιήρης"@grc,
-        "Periere"@it,
-        "Perieres"@la .
-
 res:Periphetes a myth:Character,
         myth:Male ;
     rdfs:label "Περιφήτης"@el,
         "Periphetes"@en,
         "Perifete"@it .
-
-res:Perse a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Female,
-        myth:Oceanid ;
-    rdfs:label "Πέρση"@el,
-        "Perse"@en,
-        "Πέρσηΐς"@grc,
-        "Perseide"@it,
-        "Perse"@la .
-
-res:Perses a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Perses"@en,
-        "Πέρσης , Persēs"@grc,
-        "Perse"@it .
 
 res:Perses_Q2071913 a myth:Character,
         myth:Male ;
@@ -2352,13 +1618,6 @@ res:Phoebe a myth:Character,
         "Febe"@it,
         "Phoebe"@la .
 
-res:Phoenix_Q1145956 a myth:Character,
-        myth:Male ;
-    rdfs:label "Φοίνιξ"@el,
-        "Phoenix"@en,
-        "Fenice"@it,
-        "Phoenix (filius Agenoris)"@la .
-
 res:Phorcys a myth:Character,
         myth:Creature,
         myth:Deity,
@@ -2368,17 +1627,6 @@ res:Phorcys a myth:Character,
         "Φόρκυς , Phorkys"@grc,
         "Forco"@it,
         "Phorcys"@la .
-
-res:Phrixus a myth:Character,
-        myth:Male ;
-    rdfs:label "Φρίξος"@el,
-        "Phrixus"@en,
-        "Φρίξος"@grc,
-        "Frisso"@it,
-        "Phrixus"@la .
-
-res:PhrixusAndHelle rdfs:label "Phrixus and Helle"@en,
-        "Frisso ed Elle"@it .
 
 res:Phylas_Q3744926 a myth:Character,
         myth:Male ;
@@ -2398,39 +1646,6 @@ res:Piren a myth:Character,
     rdfs:label "Piren"@en,
         "Pirene"@it .
 
-res:Pittheus a myth:Character,
-        myth:Male ;
-    rdfs:label "Πιτθέας"@el,
-        "Pittheus"@en,
-        "Πιτθεύς"@grc,
-        "Pitteo"@it,
-        "Pittheus"@la .
-
-res:Pleione a myth:Character,
-        myth:Creature,
-        myth:Deity,
-        myth:Female,
-        myth:Oceanid ;
-    rdfs:label "Πλειόνη"@el,
-        "Pleione"@en,
-        "Πληϊόνη"@grc,
-        "Pleione"@it,
-        "Pleione"@la .
-
-res:Pleisthenes a myth:Character,
-        myth:Male ;
-    rdfs:label "Πλεισθένης"@el,
-        "Pleisthenes"@en,
-        "Plistene"@it .
-
-res:Polydorus_Q1061554 a myth:Character,
-        myth:Male ;
-    rdfs:label "Πολύδωρος"@el,
-        "Polydorus"@en,
-        "Πολύδωρος"@grc,
-        "Polidoro"@it,
-        "Polydorus"@la .
-
 res:Polydorus_Q29626641 a myth:Character,
         myth:Male ;
     rdfs:label "Πολύδωρος"@el,
@@ -2443,14 +1658,6 @@ res:Polymede a myth:Character,
     rdfs:label "Πολυμήδη"@el,
         "Polymede"@en,
         "Polimede"@it .
-
-res:Polynices a myth:Character,
-        myth:Male ;
-    rdfs:label "Πολυνείκης"@el,
-        "Polynices"@en,
-        "Πολυνείκης"@grc,
-        "Polinice"@it,
-        "Polynices"@la .
 
 res:Pontus a myth:Character,
         myth:Creature,
@@ -2471,12 +1678,6 @@ res:Porphyrion a myth:Character,
         "Porphyrion"@en,
         "Πορφυρίων"@grc,
         "Porfirione"@it .
-
-res:Porthaon a myth:Character,
-        myth:Male ;
-    rdfs:label "Πορθάονας"@el,
-        "Porthaon"@en,
-        "Portaone"@it .
 
 res:Poseidon a myth:Character,
         myth:Creature,
@@ -2508,43 +1709,15 @@ res:Procrustes a myth:Character,
         "Procuste"@it,
         "Procrustes"@la .
 
-res:Prometheus a myth:Character,
-        myth:Male,
-        myth:Titan ;
-    rdfs:label "Προμηθέας"@el,
-        "Prometheus"@en,
-        "Προμηθεύς"@grc,
-        "Prometeo"@it,
-        "Prometheus"@la .
-
 res:PrometheusBound rdfs:label "Prometheus Bound"@en,
         "Prometeo incatenato"@it .
 
-res:Pyrrha a myth:Character,
-        myth:Female ;
-    rdfs:label "Πύρρα"@el,
-        "Pyrrha"@en,
-        "Pirra"@it,
-        "Pyrrha"@la .
-
 res:Q59756366 rdfs:label "Hades"@it .
-
-res:Q64150489 a myth:LiteraryWork ;
-    myth:inSourceGraph g:apollodorus ;
-    myth:writtenBy res:PseudoApollodorus .
 
 res:QueenOfAmazons a myth:RoyalTitle ;
     rdfs:label "queen of Amazons"@en,
         "regina delle Amazzoni"@it ;
     myth:titleOver res:Amazons .
-
-res:Rhadamanthus a myth:Character,
-        myth:Male ;
-    rdfs:label "Ραδάμανθυς"@el,
-        "Rhadamanthus"@en,
-        "Ῥαδάμανθυς"@grc,
-        "Radamanto"@it,
-        "Rhadamanthys"@la .
 
 res:Rhea a myth:Character,
         myth:Deity,
@@ -2565,14 +1738,6 @@ res:Rigmus a myth:Character,
         "Rigmus"@en,
         "Rigmo"@it,
         "Rigmus"@la .
-
-res:Salmoneus a myth:Character,
-        myth:Male ;
-    rdfs:label "Σαλμωνέας"@el,
-        "Salmoneus"@en,
-        "Σαλμωνεύς"@grc,
-        "Salmoneo"@it,
-        "Salmoneus"@la .
 
 res:SanctuaryOfPythianApolloAtDelphi rdfs:label "Sanctuary of Pythian Apollo at Delphi"@en ;
     geo1:lat 38.48254 ;
@@ -2623,34 +1788,12 @@ res:Sisyphus a myth:Character,
 res:Sky rdfs:label "sky"@en,
         "cielo"@it .
 
-res:SmallMoralWorks rdfs:label "Small Moral Works"@en,
-        "Operette morali"@it .
-
-res:SonsOfAegyptus rdfs:label "Sons of Aegyptus"@en,
-        "Egittidi"@it .
-
 res:Sparta rdfs:label "Sparta"@en,
         "Sparta"@it ;
     geo1:lat 37.073678,
         37.081944444 ;
     geo1:long 22.423611111,
         22.430937 .
-
-res:Sterope a myth:Character,
-        myth:Female,
-        myth:Nymph ;
-    rdfs:label "Στερόπη"@el,
-        "Sterope"@en,
-        "Στερόπη"@grc,
-        "Sterope"@it,
-        "Sterope"@la .
-
-res:Sthenelus a myth:Character,
-        myth:Male ;
-    rdfs:label "Σθένελος του Περσέως"@el,
-        "Sthenelus"@en,
-        "Stenelo"@it,
-        "Sthenelus"@la .
 
 res:Styx a myth:Character,
         myth:Creature,
@@ -2689,14 +1832,6 @@ res:Tartarus a myth:Character,
         "Tartaro"@it,
         "Tartarus"@la .
 
-res:Telegonus a myth:Character,
-        myth:Male ;
-    rdfs:label "Τηλέγονος"@el,
-        "Telegonus"@en,
-        "Τηλέγονος , Tēlegonos"@grc,
-        "Telegono"@it,
-        "Telegonus"@la .
-
 res:Telemachus a myth:Character,
         myth:Male ;
     rdfs:label "Τηλέμαχος"@el,
@@ -2704,24 +1839,6 @@ res:Telemachus a myth:Character,
         "Τηλέμαχος , Tēlemachos"@grc,
         "Telemaco"@it,
         "Telemachus"@la .
-
-res:Telephassa a myth:Character,
-        myth:Female ;
-    rdfs:label "Τηλέφασσα"@el,
-        "Telephassa"@en,
-        "Τηλέφασσα"@grc,
-        "Telefassa"@it .
-
-res:Telephus a myth:Character,
-        myth:Male ;
-    rdfs:label "Τήλεφος"@el,
-        "Telephus"@en,
-        "Τήλεφος , Tēlephos"@grc,
-        "Telefo"@it,
-        "Telephus"@la .
-
-res:Telephus_Q97664084 rdfs:label "Telephus"@en,
-        "Telefo"@it .
 
 res:Tethys a myth:Character,
         myth:Creature,
@@ -2772,15 +1889,6 @@ res:Theia a myth:Character,
         "Θεία"@grc,
         "Teia"@it .
 
-res:Themis a myth:Character,
-        myth:Female,
-        myth:Titan ;
-    rdfs:label "Θέμις"@el,
-        "Themis"@en,
-        "Θέμις , Themis"@grc,
-        "Temi"@it,
-        "Themis"@la .
-
 res:Themisto a myth:Character,
         myth:Female ;
     rdfs:label "Θεμιστώ"@el,
@@ -2804,14 +1912,6 @@ res:Theseus a myth:Character,
         "Teseo"@it,
         "Theseus"@la .
 
-res:Thestius a myth:Character,
-        myth:Male ;
-    rdfs:label "Θέστιος"@el,
-        "Thestius"@en,
-        "Θέστιος"@grc,
-        "Testio"@it,
-        "Thestius"@la .
-
 res:Thetis a myth:Character,
         myth:Female ;
     rdfs:label "Θέτις"@el,
@@ -2828,27 +1928,11 @@ res:Timalcus a myth:Character,
         "Timalco"@it,
         "Timalcus"@la .
 
-res:Tisamenus a myth:Character,
-        myth:Male ;
-    rdfs:label "Τισαμενός ο Λακεδαιμόνιος"@el,
-        "Tisamenus"@en,
-        "Τῑσᾰμενός"@grc,
-        "Tisameno"@it,
-        "Tisamenus"@la .
-
 res:Tisander a myth:Character,
         myth:Male ;
     rdfs:label "Τίσανδρος"@el,
         "Tisander"@en,
         "Tisandro"@it .
-
-res:Tithonus a myth:Character,
-        myth:Male ;
-    rdfs:label "Τιθωνός"@el,
-        "Tithonus"@en,
-        "Τιθωνός"@grc,
-        "Titone"@it,
-        "Tithonus"@la .
 
 res:Troilus a myth:Character,
         myth:Male ;
@@ -2856,13 +1940,6 @@ res:Troilus a myth:Character,
         "Troilus"@en,
         "Troilo"@it,
         "Troilus"@la .
-
-res:Tros a myth:Character,
-        myth:Male ;
-    rdfs:label "Τρως"@el,
-        "Tros"@en,
-        "Τρώς"@grc,
-        "Troo"@it .
 
 res:Trous a myth:Character,
         myth:Male ;
@@ -2896,14 +1973,6 @@ res:Typhon a myth:Character,
         "Τυφών , Tȳphōn"@grc,
         "Tifone"@it,
         "Typhon"@la .
-
-res:Tyro a myth:Character,
-        myth:Female ;
-    rdfs:label "Τυρώ"@el,
-        "Tyro"@en,
-        "Τυρώ"@grc,
-        "Tiro"@it,
-        "Tyro"@la .
 
 res:Uranids rdfs:label "Uranids"@en .
 
@@ -2945,9 +2014,6 @@ res:Amazons rdfs:label "Amazons"@en,
 res:AncientCorinth rdfs:label "Ancient Corinth"@en,
         "Corinto"@it .
 
-res:AncientLibya rdfs:label "Ancient Libya"@en,
-        "Libia"@it .
-
 res:AncientRome rdfs:label "Ancient Rome"@en,
         "antica Roma"@it .
 
@@ -2955,25 +2021,12 @@ res:ApolloniusOfRhodes a myth:Author ;
     rdfs:label "Apollonius of Rhodes"@en,
         "Apollonio Rodio"@it .
 
-res:Arcadia_Q168786 rdfs:label "Arcadia"@en,
-        "Arcadia"@it .
-
-res:Argolis rdfs:label "Argolis"@en,
-        "Argolide"@it .
-
 res:Athens_Q13534153 rdfs:label "Athens"@en,
         "regno di Atene"@it .
-
-res:Calydon rdfs:label "Calydon"@en,
-        "Calidone"@it .
 
 res:DiodorusSiculus a myth:Author ;
     rdfs:label "Diodorus Siculus"@en,
         "Diodoro Siculo"@it .
-
-res:GaiusJuliusHyginus a myth:Author ;
-    rdfs:label "Gaius Julius Hyginus"@en,
-        "Gaio Giulio Igino"@it .
 
 res:Herodotus a myth:Author ;
     rdfs:label "Herodotus"@en,
@@ -2983,21 +2036,8 @@ res:Hesiod a myth:Author ;
     rdfs:label "Hesiod"@en,
         "Esiodo"@it .
 
-res:HyginusMythographus a myth:Author ;
-    rdfs:label "Hyginus Mythographus"@en,
-        "Igino"@it .
-
-res:Iolcos rdfs:label "Iolcos"@en,
-        "Iolco"@it .
-
 res:Lydia rdfs:label "Lydia"@en,
         "Lidia"@it .
-
-res:Megara rdfs:label "Megara"@en,
-        "Megara"@it .
-
-res:Messenia rdfs:label "Messenia"@en,
-        "Messenia"@it .
 
 res:Mycenae rdfs:label "Mycenae"@en,
         "Micene"@it .
@@ -3012,8 +2052,9 @@ res:Pausanias a myth:Author ;
     rdfs:label "Pausanias"@en,
         "Pausania il Periegeta"@it .
 
-res:Plataea rdfs:label "Plataea"@en,
-        "Platea"@it .
+res:PseudoApollodorus a myth:Author ;
+    rdfs:label "Pseudo-Apollodorus"@en,
+        "Pseudo-Apollodoro"@it .
 
 res:Tauria rdfs:label "Tauria"@en,
         "Tauride"@it .
@@ -3029,10 +2070,6 @@ res:Tyre rdfs:label "Tyre"@en,
         "Tiro"@it ;
     geo1:lat 33.266666666 ;
     geo1:long 35.2 .
-
-res:PseudoApollodorus a myth:Author ;
-    rdfs:label "Pseudo-Apollodorus"@en,
-        "Pseudo-Apollodoro"@it .
 
 res:Homer a myth:Author ;
     rdfs:label "Homer"@en,

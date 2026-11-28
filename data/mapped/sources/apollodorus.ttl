@@ -15,21 +15,3 @@ res:Echidna myth:hasChild res:Chimera,
     myth:hasMother res:Gaia ;
     myth:mannerOfDeath res:Homicide .
 
-res:LinusOfThrace myth:hasFather res:Oeagrus .
-
-res:Gorgophone myth:hasChild res:Tyndareus ;
-    myth:hasFather res:Perseus ;
-    myth:hasSpouse res:Perieres .
-
-res:Oebalus myth:hasChild res:Hippocoon,
-        res:Tyndareus ;
-    myth:hasFather res:Perieres .
-
-res:Perieres myth:hasChild res:Oebalus,
-        res:Tyndareus ;
-    myth:hasSpouse res:Gorgophone .
-
-res:Tyndareus myth:hasFather res:Oebalus,
-        res:Perieres ;
-    myth:hasMother res:Gorgophone .
-

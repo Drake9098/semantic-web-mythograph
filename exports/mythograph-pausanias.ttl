@@ -688,17 +688,35 @@ myth:hasParent a owl:AsymmetricProperty,
 myth:Character a owl:Class ;
     rdfs:label "Character"@en,
         "Personaggio"@it ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:unionOf ( myth:Immortal myth:Mortal ) ],
-        [ a owl:Restriction ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality "2"^^xsd:nonNegativeInteger ;
             owl:onProperty myth:hasParent ],
+        [ a owl:Class ;
+            owl:unionOf ( myth:Immortal myth:Mortal ) ],
         crm:E28_Conceptual_Object ;
     skos:definition "Any figure acting in myth: gods, mortals, creatures."@en,
         "Qualunque figura che agisce nel mito: divinità, mortali, creature."@it .
 
 [] a owl:AllDifferent ;
     owl:distinctMembers ( res:Heracles res:Hippocoon ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf myth:Mortal ;
+    owl:intersectionOf ( [ a owl:Restriction ;
+                owl:onProperty myth:hasFather ;
+                owl:someValuesFrom myth:Mortal ] [ a owl:Restriction ;
+                owl:onProperty myth:hasMother ;
+                owl:someValuesFrom myth:Mortal ] ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf myth:Monster ;
+    owl:intersectionOf ( myth:Creature [ a owl:Restriction ;
+                owl:onProperty myth:hasParent ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:oneOf ( res:Typhon res:Echidna ) ] ] ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( myth:Character myth:Group myth:Place myth:Title myth:MannerOfDeath myth:LiteraryWork myth:Author ) .
 
 [] a swrl:Imp ;
     rdfs:label "padre"@it ;
@@ -884,22 +902,4 @@ myth:Character a owl:Class ;
                 swrl:argument2 <urn:swrl:var#p> ;
                 swrl:propertyPredicate myth:hasMother ] ) ;
     myth:swrlText "hasParent(?x,?p) ^ Female(?p) -> hasMother(?x,?p)" .
-
-[] a owl:Class ;
-    rdfs:subClassOf myth:Mortal ;
-    owl:intersectionOf ( [ a owl:Restriction ;
-                owl:onProperty myth:hasFather ;
-                owl:someValuesFrom myth:Mortal ] [ a owl:Restriction ;
-                owl:onProperty myth:hasMother ;
-                owl:someValuesFrom myth:Mortal ] ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf myth:Monster ;
-    owl:intersectionOf ( myth:Creature [ a owl:Restriction ;
-                owl:onProperty myth:hasParent ;
-                owl:someValuesFrom [ a owl:Class ;
-                        owl:oneOf ( res:Typhon res:Echidna ) ] ] ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( myth:Character myth:Group myth:Place myth:Title myth:MannerOfDeath myth:LiteraryWork myth:Author ) .
 

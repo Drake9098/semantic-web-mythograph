@@ -7,7 +7,7 @@ import os
 
 import pytest
 from rdflib import Graph, Literal
-from rdflib.namespace import RDF, RDFS
+from rdflib.namespace import RDF
 
 from mythograph.build import build
 from mythograph.namespaces import (GRAPH, MYTH, ONTOLOGY_FILE, OUTPUT_FILE, RAW_DIR, RES, ROOT,
@@ -51,13 +51,12 @@ def test_swrl_rules_are_translated():
 def test_every_source_is_consistent(store):
     meta = store.graph("meta")
     for name in store.sources:
-        assert meta.value(GRAPH[name], MYTH.consistentHermiT) == Literal(True), name
+        assert meta.value(GRAPH[name], MYTH.consistentOWLRL) == Literal(True), name
 
 
 def test_naive_merge_is_inconsistent(store):
     meta = store.graph("meta")
     assert meta.value(GRAPH["merged-naive"], MYTH.consistentOWLRL) == Literal(False)
-    assert meta.value(GRAPH["merged-naive"], MYTH.consistentHermiT) == Literal(False)
 
 
 # --------------------------------------------------------- competency questions
@@ -123,9 +122,9 @@ def test_creatures_are_not_humans(store):
 
 
 def test_selection_follows_the_cycles(store):
-    """Circa 300 personaggi, partendo dai protagonisti dei cicli (tables/cycles.ttl)."""
+    """Circa 200 personaggi, partendo dai protagonisti dei cicli (tables/cycles.ttl)."""
     chars = set(store.graph("shared").subjects(RDF.type, MYTH.Character))
-    assert 200 <= len(chars) <= 400
+    assert 150 <= len(chars) <= 250
     assert {RES.Oedipus, RES.Cassiphone, RES.Bellerophon, RES.Gaia} <= chars
 
 
@@ -135,8 +134,3 @@ def test_cassiphone_married_and_killed_her_half_brother(store):
     assert (RES.Cassiphone, MYTH.marriedSibling, RES.Telemachus) in v
     assert (RES.Cassiphone, RDF.type, MYTH.Kinslayer) in v
 
-
-def test_hermit_classifies_the_tbox(store):
-    """Parricide ⊑ Kinslayer non è scritto: lo deduce HermiT dalla gerarchia delle proprietà."""
-    tbox = store.graph("inferred/wikidata/tbox")
-    assert (MYTH.Parricide, RDFS.subClassOf, MYTH.Kinslayer) in tbox

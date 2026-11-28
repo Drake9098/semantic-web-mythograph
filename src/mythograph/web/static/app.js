@@ -29,13 +29,12 @@ const CATEGORY = {
 };
 const SOURCE_COLORS = { hesiod: "#b8691c", homer: "#2b6c94", apollodorus: "#5c7a2e", pausanias: "#7b4a91",
   diodorus: "#a33b5c", herodotus: "#3d7f7a", hyginus: "#8a6d1f", apollonius: "#4b5aa8", wikidata: "#6b6b6b" };
-const LEVEL_TEXT = { asserted: "asserita", shared: "condivisa", rules: "regola", owlrl: "OWL RL", hermit: "HermiT" };
+const LEVEL_TEXT = { asserted: "asserita", shared: "condivisa", rules: "regola", owlrl: "OWL RL" };
 const LEVEL_HELP = {
   asserted: "Affermata esplicitamente dalla fonte",
   shared: "Informazione condivisa da tutte le fonti",
   rules: "Dedotta da una regola SPARQL CONSTRUCT (ontology/rules)",
   owlrl: "Dedotta dalla chiusura OWL 2 RL (owlrl)",
-  hermit: "Dedotta dal reasoner OWL 2 DL HermiT",
 };
 
 const state = { sources: [], current: null, cy: null, source: "wikidata", view: "hood", depth: 1, data: null };
@@ -456,9 +455,8 @@ function renderSources() {
     el("p", { class: "hint" }, "Ogni fonte viene ragionata separatamente (TBox + entità comuni + fonte). La fusione ingenua mette tutte le fonti nello stesso grafo: le proprietà funzionali hasFather/hasMother fanno dedurre owl:sameAs tra personaggi diversi, in contrasto con owl:AllDifferent."),
     ...state.sources.map((s) => el("div", { class: "box" + (s.consistentOWLRL === false ? " alert" : "") },
       srcBadge(s.name), " ", el("strong", {}, s.works.join(", ") || s.label), el("br"),
-      s.asserted != null ? el("div", { class: "muted" }, `${s.asserted} triple asserite · dedotte: regole ${s.inferred.rules}, OWL RL ${s.inferred.owlrl}, HermiT ${s.inferred.hermit}`) : null,
-      el("div", {}, "OWL RL: ", yes(s.consistentOWLRL), " · HermiT: ", yes(s.consistentHermiT)),
-      s.note ? el("div", { class: "muted", style: "font-size:12px" }, s.note) : null,
+      s.asserted != null ? el("div", { class: "muted" }, `${s.asserted} triple asserite · dedotte: regole ${s.inferred.rules}, OWL RL ${s.inferred.owlrl}`) : null,
+      el("div", {}, "OWL RL: ", yes(s.consistentOWLRL)),
       s.errors.length ? el("details", {}, el("summary", {}, `${s.errors.length} violazioni`),
         el("ul", {}, s.errors.map((er) => el("li", { style: "font-size:12px" }, er.replaceAll("https://example.org/mythograph/resource/", "res:"))))) : null)));
 }

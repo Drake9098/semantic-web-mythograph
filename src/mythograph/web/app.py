@@ -16,13 +16,12 @@ from ..namespaces import DBR, EXTERNAL_NS, GEO, GRAPH, MYTH, OUTPUT_FILE, RES, W
 from ..store import Store
 
 STATIC = Path(__file__).parent / "static"
-LEVELS = ("rules", "owlrl", "hermit")
+LEVELS = ("rules", "owlrl")
 LEVEL_LABELS = {
     "asserted": "asserita dalla fonte",
     "shared": "entità condivisa",
     "rules": "dedotta da regola CONSTRUCT (RDFS/OWL)",
     "owlrl": "dedotta da OWL 2 RL (owlrl)",
-    "hermit": "dedotta da HermiT (OWL 2 DL)",
 }
 
 # archi disegnati (le inverse no, sarebbero doppi)
@@ -157,8 +156,6 @@ def sources():
             "asserted": val(MYTH.assertedTriples),
             "inferred": {lvl: val(MYTH[f"inferredBy_{lvl}"]) for lvl in LEVELS},
             "consistentOWLRL": val(MYTH.consistentOWLRL),
-            "consistentHermiT": val(MYTH.consistentHermiT),
-            "note": val(MYTH.reasonerNote),
             "errors": [str(e) for e in meta.objects(gid, MYTH.owlrlError)],
         })
     return out

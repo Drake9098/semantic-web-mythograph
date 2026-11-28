@@ -1,7 +1,7 @@
 # MythoGraph
 
 Ontologia OWL delle genealogie della mitologia greca, costruita **interamente da Wikidata**.
-Contiene circa 300 personaggi, scelti partendo da dieci cicli mitici (Tebe, Atridi, Eracle,
+Contiene circa 200 personaggi, scelti partendo da dieci cicli mitici (Tebe, Atridi, Eracle,
 Teseo, Troia, Odissea, Argonauti...) per le deduzioni che permettono: parricidi, nozze tra
 consanguinei, semidei, eroi.
 Le fonti antiche non sono d'accordo tra loro: ogni fonte (Esiodo, Omero, Apollodoro,
@@ -26,7 +26,7 @@ uvicorn mythograph.web.app:app  # http://localhost:8000  (oppure doppio clic su 
 pytest
 ```
 
-Per HermiT serve **Java** (8 o superiore).
+Il ragionamento OWL 2 DL (HermiT) si fa in **Protégé**, aprendo i file di `exports/`: la pipeline usa solo rdflib e owlrl.
 
 ## Documentazione
 

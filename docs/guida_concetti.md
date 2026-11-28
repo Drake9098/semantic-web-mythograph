@@ -44,7 +44,7 @@ Tieni aperto il file indicato mentre studi la slide.
 
 | Concetto | Nel progetto |
 |---|---|
-| Turtle / TriG / N-Triples | sorgenti / `mythograph.trig` / input per HermiT |
+| Turtle / TriG | sorgenti ed export per Protégé / `mythograph.trig` con tutti i named graph |
 | `rdf:List` | `owl:unionOf ( … )`, `owl:propertyChainAxiom ( … )`, corpo e testa delle regole SWRL |
 | Wikidata, DBpedia | **tutti i dati** vengono da Wikidata (`docs/pipeline.md`) |
 
@@ -80,10 +80,10 @@ Tieni aperto il file indicato mentre studi la slide.
 | Cardinalità | `Character ⊑ ≤2 hasParent`, `Immortal ⊑ ≤0 killedBy` (vincoli per fonte) |
 | GCI (assioma generale) | `∃hasFather.Mortal ⊓ ∃hasMother.Mortal ⊑ Mortal`; `Creature ⊓ ∃hasParent.{Typhon, Echidna} ⊑ Monster` |
 | Disgiunzione e copertura | `Immortal ⊥ Mortal`, `Character ⊑ Immortal ⊔ Mortal` |
-| **Ragionamento per casi** (solo DL) | ucciso ⇒ non immortale ⇒ mortale: HermiT sì, OWL RL no |
+| **Ragionamento per casi** (solo DL) | ucciso ⇒ non immortale ⇒ mortale: HermiT in Protégé sì, OWL RL (owlrl) no |
 | Catene di proprietà | `hasGrandparent`, `hasParentSibling`, `rulesOver = holdsTitle ∘ titleOver` |
 | **SWRL** | `ontology/rules.ttl`: 11 regole (parricidio, nozze tra consanguinei, zii...) |
-| Classificazione della TBox | HermiT mette `Parricide` sotto `Kinslayer` senza che sia scritto |
+| Classificazione della TBox | HermiT in Protégé mette `Parricide` sotto `Kinslayer` senza che sia scritto |
 | Consistenza | ogni fonte coerente; fusione ingenua no; fonti che si contraddicono da sole (CQ12) |
 | Ontologie fondazionali | `alignments.ttl`: CIDOC CRM, FaBiO, FOAF, Dublin Core |
 | Modularità, `owl:imports` | core, constraints, rules, alignments + `catalog-v001.xml` |
@@ -113,7 +113,7 @@ parte le affermazioni coinvolte (grafo `conflicts/…`) e le segnala. Esempi ver
 - **Apollodoro** dà a Tindaro due padri, Ebalo e Periere;
 - **Esiodo** dà a Urano due madri, Gea ed Emera.
 
-**Perché solo 300 personaggi?** La selezione parte da dieci cicli mitici
+**Perché solo 200 personaggi?** La selezione parte da dieci cicli mitici
 (`pipeline/tables/cycles.ttl`), scelti per le deduzioni che portano, e prende da
 Wikidata famiglie e genealogie complete. Conta la qualità del modello, non la quantità
 di triple: ogni personaggio presente serve a una competency question o a una deduzione.

@@ -5,8 +5,6 @@
 res:Dione myth:hasFather res:Oceanus ;
     myth:hasMother res:Tethys .
 
-res:Hecate myth:hasMother res:Asteria .
-
 res:Nemesis myth:hasMother res:Nyx .
 
 res:Nereus myth:hasFather res:Pontus ;
